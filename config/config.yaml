@@ -1,0 +1,41 @@
+﻿domain_keywords:
+  - reinforced concrete corrosion experiment
+  - long term durability concrete
+  - concrete chloride diffusion test
+  - reinforcement corrosion long duration exposure
+  - reinforced concrete half-cell potential experiment
+  - accelerated corrosion test concrete
+  - freeze-thaw concrete long term test
+  - wet-dry cyclic exposure concrete experiment
+  - reinforced concrete crack width over time
+  - reinforced concrete mass loss rebar corrosion
+domain_sources:
+  - https://www.crossref.org
+  - https://arxiv.org
+  - https://europepmc.org
+  - https://api.semanticscholar.org
+  - https://scholar.google.com
+  - https://ascelibrary.org
+  - https://www.concrete.org
+  - https://www.fhwa.dot.gov
+  - https://data.gov
+max_depth: 2
+file_types: [pdf, html, docx, txt, csv]
+year_filter: 1995
+rate_limits:
+  requests_per_minute: 30
+  per_domain: 10
+  throttle_sec: 0.5
+  jitter_sec: 0.2
+contact_email: ddnguyen@go.olemiss.edu
+user_agent: "uwss-bot/0.1 (+ddnguyen@go.olemiss.edu)"
+timeout_sec: 30
+retry_attempts: 3
+scrapy_whitelist_domains:
+  - www.concrete.org
+  - www.bzhb.ru
+  - arxiv.org
+scrapy_path_blacklist:
+  - /education
+  - /certification
+  - /university
