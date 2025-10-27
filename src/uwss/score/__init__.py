@@ -9,6 +9,7 @@ from typing import Dict, Iterable, List, Set
 from sqlalchemy import select
 
 from ..store import create_sqlite_engine, Document
+from ..store.db import create_engine_from_url
 
 
 def _tokenize(text: str) -> List[str]:
@@ -44,8 +45,9 @@ def _score_text(tokens: List[str], bi_tokens: List[str], kw_uni: Set[str], kw_bi
 	return raw / norm
 
 
-def score_documents(db_path: Path, keywords: List[str], min_score: float = 0.0) -> int:
-	engine, SessionLocal = create_sqlite_engine(db_path)
+
+def score_documents(db_path: Path, keywords: List[str], min_score: float = 0.0, db_url: str | None = None) -> int:
+	engine, SessionLocal = (create_engine_from_url(db_url) if db_url else create_sqlite_engine(db_path))
 	session = SessionLocal()
 	try:
 		lex = _build_keyword_lexicon(keywords)
