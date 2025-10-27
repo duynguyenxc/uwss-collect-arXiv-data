@@ -989,6 +989,154 @@ def build_parser() -> argparse.ArgumentParser:
 
 	p_export.set_defaults(func=_cmd_export)
 
+	# import-jsonl: import an exported JSONL into DB with dedupe (DOI/title/url hash)
+	p_imp = sub.add_parser("import-jsonl", help="Import JSONL into DB with dedupe (DOI/title/url hash)")
+	p_imp.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_imp.add_argument("--in", dest="in_file", required=True, help="Input JSONL file path")
+	p_imp.add_argument("--source-override", default=None, help="Override source column for imported rows")
+	p_imp.add_argument("--limit", type=int, default=None)
+	p_imp.add_argument("--dry-run", action="store_true")
+	p_imp.add_argument("--log-json", action="store_true")
+
+	def _cmd_import_jsonl(args: argparse.Namespace) -> int:
+		import hashlib
+		from sqlalchemy import select
+		from .store import Document
+
+		in_path = Path(args.in_file)
+		if not in_path.exists():
+			console.print(f"[red]Input not found: {in_path}[/red]")
+			return 1
+
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		inserted = 0
+		updated = 0
+		skipped = 0
+
+		def _sha1_url(u: str | None) -> str | None:
+			if not u:
+				return None
+			try:
+				return hashlib.sha1(u.encode("utf-8")).hexdigest()
+			except Exception:
+				return None
+
+		limit = args.limit or 10**12
+		with SessionLocal() as session:
+			with in_path.open("r", encoding="utf-8") as f:
+				for idx, line in enumerate(f, start=1):
+					if idx > limit:
+						break
+					line = line.strip()
+					if not line:
+						continue
+					try:
+						obj = json.loads(line)
+					except Exception:
+						skipped += 1
+						continue
+					doi = (obj.get("doi") or None)
+					title = (obj.get("title") or None)
+					# basic clip for varchar
+					def _clip_local(text: str | None, max_len: int) -> str | None:
+						if text is None:
+							return None
+						return str(text)[:max_len]
+					title = _clip_local(title, 1000)
+					venue = _clip_local((obj.get("venue") or None), 255)
+					topic = _clip_local((obj.get("topic") or None), 100)
+					source_url = obj.get("source_url") or obj.get("url") or None
+					landing_url = obj.get("landing_url") or None
+					pdf_url = obj.get("pdf_url") or None
+					local_path = obj.get("pdf_path") or obj.get("local_path") or None
+					content_path = obj.get("content_path") or None
+					content_chars = obj.get("content_chars") or None
+					authors = obj.get("authors") or None
+					abstract = obj.get("abstract") or None
+					year = obj.get("year") or None
+					pub_date = obj.get("date") or obj.get("pub_date") or None
+					source = args.source_override or (obj.get("source") or None)
+					license_ = obj.get("license") or None
+					oa_status = obj.get("oa_status") or None
+					relevance_score = obj.get("relevance_score") or None
+					keywords_found = obj.get("keywords_found") or None
+					url_hash = obj.get("url_hash_sha1") or _sha1_url(pdf_url or landing_url or source_url)
+
+					existing = None
+					if doi:
+						existing = session.execute(select(Document).where(Document.doi == doi)).scalar_one_or_none()
+					if existing is None and title:
+						existing = session.execute(select(Document).where(Document.title == title)).scalar_one_or_none()
+					if existing is None and url_hash:
+						existing = session.execute(select(Document).where(Document.url_hash_sha1 == url_hash)).scalar_one_or_none()
+
+					if existing is None:
+						if args.dry_run:
+							inserted += 1
+							continue
+						doc = Document(
+							source_url=source_url or (landing_url or pdf_url or ""),
+							landing_url=landing_url,
+							pdf_url=pdf_url,
+							doi=doi,
+							title=title,
+							authors=authors,
+							venue=venue,
+							year=year,
+							pub_date=pub_date,
+							abstract=abstract,
+							local_path=local_path,
+							content_path=content_path,
+							content_chars=content_chars,
+							keywords_found=keywords_found,
+							relevance_score=relevance_score,
+							source=source,
+							license=license_,
+							oa_status=oa_status,
+							url_hash_sha1=url_hash,
+						)
+						session.add(doc)
+						inserted += 1
+					else:
+						# update only when empty
+						def _set_if_empty(attr: str, val):
+							if val is not None and getattr(existing, attr) in (None, "", 0):
+								setattr(existing, attr, val)
+						_set_if_empty("landing_url", landing_url)
+						_set_if_empty("pdf_url", pdf_url)
+						_set_if_empty("doi", doi)
+						_set_if_empty("title", title)
+						_set_if_empty("authors", authors)
+						_set_if_empty("venue", venue)
+						_set_if_empty("year", year)
+						_set_if_empty("pub_date", pub_date)
+						_set_if_empty("abstract", abstract)
+						_set_if_empty("local_path", local_path)
+						_set_if_empty("content_path", content_path)
+						_set_if_empty("content_chars", content_chars)
+						_set_if_empty("keywords_found", keywords_found)
+						try:
+							if relevance_score is not None:
+								existing.relevance_score = max(filter(lambda x: x is not None, [existing.relevance_score, relevance_score]))
+						except Exception:
+							pass
+						_set_if_empty("source", source)
+						_set_if_empty("license", license_)
+						_set_if_empty("oa_status", oa_status)
+						if (getattr(existing, "url_hash_sha1", None) in (None, "")) and url_hash:
+							existing.url_hash_sha1 = url_hash
+						updated += 1
+					if not args.dry_run and (inserted + updated) % 200 == 0:
+						session.commit()
+				# final commit
+				if not args.dry_run:
+					session.commit()
+
+		_log_json(args.log_json, "import_jsonl_done", inserted=inserted, updated=updated, skipped=skipped, file=str(in_path))
+		return 0
+
+	p_imp.set_defaults(func=_cmd_import_jsonl)
+
 	# download-open (basic)
 	p_dl = sub.add_parser("download-open", help="Download open-access links for a small batch")
 	p_dl.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
