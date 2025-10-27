@@ -176,6 +176,9 @@ def download_open_links(db_path: Path, out_dir: Path, limit: int = 10, contact_e
 		"429_5xx_count": 0,
 	}
 
+	# Track visited URLs within this run to avoid inserting duplicates in one commit
+	visited_seen: set[str] = set()
+
 	# Throttle config
 	throttle_sec = float(os.getenv("UWSS_THROTTLE_SEC", "0"))
 	jitter_max = float(os.getenv("UWSS_JITTER_SEC", "0.2"))
@@ -257,17 +260,19 @@ def download_open_links(db_path: Path, out_dir: Path, limit: int = 10, contact_e
 				doc.url_hash_sha1 = hashlib.sha1((url or "").encode("utf-8")).hexdigest()
 			except Exception:
 				doc.url_hash_sha1 = None
-			# Mark URL visited in registry (set first_seen on insert)
+			# Mark URL visited in registry (set first_seen on insert); avoid duplicate inserts in same batch
 			try:
 				from datetime import datetime
-				existing = session.get(VisitedUrl, url)
-				if existing:
-					existing.last_seen = datetime.utcnow()
-					existing.status = str(r.status_code)
-					session.add(existing)
-				else:
-					vu = VisitedUrl(url=url, first_seen=datetime.utcnow(), last_seen=datetime.utcnow(), status=str(r.status_code))
-					session.add(vu)
+				if url not in visited_seen:
+					visited_seen.add(url)
+					existing = session.get(VisitedUrl, url)
+					if existing:
+						existing.last_seen = datetime.utcnow()
+						existing.status = str(r.status_code)
+						session.add(existing)
+					else:
+						vu = VisitedUrl(url=url, first_seen=datetime.utcnow(), last_seen=datetime.utcnow(), status=str(r.status_code))
+						session.add(vu)
 			except Exception:
 				pass
 			count += 1
