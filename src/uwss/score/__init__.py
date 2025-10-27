@@ -1,3 +1,14 @@
+"""Keyword-based relevance scoring for discovered documents.
+
+The scorer builds a lightweight lexicon from domain keywords (unigrams and
+bigrams) and computes a normalized score from title and abstract tokens.
+
+Features:
+- Title-weighted scoring (title contributes more than abstract).
+- Records the matched keyword phrases into `keywords_found` for explainability.
+- Optional negative keywords: if present in title/abstract, applies a penalty
+  to reduce the final score while preserving manual review ability.
+"""
 from __future__ import annotations
 
 import json

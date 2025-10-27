@@ -1,3 +1,10 @@
+"""Database engines and lightweight migrations.
+
+This module abstracts engine creation for SQLite/Postgres and provides a
+minimal migration routine for the SQLite file-based schema used in local runs.
+In Postgres, we rely on SQLAlchemy metadata and ad-hoc CREATE INDEX commands
+exposed via CLI (`db-create-indexes`).
+"""
 from __future__ import annotations
 
 from pathlib import Path

@@ -1,3 +1,14 @@
+"""Discovery iterators for academic data sources.
+
+Each iterator encapsulates paging, retries, and minimal normalization for a
+specific public API (Semantic Scholar, Europe PMC, Crossref, arXiv, PMC, DOAJ).
+
+Design:
+- Stateless generators that yield raw-ish records; CLI layer handles DB writes
+  and deduplication (DOI/title/url_hash) plus ingestion checkpoints.
+- Built-in throttling via shared HTTP utils (cache, backoff handled in callers).
+- Resume capability via `IngestionState` in CLI commands, not here.
+"""
 from __future__ import annotations
 
 from dataclasses import dataclass

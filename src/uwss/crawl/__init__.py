@@ -1,3 +1,18 @@
+"""Crawl utilities: resolve publisher links, enrich Open Access, and download content.
+
+This module centralizes all network I/O that fetches publisher pages, follows
+redirects, enriches OA metadata (via Unpaywall), and downloads PDF/HTML files.
+
+Key design points:
+- Robustness: retries with exponential backoff; honors Retry-After; per-host
+  throttling and jitter to avoid rate-limits.
+- Idempotency: file paths and DB fields (`local_path`, `content_path`) are filled
+  only if missing; repeated runs safely skip completed work.
+- Deduplication: a per-run in-memory set plus a `visited_urls` registry prevents
+  repeated URL inserts; URL SHA1 is stored on documents for downstream checks.
+- Configurable identity: optional User-Agent rotation and optional proxies can
+  be enabled through environment variables without code changes.
+"""
 from __future__ import annotations
 
 import os
@@ -27,6 +42,17 @@ def safe_filename(s: str) -> str:
 
 
 def enrich_open_access_with_unpaywall(db_path: Path, contact_email: Optional[str] = None, limit: int = 50, db_url: Optional[str] = None) -> int:
+	"""Enrich documents with Open Access metadata from Unpaywall.
+
+	Args:
+		db_path: SQLite path (unused when db_url is provided).
+		contact_email: Contact email recommended by Unpaywall for identification.
+		limit: Maximum number of DOI entries to enrich in this run.
+		db_url: Optional SQLAlchemy URL (e.g., Postgres). When provided, overrides db_path.
+
+	Returns:
+		The number of documents updated with OA information.
+	"""
 	"""Mark documents as open_access if Unpaywall reports OA and set source_url to best OA URL."""
 	engine, SessionLocal = (create_engine_from_url(db_url) if db_url else create_sqlite_engine(db_path))
 	session = SessionLocal()
@@ -150,6 +176,25 @@ def _apply_proxy(session: requests.Session, proxy_url: Optional[str]) -> None:
 
 
 def download_open_links(db_path: Path, out_dir: Path, limit: int = 10, contact_email: Optional[str] = None, db_url: Optional[str] = None) -> int:
+	"""Download open-access documents using known PDF or landing URLs.
+
+	Behavior:
+	- Prefers `pdf_url`; falls back to `source_url` when needed.
+	- Detects file type using Content-Type, Content-Disposition, or URL suffix.
+	- Writes files into `out_dir` with stable names including the document id.
+	- Updates database fields: `local_path`, `status`, `mime_type`, `file_size`,
+	  `checksum_sha256`, `url_hash_sha1`, and the `visited_urls` registry.
+
+	Args:
+		db_path: SQLite path (unused when db_url is provided).
+		out_dir: Directory to place downloaded files.
+		limit: Maximum number of downloads in this run.
+		contact_email: Used for polite User-Agent identification.
+		db_url: Optional SQLAlchemy URL (e.g., Postgres). When provided, overrides db_path.
+
+	Returns:
+		Number of files successfully downloaded.
+	"""
 	out_dir.mkdir(parents=True, exist_ok=True)
 	engine, SessionLocal = (create_engine_from_url(db_url) if db_url else create_sqlite_engine(db_path))
 	session = SessionLocal()
@@ -286,6 +331,11 @@ def download_open_links(db_path: Path, out_dir: Path, limit: int = 10, contact_e
 
 
 def _build_session() -> requests.Session:
+	"""Create a requests session with sane retry/backoff defaults.
+
+	The session honors Retry-After, retries common transient status codes, and is
+	used uniformly for all outbound HTTP requests in this module.
+	"""
 	s = requests.Session()
 	retry = Retry(
 		total=3,
@@ -301,6 +351,23 @@ def _build_session() -> requests.Session:
 
 
 def resolve_publisher_links(db_path: Path, limit: int = 50, contact_email: Optional[str] = None, db_url: Optional[str] = None) -> int:
+	"""Follow landing pages to discover better publisher and PDF links.
+
+	Typical flow:
+	1. Start from `landing_url` or `source_url`.
+	2. If on an aggregator (e.g., Semantic Scholar), follow "View via Publisher".
+	3. On publisher page, detect PDF via common meta/link patterns or .pdf anchors.
+	4. If only DOI is known, follow doi.org redirects to derive landing or PDF.
+
+	Args:
+		db_path: SQLite path (unused when db_url is provided).
+		limit: Max number of documents to attempt in this run.
+		contact_email: Used to form a polite User-Agent.
+		db_url: Optional SQLAlchemy URL (e.g., Postgres). When provided, overrides db_path.
+
+	Returns:
+		Number of documents with improved landing/pdf links.
+	"""
 	"""Try to resolve publisher landing/PDF links starting from landing_url/source_url.
 	- For Semantic Scholar pages: follow "View via Publisher" link
 	- On publisher pages: detect PDF via common selectors and meta tags

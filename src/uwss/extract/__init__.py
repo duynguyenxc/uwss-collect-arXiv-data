@@ -1,3 +1,15 @@
+"""Content extraction: build text for HTML/PDF content.
+
+Responsibilities:
+- `extract_full_text`: read local files (PDF/HTML) and produce plain text,
+  updating `content_path` and `content_chars` in the database.
+- `scrape_full_content`: fetch landing URL and parse text for documents that
+  lack local files, respecting polite headers/timeouts.
+
+Notes:
+- Keep extraction idempotent; only fill missing fields unless overwrite=true.
+- Prefer robust libraries (pdfminer.six, BeautifulSoup) with sensible defaults.
+"""
 from __future__ import annotations
 
 from pathlib import Path

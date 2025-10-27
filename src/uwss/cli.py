@@ -1,3 +1,14 @@
+"""UWSS CLI: orchestrates discovery, scoring, fetching, extraction, and export.
+
+Usage examples:
+- Discover via Semantic Scholar, then score, fetch, extract, export.
+- Swap databases by providing --db-url (Postgres) or default to SQLite path.
+
+Design principles:
+- Single source of truth: database first (Postgres recommended for production).
+- Idempotent commands: safe to rerun; dedupe and checkpointing avoid rework.
+- Observability: JSON logs on demand; simple, copy-pastable commands.
+"""
 import argparse
 import sys
 from pathlib import Path
