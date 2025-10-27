@@ -754,6 +754,11 @@ def build_parser() -> argparse.ArgumentParser:
 				neg = [ln.strip() for ln in Path(args.negative_keywords_file).read_text(encoding="utf-8").splitlines() if ln.strip()]
 			except Exception:
 				neg = None
+		# Fall back to config negative_keywords when file not provided
+		if neg is None:
+			cfg_neg = data.get("negative_keywords")
+			if isinstance(cfg_neg, list) and cfg_neg:
+				neg = [str(x).strip() for x in cfg_neg if str(x).strip()]
 		updated = score_documents(Path(args.db), keywords, args.min, db_url=getattr(args, "db_url", None), negative_keywords=neg)
 		console.print(f"[green]Scored {updated} documents[/green]")
 		return 0
