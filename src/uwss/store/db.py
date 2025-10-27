@@ -1,3 +1,10 @@
+"""Database engines and lightweight migrations.
+
+This module abstracts engine creation for SQLite/Postgres and provides a
+minimal migration routine for the SQLite file-based schema used in local runs.
+In Postgres, we rely on SQLAlchemy metadata and ad-hoc CREATE INDEX commands
+exposed via CLI (`db-create-indexes`).
+"""
 from __future__ import annotations
 
 from pathlib import Path
@@ -81,6 +88,19 @@ def migrate_db(db_path: Path) -> None:
 				first_seen DATETIME NULL,
 				last_seen DATETIME NULL,
 				status VARCHAR(50) NULL
+			)
+			"""
+		))
+		conn.commit()
+		# Ensure ingestion_state table exists
+		conn.execute(sql_text(
+			"""
+			CREATE TABLE IF NOT EXISTS ingestion_state (
+				id INTEGER PRIMARY KEY AUTOINCREMENT,
+				source VARCHAR(50) NOT NULL,
+				checkpoint_key VARCHAR(100) NULL,
+				checkpoint_value VARCHAR(1000) NULL,
+				updated_at DATETIME NULL
 			)
 			"""
 		))

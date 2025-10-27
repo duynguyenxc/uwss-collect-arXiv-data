@@ -1,0 +1,12 @@
+{
+  "dup_doi": [
+    {
+      "doi": "",
+      "count": 10
+    }
+  ],
+  "dup_title": [],
+  "missing_core": [],
+  "invalid_year": [],
+  "missing_files": []
+}

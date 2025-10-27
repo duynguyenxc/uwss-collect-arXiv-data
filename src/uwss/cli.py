@@ -1,8 +1,21 @@
+"""UWSS CLI: orchestrates discovery, scoring, fetching, extraction, and export.
+
+Usage examples:
+- Discover via Semantic Scholar, then score, fetch, extract, export.
+- Swap databases by providing --db-url (Postgres) or default to SQLite path.
+
+Design principles:
+- Single source of truth: database first (Postgres recommended for production).
+- Idempotent commands: safe to rerun; dedupe and checkpointing avoid rework.
+- Observability: JSON logs on demand; simple, copy-pastable commands.
+"""
 import argparse
 import sys
 from pathlib import Path
 from typing import Any, Dict
 import os
+import time
+import json
 
 import yaml
 from rich.console import Console
@@ -18,6 +31,13 @@ def load_config(config_path: Path) -> Dict[str, Any]:
 	with config_path.open("r", encoding="utf-8") as f:
 		data = yaml.safe_load(f) or {}
 	return data
+# Safe clip helper for varchar columns
+def _clip(text: Any, max_len: int) -> Any:
+	try:
+		s = str(text)
+		return s[:max_len]
+	except Exception:
+		return text
 
 
 def validate_config(data: Dict[str, Any]) -> None:
@@ -36,6 +56,27 @@ def validate_config(data: Dict[str, Any]) -> None:
 		raise ValueError("domain_sources must be a non-empty list")
 	if not isinstance(data["file_types"], list) or not data["file_types"]:
 		raise ValueError("file_types must be a non-empty list")
+
+
+# Structured logging helper
+def _log_json(enabled: bool, event: str, **kwargs: Any) -> None:
+	if not enabled:
+		return
+	try:
+		payload = {"uwss_event": event}
+		payload.update(kwargs)
+		print(json.dumps(payload, ensure_ascii=False))
+	except Exception:
+		pass
+
+
+# Helper: choose DB engine from --db-url or fallback to SQLite path
+
+def _get_engine_session(args, sqlite_path: Path):
+	from .store import create_sqlite_engine, create_engine_from_url
+	if getattr(args, "db_url", None):
+		return create_engine_from_url(args.db_url)
+	return create_sqlite_engine(sqlite_path)
 
 
 def cmd_config_validate(args: argparse.Namespace) -> int:
@@ -87,6 +128,8 @@ def build_parser() -> argparse.ArgumentParser:
 
 	# db-migrate
 	p_mig = sub.add_parser("db-migrate", help="Run lightweight DB migrations")
+	# Global DB URL option via env (fallback when provided)
+	parser.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"), help="SQLAlchemy DB URL (postgresql+psycopg2://...)")
 	p_mig.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 
 	def _cmd_migrate(args: argparse.Namespace) -> int:
@@ -96,6 +139,33 @@ def build_parser() -> argparse.ArgumentParser:
 		return 0
 
 	p_mig.set_defaults(func=_cmd_migrate)
+
+	# db-create-indexes (works for SQLite and Postgres)
+	p_idx = sub.add_parser("db-create-indexes", help="Create helpful indexes (doi, lower(title), url_hash_sha1)")
+	p_idx.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+
+	def _cmd_idx(args: argparse.Namespace) -> int:
+		from sqlalchemy import text as sql_text
+		engine, _ = _get_engine_session(args, Path(args.db))
+		with engine.connect() as conn:
+			# DOI index
+			conn.execute(sql_text("CREATE INDEX IF NOT EXISTS idx_documents_doi ON documents(doi)"))
+			# lower(title) functional index (Postgres); SQLite will ignore function index but we attempt compat
+			try:
+				conn.execute(sql_text("CREATE INDEX IF NOT EXISTS idx_documents_title_lower ON documents((lower(title)))"))
+			except Exception:
+				# fallback plain title index for engines that don't support functional index
+				try:
+					conn.execute(sql_text("CREATE INDEX IF NOT EXISTS idx_documents_title ON documents(title)"))
+				except Exception:
+					pass
+			# url_hash_sha1
+			conn.execute(sql_text("CREATE INDEX IF NOT EXISTS idx_documents_urlhash ON documents(url_hash_sha1)"))
+			conn.commit()
+		console.print("[green]Indexes created (or already exist).[/green]")
+		return 0
+
+	p_idx.set_defaults(func=_cmd_idx)
 
 	# discover-openalex
 	p_openalex = sub.add_parser("discover-openalex", help="Fetch candidate metadata from OpenAlex")
@@ -117,10 +187,12 @@ def build_parser() -> argparse.ArgumentParser:
 	p_crossref.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 	p_crossref.add_argument("--max", type=int, default=100)
 	p_crossref.add_argument("--cache-ttl-sec", type=int, default=None)
+	p_crossref.add_argument("--resume", action="store_true", help="Resume from saved offset")
+	p_crossref.add_argument("--log-json", action="store_true")
 
 	def _cmd_crossref(args: argparse.Namespace) -> int:
 		from .discovery import iter_crossref_results
-		from .store import create_sqlite_engine, Document, Base
+		from .store import Document, Base
 		import json
 
 		data = load_config(Path(args.config))
@@ -130,12 +202,22 @@ def build_parser() -> argparse.ArgumentParser:
 			keywords = [k.strip() for k in Path(args.keywords_file).read_text(encoding="utf-8").splitlines() if k.strip()]
 		year_filter = data.get("year_filter")
 		contact_email = data.get("contact_email")
-		engine, SessionLocal = create_sqlite_engine(Path(args.db))
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
 		Base.metadata.create_all(engine)
 		session = SessionLocal()
+		from .store import IngestionState
+		start_offset = 0
+		if args.resume:
+			st = session.query(IngestionState).filter(IngestionState.source == "crossref", IngestionState.checkpoint_key == "offset").first()
+			if st and st.checkpoint_value:
+				try:
+					start_offset = int(st.checkpoint_value)
+				except Exception:
+					start_offset = 0
+		start_ts = time.time()
 		inserted = 0
 		try:
-			for item in iter_crossref_results(keywords, year_filter, max_records=args.max, contact_email=contact_email, cache_ttl_sec=args.cache_ttl_sec):
+			for item in iter_crossref_results(keywords, year_filter, max_records=args.max, contact_email=contact_email, cache_ttl_sec=args.cache_ttl_sec, start_offset=start_offset):
 				doi = (item.get("DOI") or "")
 				title_list = item.get("title") or []
 				title = title_list[0] if title_list else None
@@ -173,20 +255,30 @@ def build_parser() -> argparse.ArgumentParser:
 						landing_url=link or item.get("URL", ""),
 						pdf_url=pdf_url or None,
 						doi=doi,
-						title=title,
+						title=_clip(title, 1000),
 						authors=json.dumps(authors),
-						venue=(item.get("container-title") or [None])[0],
+						venue=_clip((item.get("container-title") or [None])[0], 255) if (item.get("container-title") or [None])[0] else None,
 						year=year,
 						open_access=bool(pdf_url),
 						abstract=abstract,
 						status="metadata_only",
 						source="crossref",
-						topic=", ".join(keywords[:3]) if keywords else None,
+						topic=_clip(", ".join(keywords[:3]), 100) if keywords else None,
 					)
 					session.add(doc)
 				inserted += 1
 			session.commit()
+			# save new offset state
+			if args.resume:
+				new_off = start_offset + inserted
+				st = session.query(IngestionState).filter(IngestionState.source == "crossref", IngestionState.checkpoint_key == "offset").first() or IngestionState(source="crossref", checkpoint_key="offset")
+				from datetime import datetime
+				st.checkpoint_value = str(new_off)
+				st.updated_at = datetime.utcnow()
+				session.merge(st)
+				session.commit()
 			console.print(f"[green]Inserted {inserted} Crossref records into {args.db}[/green]")
+			_log_json(args.log_json, "discover_crossref_done", inserted=inserted, elapsed_sec=round(time.time()-start_ts,3))
 			return 0
 		except Exception as e:
 			session.rollback()
@@ -203,22 +295,34 @@ def build_parser() -> argparse.ArgumentParser:
 	p_arxiv.add_argument("--keywords-file", default=None)
 	p_arxiv.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 	p_arxiv.add_argument("--max", type=int, default=50)
+	p_arxiv.add_argument("--resume", action="store_true")
+	p_arxiv.add_argument("--log-json", action="store_true")
 
 	def _cmd_arxiv(args: argparse.Namespace) -> int:
 		from .discovery import iter_arxiv_results
-		from .store import create_sqlite_engine, Document, Base
+		from .store import Document, Base
 		import json
 		data = load_config(Path(args.config))
 		validate_config(data)
 		keywords = data["domain_keywords"]
 		if args.keywords_file:
 			keywords = [k.strip() for k in Path(args.keywords_file).read_text(encoding="utf-8").splitlines() if k.strip()]
-		engine, SessionLocal = create_sqlite_engine(Path(args.db))
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
 		Base.metadata.create_all(engine)
 		session = SessionLocal()
+		from .store import IngestionState
+		start = 0
+		if args.resume:
+			st = session.query(IngestionState).filter(IngestionState.source == "arxiv", IngestionState.checkpoint_key == "start").first()
+			if st and st.checkpoint_value:
+				try:
+					start = int(st.checkpoint_value)
+				except Exception:
+					start = 0
+		start_ts = time.time()
 		inserted = 0
 		try:
-			for item in iter_arxiv_results(keywords, max_records=args.max):
+			for item in iter_arxiv_results(keywords, max_records=args.max, start=start):
 				title = item.get("title")
 				pdf_link = item.get("pdf_link")
 				year = None
@@ -237,7 +341,7 @@ def build_parser() -> argparse.ArgumentParser:
 					landing_url=item.get("id", ""),
 					pdf_url=pdf_link or None,
 					doi=None,
-					title=title,
+					title=_clip(title, 1000),
 					authors=json.dumps(authors),
 					venue="arXiv",
 					year=year,
@@ -245,12 +349,21 @@ def build_parser() -> argparse.ArgumentParser:
 					abstract=item.get("summary") or "",
 					status="metadata_only",
 					source="arxiv",
-					topic=", ".join(keywords[:3]) if keywords else None,
+					topic=_clip(", ".join(keywords[:3]), 100) if keywords else None,
 				)
 				session.add(doc)
 				inserted += 1
 			session.commit()
+			if args.resume:
+				new_start = start + inserted
+				st = session.query(IngestionState).filter(IngestionState.source == "arxiv", IngestionState.checkpoint_key == "start").first() or IngestionState(source="arxiv", checkpoint_key="start")
+				from datetime import datetime
+				st.checkpoint_value = str(new_start)
+				st.updated_at = datetime.utcnow()
+				session.merge(st)
+				session.commit()
 			console.print(f"[green]Inserted {inserted} arXiv records into {args.db}[/green]")
+			_log_json(args.log_json, "discover_arxiv_done", inserted=inserted, elapsed_sec=round(time.time()-start_ts,3))
 			return 0
 		except Exception as e:
 			session.rollback()
@@ -268,10 +381,12 @@ def build_parser() -> argparse.ArgumentParser:
 	p_eupmc.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 	p_eupmc.add_argument("--max", type=int, default=100)
 	p_eupmc.add_argument("--cache-ttl-sec", type=int, default=None)
+	p_eupmc.add_argument("--resume", action="store_true")
+	p_eupmc.add_argument("--log-json", action="store_true")
 
 	def _cmd_eupmc(args: argparse.Namespace) -> int:
 		from .discovery import iter_eupmc_results
-		from .store import create_sqlite_engine, Document, Base
+		from .store import Document, Base
 		import json
 		data = load_config(Path(args.config))
 		validate_config(data)
@@ -279,12 +394,19 @@ def build_parser() -> argparse.ArgumentParser:
 		if args.keywords_file:
 			keywords = [k.strip() for k in Path(args.keywords_file).read_text(encoding="utf-8").splitlines() if k.strip()]
 		year_filter = data.get("year_filter")
-		engine, SessionLocal = create_sqlite_engine(Path(args.db))
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
 		Base.metadata.create_all(engine)
 		session = SessionLocal()
+		from .store import IngestionState
+		start_cursor = "*"
+		if args.resume:
+			st = session.query(IngestionState).filter(IngestionState.source == "europe_pmc", IngestionState.checkpoint_key == "cursor").first()
+			if st and st.checkpoint_value:
+				start_cursor = st.checkpoint_value
+		start_ts = time.time()
 		inserted = 0
 		try:
-			for item in iter_eupmc_results(keywords, year_filter, max_records=args.max, cache_ttl_sec=args.cache_ttl_sec):
+			for item in iter_eupmc_results(keywords, year_filter, max_records=args.max, cache_ttl_sec=args.cache_ttl_sec, start_cursor=start_cursor):
 				title = item.get("title")
 				doi = item.get("doi") or item.get("DOI") or ""
 				landing_url = None
@@ -321,25 +443,220 @@ def build_parser() -> argparse.ArgumentParser:
 					landing_url=landing_url or None,
 					pdf_url=pdf_url or None,
 					doi=doi,
-					title=title,
+					title=_clip(title, 1000),
 					authors=json.dumps(authors),
-					venue=item.get("journalTitle") or item.get("bookOrReportDetails") or None,
+					venue=_clip(item.get("journalTitle") or item.get("bookOrReportDetails"), 255) if (item.get("journalTitle") or item.get("bookOrReportDetails")) else None,
 					year=year,
 					open_access=True if pdf_url else False,
 					abstract=item.get("abstractText") or "",
 					status="metadata_only",
 					source="europe_pmc",
-					topic=", ".join(keywords[:3]) if keywords else None,
+					topic=_clip(", ".join(keywords[:3]), 100) if keywords else None,
 				)
 				session.add(doc)
 				inserted += 1
 			session.commit()
+			# save new cursor (naive: not available here; leave as provided)
+			if args.resume and inserted > 0:
+				st = session.query(IngestionState).filter(IngestionState.source == "europe_pmc", IngestionState.checkpoint_key == "cursor").first() or IngestionState(source="europe_pmc", checkpoint_key="cursor")
+				from datetime import datetime
+				st.checkpoint_value = start_cursor
+				st.updated_at = datetime.utcnow()
+				session.merge(st)
+				session.commit()
 			console.print(f"[green]Inserted {inserted} Europe PMC records into {args.db}[/green]")
+			_log_json(args.log_json, "discover_eupmc_done", inserted=inserted, elapsed_sec=round(time.time()-start_ts,3))
 			return 0
 		finally:
 			session.close()
 
 	p_eupmc.set_defaults(func=_cmd_eupmc)
+
+	# discover-pmc
+	p_pmc = sub.add_parser("discover-pmc", help="Fetch candidate metadata from PubMed Central (E-utilities)")
+	p_pmc.add_argument("--config", default=str(Path("config") / "config.yaml"))
+	p_pmc.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_pmc.add_argument("--max", type=int, default=50)
+	p_pmc.add_argument("--cache-ttl-sec", type=int, default=None)
+	p_pmc.add_argument("--resume", action="store_true")
+	p_pmc.add_argument("--log-json", action="store_true")
+
+	def _cmd_pmc(args: argparse.Namespace) -> int:
+		from .discovery import iter_pmc_results
+		from .store import Document, Base, IngestionState
+		import json
+		data = load_config(Path(args.config))
+		validate_config(data)
+		keywords = data["domain_keywords"]
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		Base.metadata.create_all(engine)
+		session = SessionLocal()
+		retstart = 0
+		if args.resume:
+			st = session.query(IngestionState).filter(IngestionState.source == "pmc", IngestionState.checkpoint_key == "retstart").first()
+			if st and st.checkpoint_value:
+				try:
+					retstart = int(st.checkpoint_value)
+				except Exception:
+					retstart = 0
+		start_ts = time.time()
+		inserted = 0
+		try:
+			for item in iter_pmc_results(keywords, max_records=args.max, cache_ttl_sec=args.cache_ttl_sec, start_retstart=retstart):
+				title = item.get("title") or (item.get("sorttitle") or {}).get("#text")
+				journal = (item.get("fulljournalname") or item.get("source"))
+				year = None
+				try:
+					year = int((item.get("pubdate") or "")[:4]) if item.get("pubdate") else None
+				except Exception:
+					year = None
+				pmcid = item.get("pmcid")
+				if not pmcid:
+					for aid in (item.get("articleids") or []):
+						if str(aid.get("idtype")).lower() == "pmcid" and aid.get("value"):
+							pmcid = aid.get("value")
+							break
+				landing = item.get("elocationid") or item.get("link") or None
+				if (not landing) and pmcid:
+					landing = f"https://www.ncbi.nlm.nih.gov/pmc/articles/{pmcid}/"
+				pdf_url = None
+				authors = []
+				aus = item.get("authors")
+				if isinstance(us := item.get("authors"), list):
+					for au in us:
+						name = " ".join([au.get("firstname") or "", au.get("lastname") or ""]).strip()
+						if name:
+							authors.append(name)
+				elif isinstance(us, dict):
+					for au in (us.get("author") or []):
+						name = " ".join([au.get("firstname") or "", au.get("lastname") or ""]).strip()
+						if name:
+							authors.append(name)
+				# dedupe by title
+				exists = None
+				if title:
+					exists = session.query(Document).filter(Document.title == title).first()
+				if exists:
+					continue
+				doc = Document(
+					source_url=landing or "",
+					landing_url=landing or None,
+					pdf_url=pdf_url,
+					doi=None,
+					title=_clip(title, 1000),
+					authors=json.dumps(authors),
+					venue=_clip(journal, 255) if journal else None,
+					year=year,
+					open_access=True if pdf_url else False,
+					abstract=None,
+					status="metadata_only",
+					source="pmc",
+					topic=_clip(", ".join(keywords[:3]), 100) if keywords else None,
+				)
+				session.add(doc)
+				inserted += 1
+			session.commit()
+			# save state
+			if args.resume and inserted > 0:
+				st = session.query(IngestionState).filter(IngestionState.source == "pmc", IngestionState.checkpoint_key == "retstart").first() or IngestionState(source="pmc", checkpoint_key="retstart")
+				from datetime import datetime
+				st.checkpoint_value = str(retstart + inserted)
+				st.updated_at = datetime.utcnow()
+				session.merge(st)
+				session.commit()
+			console.print(f"[green]Inserted {inserted} PMC records into {args.db}[/green]")
+			_log_json(args.log_json, "discover_pmc_done", inserted=inserted, elapsed_sec=round(time.time()-start_ts,3))
+			return 0
+		finally:
+			session.close()
+
+	p_pmc.set_defaults(func=_cmd_pmc)
+
+	# discover-doaj
+	p_doaj = sub.add_parser("discover-doaj", help="Fetch candidate metadata from DOAJ API")
+	p_doaj.add_argument("--config", default=str(Path("config") / "config.yaml"))
+	p_doaj.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_doaj.add_argument("--max", type=int, default=50)
+	p_doaj.add_argument("--cache-ttl-sec", type=int, default=None)
+	p_doaj.add_argument("--resume", action="store_true")
+	p_doaj.add_argument("--log-json", action="store_true")
+
+	def _cmd_doaj(args: argparse.Namespace) -> int:
+		from .discovery import iter_doaj_results
+		from .store import Document, Base, IngestionState
+		import json
+		data = load_config(Path(args.config))
+		validate_config(data)
+		keywords = data["domain_keywords"]
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		Base.metadata.create_all(engine)
+		session = SessionLocal()
+		page = 1
+		if args.resume:
+			st = session.query(IngestionState).filter(IngestionState.source == "doaj", IngestionState.checkpoint_key == "page").first()
+			if st and st.checkpoint_value:
+				try:
+					page = int(st.checkpoint_value)
+				except Exception:
+					page = 1
+		start_ts = time.time()
+		inserted = 0
+		try:
+			for item in iter_doaj_results(keywords, max_records=args.max, cache_ttl_sec=args.cache_ttl_sec, start_page=page):
+				title = ((item.get("bibjson") or {}).get("title"))
+				journal = ((item.get("bibjson") or {}).get("journal") or {}).get("title")
+				year = None
+				try:
+					year = int(((item.get("bibjson") or {}).get("year") or 0)) or None
+				except Exception:
+					year = None
+				landing = None
+				links = ((item.get("bibjson") or {}).get("link") or [])
+				pdf_url = None
+				for lk in links:
+					if str(lk.get("type")).lower() == "fulltext" and lk.get("url"):
+						landing = lk.get("url")
+					if str(lk.get("content_type") or "").lower() == "application/pdf" and lk.get("url"):
+						pdf_url = lk.get("url")
+				authors = [a.get("name") for a in ((item.get("bibjson") or {}).get("author") or []) if a.get("name")]
+				# dedupe by title
+				exists = None
+				if title:
+					exists = session.query(Document).filter(Document.title == title).first()
+				if exists:
+					continue
+				doc = Document(
+					source_url=landing or "",
+					landing_url=landing or None,
+					pdf_url=pdf_url or None,
+					doi=None,
+					title=_clip(title, 1000),
+					authors=json.dumps(authors),
+					venue=_clip(journal, 255) if journal else None,
+					year=year,
+					open_access=True if pdf_url else False,
+					abstract=None,
+					status="metadata_only",
+					source="doaj",
+					topic=_clip(", ".join(keywords[:3]), 100) if keywords else None,
+				)
+				session.add(doc)
+				inserted += 1
+			session.commit()
+			if args.resume and inserted > 0:
+				st = session.query(IngestionState).filter(IngestionState.source == "doaj", IngestionState.checkpoint_key == "page").first() or IngestionState(source="doaj", checkpoint_key="page")
+				from datetime import datetime
+				st.checkpoint_value = str(page + 1)
+				st.updated_at = datetime.utcnow()
+				session.merge(st)
+				session.commit()
+			console.print(f"[green]Inserted {inserted} DOAJ records into {args.db}[/green]")
+			_log_json(args.log_json, "discover_doaj_done", inserted=inserted, elapsed_sec=round(time.time()-start_ts,3))
+			return 0
+		finally:
+			session.close()
+
+	p_doaj.set_defaults(func=_cmd_doaj)
 
 	# discover-semanticscholar
 	p_s2 = sub.add_parser("discover-semanticscholar", help="Fetch candidate metadata from Semantic Scholar")
@@ -349,22 +666,34 @@ def build_parser() -> argparse.ArgumentParser:
 	p_s2.add_argument("--max", type=int, default=100)
 	p_s2.add_argument("--api-key", default=None, help="Semantic Scholar API key (optional)")
 	p_s2.add_argument("--cache-ttl-sec", type=int, default=None)
+	p_s2.add_argument("--resume", action="store_true")
+	p_s2.add_argument("--log-json", action="store_true")
 
 	def _cmd_s2(args: argparse.Namespace) -> int:
 		from .discovery import iter_semanticscholar_results
-		from .store import create_sqlite_engine, Document, Base
+		from .store import Document, Base
 		import json
 		data = load_config(Path(args.config))
 		validate_config(data)
 		keywords = data["domain_keywords"]
 		if args.keywords_file:
 			keywords = [k.strip() for k in Path(args.keywords_file).read_text(encoding="utf-8").splitlines() if k.strip()]
-		engine, SessionLocal = create_sqlite_engine(Path(args.db))
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
 		Base.metadata.create_all(engine)
 		session = SessionLocal()
+		from .store import IngestionState
+		start_offset = 0
+		if args.resume:
+			st = session.query(IngestionState).filter(IngestionState.source == "semantic_scholar", IngestionState.checkpoint_key == "offset").first()
+			if st and st.checkpoint_value:
+				try:
+					start_offset = int(st.checkpoint_value)
+				except Exception:
+					start_offset = 0
+		start_ts = time.time()
 		inserted = 0
 		try:
-			for item in iter_semanticscholar_results(keywords, max_records=args.max, api_key=args.api_key, cache_ttl_sec=args.cache_ttl_sec):
+			for item in iter_semanticscholar_results(keywords, max_records=args.max, api_key=args.api_key, cache_ttl_sec=args.cache_ttl_sec, start_offset=start_offset):
 				title = item.get("title")
 				year = item.get("year")
 				venue = item.get("venue") or (item.get("journal") or {}).get("name")
@@ -388,20 +717,29 @@ def build_parser() -> argparse.ArgumentParser:
 					landing_url=url or None,
 					pdf_url=pdf_url or None,
 					doi=doi,
-					title=title,
+					title=_clip(title, 1000),
 					authors=json.dumps(authors),
-					venue=venue,
+					venue=_clip(venue, 255) if venue else None,
 					year=int(year) if isinstance(year, int) else (int(year) if str(year).isdigit() else None),
 					open_access=True if pdf_url else False,
 					abstract=abstract,
 					status="metadata_only",
 					source="semantic_scholar",
-					topic=", ".join(keywords[:3]) if keywords else None,
+					topic=_clip(", ".join(keywords[:3]), 100) if keywords else None,
 				)
 				session.add(doc)
 				inserted += 1
 			session.commit()
+			if args.resume:
+				new_off = start_offset + inserted
+				st = session.query(IngestionState).filter(IngestionState.source == "semantic_scholar", IngestionState.checkpoint_key == "offset").first() or IngestionState(source="semantic_scholar", checkpoint_key="offset")
+				from datetime import datetime
+				st.checkpoint_value = str(new_off)
+				st.updated_at = datetime.utcnow()
+				session.merge(st)
+				session.commit()
 			console.print(f"[green]Inserted {inserted} Semantic Scholar records into {args.db}[/green]")
+			_log_json(args.log_json, "discover_s2_done", inserted=inserted, elapsed_sec=round(time.time()-start_ts,3))
 			return 0
 		finally:
 			session.close()
@@ -413,13 +751,26 @@ def build_parser() -> argparse.ArgumentParser:
 	p_score.add_argument("--config", default=str(Path("config") / "config.yaml"))
 	p_score.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 	p_score.add_argument("--min", type=float, default=0.0)
+	p_score.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
+	p_score.add_argument("--negative-keywords-file", default=None)
 
 	def _cmd_score(args: argparse.Namespace) -> int:
 		from .score import score_documents
 		data = load_config(Path(args.config))
 		validate_config(data)
 		keywords = data["domain_keywords"]
-		updated = score_documents(Path(args.db), keywords, args.min)
+		neg = None
+		if args.negative_keywords_file:
+			try:
+				neg = [ln.strip() for ln in Path(args.negative_keywords_file).read_text(encoding="utf-8").splitlines() if ln.strip()]
+			except Exception:
+				neg = None
+		# Fall back to config negative_keywords when file not provided
+		if neg is None:
+			cfg_neg = data.get("negative_keywords")
+			if isinstance(cfg_neg, list) and cfg_neg:
+				neg = [str(x).strip() for x in cfg_neg if str(x).strip()]
+		updated = score_documents(Path(args.db), keywords, args.min, db_url=getattr(args, "db_url", None), negative_keywords=neg)
 		console.print(f"[green]Scored {updated} documents[/green]")
 		return 0
 
@@ -429,10 +780,11 @@ def build_parser() -> argparse.ArgumentParser:
 	p_xt = sub.add_parser("extract-text-excerpt", help="Populate text_excerpt from abstract/title (stub)")
 	p_xt.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 	p_xt.add_argument("--limit", type=int, default=30)
+	p_xt.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
 
 	def _cmd_xt(args: argparse.Namespace) -> int:
 		from .extract import extract_text_excerpt
-		n = extract_text_excerpt(Path(args.db), limit=args.limit)
+		n = extract_text_excerpt(Path(args.db), limit=args.limit, db_url=getattr(args, "db_url", None))
 		console.print(f"[green]Populated text_excerpt for {n} records[/green]")
 		return 0
 
@@ -443,14 +795,34 @@ def build_parser() -> argparse.ArgumentParser:
 	p_xf.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 	p_xf.add_argument("--content-dir", default=str(Path("data") / "content"))
 	p_xf.add_argument("--limit", type=int, default=50)
+	p_xf.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
 
 	def _cmd_xf(args: argparse.Namespace) -> int:
 		from .extract import extract_full_text
-		n = extract_full_text(Path(args.db), Path(args.content_dir), limit=args.limit)
+		n = extract_full_text(Path(args.db), Path(args.content_dir), limit=args.limit, db_url=getattr(args, "db_url", None))
 		console.print(f"[green]Extracted full text for {n} records[/green]")
 		return 0
 
 	p_xf.set_defaults(func=_cmd_xf)
+
+	# scrape-full-content (from landing/source URL)
+	p_sfc = sub.add_parser("scrape-full-content", help="Fetch landing/source URL and extract full content to data/content")
+	p_sfc.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_sfc.add_argument("--content-dir", default=str(Path("data") / "content"))
+	p_sfc.add_argument("--limit", type=int, default=50)
+	p_sfc.add_argument("--config", default=str(Path("config") / "config.yaml"))
+	p_sfc.add_argument("--overwrite", action="store_true")
+	p_sfc.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
+
+	def _cmd_sfc(args: argparse.Namespace) -> int:
+		from .extract import scrape_full_content
+		data = load_config(Path(args.config))
+		contact_email = data.get("contact_email")
+		n = scrape_full_content(Path(args.db), Path(args.content_dir), limit=args.limit, contact_email=contact_email, overwrite=args.overwrite, db_url=getattr(args, "db_url", None))
+		console.print(f"[green]Scraped full content for {n} URLs[/green]")
+		return 0
+
+	p_sfc.set_defaults(func=_cmd_sfc)
 
 	# s3-upload (optional: upload downloaded files to S3)
 	p_s3 = sub.add_parser("s3-upload", help="Upload files from data/files to S3 bucket/prefix")
@@ -475,8 +847,8 @@ def build_parser() -> argparse.ArgumentParser:
 
 	def _cmd_del(args: argparse.Namespace) -> int:
 		from sqlalchemy import select
-		from .store import create_sqlite_engine, Document
-		engine, SessionLocal = create_sqlite_engine(Path(args.db))
+		from .store import Document
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
 		s = SessionLocal()
 		try:
 			d = s.get(Document, args.id)
@@ -504,14 +876,22 @@ def build_parser() -> argparse.ArgumentParser:
 	p_export.add_argument("--skip-missing-core", action="store_true")
 	# include-new-fields
 	p_export.add_argument("--include-provenance", action="store_true")
+	# embed content text (use with caution for large outputs)
+	p_export.add_argument("--embed-content", action="store_true")
+	# require at least one matched keyword/phrase (from score-keywords)
+	p_export.add_argument("--require-match", action="store_true")
+	# logging
+	p_export.add_argument("--log-json", action="store_true")
 	# include-full-text excerpt
 	p_export.add_argument("--include-full-text", action="store_true")
+	# negative keywords filter file (one per line)
+	p_export.add_argument("--negative-keywords-file", default=None)
 
 	def _cmd_export(args: argparse.Namespace) -> int:
 		from sqlalchemy import select
-		from .store import create_sqlite_engine, Document
+		from .store import Document
 		import json, csv
-		engine, SessionLocal = create_sqlite_engine(Path(args.db))
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
 		session = SessionLocal()
 		try:
 			q = session.execute(select(Document))
@@ -523,6 +903,17 @@ def build_parser() -> argparse.ArgumentParser:
 					continue
 				if args.skip_missing_core and (not d.title and not d.doi):
 					continue
+				if args.require_match:
+					kf = (d.keywords_found or "").strip()
+					if not kf or kf == "[]":
+						continue
+				# negative keyword filter (simple substring check in title/abstract/excerpt)
+				nk_set = None
+				if args.negative_keywords_file:
+					try:
+						nk_set = set([ln.strip().lower() for ln in Path(args.negative_keywords_file).read_text(encoding="utf-8").splitlines() if ln.strip()])
+					except Exception:
+						nk_set = None
 				row = {
 					"id": d.id,
 					"source_url": d.source_url,
@@ -547,8 +938,18 @@ def build_parser() -> argparse.ArgumentParser:
 					"oa_status": d.oa_status,
 					"topic": d.topic,
 				}
+				if nk_set:
+					txt = ((d.title or "") + "\n" + (d.abstract or "") + "\n" + (getattr(d, "text_excerpt", None) or "")).lower()
+					if any(neg in txt for neg in nk_set):
+						continue
 				if args.include_full_text:
 					row["text_excerpt"] = getattr(d, "text_excerpt", None)
+				if args.embed_content:
+					try:
+						cp = getattr(d, "content_path", None)
+						row["full_content"] = Path(cp).read_text(encoding="utf-8") if cp else None
+					except Exception:
+						row["full_content"] = None
 				if args.include_provenance:
 					row["checksum_sha256"] = getattr(d, "checksum_sha256", None)
 					row["mime_type"] = getattr(d, "mime_type", None)
@@ -604,11 +1005,160 @@ def build_parser() -> argparse.ArgumentParser:
 				else:
 					raise ValueError("Unsupported extension. Use .jsonl or .csv")
 			console.print(f"[green]Exported {len(rows)} records to {args.out}[/green]")
+			_log_json(args.log_json, "export_done", out=str(args.out), count=len(rows))
 			return 0
 		finally:
 			session.close()
 
 	p_export.set_defaults(func=_cmd_export)
+
+	# import-jsonl: import an exported JSONL into DB with dedupe (DOI/title/url hash)
+	p_imp = sub.add_parser("import-jsonl", help="Import JSONL into DB with dedupe (DOI/title/url hash)")
+	p_imp.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_imp.add_argument("--in", dest="in_file", required=True, help="Input JSONL file path")
+	p_imp.add_argument("--source-override", default=None, help="Override source column for imported rows")
+	p_imp.add_argument("--limit", type=int, default=None)
+	p_imp.add_argument("--dry-run", action="store_true")
+	p_imp.add_argument("--log-json", action="store_true")
+
+	def _cmd_import_jsonl(args: argparse.Namespace) -> int:
+		import hashlib
+		from sqlalchemy import select
+		from .store import Document
+
+		in_path = Path(args.in_file)
+		if not in_path.exists():
+			console.print(f"[red]Input not found: {in_path}[/red]")
+			return 1
+
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		inserted = 0
+		updated = 0
+		skipped = 0
+
+		def _sha1_url(u: str | None) -> str | None:
+			if not u:
+				return None
+			try:
+				return hashlib.sha1(u.encode("utf-8")).hexdigest()
+			except Exception:
+				return None
+
+		limit = args.limit or 10**12
+		with SessionLocal() as session:
+			with in_path.open("r", encoding="utf-8") as f:
+				for idx, line in enumerate(f, start=1):
+					if idx > limit:
+						break
+					line = line.strip()
+					if not line:
+						continue
+					try:
+						obj = json.loads(line)
+					except Exception:
+						skipped += 1
+						continue
+					doi = (obj.get("doi") or None)
+					title = (obj.get("title") or None)
+					# basic clip for varchar
+					def _clip_local(text: str | None, max_len: int) -> str | None:
+						if text is None:
+							return None
+						return str(text)[:max_len]
+					title = _clip_local(title, 1000)
+					venue = _clip_local((obj.get("venue") or None), 255)
+					topic = _clip_local((obj.get("topic") or None), 100)
+					source_url = obj.get("source_url") or obj.get("url") or None
+					landing_url = obj.get("landing_url") or None
+					pdf_url = obj.get("pdf_url") or None
+					local_path = obj.get("pdf_path") or obj.get("local_path") or None
+					content_path = obj.get("content_path") or None
+					content_chars = obj.get("content_chars") or None
+					authors = obj.get("authors") or None
+					abstract = obj.get("abstract") or None
+					year = obj.get("year") or None
+					pub_date = obj.get("date") or obj.get("pub_date") or None
+					source = args.source_override or (obj.get("source") or None)
+					license_ = obj.get("license") or None
+					oa_status = obj.get("oa_status") or None
+					relevance_score = obj.get("relevance_score") or None
+					keywords_found = obj.get("keywords_found") or None
+					url_hash = obj.get("url_hash_sha1") or _sha1_url(pdf_url or landing_url or source_url)
+
+					existing = None
+					if doi:
+						existing = session.execute(select(Document).where(Document.doi == doi)).scalar_one_or_none()
+					if existing is None and title:
+						existing = session.execute(select(Document).where(Document.title == title)).scalar_one_or_none()
+					if existing is None and url_hash:
+						existing = session.execute(select(Document).where(Document.url_hash_sha1 == url_hash)).scalar_one_or_none()
+
+					if existing is None:
+						if args.dry_run:
+							inserted += 1
+							continue
+						doc = Document(
+							source_url=source_url or (landing_url or pdf_url or ""),
+							landing_url=landing_url,
+							pdf_url=pdf_url,
+							doi=doi,
+							title=title,
+							authors=authors,
+							venue=venue,
+							year=year,
+							pub_date=pub_date,
+							abstract=abstract,
+							local_path=local_path,
+							content_path=content_path,
+							content_chars=content_chars,
+							keywords_found=keywords_found,
+							relevance_score=relevance_score,
+							source=source,
+							license=license_,
+							oa_status=oa_status,
+							url_hash_sha1=url_hash,
+						)
+						session.add(doc)
+						inserted += 1
+					else:
+						# update only when empty
+						def _set_if_empty(attr: str, val):
+							if val is not None and getattr(existing, attr) in (None, "", 0):
+								setattr(existing, attr, val)
+						_set_if_empty("landing_url", landing_url)
+						_set_if_empty("pdf_url", pdf_url)
+						_set_if_empty("doi", doi)
+						_set_if_empty("title", title)
+						_set_if_empty("authors", authors)
+						_set_if_empty("venue", venue)
+						_set_if_empty("year", year)
+						_set_if_empty("pub_date", pub_date)
+						_set_if_empty("abstract", abstract)
+						_set_if_empty("local_path", local_path)
+						_set_if_empty("content_path", content_path)
+						_set_if_empty("content_chars", content_chars)
+						_set_if_empty("keywords_found", keywords_found)
+						try:
+							if relevance_score is not None:
+								existing.relevance_score = max(filter(lambda x: x is not None, [existing.relevance_score, relevance_score]))
+						except Exception:
+							pass
+						_set_if_empty("source", source)
+						_set_if_empty("license", license_)
+						_set_if_empty("oa_status", oa_status)
+						if (getattr(existing, "url_hash_sha1", None) in (None, "")) and url_hash:
+							existing.url_hash_sha1 = url_hash
+						updated += 1
+					if not args.dry_run and (inserted + updated) % 200 == 0:
+						session.commit()
+				# final commit
+				if not args.dry_run:
+					session.commit()
+
+		_log_json(args.log_json, "import_jsonl_done", inserted=inserted, updated=updated, skipped=skipped, file=str(in_path))
+		return 0
+
+	p_imp.set_defaults(func=_cmd_import_jsonl)
 
 	# download-open (basic)
 	p_dl = sub.add_parser("download-open", help="Download open-access links for a small batch")
@@ -616,15 +1166,16 @@ def build_parser() -> argparse.ArgumentParser:
 	p_dl.add_argument("--outdir", default=str(Path("data") / "files"))
 	p_dl.add_argument("--limit", type=int, default=5)
 	p_dl.add_argument("--config", default=str(Path("config") / "config.yaml"))
+	p_dl.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
 
 	def _cmd_dl(args: argparse.Namespace) -> int:
 		from .crawl import download_open_links, enrich_open_access_with_unpaywall
 		data = load_config(Path(args.config))
 		contact_email = data.get("contact_email")
 		# Try to enrich OA first to improve hit rate
-		enriched = enrich_open_access_with_unpaywall(Path(args.db), contact_email=contact_email, limit=50)
+		enriched = enrich_open_access_with_unpaywall(Path(args.db), contact_email=contact_email, limit=50, db_url=getattr(args, "db_url", None))
 		console.print(f"[blue]Enriched OA via Unpaywall: {enriched}[/blue]")
-		n = download_open_links(Path(args.db), Path(args.outdir), limit=args.limit, contact_email=contact_email)
+		n = download_open_links(Path(args.db), Path(args.outdir), limit=args.limit, contact_email=contact_email, db_url=getattr(args, "db_url", None))
 		console.print(f"[green]Downloaded {n} files[/green]")
 		return 0
 
@@ -638,9 +1189,12 @@ def build_parser() -> argparse.ArgumentParser:
 	p_fetch.add_argument("--config", default=str(Path("config") / "config.yaml"))
 	p_fetch.add_argument("--throttle-sec", type=float, default=None, help="Global per-host throttle seconds (override env UWSS_THROTTLE_SEC)")
 	p_fetch.add_argument("--jitter-sec", type=float, default=None, help="Extra random jitter seconds (override env UWSS_JITTER_SEC)")
+	p_fetch.add_argument("--log-json", action="store_true")
+	p_fetch.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
 
 	def _cmd_fetch(args: argparse.Namespace) -> int:
 		from .crawl import download_open_links, enrich_open_access_with_unpaywall
+		start = time.time()
 		data = load_config(Path(args.config))
 		contact_email = data.get("contact_email")
 		# allow overrides for throttle/jitter via flags
@@ -648,10 +1202,19 @@ def build_parser() -> argparse.ArgumentParser:
 			os.environ["UWSS_THROTTLE_SEC"] = str(args.throttle_sec)
 		if args.jitter_sec is not None:
 			os.environ["UWSS_JITTER_SEC"] = str(args.jitter_sec)
-		enriched = enrich_open_access_with_unpaywall(Path(args.db), contact_email=contact_email, limit=200)
+		# resolve publisher links first to improve pdf_url hit rate
+		try:
+			from .crawl import resolve_publisher_links
+			resolved = resolve_publisher_links(Path(args.db), limit=200, contact_email=contact_email, db_url=getattr(args, "db_url", None))
+			_log_json(args.log_json, "resolve_publisher_done", resolved=resolved)
+		except Exception:
+			pass
+		enriched = enrich_open_access_with_unpaywall(Path(args.db), contact_email=contact_email, limit=200, db_url=getattr(args, "db_url", None))
 		console.print(f"[blue]Enriched OA via Unpaywall: {enriched}[/blue]")
-		n = download_open_links(Path(args.db), Path(args.outdir), limit=args.limit, contact_email=contact_email)
+		n = download_open_links(Path(args.db), Path(args.outdir), limit=args.limit, contact_email=contact_email, db_url=getattr(args, "db_url", None))
 		console.print(f"[green]Downloaded {n} files[/green]")
+		elapsed = round(time.time() - start, 3)
+		_log_json(args.log_json, "fetch_done", elapsed_sec=elapsed, enriched=enriched, downloaded=n)
 		return 0
 
 	p_fetch.set_defaults(func=_cmd_fetch)
@@ -709,13 +1272,15 @@ def build_parser() -> argparse.ArgumentParser:
 	p_stats = sub.add_parser("stats", help="Show dataset statistics (counts, OA ratio, by source/year)")
 	p_stats.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 	p_stats.add_argument("--json-out", default=None)
+	p_stats.add_argument("--log-json", action="store_true")
 
 	def _cmd_stats(args: argparse.Namespace) -> int:
 		from sqlalchemy import select, func
-		from .store import create_sqlite_engine, Document
+		from .store import Document
 		import json
-		engine, SessionLocal = create_sqlite_engine(Path(args.db))
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
 		s = SessionLocal()
+		start = time.time()
 		try:
 			stats = {}
 			# totals
@@ -735,6 +1300,8 @@ def build_parser() -> argparse.ArgumentParser:
 				Path(args.json_out).parent.mkdir(parents=True, exist_ok=True)
 				Path(args.json_out).write_text(json.dumps(stats, ensure_ascii=False, indent=2), encoding="utf-8")
 				console.print(f"[green]Saved stats to {args.json_out}[/green]")
+			elapsed = round(time.time() - start, 3)
+			_log_json(args.log_json, "stats_done", elapsed_sec=elapsed, **stats)
 			return 0
 		finally:
 			s.close()
@@ -748,9 +1315,9 @@ def build_parser() -> argparse.ArgumentParser:
 
 	def _cmd_validate(args: argparse.Namespace) -> int:
 		from sqlalchemy import select, func
-		from .store import create_sqlite_engine, Document
+		from .store import Document
 		import json, os
-		engine, SessionLocal = create_sqlite_engine(Path(args.db))
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
 		s = SessionLocal()
 		issues = {"dup_doi": [], "dup_title": [], "missing_core": [], "invalid_year": [], "missing_files": []}
 		try:

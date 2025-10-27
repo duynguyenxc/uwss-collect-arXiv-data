@@ -1,3 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+.venv/
+
+# OS/Editors
+.DS_Store
+.idea/
+
+# Generated data
+data/cache/
+data/files/
+data/content/
+data/export/*.jsonl
+data/export/*.csv
+
+# Logs
+*.log
 __pycache__/
 .venv/
 .cursor/

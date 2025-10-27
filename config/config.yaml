@@ -9,6 +9,21 @@
   - wet-dry cyclic exposure concrete experiment
   - reinforced concrete crack width over time
   - reinforced concrete mass loss rebar corrosion
+  - reinforced concrete deterioration
+  - corrosion-induced cracking in reinforced concrete
+  - carbonation induced corrosion reinforced concrete
+  - chloride ingress rapid migration test concrete
+  - electrochemical impedance spectroscopy concrete corrosion
+  - impressed current accelerated corrosion concrete
+  - galvanostatic corrosion test reinforced concrete
+  - time series corrosion monitoring reinforced concrete
+  - sensor monitoring rebar corrosion concrete
+  - half-cell potential mapping reinforced concrete
+  - service life prediction chloride diffusion concrete
+  - concrete cover depth effect on corrosion
+  - long-term exposure marine chloride reinforced concrete
+  - concrete carbonation depth measurement
+  - corrosion rate measurement linear polarization resistance concrete
 domain_sources:
   - https://www.crossref.org
   - https://arxiv.org
@@ -31,6 +46,19 @@ contact_email: ddnguyen@go.olemiss.edu
 user_agent: "uwss-bot/0.1 (+ddnguyen@go.olemiss.edu)"
 timeout_sec: 30
 retry_attempts: 3
+negative_keywords:
+  - deep learning
+  - neural network
+  - machine learning
+  - transformer
+  - convolutional
+  - computer vision
+  - image segmentation
+  - object detection
+  - LLM
+  - GAN
+  - big data
+  - blockchain
 scrapy_whitelist_domains:
   - www.concrete.org
   - www.bzhb.ru
