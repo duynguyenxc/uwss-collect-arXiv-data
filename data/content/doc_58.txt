@@ -1,0 +1,1623 @@
+Journal of Materials Science Research; Vol. 12, No. 2; 2023 
+ISSN 1927-0585      E-ISSN 1927-0593 
+Published by Canadian Center of Science and Education 
+
+Correlation of Accelerated Corrosion and Real Reinforced Concrete 
+Water Structures   
+
+1 Department of Civil Engineering, South Eastern Kenya University, Kitui, Kenya 
+
+Correspondence: Philip Mogire, Department of Civil, Construction and Environmental Engineering, South Eastern 
+Kenya University, 170,90200, Kitui, Kenya. E-mail: philosiemo@yahoo.com 
+
+Philip Mogire1 
+
+Received: June 20, 20233 
+
+Accepted: July 28, 2023 
+
+Online Published: August 15, 2023 
+
+doi:10.5539/jmsr.v12n2p88                      URL: https://doi.org/10.5539/jmsr.v12n2p88 
+
+Abstract 
+
+The service life of reinforced concrete constitutes the initiation and propagation period. Accelerated corrosion tests 
+are carried out to obtain results in modelling the Service life of reinforced concrete structures. Its erroneous to 
+undertake a direct linear extrapolation of accelerated test results to real structures in predicting their service life. 
+This research examines the relationship between the result from accelerated corrosion and real reinforced concrete 
+water structures. The physical and chemical properties of the materials used in the study were investigated for 
+compliance for use in reinforced concrete water structures. Concrete of three classes M25, M30 and M35 were 
+used to cast accelerated corrosion test samples. For each class 9 concrete samples of diameter 100 mm, 130 mm 
+and 150mm respectively and 300mm long were prepared. A 10 mm diameter bar, 400 mm  long was centrally 
+inserted during casting. After curing the test samples were immersed in a 3.5% solution of sodium chloride solution 
+under 6 V. The accelerated corrosion specimens were monitored for onset of cracks and stopped when the cracks 
+were 0.2 mm in width. Using the accelerated corrosion and real reinforced concrete results, a parametric study of 
+the propagation period was done and a model proposed. From the results the proposed and published propagation 
+period model compares well. The result from accelerated corrosion and real reinforced concrete water structures 
+lineally increase for the propagation period. The proposed model can be considered as an input parameter for the 
+service life of actual reinforced concrete water structures and contribute to their optimum performance.     
+
+Keywords: Service Life model, Corrosion, Real Reinforced Concrete Structures.   
+
+1. Introduction 
+
+Reinforced  concrete  deterioration  due  to  corrosion  resulting  from  chloride  ingress  or  carbonation  plays  a 
+significant role in reduction of the design service life of reinforced concrete water structures attracting researchers 
+of various disciplines during the past three decades (Hossein, Keivan, & Hashemian). Metals release the potential 
+energy during the corrosion process after reacting with the favorable corrosive species. The metals then revert to 
+compounds  more or  less  similar  to  their  original  states.  The  energy  stored  during  melting  and released  during 
+corrosion  supplies  the  driving  potential  for  the  corrosion  process  to  take  place  (Palanisamy,  2019).  Corrosion 
+occurs when at least two metals (or two locations of the reinforcing bar) is at different energy levels. In reinforced 
+concrete the concrete acts as an electrolyte while the rebar act as a metallic connection (Palanisamy, 2019). At a 
+pH of 12–13, reinforced concrete is in an alkaline state and a thin oxide layer forms on the steel and prevents metal 
+atoms from dissolving forming a passive film (Ghods, 2012). The passive film reduces the corrosion rate to an 
+insignificant level without which the steel would corrode at rates at least 1,000 times higher (ACI 222R-01).   
+
+The  presence  of  rust  on  reinforcement  bars  and  appearance  of  cracks  parallel  to  the  reinforcement  bars  is  an 
+indication  of  corrosion  in  reinforced  concrete  structures.  The  main  causes  of  electrochemical  corrosion  in 
+reinforced  concrete  is  carbonation  and  chlorides  which  induces  a  generalized  attack  and  localized  attack 
+respectively.  Carbonation  induced  corrosion  commonly  occurs  in  relatively  dry  environments  where  sufficient 
+carbon  oxide  diffuses  through  the  concrete  cover.  In  chloride  containing  environments,  the  chloride  ingress  is 
+usually faster than the carbonation process, and it is more likely to be the predominant cause of deterioration in 
+reinforced concrete water structures by degrading the resistance of the structure to service load.   
+
+A  number  of  corrosion  models  have  been  proposed;  broadly  categorized  into  either  empirical  (Alonso,  1998), 
+analytical (Pasant, 1979; Liu, 1998) or numerical (Li, 2006; Molina, 1993). Molina used a smeared crack model 
+for the finite element analysis of cover cracking due to reinforcement corrosion. In their model they presumed 
+
+88 
+
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+corrosion of steel to take a linear variation of the material properties from those of steel to those of rust. They 
+assumed that the mechanical properties of rust nearly resemble that of water, one of the main constituents of rust. 
+Their analysis was based on the experiments of Andrade, 1993, where the thickness of the concrete cover was 1.25 
+and 1.9 times the reinforcement diameter. 
+
+Morinaga (1989) suggested an empirical equation for predicting the time to cover cracking without reference to 
+the evolution of the damage zone. In his empirical equation; the time to cover cracking was taken as a function of 
+the corrosion rate, concrete cover thickness and reinforcing diameter. The results predicted by this model is much 
+shorter than the experimentally observed values (Morinaga, 1989; Liu, 1998). 
+
+Further investigations in this field have revealed that the consideration of the appropriate mechanical behavior of 
+corrosion products strongly affects the predicted results (Bhargava, 2006). Lundgren (Lundgren, 2002), in an effort 
+to  study  rebar  pull-out,  presented  a  reasonable  way  to  model  the  effect  of  corrosion  on  the  bond  between  the 
+corroded reinforcement and concrete. Lundgren employed finite element analysis and assumed that rust behaves 
+like granular materials, in accordance with the experimental tests of Andrade (Andrade, 1993). Lundgren pointed 
+out that the model could predict the decrease of the bond when splitting of the concrete occurs. It was emphasized 
+that axisymmetric analysis appears to be a satisfactory level of modeling when a study of concrete cover cracking 
+due to uniform corrosion is of concern. However, three dimensional models should be used if localized corrosion 
+is to be studied.   
+
+Bhargava et al., 2006, presented a mathematical model to predict the time to concrete cover cracking and weight 
+loss of reinforcing bars. However, they assumed that the mechanical properties of corrosion products are the same 
+as  those  of  steel,  although  reasonably  good  agreement  was  obtained  between  experimental  results  and  the 
+analytical  predictions.  They  showed  that  tensile  strength,  initial  tangent  modulus  of  concrete,  annual  mean 
+corrosion rate, and modulus of elasticity of the reinforcement and corrosion significantly influence the predicted 
+time to cover cracking. 
+
+In this study a mathematical model is formulated to determine the corrosion rate in water structures. This model 
+takes into consideration of the serviceability limiting condition of the crack width of water structures. 
+
+2. Methodology 
+
+The study was conducted at the University of Nairobi Concrete and Materials Lab, where the physical properties 
+of the materials were identified and the sample preparation and testing were done. The chemical properties of the 
+selected  Cem  1  brands  were  identified  in  the  State  Department  of  Infrastructure  in  the  Ministry  of  Transport, 
+Infrastructure, Housing and Urban Development of the Government of Kenya. 
+
+2.1 Cement, Aggregates and Water for the Study 
+
+Available  Cem  1  brands  of  cement  in  Kenya  are  manufactured  in  accordance  with  (KS  EAS  18-1:2017).  The 
+cements were sourced from a local wholesaler and were randomly selected. Table 1 shows the sources of the fine 
+aggregate (FA), coarse aggregates (CA) reinforcing steel bar and water used in this study.   
+
+Table 1. Details of material for this study 
+
+SN 
+
+Description 
+
+Source 
+
+Remark 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+Fine aggregates 
+
+Machakos River 
+
+Coarse aggregates 
+
+Kenya Builders    quarry 
+
+5-20mm graded at source 
+
+10mm ribbed bars 
+
+Local Manufacturer 
+
+Factory cut to 1010mm length 
+
+Mixing water 
+
+lab 
+
+Portable 
+
+2.2 Test for Mechanical Properties of Aggregates 
+
+Table 2 shows the reference standard used for the procedure of testing aggregates the physical and mechanical 
+properties of aggregates.   
+
+89 
+
+ 
+ 
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+Table 2. Testing procedure for physical and mechanical properties of aggregates 
+
+Test 
+
+Specific gravity 
+
+Water absorption 
+
+Silt content 
+
+Crushing value 
+
+Impact value 
+
+Flakiness index 
+
+Los Angeles abrasion value 
+
+Standard for test procedure 
+
+ASTM C128 
+
+BS 812-2:1995 
+
+ASTM C142-97 
+
+BS EN 1097-2 
+
+BS EN 1097-2 
+
+BS/EN 933-3 
+
+BS/EN 1097-2 
+
+2.3 Mix Design 
+The  concrete used  for  this  study was of  characteristic  strength  25 N/mm2,  30  N/mm2  and 35 N/mm2  designed 
+according  to  the  Department  of  Environment’s  Design  (DOE)  method  (Ejiogu,  2020)  and  constituted  the 
+proportions shown in Table 3. 
+
+Table 3. mix proportions of materials for this study 
+
+Characteristic strength 
+(N/mm2) 
+
+Coarse aggregates 
+(kg/ m3) 
+
+Fine aggregates 
+(kg/ m3) 
+
+Cement 
+(kg/ m3) 
+
+Water(kg/m3) 
+
+25 
+
+30 
+
+35 
+
+1190 
+
+1069 
+
+1075 
+
+650 
+
+638 
+
+631 
+
+450 
+
+450 
+
+469 
+
+225 
+
+225 
+
+225 
+
+Using the mix proportions, fresh concrete was prepared by using an electric mixing pan, poured into the moulds 
+in five layers and vibrated by a vibrating table for 60 seconds. A slump test was carried out for each batch of 
+concrete. After 24 hours, the moulds were removed and the concrete specimens cured at normal room temperature 
+in a water tank for 27 days. 
+
+2.4 Sample Size and Precision   
+
+Cubes of size 150mm*150mm*150mm, cylinders with a diameter of 150mm*300mm long, cylinders of diameter 
+150mm*30mm long with 10mm diameter*1010mm long reinforcing ribbed steel bar centrally placed were pepared 
+in line with BS 12390-1:2012, BS EN 12390-5:2009 and ACI 318 -08 specifications for compressive strength, 
+tensile strength and bond strength tests. A total number of 27 cubes, 27 cylinder specimens for tensile strength and 
+27  cylinders  for  bond  strength  were  prepared,  cured  and  tested  according  to  the  methods  stipulated  in  BS  EN 
+12390-2:2019, BS EN 12390-6:2009, for 7,14 and 28 days’ compressive strength, tensile and bond strength. Each 
+sample  for  compressive  strength  was  subjected  to  loading  until  failure  using  an  automated  electronic  testing 
+machine, which conforms to BS EN 12390-4:2019. A universal testing machine (UTM) maximum load of 2000 
+kN was used to test the cylinders for tensile strength. 
+
+The bond strength study was carried out through a pull out test in which a manually operated hydraulic pump with 
+a load cell of 100 kN was used. The load was applied at a rate of 2 kN/sec and distributed on the specimen surface 
+by a 200 mm square steel plate with a hole at the center system. The setup of the pull out test is shown in Figure 
+1. 
+
+90 
+
+ 
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+(a) Sample confining apparatus          (b) Tensile load detection equipment 
+
+Figure 1. (a)- (b) Pull out Testing equipment during sample testing (Source: Author) 
+
+Bond stress (S) in MPa was calculated as average stress between the reinforcing bar and the surrounding concrete 
+along the embedded length of the bar from Equation 1. 
+
+            S =
+
+(cid:2900)(cid:3171)(cid:3159)(cid:3182)
+(cid:2976)(cid:2914)(cid:3160)(cid:2896)(cid:3162)
+
+                                                                                  (1) 
+
+Where Pmax was the maximum pullout load(N)), db was diameter of the bar(mm) and Ld was the embedded bar 
+length(mm). 
+
+2.5 The Accelerated Corrosion Test 
+
+2.5.1 Materials and Specimens 
+
+This was done through an impressed corrosion test using the procedure below;   
+
+i) 
+
+ii) 
+
+iii) 
+
+iv) 
+
+v) 
+
+10 mm diameter x 400 mm long ribbed bars were polished with abrasive papers.   
+
+120 mm of the surface length of each bar were sprayed with a zinc rich coating and left to naturally dry.   
+
+The mixed concrete (in two batches) was poured into 9 cylindrical samples of 150 mm diameter and 30 
+0mm long, 130 mm diameter and 300 mm long, 100 mm diameter and 300 mm long each with a 10 mm 
+diameter rebar 
+
+The specimens were mechanically vibrated for 60 s. After 24 hours, the cylindrical concrete specimens 
+were demolded and cured for 27 days.   
+
+The test specimens were dried for 24 hours and then subjected to accelerated corrosion by storing them 
+in a tank containing 3.5 % NaCl at room temperature and an impressed voltage of 6volts applied through 
+a DC power supply regulator. The top and bottom surfaces of the concrete specimens were also sealed 
+with Zinc rich coating so as to allow chloride ingress from the sides to simulate the corrosion of a section 
+of a typical structural member in a water conveyancing structure.   
+
+2.5.2 Testing Methodology 
+
+The accelerated corrosion set up is shown in Figure 2. The rebars projecting were connected in series to the anode 
+and the stainless steel rod was connected to the negative terminal (cathode). The test specimens were subjected to 
+a constant voltage of 6 V applied to the system using a DC power supply regulator. The variation in development 
+of corrosion current was monitored at regular intervals using a high impedance multitimeter and the average for 
+the corrosion period taken for calculation of the average mass loss. 
+
+91 
+
+                 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+Figure 2. a) Schematic drawing of accelerated corrosion set up, b) Photo of the samples during experimentation 
+
+a) 
+
+                                                        b) 
+
+The appearances of first visible cracking were detected by visual observation using a magnification glass with 
+power of x1000. The data collected for crack propagation provided the timing of first cracking and the subsequent 
+time-dependent increase in crack width. After testing, the weight loss of bars due to corrosion were studied by 
+cleaning, drying and weighing the reinforcement bars according to the gravimetric weight loss method as specified 
+in ASTM G1 – 90.   
+
+The appearances of first visible cracking were detected by visual observation using a magnification glass with 
+power of x1000. The data collected for crack propagation provided the timing of first cracking and the subsequent 
+time-dependent increase in crack width. After testing, the weight loss of bars due to corrosion were studied by 
+cleaning, drying and weighing the reinforcement bars according to ASTM G1 – 90. Figure 3 shows samples during 
+experimentation and measurement. The weight loss corresponded closely to that expected from current density 
+(icorr) measurements. 
+
+a)                          b)                    c)                                    d)                                    e) 
+
+Figure 3: a) Samples during experimentation b) sample with 0.2 mm longitudinal crack c) crack measurement d) 
+recovering the corroded steel and e) cleaned rebar’s for gravimetric weight loss measurement 
+
+3. Results and Discussions 
+
+Physical and mechanical tests on aggregates were carried out to determine their suitability for use in the study. 
+
+3.1 Results and Discussion of Material Properties 
+
+Water soluble chlorides ions in fine aggregates were found to be zero percent and 0.002 % in coarse aggregates. 
+The percentage of chloride is less than the maximum limit of 0.03% as per BS EN 12620; 2013 and therefore 
+acceptable for use. High water soluble chlorides in the aggregates may aggravate the threshold available in concrete 
+and contribute to corrosion. Table 5 shows the physical properties of the aggregates used in this study. 
+
+Table 5. Physical properties of aggregates used in the study 
+
+Material 
+
+Specific gravity 
+
+% Water Absorption    % Silt content 
+
+Max. Size(mm) 
+
+FA 
+
+CA 
+
+2.6 
+
+2.6 
+
+1.8 
+
+0.3 
+
+7.4 
+
+0 
+
+4.0 
+
+20.0 
+
+92 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+As seen in Table 5, the specific gravity of all the aggregates is within the limits of 2.4–3.0 conforming to BS EN 
+1097-6:2013 and they influence the mix design of the concrete. The optimal concrete strength is attained when the 
+specific  gravity  of  coarse  aggregates  is  higher  than  that  of  water  and  lower  than  that  of  cement.  The  water 
+absorption of  the fine  aggregates  is within  the  limits  of 1%–3%  in  BS EN 1097-6:2013  implying  a low  water 
+absorption hence being suitable for concrete works. The low water absorption in the coarse aggregates was taken 
+into consideration in the mix design. 
+
+ASTM  C117  –  17  gives  an  allowable  limit  of  10%  for  silt  and  clay  content  in  fine  aggregates  for  concrete 
+production, while BS EN 12620:2013 gives an upper limit of 3% for non-harmful fines. The silt content in the fine 
+aggregate was more than the allowable percentage of silt content; it was washed and oven-dried before use. Table 
+6 shows the mechanical properties of the coarse aggregates used in this study. 
+
+Table 6. Mechanical properties of coarse aggregates 
+
+Test 
+
+                                Result 
+
+              Limit 
+
+Crushing value % 
+
+Impact Value % 
+
+Loss Angeles Abrasion Value % 
+
+18 
+
+8 
+
+20 
+
+<45 
+
+<45 
+
+30 
+
+The mechanical properties of aggregates cannot be improved but depend on the properties of the parent rock. The 
+Aggregates  Impact  Value  is  less  than  30%  specified  in  KS  EAS  18-1:2017.  It,  therefore,  follows  that  the 
+Aggregates Impact Value of all the aggregates tested were very suitable for concreting works.   
+
+The particle size distribution analysis on a representative sample, as shown in Figure 4 of the course aggregates 
+for the work, was carried out to obtain the proportions by weight of the different sizes of coarse aggregates present. 
+The sample is well graded with a maximum aggregate size of 20 mm. From the gradation curve, a reasonable 
+portion falls within the gradation limits. Reasonable workability can be achieved with such aggregates without 
+greater fines. 
+
+Figure 4. Gradation of Coarse aggregates   
+
+Particle size distribution analysis, as shown in Figure 4, on a representative sample of the fine aggregates for the 
+research was carried out to obtain the proportions by weight of the different sizes of fine particles present according 
+to  BS  EN  933-1:2012.  The  proportions  were  expressed  as  percentages  by  weight  passing  various  sieve  sizes 
+conforming to BS 410. As shown in Figure 5, the fine aggregates were well graded and expected to give a well 
+interlocked composite concrete mix. 
+
+93 
+
+ 
+ 
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+0.01
+
+Min
+
+Max
+
+Research Sample
+
+)
+
+%
+
+(
+g
+n
+i
+s
+s
+a
+P
+
+0.1
+
+Sieves (mm)
+
+1
+
+10
+
+100
+
+Figure 5. Gradation of fine aggregates 
+
+Table 7 shows the chemical properties of the selected Cem 1 brands in Kenya used in this study. 
+
+Table 7. Chemical composition of the cement used in the study 
+
+Test 
+
+CaO% 
+
+SiO2% 
+
+SO3% 
+
+MgO% 
+
+K2O% 
+
+Fe2O3% 
+
+Al2O3 
+
+Na2O3% 
+
+LOI% 
+
+Cl% 
+
+IR% 
+
+Result 
+
+Cem A 
+
+Cem B 
+
+59.86 
+
+16.56 
+
+2.02 
+
+1.76 
+
+0.027 
+
+2.32 
+
+7.61 
+
+0.054 
+
+0.11 
+
+0.012 
+
+2.20 
+
+59.11 
+
+21.56 
+
+2.78 
+
+1.04 
+
+0.051 
+
+3.48 
+
+8.09 
+
+0.018 
+
+0.10 
+
+0.016 
+
+0.55 
+
+Cem C 
+
+58.82 
+
+19.47 
+
+2.03 
+
+0.57 
+
+- 
+
+1.44 
+
+6.85 
+
+4.75 
+
+0.014 
+
+1.96 
+
+KS EAS 18-1: 2017 
+
+Requirement 
+
+Sum ≥ 50 
+
+≤ 3.5 
+
+≤ 5 
+
+3-8 
+
+≤ 5 
+
+≤ 0.1 
+
+≤ 5 
+
+From Table 7, Cem A has the highest amount of lime(CaO) (59.86%) and Insoluble residue (2.20%), Cem B has 
+the  highest  Silicon  dioxide  (SiO2)  (21.  56%).  The  increased  sum  of  (CaO)  and  (SiO2)  increases  compressive 
+strength and subsequently, bond strength and critical penetration depth should not be less than 50%. Similarly, an 
+increase in insoluble residue reduces compressive strength. All cement samples used for this work satisfied this 
+requirement of KS EAS 18-1:2017. Cement sample B has a CaO + SiO2 value of 80.67 % and produced the highest 
+compressive strength of concrete (44.89 N/mm2). SiO2 has to be limited relative to CaO in order not to negatively 
+affect setting time.   
+
+The ratio (CaO)/(SiO2) contents in Cem 1 cement should be greater than 2. The restriction is to ensure that the 
+setting of concrete is not inhibited. All the cement samples investigated fulfilled this requirement. The ratio of 
+CaO/SiO2 in interaction with an insoluble residue of cement influences the compressive strength. 
+
+The quantity of magnesium oxide (MgO) in Cem 1 cement should not exceed 5%. All the cement samples satisfied 
+this requirement with 1.76%, 1.04% and 0.57% for cement samples A, B and C, respectively. MgO contributes to 
+the colour of cement and hardness of the resulting concrete. If the quantity of MgO is more than 5%, cracks will 
+appear in concrete, which may reduce the bond strength by reducing the effective length. Cracks may subsequently 
+increase and accelerate the critical penetration depth. 
+
+94 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+The chloride content in ordinary Portland cement should be less than 0.4%. All the cement samples in this work 
+satisfied this requirement. Chloride content limits ensure a reduced amount available to aggravate corrosion, which 
+in turn reduces bond strength.   
+
+Na2O, K2O, TiO2 and P2O5 in Cem 1 are considered residues and their sum is limited to 5% (Sharma, 2020). All 
+the cement samples investigated fulfilled this requirement, with cement samples A, B and C having total residue 
+contents  of  0.55,  2.2  and  1.96%,  respectively.  If  these  values  are  more  than  5%,  efflorescence  and  unsightly 
+cracking will occur, thus reducing the bond strength. 
+
+3.2 Results of fresh concrete test 
+
+The result for the slump test of the fresh concrete is shown in Figure 6.    The slumps obtained are in the medium 
+range (68-93 mm). 
+
+Figure 6. Slump from Cem 1 brands of cement 
+
+From  Figure  6,  concrete  with  Cem  B  brand  of  cement  had  the  highest  slump  while  C  had  the  lowest  slump. 
+Workability increases with an increase in a slump and this reduces the resulting strength on concrete. 
+
+3.3 Results of Hardened Concrete 
+
+Table 8 shows the compressive, split tensile and bond strength results. 
+
+Table 8. Results of properties of hardened concrete 
+
+Cem 1 brand 
+
+Compressive strength (N/mm2 
+
+Tensile strength (N/mm2) 
+
+Bond strength (N/mm2) 
+
+A 
+
+B 
+
+C 
+
+41.29 
+
+41.09 
+
+44.89 
+
+4.5 
+
+4.45 
+
+4.48 
+
+4.42 
+
+4.33 
+
+4.4 
+
+From Table 8, Figures 7, 8 and 9 are drawn to show the relationship of the hardened properties of concrete for a 
+selected brand of cement. Figure 7 shows a bar chart of a comparative relationship of the hardened properties of 
+concrete with a selected Cem 1 brand. 
+
+95 
+
+ 
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+h
+t
+g
+n
+e
+r
+t
+s
+
+e
+v
+i
+s
+s
+e
+r
+p
+m
+o
+C
+
+50
+
+40
+
+30
+
+20
+
+10
+
+0
+
+2
+
+/
+
+m
+m
+N
+n
+i
+
+A
+
+B
+Cem 1 Brand of Cement
+
+C
+
+Age at Testing  7 days
+
+Age at Testing  14 days
+
+Age at Testing  28 days
+
+Figure 7. Bar chart of Compressive strength for selected Cem 1 Cement brand 
+
+From Figure 7, it can be noted that a choice of a brand of Cem 1 cement influences the compressive strength. As 
+expected, Cem C with the highest CaO/SiO2 ratio in interaction with insoluble residue had the highest compressive 
+strength. A high compressive strength increases bond strength and affects the critical penetration depth. This result 
+is also in line with those from Fig.3, as increase in slumps causes reduced strength, durability and permeability of 
+concrete. The test was carried out after 27 days of curing. 
+
+Figure 8 shows a bar chart of the relationship of split tensile strength and a selected Cem 1 brand of cement as 
+shown in Table 8. 
+
+Figure 8. Bar Chart showing the relationship of split tensile strength of concrete with selected Cem 1 brands of 
+
+cement 
+
+From Figure 6, it can be shown that concrete with Cem C has the highest split tensile strength. Cem C has the 
+highest  CaO/SiO2  ratio  in  combination  with  insoluble  residue  and  increases  the  compressive  strength  and 
+subsequently the split tensile strength. Fig.7 shows a relationship between bond strength and a brand of Cem 1 
+cement. 
+
+96 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+Figure 9. Relationship of bond strength and selected Cem 1 cement brand 
+
+From Figure 9, a selected Cem 1 cement brand influenced the bond strength of the reinforced concrete samples. 
+Samples with Cem B brand of cement had the lowest chemical constituents that affect compressive strength and 
+subsequently had the lowest bond strength as expected.   
+
+Based on the results shown in Figure 7, the choice of Cem 1 brand of cement significantly affects the bond strength 
+and subsequently the service life of the respective structures. 
+
+Table 9 shows a statistical relationship between split tensile and bond strength in a linear regression statistical 
+model with a 96.2 % coefficient of determination. 
+
+Table 9. Statistical relationship between tensile and bond strength 
+
+R Squire 
+
+0.962 
+
+F 
+
+25.21 
+
+Sig 
+
+0.124 
+
+Constant 
+
+2.187 
+
+b1 
+
+0.522 
+
+From Table 9, Equation 2 is proposed for this study.     
+
+ft = 2.187 + 0.522fb                                                                                                  (2) 
+
+Where fb is the bond strength (MPa). 
+
+3.4 Results from Accelerated Corrosion Tests 
+
+Where, ΔW = calculated mass loss in grams. 
+
+ΔW=25It                                                                              (3)   
+
+I  =  corrosion  current  (amp)  averages  measured  during  accelerated  corrosion  (4.0,2.4  and  2.0  milliampares  for 
+concrete characteristic strength 35N/mm2,30N/mm2 and 25N/mm2 respectively) and t = time (days). 
+
+Corrosion Rate(mm/yr)= 87.6 x [w/(D x A x T)]                                                          (4)     
+
+where W is the weight loss in milligrams measured as an average from corroded samples.   
+
+D is the density of the rebar used, g/cc, =7.8 
+A is the surface area of the specimen subjected to corrosion (cm2), and =91.11 
+
+T is the duration of the test period in hours. 
+
+97 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+Table 10. The rate of corrosion of rebar from samples from different diameter samples and strengths 
+
+Rate of corrosion in mm/yr 
+
+Concrete 
+characteristic 
+strength 
+
+Sample 
+series 
+
+Average mass 
+of steel sample 
+before 
+corrosion 
+(gms) 
+
+Average mass 
+of steel sample 
+after corrosion 
+(gms) 
+
+Loss in 
+weight 
+(gms) 
+
+Loss in 
+weight 
+(gms) 
+
+Rate of 
+corrosion 
+mm/yr 
+
+Rate of 
+corrosion 
+mm/yr 
+
+Duration 
+in days 
+
+measured 
+
+Calculated 
+
+(measured) 
+
+(calculated) 
+
+25N/mm2 
+
+30N/mm2 
+
+35N/mm2 
+
+150mm 
+diameter 
+
+130mm 
+diameter 
+
+100mm 
+diameter 
+
+150mm 
+diameter 
+
+130mm 
+diameter 
+
+100mm 
+diameter 
+
+150mm 
+diameter 
+
+130mm 
+diameter 
+
+100mm 
+diameter 
+
+371 
+
+371 
+
+371 
+
+371 
+
+371 
+
+371 
+
+371 
+
+371 
+
+371 
+
+360.4 
+
+10.6 
+
+10.7 
+
+107 
+
+0.51 
+
+0.51 
+
+362.3 
+
+363.2 
+
+361.5 
+
+362.4 
+
+363.4 
+
+361.6 
+
+362.4 
+
+363.1 
+
+8.7 
+
+7.8 
+
+9.5 
+
+8.6 
+
+7.6 
+
+9.4 
+
+8.6 
+
+7.9 
+
+8.7 
+
+7.6 
+
+9.4 
+
+8.5 
+
+7.6 
+
+9.3 
+
+8.6 
+
+7.9 
+
+86 
+
+76 
+
+0.52 
+
+0.52 
+
+0.53 
+
+0.52 
+
+156 
+
+0.31 
+
+0.31 
+
+142 
+
+0.31 
+
+0.31 
+
+127 
+
+0.31 
+
+0.31 
+
+186 
+
+0.26 
+
+0.26 
+
+172 
+
+0.26 
+
+0.26 
+
+158 
+
+0.26 
+
+0.26 
+
+Figure 10 shows a graph of the Relationship of the rate of corrosion and the characteristic strength of concrete 
+derived from Table 10. 
+
+Figure 10. Relationship of the rate of corrosion vs the rate of corrosion 
+
+From Table 10 and Figure 10, it can be observed that the rate of corrosion is affected by the characteristic strength 
+and this is attributed to the rate at which the aggressive chloride ions took to reach the rebar to enhance the onset 
+of corrosion. It took a longest period for samples of characteristic 35N/mm2 to corrode and result to a crack width 
+of 0.2 mm while samples with characteristic strength 25 N/mm2 exhibited the shortest time. It can also be observed 
+
+98 
+
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+that concrete cover affects the duration of corrosion within the same characteristic strength of concrete but the rate 
+of  corrosion  remains  the  same  and  this  is  because  concrete  of  the  same  characteristic  strength  has  the  same 
+electrical resistance. 
+
+It was also observed that the rate of corrosion in rebar reduced with an increase in characteristic strength. Concrete 
+with  a  higher  characteristic  strength  has  a  low  permeability  and  a  high  inhibition  of  the  cathodic  site  and  the 
+hydroxyl  ion  conduit  from  forming.  Consequently,  the  reduction  in  permeability  with  increasing  characteristic 
+strength reduces the rate of corrosion in addition to crack initiation in concrete. 
+
+3.5 Crack Initiation (t1) 
+
+This is the first visible crack, which was observed through a magnifying glass (x1000) and this period of time (t1) 
+can be referred to as time to crack initiation. t1 depends on concrete tensile strength (ft).   
+
+3.6 Crack Propagation (t2) 
+
+Cracks first observed at the concrete surface through the magnifying glass were very small (width of less than 
+0.2mm) with lengths varying from 30mm to 300mm.Cracks width and length then increased in an inhomogeneous 
+manner until they extended and joined together to create continuous corrosion-induced longitudinal cracking when 
+the crack width was 0.2mm when the experiment stopped. 
+
+3.7  Time to Cracking 
+
+When the amount of corrosion products reaches the critical amount of rust products, the internal expansion stress 
+will exceed the tensile strength of concrete and cause the cracking of the cover concrete. According to equation 
+11, for a constant corrosion rate, the time to cracking, tcr can be given as follows: 
+
+tcr =M2
+
+crit/2[2.59 (cid:1850)10(cid:2879)(cid:2874)(cid:3435)1
+
+(cid:2009)(cid:3415) (cid:3439)(cid:2024)(cid:1830)(cid:1861)(cid:3030)(cid:3042)(cid:3045)                                                            (5) 
+
+where       
+
+Mcrit is the critical amount of corrosion products in kilograms.   
+
+                (cid:2009)  is the ratio of the molecular weight of rust to that of iron, 
+
+                D is the steel diameter (cm.) and 
+                i(cid:2913)(cid:2925)(cid:2928)  is the annual mean corrosion rate (µA/cm2). 
+Since corrosion rate is a function of corrosion time,using the numerical method, the time to cracking can be also 
+calculated from equation 5. 
+
+Table 11 Based on calculated critical amount of rust products the times to cracking is obtained from equation 5. 
+The results are summarized in Table 11. As it can be seen from the Table in column 6, the measured times to 
+cracking are within the predicted values by the model. 
+
+Table 11. Parametric study of predicted and observed times to cracking of the research and the model 
+
+Concrete 
+characteristic 
+strength 
+
+Sample series 
+
+Cover 
+
+X300mm length   
+
+Measured 
+corrosion  rate 
+mm/year 
+
+Real 
+corrosion rate 
+mm/year 
+
+Time in years 
+Model 
+predicted* 
+
+Time in years 
+Measured 
+
+25N/mm2 
+
+100diameter 
+
+130mm diameter   
+
+150mm diameter 
+
+30N/mm2 
+
+100mm diameter   
+
+130mm diameter 
+
+150mm diameter 
+
+35N/mm2 
+
+100mm diameter   
+
+130mm diameter 
+
+150mm diameter   
+
+70 
+
+60 
+
+45 
+
+70 
+
+60 
+
+45 
+
+70 
+
+60 
+
+45 
+
+0.51 
+
+0.52 
+
+0.53 
+
+0.31 
+
+0.31 
+
+0.31 
+
+0.26 
+
+0.26 
+
+0.26 
+
+0.51kp 
+
+0.52kp 
+
+0.53kp 
+
+0.31kp 
+
+0.31kp 
+
+0.31kp 
+
+0.26kp 
+
+0.26kp 
+
+0.26kp 
+
+0.153-0.319 
+
+0.215 
+
+0.186-0.389 
+
+0.243 
+
+0.272-0.566 
+
+0.302 
+
+0.239-0.498 
+
+0.441 
+
+0.306-0.638 
+
+0.401 
+
+0.374-0.778 
+
+0.359 
+
+0.285-0.594 
+
+0.525 
+
+0.365-0.761 
+
+0.486 
+
+0.436-0.908 
+
+0.430 
+
+*The model predicted times to cracking were calculated taking α1 value of 1.8 for (FeO) and 3.75 for (Fe(OH)2) 
+for corrosion product. 
+
+99 
+
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+From Table 11, it can be observed that the measured times to cracking are within the model predicted time.   
+
+From Table 11, Figure 11a), b) and c) are drawn showing a relationship between measured and real corrosion rate 
+for reinforced concrete water structures. 
+
+Figure 11a)                                          Figure 11b) 
+
+*Real corrosion rate=3kp 
+
+For low corrosion rates: 
+
+Figure 11c) 
+
+T(cid:2870)(cid:4666)(cid:2928)(cid:2915)(cid:2911)(cid:2922)(cid:4667) = k(cid:2926)  x T(cid:2870)(cid:4666)(cid:2915)(cid:2934)(cid:2926)(cid:4667)                                                                (6) 
+
+K(cid:2926) = k(cid:2902)  x 
+
+(cid:2919)(cid:3161)(cid:3173)(cid:3176)(cid:3176)(cid:4666)(cid:3163)(cid:3182)(cid:3174)(cid:4667)
+(cid:2919)(cid:3161)(cid:3173)(cid:3176)(cid:3176)(cid:4666)(cid:3176)(cid:3163)(cid:3159)(cid:3170)(cid:4667)
+
+                                                                    (7) 
+
+Where 
+
+                  (cid:1846)(cid:2870)(cid:4666)(cid:3045)(cid:3032)(cid:3028)(cid:3039)(cid:4667)  = Corrosion propagation time for real structures 
+                  (cid:1863)(cid:3019)  = Rate of loading correction factor 
+                  (cid:1861)(cid:3030)(cid:3042)(cid:3045)(cid:3045)(cid:4666)(cid:3032)(cid:3051)(cid:3043)(cid:4667)  = accelerated corrosion rate 
+                  (cid:1861)(cid:3030)(cid:3042)(cid:3045)(cid:3045)(cid:4666)(cid:3045)(cid:3032)(cid:3028)(cid:3039)(cid:4667)  = any value of selected corrosion rate 
+(cid:1846)(cid:2870)(cid:4666)(cid:3032)(cid:3051)(cid:3043)(cid:4667)  = is the measured time and can be obtained from the proposed model   
+If the rate of loading does not affect crack propagation, then kR = 1. Empirically: 
+
+k(cid:2902) (cid:3406) 0.95  (cid:3428)exp (cid:3436)
+
+(cid:2879)(cid:2868).(cid:2871)(cid:2919)(cid:3161)(cid:3173)(cid:3176)(cid:3176)(cid:4666)(cid:3163)(cid:3182)(cid:3174)(cid:4667)
+(cid:2919)(cid:3161)(cid:3173)(cid:3176)(cid:3176)(cid:4666)(cid:3176)(cid:3163)(cid:3159)(cid:3170)(cid:4667)  
+
+(cid:3440) (cid:3398)
+
+ (cid:2919)(cid:3161)(cid:3173)(cid:3176)(cid:3176)(cid:4666)(cid:3163)(cid:3182)(cid:3174)(cid:4667)
+(cid:2919)(cid:3161)(cid:3173)(cid:3176)(cid:3176)(cid:4666)(cid:3176)(cid:3163)(cid:3159)(cid:3170)(cid:4667)
+
+(cid:3397) 0.3(cid:3432) , k(cid:2902) (cid:3410) 0.25                                        (8) 
+
+4. Conclusion 
+
+A study of selected Cem 1 brands of cement intended for structural applications has been done in this research. 
+The  variation  in  the  chemical  composition  of  the  selected  brands  affects  the  compressive,  split  tensile,  bond 
+strength and critical penetration depth. According to the analyses and experiments of hardened properties of the 
+
+100 
+
+ 
+ 
+ 
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+tested  samples,  it  was  found  that  available  Cem  1  brands  of  cement  in  the  Kenyan  market  vary  in  chemical 
+composition, and this affects the hardened properties of concrete.   
+
+It can also be deduced that the rate of corrosion in reinforced concrete increases with a reduction of concrete cover 
+and  compressive  strength,  and  this  is  attributed  to  all  the  factors  that  affect  the  spilt  tensile  strength,  which 
+subsequently affects both properties. The relationship between the rate of corrosion from accelerated corrosion 
+tests and real structures linear and in this can be used in the calculation of the ervice life of reinforced concrete 
+structures. 
+
+Funding 
+
+None 
+
+Competing Interests 
+
+Sample: The authors declare that they have no known competing financial interests or personal relationships that 
+could have appeared to influence the work reported in this paper. 
+
+Provenance and Peer Review 
+
+Not commissioned; externally double-blind peer reviewed. 
+
+Data Availability Statement 
+
+The data that support the findings of this study are available on request. 
+
+Data Sharing Statement 
+
+No additional data are available. 
+
+References 
+
+ACI 318-08. Building Code Requirements for Structural Concrete and Commentary. American Concrete Institute, 
+
+U.S.A. 
+
+CI Committee 222. (2001). Protection of Metals in Concrete Against Corrosion. ACI 222R-01, American Concrete 
+
+Institute, Farmington Hills, Michigan.   
+
+Alonso, C., Andrade, C., Rodriguez, J., & Diez, J. M. (1998). Factors controlling cracking of concrete affected by 
+reinforcement corrosion. Materials and structures, 31, 435-441. https://doi.org/10.1007/BF02480466 
+
+Andrade, C., Alonso, C., & Molina, F. J. (1993). Cover cracking as a function of bar corrosion: Part I-Experimental 
+
+test. Materials and structures, 26, 453-464. https://doi.org/10.1007/BF02472805 
+
+ASTM C117 - 17. Standard Test Method for Materials Finer than 75-μm (No. 200). Sieve in Mineral Aggregates 
+by washing, ASTM International. U.S.A. 
+
+Bažant,  Z.  P.  (1979).  Physical  model  for  steel  corrosion  in  concrete  sea  structures-Application.  Journal  of  the 
+
+structural division, 105(6), 1155-1166. https://doi.org/10.1061/JSDEAG.0005169 
+
+Bhargava, K., Ghosh, A. K., Mori, Y., & Ramanujam, S. (2005). Modeling of time to corrosion-induced cover 
+cracking  in  reinforced  concrete  structures.  Cement  and  Concrete  Research,  35(11),  2203-2218. 
+https://doi.org/10.1016/j.cemconres.2005.06.007 
+
+Bhargava, K., Ghosh, A. K., Mori, Y., & Ramanujam, S. (2006). Model for cover cracking due to rebar corrosion 
+in RC structures. Engineering Structures, 28(8), 1093-1109. https://doi.org/10.1016/j.engstruct.2005.11.014 
+
+British Standard Institute. (2009). EN 12390-5:2009. Testing hardened concrete - Part 5: Flexural strength of test 
+
+specimens. 
+
+British Standard Institute. (2009). BS EN 12390-6:2009: Testing hardened concrete. Tensile splitting strength of 
+
+test specimens. 
+
+British Standard Institute. (2012). BS EN 12390-1:2012: Testing hardened concrete. Shape, dimensions and other 
+
+requirements for specimens and moulds. 
+
+British  Standard  Institute.  (2012).  BS  EN  933-1:2012:  The  Standard  for  Tests  for  geometrical  properties  of 
+
+aggregates - Determination of particle size distribution. 
+
+British Standard Institute. (2013). BS EN 12620(2013): Aggregates for concrete. 
+
+British Standard Institute. (2013). EN 1097-6:2013: Tests for mechanical and physical properties of aggregates - 
+
+Part 6: Determination of particle density and water absorption. 
+
+101 
+
+jmsr.ccsenet.org 
+
+Journal of Materials Science Research 
+
+Vol. 12, No. 2; 2023 
+
+British Standard Institute. (2019). BS EN 12390-2:2019: Testing hardened concrete Making and curing specimens 
+
+for strength tests. 
+
+Du, Y. G., Chan, A. H. C., & Clark, L. A. (2006). Finite element analysis of the effects of radial expansion of 
+917-929. 
+
+structures, 
+
+84(13-14), 
+
+& 
+
+corroded 
+Computers 
+reinforcement. 
+https://doi.org/10.1016/j.compstruc.2006.02.012 
+
+Ejiogu, I. K., Mamza, P. A. P., Nkeonye, P. O., & Yaro, S. A. (2020). Comparison of aci, is and doe methods of 
+
+concrete mix design. Nigerian Journal of Engineering, 27(1), 68-68. 
+
+Ghods, P., Isgor, O. B., Bensebaa, F., & Kingston, D. (2012). Angle-resolved XPS study of carbon steel passivity 
+and  chloride-induced  depassivation  in  simulated  concrete  pore  solution.  Corrosion  Science,  58,  159-167. 
+https://doi.org/10.1016/j.corsci.2012.01.019 
+
+Kenya  Bureau  of  Standards,  KS  EAS  18-1:  2017-Cement  Part  1:  Composition,  Specification  and  Conformity 
+
+Criteria for Common Cements. Kenya Bureau of Standards, Nairobi, 2017. 
+
+Kiani,  K.  (2002).  Study  of  reinforcement  corrosion  in  RC  structures  via  reproducing  kernel  particle  method 
+
+(Doctoral dissertation, M. Sc. Thesis. Tehran, Sharif University of Technology). 
+
+Li C.Q., Melchers R. E., & Zheng, J. J. (2006). Analytical model for corrosion-induced crack width in reinforced 
+
+concrete structures. ACI Struct J, 103(4), 479-487. https://doi.org/10.14359/16423 
+
+Liu, Y., & Weyers, R. E. (1998). Modelling the time to corrosion in cracking in chloride contaminated reinforced 
+
+concrete structures. ACI Mat. J, 95, 675-681. https://doi.org/10.14359/410 
+
+Lundgren, K. (2002). Modeling the effect of corrosion on bond in reinforced concrete. Mag. Concr. Res., 54, 165-
+
+173. https://doi.org/10.1680/macr.2002.54.3.165 
+
+Molina, F. J., Alonso, C., & Andrade, C. (1993). Cover cracking as a function of rebar corrosion: Part 2 - Numerical 
+
+model. Mater and Struct, 26, 532-548. https://doi.org/10.1007/BF02472864 
+
+Morinaga, S. (1989). Prediction of Service Lives of Reinforced Concrete Buildings based on Rate of Corrosion of 
+
+Reinforcing Steel. Special report of the Institute of Technology, Japan, Skimiza Corporation. 
+
+Palanisamy, G. (2019). Corrosion Inhibitors. IntechOpen. http://dx.doi.org/10.5772/intechopen.80542. 
+
+Shodja, H. M., Kiani, K., & Hashemian, A. (2010). A model for the evolution of concrete deterioration due to 
+1403-1422. 
+
+and  Computer  Modelling, 
+
+corrosion.  Mathematical 
+
+52(9-10), 
+
+reinforcement 
+https://doi.org/10.1016/j.mcm.2010.05.023 
+
+Copyrights 
+
+Copyright for this article is retained by the author(s), with first publication rights granted to the journal. 
+
+This is an open-access article distributed under the terms and conditions of the Creative Commons Attribution 
+license (http://creativecommons.org/licenses/by/4.0/). 
+
+102 
+
+ 
+

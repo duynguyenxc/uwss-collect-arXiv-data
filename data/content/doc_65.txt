@@ -1,0 +1,5084 @@
+TIME TO SURFACE CRACKING AND CRACK WIDTH OF REINFORCED 
+CONCRETE STRUCTURES UNDER CORROSION OF MULTIPLE REBARS 
+
+Xun Xi1, 2 and Shangtong Yang2* 
+1 School  of  Civil  and  Resource  Engineering,  University  of  Science  and  Technology  Beijing,  Beijing, 
+
+100083, China. 
+2 Department of Civil and Environmental Engineering, University of Strathclyde, Glasgow, G1 1XJ, 
+
+United Kingdom. 
+
+1 
+2 
+3 
+4 
+
+5 
+
+6 
+
+7 
+
+8 
+
+9 
+
+10 
+
+ABSTRACT 
+
+11 
+
+Concrete  cover  cracking  caused  by  corrosion  of  reinforcement  is  one  of  major  deterioration 
+
+12 
+
+mechanisms for reinforced concrete structures. In practice, time to surface cracking and crack 
+
+13 
+
+width evolution are of significance in regards to the assessment of serviceability of reinforced 
+
+14 
+
+concrete structures.  Literature review suggests that, although considerable research has been 
+
+15 
+
+undertaken  on  corrosion-induced  concrete  cracking,  little  has  been  focused  on  corrosion  of 
+
+16 
+
+multiple reinforcing bars, especially by considering the non-uniform corrosion process. In this 
+
+17 
+
+paper, a time-dependent non-uniform corrosion model is established. A cohesive crack model 
+
+18 
+
+is  then  formulated  to  simulate  arbitrary  cracking  in  the  whole  cover  of  concrete  structures. 
+
+19 
+
+Two typical cover failure modes (i.e., “delamination” and “combined delamination and corner 
+
+20 
+
+spalling”) have been simulated under the non-uniform corrosion of multiple reinforcing bars 
+
+21 
+
+and found dependent on spacing of reinforcement and fracture energy of concrete. The effects 
+
+22 
+
+of  corrosion,  geometric  and  mechanical  parameters  on  the  time  to  surface  cracking  after 
+
+23 
+
+corrosion  initiation  and  the  crack  width  evolution  are  also  investigated  and  discussed.  The 
+
+24 
+
+developed model is partially verified by comparing the results with those from experimental 
+
+25 
+
+tests on uniform corrosion of multiple reinforcing bars.  
+
+26 
+
+Keywords: corrosion initiation, surface cracking, non-uniform corrosion, multiple reinforcing 
+
+27 
+
+bars, cohesive crack model, reinforced concrete, finite element modelling. 
+
+28 
+
+*  Corresponding  author.  Tel:  +44  141  548  3273.  Email:  shangtong.yang@strath.ac.uk. 
+
+1 
+
+ 
+ 
+29 
+
+1   
+
+INTRODUCTION 
+
+30 
+
+Corrosion  of  reinforcement  is  a  significant  problem  affecting  the  durability  of  reinforced 
+
+31 
+
+concrete  (RC)  structures,  e.g.,  bridge  decks,  retaining  walls,  piers,  tunnels.  Practical 
+
+32 
+
+experience and observations suggest that corrosion-affected RC structures are more prone to 
+
+33 
+
+cracking  than  other  forms  of  structural  deterioration.  Consequently,  the  corrosion  induced 
+
+34 
+
+cracks  destroys  the  integrity  of  the  concrete  cover,  deteriorate  the  bonding  strength  of  the 
+
+35 
+
+interface between reinforcement and concrete, and lead to premature failure of RC structures. 
+
+36 
+
+Moreover,  the  reinstatement  cost  of  corrosion-affected  RC  structures  is  significantly  high; 
+
+37 
+
+worldwide, the maintenance and repair costs for corrosion-affected concrete infrastructure are 
+
+38 
+
+estimated around $100 billion per annum [1].  
+
+39 
+
+40 
+
+Considerable research has been carried out in concrete cover cracking induced by corrosion of 
+
+41 
+
+reinforcement [1-8]. Liu and Weyers [2] were amongst the first to model the surface cracking 
+
+42 
+
+time  of  concrete  cover  due  to  corrosion  of  reinforcement,  based  on  a  series  of  experimental 
+
+43 
+
+tests. Their formula for the critical amount of corrosion products has been widely cited in the 
+
+44 
+
+research  literature.  Pantazopoulou  and  Papoulia  [4]  established  a  relationship  between  the 
+
+45 
+
+amount  of  corrosion  products  and  internal  pressure  from  which  the  cracking  time  of  the 
+
+46 
+
+concrete  cover  can  be  obtained.  Li  et  al.  [9]  developed  an  analytical  model  to  calculate  the 
+
+47 
+
+crack width of concrete cover caused by corrosion of reinforcement. Amongst these existing 
+
+48 
+
+studies, most are focused on uniform corrosion of a single reinforcing bar.  
+
+49 
+
+50 
+
+However,  due  to  the  fact  that  chlorides,  as  well  as  moisture  and  oxygen,  penetrates  into 
+
+51 
+
+surface of steel at different rates on different sides of the concrete, it is rare to have a uniform 
+
+52 
+
+corrosion  on  the  reinforcing  bar.  Recently,  some  researchers  have  started  to  model  the 
+
+53 
+
+cracking  of  concrete  cover  induced  by  non-uniform  corrosion.  According  to  geometry  and 
+
+2 
+
+ 
+ 
+54 
+
+diffusion  properties  of  concrete,  non-uniform  corrosion  model  can  be  built  by  considering 
+
+55 
+
+chloride  concentration  via  Fick’s  second  law  of  diffusion  [10-12].  However,  the  actual 
+
+56 
+
+environmental  conditions  of  concrete  may  differ  significantly  from  the  hypothesis  under 
+
+57 
+
+Fick’s  law  [13].  Meanwhile,  experimental  tests  or  field  surveys  have  been  carried  out  to 
+
+58 
+
+determine  the  distribution  of  corrosion  rust  which  is  found  not  uniform  along  the 
+
+59 
+
+circumference of the  reinforcement [14-16]. Almost all the experimental results in literature 
+
+60 
+
+have  shown  that  only  the  part  of  reinforcement  facing  concrete  cover  is  corroded  and  the 
+
+61 
+
+further  towards  the  concrete  surface  the  location  is,  the  more  corrosion  products  that  are 
+
+62 
+
+produced at this location. Some studies introduced a factor defining the ratio of the depth of 
+
+63 
+
+non-uniform corrosion to that of uniform corrosion, and found that its value ranges about 4-8 
+
+64 
+
+in  natural  conditions  [17-19].  Yuan  and  Ji  [16]  conducted  corrosion  tests  on  reinforced 
+
+65 
+
+concrete  samples  in  an  artificial  environmental  chamber  and  found  that,  only  a  half  of  the 
+
+66 
+
+reinforcement, facing concrete cover, was corroded and the expansion was in a semi-elliptical 
+
+67 
+
+shape. Similar corrosion distributions were also found in other experiments [20]. 
+
+68 
+
+69 
+
+Moreover,  corrosion  rate  is  the  most  important  single  parameter  controlling  the  corrosion 
+
+70 
+
+development [2, 9, 21, 22]. Previous work on predicting of corrosion-induced cover cracking 
+
+71 
+
+mainly assumes a constant mean annual value of corrosion rate for the whole life-cycle of RC 
+
+72 
+
+structures  after  corrosion  initiation  [18,  19,  23].  However,  the  corrosion  process  of  steel 
+
+73 
+
+reinforcing  bar  is  an  electrochemical  reaction  process  influenced  by  three  factors,  i.e., 
+
+74 
+
+chloride  concentration,  oxygen  content  and  resistivity  of  concrete  [24].  In  natural 
+
+75 
+
+environment,  the  actual  corrosion  rate  should  change  throughout  the  year  and  the  full  life-
+
+76 
+
+cycle of RC structures. A number of researches have been made to analytically establish the 
+
+77 
+
+corrosion  rate  model  for  the  entire  lifetime  of  RC  structures  based  on  the  electrochemical 
+
+78 
+
+theory  and/or  to  conduct  experiments  under  artificial  and  nature  climate  environment 
+
+79 
+
+conditions for verifications [25-28].  
+
+3 
+
+ 
+80 
+
+81 
+
+Under the expansive force caused by non-uniform corrosion of reinforcement, concrete cover 
+
+82 
+
+can be cracked which leads to delamination of the cover. To investigate the structural effects 
+
+83 
+
+of corrosion on the concrete cover, most previous work is focused on a single reinforcing bar, 
+
+84 
+
+e.g.,  in  [11,  18,  29].  It  has  been  proved  that  the  location  of  rebar  (i.e.,  corner  and  middle 
+
+85 
+
+rebars,  respectively)  and  boundary  conditions  have  significant  effect  on  cover  cracking 
+
+86 
+
+induced by reinforcement corrosion [11, 29]. Moreover, spacing between  the reinforcement, 
+
+87 
+
+in case of multiple reinforcing bars, can influence the stress fields and thus the time to surface 
+
+88 
+
+cracking  and  the  cracking  patterns.  Very  few  of  the  existing  models  can  well  explain  the 
+
+89 
+
+effect of corrosion of multiple rebars on cracking of the whole concrete cover, including those 
+
+90 
+
+of uniform corrosion [30]. Amongst the limited studies on corrosion of multiple rebars, Chen 
+
+91 
+
+et.al [19] simulated the crack patterns of concrete cover induced by uniform corrosion of two 
+
+92 
+
+reinforcing  bars  via  lattice  model.  Further,  Zhang  et.al  [31]  modelled  the  cover  cracking  of 
+
+93 
+
+RC  structures  with  two  reinforcing  (middle)  bars  under  non-uniform  corrosion  via  damage 
+
+94 
+
+plastic  model.  Literature  review  suggest  that  very  little  work  has  been  carried  out  on  cover 
+
+95 
+
+cracking induced by non-uniform corrosion of multiple reinforcing bars of RC structures and; 
+
+96 
+
+the  relationship  between  the  cover  cracking  and  the  time-dependent  corrosion  rate  of  the 
+
+97 
+
+whole life-cycle under corrosion of multiple reinforcing bars has not been established. 
+
+98 
+
+99 
+
+This  paper  attempts  to  develop  a  combined  analytical  and  numerical  method  to  predict  the 
+
+100 
+
+time  to  cover  cracking  after  corrosion  initiation  and  the  crack  width  under  time-dependent 
+
+101 
+
+non-uniform corrosion of multiple reinforcing bars of RC structures. A non-uniform corrosion 
+
+102 
+
+model is first formulated based on available experiment results. The time-dependent corrosion 
+
+103 
+
+rate  in  the  whole  life-cycle  of  RC  structures  is  introduced.  Under  the  expansion  caused  by 
+
+104 
+
+corrosion of multiple reinforcing bars, arbitrary discrete cracks are modelled in cover concrete 
+
+105 
+
+by cohesive elements with finite element method. Time to concrete cracking, crack width and 
+
+4 
+
+ 
+ 
+106 
+
+crack patterns of the whole cover are obtained. The developed model is partially verified by 
+
+107 
+
+comparing the results of uniform corrosion from the developed method and experiments, due 
+
+108 
+
+to  the  lack  of  experimental  data  on  non-uniform  corrosion.  Moreover,  a  parametric  study  is 
+
+109 
+
+carried out to investigate the effects of some key parameters, e.g., fracture energy of concrete, 
+
+110 
+
+spacing between the reinforcing bars and corrosion rate, on the time to surface cracking and 
+
+111 
+
+crack width, under non-uniform corrosion of multiple reinforcing bars.  
+
+112 
+
+113 
+
+2    RESEARCH SIGNIFICANCE  
+
+114 
+
+Considerable research has been conducted in the last few decades in modelling corrosion of 
+
+115 
+
+reinforcement  in  concrete  and  its  effects  on  concrete  cover  cracking.  However,  most  of 
+
+116 
+
+existing  studies  are  focused  on  corrosion  of  a  single  reinforcing  bar  and  model  the  cover 
+
+117 
+
+cracking as a thick-wall cylinder (mainly analytical) or other geometries (mainly numerical). 
+
+118 
+
+Very few models could address the interactive behaviour of corrosion of multiple reinforcing 
+
+119 
+
+bars of RC structures,  e.g., beams with 4 tensile  rebars.  In fact, the cover cracking patterns, 
+
+120 
+
+time to surface cracking and crack width development could be significantly affected by the 
+
+121 
+
+combined  stress  fields  generated  from  corrosion  of  multiple  steel  bars.  Therefore,  a  rational 
+
+122 
+
+model  for  predicting  concrete  cover  cracking  should  employ  a  system  approach,  by 
+
+123 
+
+considering  all  corrosion-affected  reinforcing  bars,  rather  than  a  simplified  approach  by 
+
+124 
+
+simulating  a  single  bar  only.  Moreover,  corrosion  is  actually  a  time-dependent  process  and 
+
+125 
+
+non-uniform along the circumference of reinforcing bars. It would be ideal to derive a time-
+
+126 
+
+dependent  non-uniform  corrosion  model  for  failure  prediction  of  the  whole  cover  of  RC 
+
+127 
+
+structures with multiple reinforcing bars. It is in this regard this paper is presented.   
+
+128 
+
+3    TIME-DEPENDENT NON-UNIFORM CORROSION 
+
+129 
+
+Chloride-induced corrosion of reinforcing bar in concrete produces rusts (mainly ferrous and 
+
+130 
+
+ferric  hydroxides,  Fe(OH)2  and  Fe(OH)3)  which  accumulate  and  result  in  cracking,  spalling 
+
+5 
+
+ 
+131 
+
+and delamination of RC structures. The corrosion rusts first fill in the annular porous layer in 
+
+132 
+
+concrete around the reinforcing bar, often referred to “diffusion zone” or “porous zone”. This 
+
+133 
+
+initial stage normally does not produce stresses in concrete. As schematically shown in Figure 
+
+134 
+
+1,  D  is  the  diameter  of  the  bar  and 
+
+0d  is  thickness  of  the  “porous  zone”.  The  thickness 0d  
+
+135 
+
+varies from 10 to 20 µm according to the porosity of concrete and compaction degree, which 
+
+136 
+
+is constant once concrete has hardened [23]. Depending on the level of corrosion, the products 
+
+137 
+
+of corrosion may occupy up to a few times more volume than the original steel. As corrosion 
+
+138 
+
+of  the  reinforcement  propagate  further,  a  band  of  corrosion  products  forms,  as  shown  in 
+
+139 
+
+Figure  1.  If  corrosion  process  is  assumed  uniform,  the  band  becomes  a  circular  ring  which 
+
+140 
+
+causes uniform stresses in the concrete. However, due to the fact that the chlorides, as well as 
+
+141 
+
+moisture and oxygen, reach the reinforcement surface at different rates through top side of the 
+
+142 
+
+concrete structure, it is rare to have uniform corrosion around the reinforcement. Experiments 
+
+143 
+
+results suggest that the front of corrosion products for the half of rebar facing concrete cover 
+
+144 
+
+is in a semi-elliptical shape, while corrosion of the opposite half of rebar is negligibly small 
+
+145 
+
+[16].  
+
+146 
+147 
+148 
+
+As illustrated in Figure 1(b), the total amount of corrosion products 
+
+rustW  can be assumed to 
+
+149 
+
+occupy three bands: the semi-elliptical band of corroded steel with maximum thickness 
+
+cod −
+
+st
+
+, 
+
+150 
+
+the  porous  circular  band 
+
+0d and  the  semi-elliptical  rust  band  with  maximum  thickness  md . 
+
+151 
+
+The  semi-major  axis  and  semi-minor  axis  for  the  semi-ellipse  of  corrosion  front  are 
+
+152 
+
+D
+
+2/
+
+d
++ 0
+
++
+
+md
+
+ and 
+
+D +
+2/
+
+d
+
+0
+
+, respectively.  
+
+153 
+
+154 
+
+Based on the geometry, the total amount of corrosion products 
+
+rustW  can be shown as follows: 
+
+155 
+
+rust
+
+
+W
+2
+1
+
+ρπ
+
+
+rust
+
+−
+
+α
+rust
+ρ
+st
+
+
+=
+
+
+Dd
+
+0
+
++
+
+d
+
+2
+0
+
++
+
+D
+2
+
+d
+
+m
+
++
+
+dd
+0
+
+m
+
+                         (1) 
+
+6 
+
+ 
+ 
+ 
+                                            
+156 
+157 
+
+where 
+
+rustα  is  the  molecular  weight  of  steel  divided  by  the  molecular  weight  of  corrosion 
+
+158 
+
+products. It varies from 0.523 to 0.622 according to different types of corrosion products [2]. 
+
+159 
+
+rustρ  is the density of corrosion products and 
+
+stρ  is the density of steel. 
+
+160 
+
+161 
+
+By  neglecting  the  second  order  of  small  quantities,  i.e., 
+
+mdd 0
+
+and 
+
+2
+
+0d ,  md can  be  derived  as 
+
+162 
+
+follows: 
+
+163 
+
+164 
+
+d
+
+m
+
+=
+
+
+W
+4
+1
+
+rust
+D
+ρπ
+
+
+rust
+
+−
+
+α
+rust
+ρ
+st
+
+
+−
+
+
+d
+02
+
+                                           (2) 
+
+165 
+
+To determine the displacement boundary condition caused by the rust expansion of the rebar, 
+
+166 
+
+the function of the semi-ellipse of the corrosion front in rectangular coordinate system can be 
+
+167 
+
+expressed as follows: 
+
+168 
+
+2
+
+y
+
+
+
+
+
+D
+2
+
++
+
+d
+
+0
+
++
+
+d
+
+m
+
++
+
+2
+
+
+
+
+
+
+
+
+
+D
+2
+
+2
+
+x
+
++
+
+d
+
+0
+
+2
+
+
+
+
+
+=
+
+1
+
+                                            (3) 
+
+169 
+
+Equation  (3)  can  be  transformed  in  a  polar  coordinate  system.  By  considering  the  original 
+
+170 
+
+location  of  inner  boundary  of  the  concrete,  i.e., 
+
+D +
+2/
+
+d
+
+,  the  displacement  boundary 
+
+0
+
+171 
+
+condition can be derived as follows, 
+
+172 
+
+173 
+
+r
+
+=
+
+(
+4
+
+D
+
+d
+
+0
+
++
+)
+2
+
+(
+2
+
+D
+
++
+
+174 
+
+where  
+
+πθ≤≤0
+
+.  
+
+175 
+
+2
+
+d
+
+0
+
++
+
+16
+
++
+
+2
+
+)(
+Dd
+m
+(
+Dd
++
+m
+
+2
+
++
+
+2
+
+d
+
+d
+
+0
+
++
+
+0
+
+)
+d
+
+m
+
+−
+
+D
+2
+
+)
+
+cos
+
+2
+
+θ
+
+−
+
+d
+
+0
+
+                         (4) 
+
+176 
+
+By substituting Equations (2) in to Equations (4), the displacement boundary condition of 
+
+177 
+
+concrete 
+
+)t,θδ
+(
+
+ can be derived as follows: 
+
+7 
+
+ 
+ 
+                                                
+                                                   
+                                                
+ 
+                               
+ 
+178 
+
+(
+,
+θδ
+
+)
+
+t
+
+=
+
+
+
+
+
+
+D
+
++
+
+2
+
+d
+
++
+
+0
+
+( )
+tW
+8
+rust
+D
+π
+
+
+
+
+
+1
+ρ
+
+rust
+
+−
+
+α
+rust
+ρ
+st
+
+
+−
+
+
+4
+
+
+(
+Dd
+
+
+
+
+0
+
++
+
+2
+
+d
+
+0
+
+)
+
+(
+2
+
+D
+
++
+
+4
+
+d
+
+2
+
+)
+
+0
+
++
+
+32
+
+( )
+tW
+2
+rust
+D
+π
+
+
+
+
+
+
+
+
+
+
+1
+ρ
+
+rust
+
+−
+
+α
+rust
+ρ
+st
+
+
+−
+
+
+d
+
+0
+
+
+
+
+
+
+
+
+
+
+
+D
+
++
+
+2
+
+d
+
++
+
+0
+
+( )
+tW
+4
+rust
+D
+π
+
+
+
+
+
+1
+ρ
+
+rust
+
+−
+
+α
+rust
+ρ
+st
+
+
+−
+
+
+2
+
+d
+
+0
+
+
+
+
+
+
+2
+
+cos
+
+θ
+
+(5) 
+
+−
+
+D
+2
+
+−
+
+d
+
+0
+
+179 
+
+where 
+
+πθ ≤≤0
+
+.  
+
+180 
+
+181 
+
+In Equations (5), 
+
+( )tWrust
+
+ is related to the corrosion rate of the steel bar and can be expressed 
+
+182 
+
+as follows [2]: 
+
+183 
+
+tW
+)(
+rust
+
+=
+
+∫
+/1(105.02
+
+t
+
+0
+
+πα
+rust
+
+)
+
+Di
+
+corr
+
+t
+)(
+
+dt
+
+                                      (6)                               
+
+184 
+
+( )tWrust
+
+ is the total amount of rust products at time t.  corr
+
+i
+
+ is the corrosion current density and 
+
+185 
+
+t  is time after corrosion initiation. The units of these variables are presented in Tables.    
+
+186 
+
+187 
+
+As  described  in  Equations  5  and  6,  the  corrosion  rate  corr
+
+i
+
+ can  be  the  most  important  single 
+
+188 
+
+factor  controlling  the  amount  of  corrosion  products  which  determines  the  displacement 
+
+189 
+
+boundary condition of concrete. Based on previous studies on experiments and simulations in 
+
+190 
+
+terms  of  corrosion  initiation,  corrosion  propagation  and  cover  cracking  [13,  24,  26,  32-34], 
+
+191 
+
+etc.,  the  corrosion  process  of  steel  bar  in  concrete  for  the  whole  life-cycle  could  be  divided 
+
+192 
+
+into six stages: (1) no corrosion－chloride ions penetrate the concrete cover and reach to the 
+
+193 
+
+threshold  value;  (2)  corrosion  initiation－gradual  depassivation  process  of  the  steel  bar;  (3) 
+
+194 
+
+corrosion  products  free  expansion－the  oxygen  and  moisture  supply  in  the  “porous  zone” 
+
+195 
+
+gradually  reduce  while  the  rust  occupies  the  “porous  zone”;  (4)  steady  corrosion － the 
+
+196 
+
+equilibrium  between  consuming  and  transporting  oxygen  and  moisture  is  maintained;  (5) 
+
+197 
+
+accelerated  corrosion－  caused  by  significant  cracking  which  leads  to  faster  transport  of 
+
+198 
+
+oxygen and moisture; and (6) final steady corrosion－the reinforcing bar exposes to chloride 
+
+8 
+
+ 
+                                            
+ 
+199 
+
+and  atmosphere  directly.  The  development  of  corrosion  rate  in  the  whole  life-cycle  of  RC 
+
+200 
+
+structures can be schematically shown in Figure 2.  
+
+201 
+
+202 
+
+This  paper  mainly  focuses  on  the  time  from  corrosion  initiation  to  surface  cracking  (crack 
+
+203 
+
+width smaller than 0.3-0.6mm). The time needed for chlorides to penetrate the concrete to the 
+
+204 
+
+depth of the reinforcement (i.e., Stage 1) is excluded. Since stage 2 is usually very short and 
+
+205 
+
+stages (5) and (6) are normally beyond the serviceability of RC structures, the corrosion rate 
+
+206 
+
+for the stages (3) and (4) in the whole life-cycle of RC structures can be expressed as follows 
+
+207 
+
+[27]: 
+
+208 
+
+209 
+
+210 
+
+211 
+
+i
+corr
+
+=
+
+1
+2
+
+
+3
+δ
+
+
+
+−
+
+2
+
+×
+
+10
+
+exp[
+
+9500
+(
+
+1
+298
+
+−
+
+1
+T
+
+
+)]
+
+
+
+5.0
+
+
+{
+1
+
+
+
+3
+−
+
+×
+
+10
+
+exp[
+
+2612
+(
+
+1
+T
+
+−
+
+1
+298
+
+
+)]
+
+
+
+5.0
+
+(
+
+exp[
+
+522
+β
+
++
+Rt
+,(
+
+T
+44.1
+)
+
+con
+
+)
+
+]
+
+           (7) 
+
+β
+
+Rt
+,(
+
+con
+
+)
+
+=
+
+
+143[
+
+
+
+143[
+
+78.
+
+78.
+
+−
+
+54
+
+×
+
+(
+
+cw
+
+.0)/
++
+
+018
+
+−
+
+54
+
+×
+
+(
+
+cw
+
+.0)/
++
+
+018
+
+R
+,1
+
+con
+
+R
+,1
+
+con
+
+]
+
++
+
+78.0[
+
+−
+
+92.0
+
+×
+
+(
+
+cw
+
+2.1)/
+−
+
+×
+
+10
+
+]
+
++
+
+78.0[
+
+−
+
+92.0
+
+×
+
+(
+
+cw
+
+2.1)/
+−
+
+×
+
+10
+
+4
+−
+
+−
+
+4
+
+R
+
+con
+
+]
+
+×
+
+t
+
+t
+(,
+1
+
+t
+<≤
+
+t
+
+)
+
+2
+
+R
+
+con
+
+]
+
+×
+
+t
+
+t
+(,
+
+2
+
+2
+
+t
+<≤
+
+t
+
+)
+
+3
+
+212 
+
+where δ  is  the  ratio  of  activation  area  to  the  total  surface  area,  which  is  0.5  in  the  non-
+
+213 
+
+uniform corrosion model; T is the absolute temperature of concrete, which can be considered 
+
+214 
+
+as the same as the ambient temperature due of the lack of true temperature data of the internal 
+
+215 
+
+concrete; 
+
+conRtβ
+,(
+
+)
+
+ is the natural logarithm Tafel slopes of the polarization curve.
+
+cw /
+
+is the 
+
+216 
+
+water  cement  ratio;  1t ,  2t
+
+ and  3t  are  times  illustrated  in  Figure  2.  At  2t
+
+,  the  amount  of 
+
+217 
+
+corrosion products 
+
+( 2tWrust
+
+)
+
+ fully fills in the “porous zone”, with the thickness 
+
+0d ; therefore, 
+
+218 
+
+Equation (1) can be re-written as follows, 
+
+219 
+
+220 
+
+)
+
+2
+
+tW
+2
+(
+rust
+D
+π
+
+
+
+
+
+1
+ρ
+
+rust
+
+−
+
+α
+rust
+ρ
+st
+
+
+=
+
+
+d
+
+0
+
+                                                (8) 
+
+9 
+
+ 
+ 
+      
+ 
+ 
+                                                
+ 
+221 
+
+2t  can  be  determine  by  combining  the  Equations  (6)  and  (8).  In  Equation  (7), 
+
+conR  is  the 
+
+222 
+
+resistivity  of  concrete,  which  is  related  to  water  cement  ratio 
+
+cw /
+
+,  chloride  content 
+
+−Cl
+
+, 
+
+223 
+
+temperature  T  and pore water saturation  P , with the expression presented as follows [27]: 
+
+224 
+
+225 
+
+Rcon
+
+=
+
+[
+
+,750
+
+605
+
+×
+
+(
+
+cw
+)/
+
+−
+
+,106
+
+]228
+
+×
+
+exp[
+
+−
+
+17.44
+
+×
+
+Cl
+
+−
+
+−
+
+.7
+
+7213
+
+P
++×
+
+2889
+
+(
+
+1
+T
+
+−
+
+1
+303
+
+)]
+
+       (9) 
+
+226 
+
+conR ,1
+
+ is the resistivity of concrete at time  1t . 
+
+227 
+
+228 
+
+It has been found that surface chloride concentration does not change significantly with time 
+
+229 
+
+for  most  RC  structures  in  coastal  zone  [13].  Moreover,  numerical  simulations  on  chloride 
+
+230 
+
+diffusion  indicated  that  after  corrosion  initiation,  the  chloride  content  in  concrete  will  not 
+
+231 
+
+increase  significantly  given  constant  value  of  surface  chloride  concentration  under  natural 
+
+232 
+
+environment  [35].  The  pore  water  saturation  P  is  related  to  internal  relative  humidity  and 
+
+233 
+
+temperature.  Although  the  relative  humidity  and  temperature  in  nature  climate  changes 
+
+234 
+
+considerably,  pore  water  saturation  P  does  not  change  much  because  of  the  response 
+
+235 
+
+hysteresis  of  concrete  to  external  climate  [28].  Therefore,  temperature  could  be  the  most 
+
+236 
+
+significant factor that affects the corrosion rate after corrosion initiation in concrete under an 
+
+237 
+
+atmospheric environment. Similar statements have been found in previous literatures, e.g. [28, 
+
+238 
+
+35].   
+
+239 
+
+240 
+
+4    COVER CRACKING MODEL 
+
+241 
+
+Concrete  is  modelled  as  a  quasi-brittle  material,  with  its  constitutive  tensile  stress-
+
+242 
+
+displacement  relation  (
+
+δσ− )  illustrated  in  Figure  3.  To  model  the  arbitrary  cracking  in 
+
+243 
+
+concrete,  cohesive  elements  are  embedded  in  the  mesh  which  is  sufficiently  fine.  The 
+
+244 
+
+insertion  process  of  cohesive  elements  is  shown  in  Figure  4.  First,  all  individual  nodes  are 
+
+245 
+
+replaced by certain number of new nodes at the same location. The number of newly created 
+10 
+
+                        
+ 
+ 
+246 
+
+nodes  depends  on  the  number  of  the  elements  connecting  to  the  original  node.  Second,  the 
+
+247 
+
+newly created nodes at the interface between two triangle elements are identified and linked 
+
+248 
+
+to  form  a  cohesive  element.  The  cohesive  elements  are  shown  in  red  in  Figure  4.  This 
+
+249 
+
+insertion  process  was  conducted  by  a  script  written  in  Python.  Moreover,  it  should  be 
+
+250 
+
+mentioned  that  the  cohesive  elements  generated  are  of  zero  thickness  in  geometry.  The  two 
+
+251 
+
+nodes  of  a  cohesive  element,  in  the  thickness  direction,  share  the  same  coordinates  before 
+
+252 
+
+loading.  The  constitutive/calculation  thickness  of  the  cohesive  elements,  however,  is  1.0  for 
+
+253 
+
+the convenience of transformation between strain and displacement.  
+
+254 
+
+255 
+
+Figure 5 shows a RC beam with four tensile reinforcing bars and two compressive reinforcing 
+
+256 
+
+bars. In light of reducing the computing time, only half of the structure is modelled due to the 
+
+257 
+
+symmetry of the structure and the loading, as illustrated in Figure 5. The beam is modelled in 
+
+258 
+
+2D since it is a plane strain problem. Two elements are employed in this study, i.e., 4-node 
+
+259 
+
+cohesive  elements  at  all  interfaces  between  the  triangle  solid  elements,  and  3-node  plane 
+
+260 
+
+strain element for the bulk intact concrete. The size of solid elements in the region close to the 
+
+261 
+
+corrosion products varies from 0.6 mm to 1.5 mm while the size in other region varies from 
+
+262 
+
+1.5 mm to 15 mm. Very fine mesh is generated before inserting sufficient number of cohesive 
+
+263 
+
+elements. The meshed structure is shown in Figure 6. There are 12,040 solid triangle elements 
+
+264 
+
+and  17,865  cohesive  elements  inserted,  for  half  of  the  structure  with  clear  spacing  between 
+
+265 
+
+tensile  rebars  of  30  mm.  The  expansive  behaviour  of  non-uniform  corrosion  is modelled  by 
+
+266 
+
+applying radial expansive displacement to the concrete structure.  
+
+267 
+
+268 
+
+5    RESULTS AND VALIDATION  
+
+269 
+
+5.1    Worked example 
+
+270 
+
+To  demonstrate  the  application  of  the  derived  method,  the  time-dependent  corrosion  rate  is 
+
+271 
+
+first calculated. The average monthly temperature in England from 1996-2016 is used which 
+11 
+
+ 
+  
+272 
+
+is listed in Table 1 [36]. According to the data in Table 1, the temperature can be analytically 
+
+273 
+
+formulated and expressed as a function of time: 
+
+274 
+
+=T
+
+-5.98
+
+×
+
+cos((t
+
+-
+
+0.5)
+
+(2
+π×
+
++))
+
+10.39
+
+                                      (10) 
+
+275 
+
+where  T is in Centigrade and should be transformed to absolute temperature to calculate the 
+
+276 
+
+corrosion rate in Equation  7.  t  is the time in year. 
+
+277 
+
+278 
+
+With the values for input parameters shown in Table 2 the corrosion rate for the whole life-
+
+279 
+
+cycle from corrosion initiation to surface crack width up to 0.3-0.6 mm can be obtained and 
+
+280 
+
+shown in Figure 7. It should be noted that the initial increase of corrosion rate, i.e., stage 2 in 
+
+281 
+
+Figure  2,  is  neglected  in  the  whole  life-cycle  analysis  in  this  study  since  the  period  is 
+
+282 
+
+negligibly  small.  It  can  be  seen  that,  in  the  free  expansion  stage,  the  corrosion  rate  corr
+
+i
+
+283 
+
+decreases from 1.69 to 1.07 µA/cm2, and the “porous zone” is fully filled with the corrosion 
+
+284 
+
+products.  This  process  takes  about  0.07  year.  As  discussed,  the  reason  for  the  drop  of 
+
+285 
+
+corrosion  rate  is  because  the  consumption  of  oxygen  in  the  “porous  zone”.  In  the  steady 
+
+286 
+
+corrosion  stage,  the  fluctuation  of  corrosion  rate  is  caused  by  the  seasonal  variation  of 
+
+287 
+
+temperature. The lowest corrosion rate is 0.63 µA/cm2 and the highest is 1.1 µA/cm2.  
+
+288 
+
+289 
+
+After  calculating  the  time-dependent  corrosion  rate,  the  maximum  non-uniform  corrosion 
+
+290 
+
+induced expansive displacement 
+
+)(td m
+
+, as illustrated in Figure 1, can be shown as a function 
+
+291 
+
+of  time  after  corrosion  initiation  in  Figure  8.  For  better  evaluating  the  time-dependent 
+
+292 
+
+corrosion  rate,  developments  of  corrosion  expansion 
+
+)(td m
+
+ under  three  constant  corrosion 
+
+293 
+
+rates  (
+
+i
+corr
+
+=
+
+0.5,  1.0  and  2.0  µA/cm2)  are  plotted.  First,  it  has  been  found  that  the  growth 
+
+294 
+
+curves  of 
+
+)(td m
+
+ over  time  for  constant  corrosion  rates  are  rather  smooth  while  that  for  the 
+
+295 
+
+time-dependent  corrosion  is  slightly  fluctuating.  This  is  because  the  model  proposed  in  this 
+
+12 
+
+                                             
+ 
+ 
+ 
+296 
+
+paper for corrosion rate is a function of temperature which changes during a year. The 
+
+)(td m
+
+297 
+
+curve for the time-dependent corrosion rate initially falls in between the curves for 
+
+i
+corr
+
+=
+
+1.0 
+
+298 
+
+µA/cm2  and  2.0  µA/cm2,  respectively;  after  about  0.4  year,  however,  the  time-dependent 
+
+299 
+
+curve  progresses  below  the  curve  for 
+
+i
+corr
+
+=
+
+1.0  µA/cm2.  Therefore,  it  would  be  hard  to  find 
+
+300 
+
+any  constant  corrosion  rate  to  represent  the  time-dependent  corrosion  rate  in  terms  of  the 
+
+301 
+
+development  of  corrosion  induced  expansion  over  time.  This  also  justifies  the  use  of  time-
+
+302 
+
+dependent corrosion rate rather than constant corrosion rate. For the time-dependent corrosion 
+
+303 
+
+rate, corrosion starts to cause stress/displacement onto concrete at 0.07 year.  
+
+304 
+
+305 
+
+5.2    Cover failure modes 
+
+306 
+
+A number of combinations of reinforcement clear spacing (S) and fracture energy of concrete 
+
+307 
+
+(Gf) are modelled in this study to investigate the cover failure patterns caused by corrosion of 
+
+308 
+
+multiple reinforcements. Three values of the reinforcement spacing (S), i.e., 30 mm, 45 mm 
+
+309 
+
+and 60 mm, and three fracture energy of concrete (Gf) 60 N/m, 90 N/m and 120 N/m, are used. 
+
+310 
+
+The geometric and mechanical parameters of the RC structures are shown in Table 3. There 
+
+311 
+
+are  two  typical  failure  patterns  of  the  cover  structure  which  have  been  found.  The  cracking 
+
+312 
+
+patterns  and  time  to  cracking  for  different  combinations  of  reinforcement  spacing  (S)  and 
+
+313 
+
+fracture  energy  of  concrete  (Gf)  are  presented  in  Table  4.  As  shown  in  Figure  9,  the  first 
+
+314 
+
+pattern has a through crack between reinforcing bars and a side crack whilst no top crack is 
+
+315 
+
+visible.  Such  a  pattern  is  considered  as  a  delamination  failure  of  the  cover.  For  the  other 
+
+316 
+
+pattern,  however,  there  is  a  top  crack  above  the  side  reinforcing  bar,  other  than  the  through 
+
+317 
+
+crack and the side crack. This pattern tends to cause spalling of the corner concrete cover and 
+
+318 
+
+hence it is regarded as a combined delamination  and corner spalling failure of the cover.  In 
+
+319 
+
+general, relative small values of reinforcement spacing and fracture energy of concrete tend to 
+
+320 
+
+cause typical delamination failure of concrete cover while high values of these two parameters 
+
+13 
+
+ 
+ 
+321 
+
+tend to lead to spalling failure of concrete corner. Discussions on the effects of reinforcement 
+
+322 
+
+spacing and fracture energy of concrete on the cover failure will be presented in Section 6.  
+
+323 
+
+324 
+
+5.3    Verification 
+
+325 
+
+The  derived  model  is  verified  by  comparing  the  time  to  surface  cracking  with  experiments 
+
+326 
+
+from literature [37]. According to the literature searched, almost all the test data regarding to 
+
+327 
+
+the  time  to  cracking  for  multiple  reinforcement  corrosion  are  based  on  uniform  corrosion 
+
+328 
+
+development  by  electric  current  method  for  accelerated  corrosion  [32,  37,  38].  As  such,  a 
+
+329 
+
+special numerical case on uniform corrosion is conducted and the results are compared with 
+
+330 
+
+those  from  experiments  [37].  The  same  inputs  from  the  tests  are  used  in  the  numerical 
+
+331 
+
+simulation,  which  are  presented  in  Table  5.  The  correlation  between  the  time  and  uniform 
+
+332 
+
+corrosion  expansion  is  achieved  by  the  corrosion  model  presented  in  Li  and  Yang  [1].  The 
+
+333 
+
+comparisons of crack width for the side reinforcing bar between the developed model and the 
+
+334 
+
+experimental  results  are  illustrated  in  Figure  10.  It  can  be  found  that  the  progress  of  crack 
+
+335 
+
+width  simulated  is  in  reasonably  good  agreement  with  the  experimental  results.  The  time to 
+
+336 
+
+surface  cracking  in  the  experiment  is  72  hours,  which  is  very  close  to  the  time  when  crack 
+
+337 
+
+width  reaches  0.02mm  from  the  simulation.  It  should  be  mentioned  that,  in  the  experiment, 
+
+338 
+
+the measured time to crack initiation and propagation is calibrated as it was for corrosion rate 
+
+339 
+
+100 µA/cm2 and the surface crack initiation is obtained by a crack detection microscope with 
+
+340 
+
+an accuracy of 0.02mm. 
+
+341 
+
+342 
+
+5.4    Justification of top crack 
+
+343 
+
+It  is  very  interesting  to  find  that,  in  the  combined  delamination  and  corner  spalling  failure 
+
+344 
+
+mode,  the  top  crack  always  starts  from  the  outer  surface  and  propagates  inwards  to  the 
+
+345 
+
+reinforcing bar. This is different from the common perspective on corrosion-induced cracking 
+
+346 
+
+which  is  usually  considered  to  be  initiated  from  inside  to  outside  of  the  concrete  cover. 
+
+14 
+
+ 
+ 
+347 
+
+Similar  results  have  been  found  in  experimental  tests  from  S.  Caré  et  al.  [39]  and  damage 
+
+348 
+
+simulations from Du et al. [29] which indicated that a vertical crack was generated at surface 
+
+349 
+
+of  concrete  and  propagated  towards  the  rebar.  To  thoroughly  investigate  this  problem,  the 
+
+350 
+
+stress  distributions  (maximum  principal  stress)  of  the  corner  rebar  region  under  uniform 
+
+351 
+
+corrosion  and  non-uniform  corrosion  respectively  are  plotted  in  Figure  11.  It  can  be  found 
+
+352 
+
+that,  for  uniform  corrosion,  the  maximum  principal  stress  concentrates  around  the 
+
+353 
+
+reinforcement  in  a  relative  uniform  manner.  By  sign  convention,  the  maximum  principal 
+
+354 
+
+stress  is  tensile  stress.  The  maximum  principal  stresses  for  all  elements  in  this  region  are 
+
+355 
+
+tensile stresses while largest stress occurs at the inner boundary, according to Figure 11 (a). 
+
+356 
+
+This  is  why  the  uniform  corrosion-induced  crack  is  always  initiated  at  the  inner  boundary.  
+
+357 
+
+For the non-uniform corrosion developed from this study, the stress concentrates around two 
+
+358 
+
+sides  of  the  inner  boundary － roughly  at  10  degrees  above  the  horizontal  direction,  as 
+
+359 
+
+illustrated in Figure 11 (b). This is where the side crack is initiated; after that, the side crack 
+
+360 
+
+propagates towards the side surface. A closer look is shown in Figure 12 (a) in which a tensile 
+
+361 
+
+stress  concentration  is  clearly  demonstrated.  However,  for  the  potential  top  crack,  the  inner 
+
+362 
+
+boundary  region  is  in  bi-axial  compression,  as  illustrated  in  Figure  12  (b).  It  is  therefore 
+
+363 
+
+impossible to have a crack initiated here. However, at the top surface, the region is in tension 
+
+364 
+
+in  the  x-direction  where  the  top  crack  should  start.  The  different  stress  distributions  for 
+
+365 
+
+uniform  and  non-uniform  corrosion  models  determine  the  cracking  patterns  of  the  concrete 
+
+366 
+
+cover and explain why the non-uniform corrosion induced top crack is initiated from the top 
+
+367 
+
+surface, rather than from the inner boundary of concrete cover.  
+
+368 
+
+369 
+
+6         ANALYSIS AND DISCUSSION 
+
+370 
+
+6.1    Corrosion parameters 
+
+15 
+
+ 
+371 
+
+Corrosion  rate  has  been  considered  as  one  of  the  key  factors  affecting  the  durability  of 
+
+372 
+
+reinforced  concrete  structures.  The  effect  of  constant  corrosion  rates  on  time  to  surface 
+
+373 
+
+cracking  for  the  model  (spacing  of  reinforcement  45  mm  and  fracture  energy  90  N/m)  is 
+
+374 
+
+investigated  and  shown  in  Figure  13.  It  can  be  found  that  the  increase  of  corrosion  rate 
+
+375 
+
+reduces  the  time  to  surface  cracking.  For  relatively  low  corrosion  rate,  e.g.,  corr
+
+i
+
+ is  smaller 
+
+376 
+
+than 1.0 µA/cm2, the time to surface cracking decreases sharply from 7.5 years to 0.75 year. 
+
+377 
+
+However, for moderate or high rate of corrosion, e.g.,  corr
+
+i
+
+ is larger than 1.0 µA/cm2, the time 
+
+378 
+
+to surface cracking does not change dramatically.   
+
+379 
+
+380 
+
+One of the advantages of the corrosion model developed in this paper is that the corrosion rate 
+
+381 
+
+is  directly  related  to  ambient  temperature  and  chloride  content  in  concrete  cover.  To 
+
+382 
+
+investigate the effect of temperature on the time to surface cracking, values of temperature in 
+
+383 
+
+range  of  5-35°C  are  used  to  calculate  the  constant  corrosion  rates.  The  time  to  surface 
+
+384 
+
+cracking for the model (spacing of reinforcement 45mm, fracture energy 90N/m and chloride-
+
+385 
+
+ion content 3.034%) as a function of temperature is shown as Figure 14. It can be seen that, 
+
+386 
+
+the  concrete  cover  surface  cracking  is  advanced  from  about  1.5  years  to  0.2  year,  as  the 
+
+387 
+
+temperature changes from 5°C to 35°C. This proves that the time to surface cracking is very 
+
+388 
+
+sensitive  to  temperature.  However,  it  has  also  been  found  the  surface  cracking  is  more 
+
+389 
+
+sensitive  to  changes  of  temperature  lower  than  25°C,  than  that  of  temperature  higher  than 
+
+390 
+
+25°C.  
+
+391 
+
+392 
+
+The effects of chloride content in concrete on the cracking of concrete cover have also been 
+
+393 
+
+investigated  which  is  shown  in  Figure  15.  As  expected,  the  time  to  surface  cracking  is 
+
+394 
+
+reduced  as  the  content  of  chloride  ions  increases.  When  chloride  ions  content  is  increased 
+
+395 
+
+from 1% to 4%, the time to surface cracking is advanced from 2.17 years to 0.84 year. After 
+
+16 
+
+ 
+ 
+396 
+
+4% chloride concentration up to 7% investigated, the decrease in time to surface cracking is 
+
+397 
+
+only 0.23 year down to 0.61 year. Therefore, it can be postulated that the cracking of concrete 
+
+398 
+
+cover is very sensitive to the change of low chloride concentrations up to 4%.  
+
+399 
+
+400 
+
+6.2    Crack width 
+
+401 
+
+To investigate the effect of corrosion rate on evolution of surface crack width, the model for 
+
+402 
+
+spacing of reinforcement 30 mm and fracture energy 60 N/m is taken as an example based on 
+
+403 
+
+time-dependent corrosion rate and three constant low/moderate corrosion rates, i.e., 
+
+i
+corr
+
+=
+
+0.5 
+
+404 
+
+µA/cm2, 
+
+i
+corr
+
+=
+
+1.0 µA/cm2 and 
+
+i
+corr
+
+=
+
+2.0 µA/cm2. The crack width is obtained by measuring 
+
+405 
+
+the distance between the nodes of the cohesive element at surface of concrete cover. It should 
+
+406 
+
+be noted that, before the surface cracking, i.e., cohesive element being deleted, the cohesive 
+
+407 
+
+element  already  has  a  deformation  according  to  the  constitutive  definition  of  the  cohesive 
+
+408 
+
+elements.  This  displacement  should  be  disregarded  from  the  crack  width  calculation.  As 
+
+409 
+
+illustrated in Figure 16, the increase of corrosion rate can cause significant reduce in time to 
+
+410 
+
+surface  cracking.  The  initial  sudden  increases  in  the  surface  crack  width  for  different 
+
+411 
+
+corrosion  rate  are  almost  the  same  since  the  geometry  and  mechanical  parameters  in  these 
+
+412 
+
+models are the same. Further, higher  corrosion rate can  result in considerably larger surface 
+
+413 
+
+crack  width  than  lower  corrosion  rate,  for  long-term  crack  width  growth.  It  should  be 
+
+414 
+
+mentioned that since the corrosion mechanism will change significantly after the crack width 
+
+415 
+
+larger than 0.3 mm [26] which is not considered in the developed model, only 10-year service 
+
+416 
+
+life is investigated in which the crack widths for most cases are smaller than 0.25 mm. 
+
+417 
+
+418 
+
+The effects of the fracture energy on development of side and top surface cracks are shown as 
+
+419 
+
+Figures  17  and  18.  In  Figure  17,  it  can  be  seen  that  larger  fracture  energy  of  concrete  will 
+
+420 
+
+delay  the  time  to  side  surface  cracking  and  cause  larger  initial  sudden  increase  in  the  crack 
+
+17 
+
+ 
+ 
+421 
+
+width.  However,  the  differences  in  time  to  surface  cracking  and  initial  crack  width 
+
+422 
+
+development are both very small. Moreover, the  long-term developments of the crack width 
+
+423 
+
+for  these  two  cases  investigated  are  almost  identical.  Figure  18  illustrates  the  effect  of  the 
+
+424 
+
+fracture energy of concrete on the development of top surface crack width. Similarly, larger 
+
+425 
+
+fracture  energy  of  concrete  will  result  in  larger  initial  increase  of  crack  width  and  longer 
+
+426 
+
+cracking time. The fracture energy of concrete has little effect on the long-term development 
+
+427 
+
+of  top  surface  crack  width.  It  is  interesting  to  find  that,  when  the  through  crack  completely 
+
+428 
+
+forms,  there  is  a  sudden  drop  in  top  surface  crack  width.  Such  an  effect  of  formation  of 
+
+429 
+
+through crack on the surface crack growth has not been found in previous literatures.  
+
+430 
+
+431 
+
+The effect of spacing between reinforcing bars S on the top surface crack width is shown in 
+
+432 
+
+Figure  19.  Fracture  energy  120  N/m  is  used  in  this  analysis.  It  can  be  found  that  the  initial 
+
+433 
+
+crack width growth is significantly affected by the spacing between reinforcements while the 
+
+434 
+
+long-term developments of crack width are almost the same. Further, there is a sudden drop of 
+
+435 
+
+crack width for S = 60 mm which is caused by the complete formation of the through crack. 
+
+436 
+
+As explained, when the through crack is formed, there will be a sudden energy release which 
+
+437 
+
+leads  to  unloading  of  the  other  cracks.  There  is  no  drop  for  S  =30  and  45mm  because  the 
+
+438 
+
+through crack forms ahead of the initiation of the top crack.  
+
+439 
+
+440 
+
+6.3    Cracking time 
+
+441 
+
+Although the through crack is an internal crack  which can be less important in terms of the 
+
+442 
+
+durability, it has significant effects on the development of surface cracks, i.e., the side and top 
+
+443 
+
+cracks.  Figure  20  (a)  shows  the  effects  of  fracture  energy  of  concrete  and  spacing  between 
+
+444 
+
+reinforcing bars on time to complete formation of through crack. It can be seen that the larger 
+
+445 
+
+the fracture energy of concrete or the spacing between reinforcements is, the longer the time 
+
+446 
+
+to  formation  of  through  crack  is.  Moreover,  the  effects  of  fracture  energy  of  concrete  and 
+
+18 
+
+ 
+ 
+447 
+
+spacing between reinforcing bars on time to initiation of top crack are shown in Figure 20 (b). 
+
+448 
+
+Only results of S = 45 and 60 mm are plotted because there is no top crack for most cases of S 
+
+449 
+
+= 30 mm, i.e., delamination mechanism in Figure 9. Again, it has been found that the increase 
+
+450 
+
+of  fracture  energy  of  concrete  can  delay  the  time  to  initiation  of  top  crack.  In  addition,  the 
+
+451 
+
+effect of spacing is very sensitive, for larger fracture energy of concrete. For fracture energy 
+
+452 
+
+60 and 90N/m, there are almost no differences between cases of S = 45 and 60 mm, whilst the 
+
+453 
+
+time  to  initiation  of  top  crack  is  nearly  doubled  for  fracture  energy  120N/m.  This  finding 
+
+454 
+
+should be very helpful for structural engineers in regards to their consideration of durability 
+
+455 
+
+design of RC structures. Nevertheless, more simulations will be ideal in the future for some 
+
+456 
+
+extra clarification; for example, more values of spacing between reinforcements.  
+
+457 
+
+458 
+
+6.4    Crack path 
+
+459 
+
+To  investigate  the  change  of  normal  stress  (crack  driving  force)  of  the  cohesive  elements 
+
+460 
+
+along the cracks over time, Figures 21 and 22 are plotted for the side crack and the top crack 
+
+461 
+
+respectively. The spacing between reinforcements is taken 30 mm and the fracture energy is 
+
+462 
+
+120 N/m. The normal stress distributions of cohesive elements along the side crack are shown 
+
+463 
+
+for 0.12 year, 1.13 years and 10 years in Figure 21. There are 19 elements in the path of side 
+
+464 
+
+crack and the elements are ordered from the surface of concrete to the inner boundary. At 0.12 
+
+465 
+
+year, the first element (no. 19) from the inner boundary approaches the tensile strength. As the 
+
+466 
+
+load  increases,  the  side  crack  is  initiated  and  the  peak  stress  moves  along  the  crack  path 
+
+467 
+
+towards the surface. At 1.13 year, the peak stress moves to the location of element no. 4 while 
+
+468 
+
+the  normal  stresses  for  all  previously  cracked  cohesive  elements  soften/degrade  to  certain 
+
+469 
+
+values,  according  to  its  constitutive  stress-displacement  ration  defined  in  Figure  3.  For  this 
+
+470 
+
+example, because of the existence of top crack, the surface region of the side crack is always 
+
+471 
+
+in compression as shown in Figure 12. Even at 10 years, the side crack tip can only reach the 
+
+472 
+
+cohesive  element  no.  2  whilst  the  first  cohesive  element  from  the  surface  is  in  significant 
+
+19 
+
+ 
+473 
+
+compression, more than 10 MPa. This reflects complex nature of the problem for non-uniform 
+
+474 
+
+corrosion of multiple reinforcing bars.    
+
+475 
+
+476 
+
+Figure  22  shows  the  normal  stress  distributions  of  cohesive  elements  along  the  top  crack 
+
+477 
+
+under the case of reinforcement spacing 30 mm and fracture energy 120 N/m. It can be seen 
+
+478 
+
+that the peak tensile stress moves from the cohesive element no. 21 (at the top surface) to the 
+
+479 
+
+cohesive  element  no.  2  (close  to  the  inner  boundary),  as  time  increases.  At  0.12  year,  the 
+
+480 
+
+concrete near reinforcing bar is in compression while the concrete near the surface of concrete 
+
+481 
+
+is in tension. As explained earlier, this is why the top crack is initiated at the top, rather than 
+
+482 
+
+at  the  inner  boundary.  From  0.12  to  1.43  years,  the  top  crack  propagates  fast,  i.e.,  the  peak 
+
+483 
+
+tensile stress moves from cohesive element no. 21 to no. 6; the location of peak tensile stress 
+
+484 
+
+is  usually  referred  to  as  the  start  of  fracture  process  zone  or  the  fictitious  crack  front, 
+
+485 
+
+according to definition of cohesive crack model [40].  
+
+486 
+
+487 
+
+7    CONCLUSIONS 
+
+488 
+
+A combined analytical and numerical method has been presented to predict the time to cover 
+
+489 
+
+cracking and the crack width under non-uniform corrosion of multiple reinforcing bars of RC 
+
+490 
+
+structures. The non-uniform corrosion model was derived based on experimental results and 
+
+491 
+
+formulated  as  a  function  of  time.  Under  the  non-uniform  corrosion-induced  expansion,  a 
+
+492 
+
+fracture  model  was  established  to  simulate  arbitrary  cracking  of  the  cover  of  RC  structures 
+
+493 
+
+with  multiple  reinforcing  bars.  The  times  to  cracking  and  failure  modes  of  concrete  cover 
+
+494 
+
+affected  by  fracture  energy  of  concrete  and  spacing  between  reinforcing  bars  were  obtained 
+
+495 
+
+and discussed. To validate the developed model, comparisons with experimental results from 
+
+496 
+
+literature were carried out. It has been found that the time to surface cracking is significantly 
+
+497 
+
+affected by ambient temperature, chloride content and corrosion rate.  It has also been found 
+
+20 
+
+ 
+ 
+498 
+
+that two cover failure modes exist, depending on the spacing of reinforcing bars and fracture 
+
+499 
+
+energy of concrete. It can be concluded that the developed combined analytical and numerical 
+
+500 
+
+model  can  be  used  to  accurately  simulate  the  time  to  cover  cracking  and  the  crack  width 
+
+501 
+
+evolution of RC structures caused by non-uniform corrosion of multiple reinforcing bars. 
+
+502 
+
+503 
+
+ACKNOWLEDGEMENT 
+
+504 
+
+Financial  support  from  National  Key  R&D  Plan  of  China  (Grant  No:  2016YFC0600801)  is 
+
+505 
+
+gratefully acknowledged. The first author is also funded by China Scholarship Council for his 
+
+506 
+
+PhD research at University of Strathclyde, UK. 
+
+507 
+
+508 
+
+REFERENCES 
+
+509 
+510 
+511 
+512 
+513 
+514 
+515 
+516 
+517 
+518 
+519 
+520 
+521 
+522 
+523 
+524 
+525 
+526 
+527 
+528 
+529 
+530 
+531 
+532 
+533 
+534 
+535 
+
+[1] 
+
+[2] 
+
+[3] 
+
+[4] 
+
+C.  Q.  Li,  and  S.  T.  Yang,  “Prediction  of  concrete  crack  width  under  combined 
+reinforcement corrosion and applied load,” Journal of Engineering Mechanics-ASCE, 
+vol. 137, no. 11, pp. 722-731, 2011. 
+Y.  Liu,  and  R.  E.  Weyers,  “Modelling  the  time-to-corrosion  cracking  in  chloride 
+contaminated  reinforced  concrete  structures,”  ACI  Materials  Journal,  vol.  95,  no.  6, 
+pp. 675-681, 1998. 
+K.  Bhargava,  A.  K.  Ghosh,  Y.  Mori  et  al.,  “Model  for  cover  cracking  due  to  rebar 
+corrosion  in  RC  structures,”  Engineering  Structures,  vol.  28,  no.  8,  pp.  1093-1109, 
+2006. 
+S.  J.  Pantazopoulou,  and  K.  D.  Papoulia,  “Modeling  cover  cracking  due  to 
+reinforcement corrosion in RC structures,” Journal of Engineering Mechanics-ASCE, 
+vol. 127, no. 4, pp. 342-351, 2001. 
+
+[6] 
+
+[7] 
+
+[5]  M. Elices, C. Rocco, and C. Roselló, “Cohesive crack modelling of a simple concrete: 
+Experimental  and  numerical  results,”  Engineering  Fracture  Mechanics,  vol.  76,  no. 
+10, pp. 1398-1410, 2009. 
+C.  Andrade,  C.  Alonso,  and  F.  J.  Molina,  “Cover  cracking  as  a  function  of  bar 
+corrosion: Part I-Experimental test,” Materials and Structures, vol. 26, no. 8, pp. 453-
+464, 1993. 
+C.  Q.  Li,  “Time  Dependent  Reliability  Analysis  of  the  Serviceability  of  Corrosion 
+Affected  Concrete  Structures,”  International  Journal  of  Materials  and  Structural 
+Reliability, vol. 3, no. 2, pp. 105-116, 2005. 
+L.  Chernin,  and  D.  V.  Val,  “Prediction  of  corrosion-induced  cover  cracking  in 
+reinforced  concrete  structures,”  Construction  and  Building  Materials,  vol.  25,  no.  4, 
+pp. 1854-1869, 2011. 
+C.  Q.  Li,  R.  E.  Melchers,  and  J.  J.  Zheng,  “Analytical  model  for  corrosion-induced 
+crack width in reinforced concrete structures,” ACI Structural Journal, vol. 103, no. 4, 
+pp. 479-487, 2006. 
+
+[8] 
+
+[9] 
+
+21 
+
+ 
+ 
+536 
+537 
+538 
+539 
+540 
+541 
+542 
+543 
+544 
+545 
+546 
+547 
+548 
+549 
+550 
+551 
+552 
+553 
+554 
+555 
+556 
+557 
+558 
+559 
+560 
+561 
+562 
+563 
+564 
+565 
+566 
+567 
+568 
+569 
+570 
+571 
+572 
+573 
+574 
+575 
+576 
+577 
+578 
+579 
+580 
+581 
+582 
+583 
+584 
+585 
+586 
+
+[10]  L.  Jin,  R.  Zhang,  X.  Du  et  al.,  “Investigation  on  the  cracking  behavior  of  concrete 
+cover induced by corner located rebar corrosion,” Engineering Failure Analysis, vol. 
+52, pp. 129-143, 2015. 
+
+[11]  E.  Chen,  and  C.  K.  Y.  Leung,  “Finite  element  modeling  of  concrete  cover  cracking 
+due  to  non-uniform  steel  corrosion,”  Engineering  Fracture  Mechanics,  vol.  134,  pp. 
+61-78, 2015. 
+
+[12]  C.  Cao,  and  M.  M.  S.  Cheung,  “Non-uniform  rust  expansion  for  chloride-induced 
+pitting corrosion in RC structures,” Construction and Building Materials, vol. 51, pp. 
+75-81, 2014. 
+
+[13]  K. A. T. Vu,  and M. G.  Stewart, “Structural reliability of concrete bridges including 
+improved  chloride-induced  corrosion  models,”  Structural  Safety,  vol.  22,  no.  4,  pp. 
+313-333, 2000. 
+
+[14]  M. G. Stewart, “Spatial variability of pitting corrosion and its influence on structural 
+fragility and reliability of RC beams in flexure,” Structural Safety, vol. 26, no. 4, pp. 
+453-470, 2004. 
+J.  A.  González,  C.  Andrade,  C.  Alonso  et  al.,  “Comparison  of  rates  of  general 
+corrosion  and  maximum  pitting  penetration  on  concrete  embedded  steel 
+reinforcement,” Cement and Concrete Research, vol. 25, no. 2, pp. 257-264, 1995. 
+
+[15] 
+
+[16]  Y. Yuan, and Y. Ji, “Modeling corroded section configuration of steel bar in concrete 
+
+structure,” Construction and Building Materials, vol. 23, no. 6, pp. 2461-2466, 2009. 
+
+[17]  B.  S.  Jang,  and  B.  H.  Oh,  “Effects  of  non-uniform  corrosion  on  the  cracking  and 
+service  life  of  reinforced  concrete  structures,”  Cement  and  Concrete  Research,  vol. 
+40, no. 9, pp. 1441-1450, 2010. 
+
+[18]  B.  Šavija,  M.  Luković,  J.  Pacheco  et  al.,  “Cracking  of  the  concrete  cover  due  to 
+reinforcement  corrosion:  A  two-dimensional  lattice  model  study,”  Construction  and 
+Building Materials, vol. 44, pp. 626-638, 2013. 
+
+[19]  A. Chen, Z. Pan, and R. Ma, “Mesoscopic simulation of steel rebar corrosion process 
+in  concrete  and  its  damage  to  concrete  cover,”  Structure  and  Infrastructure 
+Engineering, vol. 13, no. 4, pp. 478-493, 2016. 
+
+[20]  Y. Zhao, A. R. Karimi, H. S. Wong et al., “Comparison of uniform and non-uniform 
+corrosion  induced  damage  in  reinforced  concrete  based  on  a  Gaussian  description  of 
+the corrosion layer,” Corrosion Science, vol. 53, no. 9, pp. 2803-2814, 2011. 
+
+[21]  Z. P. Bazant, “Physical model for steel corrosion in concrete sea structures - theory,” 
+Journal of the Structural Division-ASCE, vol. 105, no. 6, pp. 1137-1153, 1979. 
+[22]  C.  Andrade,  F.  J.  Molina,  and  C.  Alonso,  “Cover  cracking  as  a  function  of  rebar 
+corrosion:  Part  1-experiment  test,”  Materials  and  Structures,  vol.  26,  pp.  453-454, 
+1993. 
+
+[23]  C.  Lu,  W.  Jin,  and  R.  Liu,  “Reinforcement  corrosion-induced  cover  cracking  and  its 
+time prediction for reinforced concrete structures,” Corrosion Science, vol. 53, no. 4, 
+pp. 1337-1347, 2011. 
+
+[24]  C.  Cao,  M.  M.  S.  Cheung,  and  B.  Y.  B.  Chan,  “Modelling  of  interaction  between 
+corrosion-induced concrete cover  crack and steel corrosion  rate,” Corrosion Science, 
+vol. 69, pp. 97-109, 2013. 
+
+[25]  Y. Yuan, Y. Ji, and J. Jiang, “Effect of corrosion layer of steel bar in concrete on time-
+variant  corrosion  rate,”  Materials  and  Structures,  vol.  42,  no.  10,  pp.  1443-1450, 
+2009. 
+
+[26]  Y.  Yuan,  J.  Jiang,  and  T.  Peng,  “Corrosion  process  of  steel  bar  in  concrete  in  full 
+
+[27] 
+
+lifetime,” ACI Materials Journal, vol. 107, no. 6, pp. 562-568, 2010. 
+J. Jiang, and Y. Yuan, “Prediction model for the time-varying corrosion rate of rebar 
+based on micro-environment in concrete,” Construction  and  Building  Materials, vol. 
+35, pp. 625-632, 2012. 
+
+22 
+
+587 
+588 
+589 
+590 
+591 
+592 
+593 
+594 
+595 
+596 
+597 
+598 
+599 
+600 
+601 
+602 
+603 
+604 
+605 
+606 
+607 
+608 
+609 
+610 
+611 
+612 
+613 
+614 
+615 
+616 
+617 
+618 
+619 
+620 
+621 
+622 
+623 
+624 
+625 
+626 
+627 
+628 
+629 
+630 
+631 
+632 
+
+[28] 
+
+J. Jiang, and Y. Yuan, “Development and prediction strategy of steel corrosion rate in 
+concrete  under  natural  climate,”  Construction  and  Building  Materials,  vol.  44,  pp. 
+287-292, 2013. 
+
+[29]  X.  Du,  L.  Jin,  and  R.  Zhang,  “Modeling  the  cracking  of  cover  concrete  due  to  non-
+
+uniform corrosion of reinforcement,” Corrosion Science, vol. 89, pp. 189-202, 2014. 
+
+[30]  A.  Jamali,  U.  Angst,  B.  Adey  et  al.,  “Modeling  of  corrosion-induced  concrete  cover 
+cracking: A critical analysis,” Construction and Building Materials, vol. 42, pp. 225-
+237, 2013. 
+J.  Zhang,  X.  Ling,  and  Z.  Guan,  “Finite  element  modeling  of  concrete  cover  crack 
+propagation  due  to  non-uniform  corrosion  of  reinforcement,”  Construction  and 
+Building Materials, vol. 132, pp. 487-499, 2017. 
+
+[31] 
+
+[32]  K.  Vu,  M.  G.  Stewart,  and  J.  Mullard,  “Corrosion-induced  cracking:  Experimental 
+data  and  predictive  models,”  ACI  Structural  Journal,  vol.  102,  no.  5,  pp.  719-726, 
+2005. 
+
+[33]  W. Jung,  “Predicting  the  remaining  service  life  of  land  concrete  by  steel  corrosion,” 
+
+Cement and Concrete Research, vol. 33, no. 5, pp. 663-677, 2003. 
+
+[34]  R. Zhang, A. Castel, and R. François, “The corrosion pattern of reinforcement and its 
+influence on serviceability of reinforced concrete members in chloride environment,” 
+Cement and Concrete Research, vol. 39, no. 11, pp. 1077-1086, 2009. 
+
+[35]  D. Chen, and S. Mahadevan, “Chloride-induced reinforcement corrosion and concrete 
+cracking simulation,” Cement and Concrete Composites, vol. 30, no. 3, pp. 227-238, 
+2008. 
+[36]  Metoffice.uk, 
+
+sunshine  anomaly  graphs," 
+
+rainfall  and 
+
+temperature, 
+
+"UK 
+
+http://www.metoffice.gov.uk/climate/uk/summaries/datasets, 2017. 
+
+[38] 
+
+[37]  A. S. Al-Harthy, M. G. Stewart, and J. Mullard, “Concrete cover cracking caused by 
+steel  reinforcement  corrosion,”  Magazine  of  Concrete  Research,  vol.  63,  no.  9,  pp. 
+655-667, 2011. 
+J.  A.  Mullard,  and  M.  G.  Stewart,  “Corrosion-induced  cover  cracking:  new  test  data 
+and predictive models,” ACI Structural Journal, vol. 108, no. 1, pp. 71-79, 2011. 
+[39]  S.  Caré,  Q.  T.  Nguyen,  K.  Beddiar  et  al.,  “Times  to  cracking  in  reinforced  mortar 
+beams subjected to accelerated corrosion tests,” Materials and Structures, vol. 43, no. 
+1-2, pp. 107-124, 2009. 
+
+[40]  A.  Hillerborg,  M.  Modeer,  and  P.  E.  Petersson,  “Analysis  of  crack  formation  and 
+crack growth in concrete by means of fracture mechanics and finite elements,” Cement 
+and Concrete Research, vol. 6, no. 6, pp. 773-781, 1976. 
+
+[41]  C.  Q.  Li,  “Life-cycle  modelling  of  corrosion-affected  concrete  structures: 
+Propagation,”  Journal  of  Structural  Engineering-ASCE  vol.  129,  no.  6,  pp.  753-761, 
+2003. 
+
+[42]  S. P. Timoshenko, and J. N. Goodier, Theory of Elasticity, 3rd ed., Singapore, 1970. 
+[43]  X.  Shilang,  Determination  of  parameters  in  the  bilinear,Reinhardt’s  nonlinear  and 
+exponentially non-linear softening curves and their physical meanings, University of 
+Stuttgart, Stuttgart, 1999. 
+
+[44]  S. Xu, and X. Zhang, “Determination of fracture parameters for crack propagation in 
+concrete using an energy approach,” Engineering Fracture Mechanics, vol. 75, no. 15, 
+pp. 4292-4308, 2008. 
+
+23 
+
+633 
+
+LIST OF TABLES 
+
+634 
+
+1.  The average monthly temperature in England from 1996-2016 (°C) 
+
+635 
+
+2.  Values of basic variables used in the time-dependent non-uniform corrosion model 
+
+636 
+
+3.  Values for geometric and mechanical parameters in the examples 
+
+637 
+
+4.  Crack  patterns  and  time  to  cracking  for  different  combinations  of  fracture  energy  and 
+
+638 
+
+reinforcement clear spacing 
+
+639 
+
+5.  Values for basic variables used for validation 
+
+24 
+
+640 
+
+Table 1   The average monthly temperature in England from 1996-2016 (°C) [36] 
+
+Jul.  Aug.  Sept.  Oct.  Nov.  Dec. 
+Jan.  Feb.  Mar.  Apr.  May. 
+4.41  4.70  6.32  8.66  11.57  14.38  16.37  16.34  14.21  10.90  7.18  4.75 
+
+Jun. 
+
+641 
+
+25 
+
+642 
+643 
+644 
+
+645 
+
+Table 2   Values of basic variables used in the time-dependent non-uniform corrosion 
+model 
+
+Symbol 
+
+Values 
+
+12 mm 
+
+Sources 
+
+Li [41] 
+
+D  
+
+0d  
+
+ α  
+rust
+
+rustρ  
+
+stρ  
+
+rustW  
+
+cw /
+
+−Cl
+
+P  
+
+1tT  
+
+0.0125 mm 
+
+Liu and Weyers [2] 
+
+0.57 
+
+Liu and Weyers [2] 
+
+3.60 mg/mm3 
+
+Liu and Weyers [2] 
+
+7.85 mg/mm3 
+
+Liu and Weyers [2] 
+
+mg 
+
+0.54 
+
+3.034% 
+
+0.68 
+
+Liu and Weyers [2] 
+
+Jiang [27] 
+
+Jiang [27] 
+
+Jiang [27] 
+
+289.36 K 
+
+Metoffice.uk[36] 
+
+26 
+
+ 
+ 
+ 
+646 
+
+Table 3 Values for geometric and mechanical parameters in cracking simulation 
+
+Description 
+
+Symbol 
+
+Values 
+
+Cover thickness 
+
+Clear space of steel 
+
+bars 
+
+Diameter of steel bars 
+
+Length of RC 
+
+Height of RC 
+
+Effective modulus of 
+
+elasticity 
+
+Poisson’s ratio 
+
+Shear modulus 
+
+Tensile strength 
+
+C  
+
+S  
+
+D  
+
+L  
+
+H  
+
+20 mm 
+
+30 mm 
+
+45 mm 
+
+60 mm 
+
+12 mm 
+
+178 mm 
+
+400 mm 
+
+efE  
+
+18.82 GPa [41] 
+
+cν  
+
+G 
+
+'
+tf  
+
+0.18 [41] 
+
+E
+
+1(2/[
+
+ν+
+
+)]
+
+ [42] 
+
+5.725 MPa [41] 
+
+60 N/m [43, 44] 
+
+Fracture energy 
+
+fG  
+
+90 N/m [43, 44] 
+
+120 N/m [43, 44] 
+
+647 
+
+27 
+
+ 
+648 
+
+Table 4   Crack patterns and time to cracking for different values of fracture energy and reinforcement clear spacing 
+
+Gf1 
+
+Gf2 
+
+Gf3 
+
+P 
+
+tth1 
+
+tth2 
+
+tto1 
+
+tsi2 
+S1  De  0.41  0.44  N/A  N/A  0.60  0.85  De  0.62  0.70  N/A  N/A  0.91  1.05  Sp  0.86  0.92  1.43  N/A  1.13  N/A 
+S2  Sp  0.62  0.79  0.70  N/A  0.62  N/A  Sp  0.89  0.93  0.89  N/A  1.01  N/A  Sp  1.04  1.11  1.64  N/A  1.33  N/A 
+S3  Sp  0.67  1.3  0.70  N/A  0.67  N/A  Sp  0.88  1.59  0.84  N/A  1.00  N/A  Sp  1.13  1.88  1.04  N/A  1.46  N/A 
+
+tsi2  P 
+
+tth1 
+
+tth2 
+
+tto1 
+
+tto2 
+
+tto2 
+
+tto2 
+
+tth1 
+
+tth2 
+
+tto1 
+
+tsi1 
+
+tsi1 
+
+tsi1 
+
+tsi2 
+
+P 
+
+Parameter 
+Gf1 
+Gf2 
+Gf3 
+S1 
+S2 
+S3 
+P 
+De 
+Sp 
+tth1 
+tth2 
+tto1 
+tto2 
+tsi1 
+tsi2 
+Time unit 
+
+Description or value 
+Fracture energy 60 N/m 
+Fracture energy 90 N/m 
+Fracture energy 120 N/m 
+Spacing between rebars 30 mm 
+Spacing between rebars 45 mm 
+Spacing between rebars 60 mm 
+Crack pattern 
+Delamination 
+Combined delamination and corner spalling 
+Time to initiation of through crack  
+Time to complete formation of through crack 
+Time to initiation of top crack 
+Time to complete formation of top crack 
+Time to initiation of side crack 
+Time to complete formation of side crack 
+year 
+
+649 
+
+28 
+
+ 
+ 
+ 
+ 
+ 
+650 
+
+Table 5 Values for basic variables used for validation 
+
+Description 
+
+Symbol 
+
+Values 
+
+Top cover thickness 
+
+Edge cover thickness 
+
+Space of steel bars 
+
+Diameter of steel bars 
+
+Length of RC 
+
+Height of RC 
+
+Effective modulus of 
+
+elasticity 
+
+Poisson’s ratio 
+
+Tension strength  
+
+Fracture energy 
+
+Corrosion rate 
+
+TC  
+
+EC  
+
+S  
+
+D  
+
+L  
+
+H  
+
+efE  
+
+cν  
+
+'
+tf  
+
+fG  
+
+i
+
+corr
+
+20 mm 
+
+75 mm 
+
+150 mm 
+
+12 mm 
+
+648 mm 
+
+400 mm 
+
+18.82 GPa 
+
+0.18 
+
+2.4 MPa 
+
+65 N/m 
+
+100 µA/cm2 
+
+651 
+652 
+
+29 
+
+ 
+ 
+653 
+
+LIST OF FIGURES 
+
+654 
+
+1.  Non-uniform corrosion model 
+
+655 
+
+2.  Time-dependent corrosion rate in the whole life-cycle of RC structures 
+
+656 
+
+3.  Constitutive relationship of concrete in tension for Mode-I fracture 
+
+657 
+
+4.  Insertion process of cohesive elements: (a) initial mesh; (b) inserted cohesive element 
+
+658 
+
+based on newly created nodes; and (c) mesh after insertion of cohesive elements 
+
+659 
+
+5.  Configuration of the RC beam with multiple tension bars  
+
+660 
+
+6.  Typical meshing for half of the cover structure modelled 
+
+661 
+
+7.  Time-dependent corrosion rate from corrosion initiation by considering seasoned effect 
+
+662 
+
+8.  Development of 
+
+)(td m
+
+ as a function of time under various corrosion rates 
+
+663 
+
+9.  Two typical cracking patterns for half of RC structures 
+
+664 
+
+10. Experimental verification of the crack width  
+
+665 
+
+11. The maximum principal stress distributions around the corner rebar under (a) uniform 
+
+666 
+
+corrosion and (b) non-uniform corrosion  
+
+667 
+
+12. Normal (driving) stress distributions of (a) side crack and (b) top crack prior to cracking 
+
+668 
+
+initiation 
+
+669 
+
+13. Time to surface cracking (top crack) as a function of corrosion rate 
+
+670 
+
+14. Time to surface cracking (top crack) as a function of ambient temperature 
+
+671 
+
+15. Time to surface cracking (top crack) as a function of chloride-ion content 
+
+672 
+
+16. Surface crack width (top crack) as a function of time under various corrosion rates 
+
+673 
+
+17. Surface crack width (side crack) as a function of time for different fracture energies of 
+
+674 
+
+concrete 
+
+675 
+
+18. Surface crack width (top crack) as a function of time for different fracture energies of 
+
+676 
+
+concrete 
+
+677 
+
+19. Surface crack width (top crack) as a function of time for different reinforcement spacing 
+
+678 
+
+20. Effect of fracture energy and spacing on time to cracking  
+
+30 
+
+679 
+
+21. Normal stress distributions along the side crack 
+
+680 
+
+22. Normal stress distributions along the top crack 
+
+681 
+
+31 
+
+682 
+
+683 
+
+684 
+
+Figure 1 Non-uniform corrosion model 
+
+32 
+
+ 
+685 
+
+686 
+
+687 
+
+Figure 2 Time-dependent corrosion rate in the whole life-cycle of RC structures 
+
+33 
+
+ 
+688 
+
+689 
+
+690 
+
+Figure 3 Constitutive relationship of concrete in tension for Mode-I fracture 
+
+34 
+
+ 
+691 
+
+692 
+693 
+694 
+
+695 
+
+696 
+
+(a)                                           (b)                                          (c) 
+
+Figure 4 Insertion process of cohesive elements: (a) initial mesh; (b) inserted cohesive 
+
+element based on newly created nodes; and (c) mesh after insertion of cohesive elements 
+
+35 
+
+ 
+ 
+697 
+
+698 
+
+699 
+
+Figure 5 Configuration of the RC beam with multiple tension bars  
+
+36 
+
+ 
+700 
+
+701 
+
+702 
+
+Figure 6 Typical meshing for half of the cover structure modelled 
+
+37 
+
+ 
+1.6
+
+1.4
+
+1.2
+
+1.0
+
+0.8
+
+0.6
+
+0.4
+
+0.0
+
+Free expansion of 
+corrosion products
+
+0.1
+
+0.2
+
+0.3
+
+0.4
+
+0.5
+
+)
+
+2
+
+m
+c
+/
+A
+µ
+(
+
+e
+t
+a
+r
+
+n
+o
+i
+s
+o
+r
+r
+o
+C
+
+1.8
+
+1.6
+
+1.4
+
+1.2
+
+1.0
+
+0.8
+
+0.6
+
+0.4
+
+0
+
+1
+
+2
+
+3
+
+5
+4
+6
+Time (years)
+
+7
+
+8
+
+9
+
+10
+
+Figure 7 Time-dependent corrosion rate from corrosion initiation by considering seasoned 
+
+effect 
+
+703 
+
+704 
+
+705 
+
+706 
+
+38 
+
+ 
+ 
+ 
+707 
+
+708 
+
+709 
+
+ Time-dependent icorr
+ icorr=0.5 µA/cm2
+ icorr=1.0 µA/cm2
+ icorr=2.0 µA/cm2 
+
+0.02
+
+0.01
+
+)
+
+m
+m
+
+(
+
+)
+t
+(
+
+m
+
+d
+
+0.30
+
+0.25
+
+0.20
+
+0.15
+
+0.10
+
+0.05
+
+0.00
+
+0
+
+1
+
+2
+
+3
+
+5
+
+4
+
+6
+Time (years)
+
+0.05 0.10 0.15 0.20 0.25
+
+7
+
+8
+
+9
+
+10
+
+Figure 8 Development of 
+
+)(td m
+
+ as a function of time under various corrosion rates 
+
+39 
+
+ 
+ 
+Side crack  Through crack 
+
+S 
+
+Side crack  Top crack 
+
+S 
+
+Through crack 
+
+710 
+
+711 
+
+712 
+
+Delamination 
+
+S 
+
+Combined delamination and corner spalling 
+
+S 
+
+Figure 9 Two typical cracking patterns for half of RC structures 
+
+40 
+
+          
+       
+0.15
+
+0.10
+
+0.05
+
+)
+
+m
+m
+
+(
+
+h
+t
+d
+i
+W
+k
+c
+a
+r
+
+C
+
+ Nemerical results
+ Experimental results (Ali et al. 2011)
+
+0.00
+
+0
+
+100
+
+200
+300
+Time (hours)
+
+400
+
+500
+
+Figure 10 Experimental verification of the crack width  
+
+713 
+
+714 
+
+715 
+
+41 
+
+ 
+ 
+ 
+716 
+717 
+
+718 
+
+719 
+
+720 
+
+                                                            (a)                                                                                (b)  
+
+Figure 11 The maximum principal stress distributions around the corner rebar under (a) 
+
+uniform corrosion and (b) non-uniform corrosion  
+
+42 
+
+       
+       
+ 
+721 
+
+722 
+723 
+
+724 
+
+725 
+
+726 
+
+                           (a)                                                                                          (b)  
+
+Figure 12 Normal (driving) stress distributions of (a) side crack and (b) top crack prior to 
+
+cracking initiation 
+
+43 
+
+        
+                 
+ 
+10
+
+)
+s
+r
+a
+e
+y
+(
+
+g
+n
+i
+k
+c
+a
+r
+c
+
+e
+c
+a
+f
+r
+u
+s
+
+o
+t
+
+e
+m
+T
+
+i
+
+9
+
+8
+
+7
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0
+
+0.0
+
+0.5
+
+1.0
+
+1.5
+
+2.0
+
+2.5
+
+3.0
+
+3.5
+
+4.0
+
+4.5
+
+5.0
+
+Corrosion rate icorr (µA/cm2)
+
+Figure 13 Time to surface cracking (top crack) as a function of corrosion rate 
+
+727 
+
+728 
+
+729 
+
+44 
+
+ 
+ 
+ 
+ 
+ 
+)
+s
+r
+a
+e
+y
+(
+
+g
+n
+i
+k
+c
+a
+r
+c
+
+e
+c
+a
+f
+r
+u
+s
+
+o
+t
+
+e
+m
+T
+
+i
+
+1.5
+
+1.0
+
+0.5
+
+0.0
+
+5
+
+10
+
+15
+
+20
+
+25
+
+30
+
+35
+
+Temperature (°C)
+
+Figure 14 Time to surface cracking (top crack) as a function of ambient temperature 
+
+730 
+
+731 
+
+732 
+
+45 
+
+ 
+ 
+ 
+ 
+  
+733 
+
+734 
+
+735 
+
+)
+s
+r
+a
+e
+y
+(
+
+g
+n
+i
+k
+c
+a
+r
+c
+
+e
+c
+a
+f
+r
+u
+s
+
+o
+t
+
+e
+m
+T
+
+i
+
+2.5
+
+2.0
+
+1.5
+
+1.0
+
+0.5
+
+1
+
+2
+
+3
+
+4
+Choride-ion content (%)
+
+5
+
+6
+
+7
+
+Figure 15 Time to surface cracking (top crack) as a function of chloride-ion content 
+
+46 
+
+ 
+ 
+ 
+ 
+ 
+)
+
+m
+m
+
+(
+
+h
+t
+d
+i
+w
+k
+c
+a
+r
+c
+
+e
+c
+a
+f
+r
+u
+S
+
+0.25
+
+0.20
+
+0.15
+
+0.10
+
+0.05
+
+0.00
+
+ Time-dependent icorr
+ icorr= 0.5 µA/cm2
+ icorr= 1.0 µA/cm2
+ icorr= 2.0 µA/cm2
+
+736 
+
+0
+
+1
+
+2
+
+3
+
+6
+5
+4
+Time (years)
+
+7
+
+8
+
+9
+
+10
+
+737 
+
+Figure 16 Surface crack width (top crack) as a function of time under various corrosion rates 
+
+738 
+
+47 
+
+ 
+ 
+ 
+ 
+ Side crack (Gf=60 N/m)
+
+ Side crack (Gf=90 N/m)
+
+0.25
+
+)
+
+m
+m
+
+(
+
+h
+t
+d
+i
+w
+k
+c
+a
+r
+c
+
+e
+c
+a
+f
+r
+u
+S
+
+0.20
+
+0.15
+
+0.10
+
+0.05
+
+0.00
+
+739 
+
+0
+
+1
+
+2
+
+3
+
+6
+5
+4
+Time (years)
+
+7
+
+8
+
+9
+
+10
+
+740 
+
+Figure 17 Surface crack width (side crack) as a function of time for different fracture energies 
+
+741 
+
+742 
+
+of concrete 
+
+48 
+
+ 
+ 
+ 
+ 
+ Top crack  (Gf=60 N/m)
+ Top  crack (Gf =90 N/m)
+ Top  crack (Gf=120 N/m)
+
+When the through crack
+ completely forms
+
+)
+
+m
+m
+
+(
+h
+t
+d
+i
+w
+k
+c
+a
+r
+c
+
+e
+c
+a
+f
+r
+u
+S
+
+0.20
+
+0.15
+
+0.10
+
+0.05
+
+0.00
+
+743 
+
+0
+
+1
+
+2
+
+3
+
+5
+4
+6
+Time (years)
+
+7
+
+8
+
+9
+
+10
+
+744 
+
+Figure 18 Surface crack width (top crack) as a function of time for different fracture energies 
+
+745 
+
+746 
+
+of concrete 
+
+49 
+
+ 
+ 
+ 
+ 
+ Top crack (S=30 mm)
+ Top  crack (S=45 mm)
+ Top  crack (S=60 mm)
+
+When the through crack 
+completely forms
+
+0.20
+
+)
+
+m
+m
+
+(
+h
+t
+d
+i
+w
+k
+c
+a
+r
+c
+
+e
+c
+a
+f
+r
+u
+S
+
+0.15
+
+0.10
+
+0.05
+
+0.00
+
+0
+
+1
+
+2
+
+3
+
+5
+4
+6
+Time (years)
+
+7
+
+8
+
+9
+
+10
+
+Figure 19 Surface crack width (top crack) as a function of time for different reinforcement 
+
+spacing 
+
+747 
+
+748 
+
+749 
+
+750 
+
+50 
+
+ 
+ 
+ 
+ 
+ S=30 mm
+ S=45 mm
+ S=60 mm
+
+2.0
+
+1.8
+
+1.6
+
+1.4
+
+1.2
+
+1.0
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+60
+90
+Fracture energy of concrete Gf (N/m)
+                    (a) Time to complete formation of through crack          
+2.0
+
+120
+
+ S=45 mm
+ S=60 mm
+
+1.8
+
+1.6
+
+1.4
+
+1.2
+
+1.0
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+)
+s
+r
+a
+e
+y
+(
+
+e
+m
+T
+
+i
+
+)
+s
+r
+a
+e
+y
+(
+
+e
+m
+T
+
+i
+
+60
+90
+Fracture energy of concrete Gf (N/m)
+
+120
+
+(b) Time to initiation of top surface crack 
+
+Figure 20 Effect of fracture energy and spacing on time to cracking  
+
+51 
+
+751 
+752 
+
+753 
+754 
+
+755 
+
+756 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ at 0.12 year
+ at 1.13 years
+ at 10  years
+
+6
+
+4
+
+2
+
+0
+
+-2
+
+-4
+
+-6
+
+-8
+
+)
+a
+P
+M
+
+(
+
+s
+s
+e
+r
+t
+S
+
+-10
+
+1
+
+19
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+
+Cohesive element in the side crack
+
+Figure 21 Normal stress distributions along the side crack 
+
+757 
+
+758 
+
+759 
+
+52 
+
+ 
+ 
+760 
+
+761 
+
+762 
+
+763 
+
+)
+a
+P
+M
+
+(
+
+s
+s
+e
+r
+t
+S
+
+6
+4
+2
+0
+-2
+-4
+-6
+-8
+-10
+-12
+-14
+-16
+-18
+-20
+-22
+-24
+-26
+-28
+-30
+
+ at 0.12 year
+ at 1.43 years
+ at 10 years
+
+21
+
+1
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+
+Cohesive element in the top crack 
+
+Figure 22 Normal stress distributions along the top crack  
+
+53 
+
+ 
+ 
+ 
+ 
+

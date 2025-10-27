@@ -1,0 +1,1504 @@
+ISSN 1517-7076 artigo e-12512, 2019 
+
+Analysis of the chloride diffusion coefficients  
+by different test methods in concrete  
+mixtures containing metakaolin and  
+high-slag blast-furnace cement 
+
+Guilherme Cunha Guignone1, Geilma Lima Vieira1, 
+Robson Zulcão1, Gabriel Mion1, Gercyr Baptista1 
+
+1  Graduate Program in Civil Engineering (PPGEC/UFES), Building Materials Testing Laboratory (LEMAC/UFES) – 
+Technological Center - Universidade Federal do Espírito Santo (UFES) - Av. Fernando Ferrari, 514 - Goiabeiras, CEP: 
+29075-910, Vitória, ES, Brazil. 
+e-mail: guilhermecguignone@gmail.com, geilma.vieira@gmail.com, robsonzulcao@gmail.com, gabri-
+el.mion@gmail.com, gercyr@gmail.com 
+
+ABSTRACT 
+
+This study aims to evaluate the chloride diffusion coefficient and the service life (SL) of concretes containing 
+metakaolin and high-slag blast-furnace cement (HSBFC). Accelerated methods of chloride ion diffusion and 
+migration (RCPT, RMT, BDT and multiregime test method) were used. To produce the specimens, HSBFC 
+resistant to sulphates (CPIII 40 RS) was partially replaced by metakaolin in the contents of 4%, 8% and 12%. 
+Statistical analysis was performed by means of Analysis of Variance (ANOVA) and Tukey's Test to the chlo-
+rides diffusion coefficients obtained from different test methods. Similarity between diffusion by immersion 
+(BDT)  and non-stationary  migration test  (RMT and  multiregime  method)  results  was  noted, however,  with 
+differences  regarding  to  the  stationary  regime.  The  average  diffusion  coefficient  obtained  in  the  concrete 
+specimens with 8 and 12% metakaolin as HSBFC partial replacement was 40-45 % lower than the reference 
+mixture, providing an SL increase of approximately 70%. The most efficient metakaolin content obtained for 
+overall mechanical and durability properties of concrete was 8%. This study also showed that HSBFC partial 
+replacement by metakaolin can be beneficial even at later ages, as in 150 days.  
+
+Keywords: Concrete durability; Chloride diffusion; Service life; Granulated blast-furnace slag; Pozzolan. 
+
+1.  INTRODUCTION 
+The cement industry is responsible for nearly 7% of the CO2 global emissions, being a significant contributor 
+to the global warming [1]. In this scenario, the cement partial replacement by supplementary cementing ma-
+terials (SCM) emerges as a solution for reducing the CO2 emissions and the consumption of energy and natu-
+ral  resources.  The  SCM  use  can  occur  in  the  production  of  blended  cement  or  in  the  concrete  batching,  at 
+fresh state. One of the SCM widely used in cement production is the granulated blast-furnace slag (GBFS). A 
+high-slag blast-furnace cement (HSBFC) is a blended cement that has around 60 to 80% of GBFS, producing 
+concretes with elevated chloride ion penetration resistance (CPR), being adequate for mitigating the harmful 
+effects  of  corrosion  in  reinforced  concrete  structures  [2-5].  Studies  have  indicated  that  HSBFC  can  reduce 
+chlorides diffusion up to 600% [6-8]. Furthermore, the GBFS use in concrete  has a positive environmental 
+effect,  due  to  GBFS  be  a  by-product  of  iron  production.  The  global  production  of  pig  iron  according  to 
+WORLDSTEEL ASSOCIATION [9] was approximately 1.16 billion tons in 2015, being around 27.8 million 
+tons  in  Brazil.  Since  for  each  ton  of  pig  iron  produced,  300  kg  of  slag  is  generated  [10],  an  annual  global 
+generation of approximately 350 million tons is expected. 
+
+Another SCM commonly used in concrete production is metakaolin, a fine pozzolanic material, highly 
+reactive, capable of accelerating the pozzolanic reaction and contributing to the pore-filling effect [11, 12]. It 
+presents  a  silico-aluminous  chemical  composition  derived  from  the  calcination  between  600  to  900ºC  of  a 
+special type of clays, the kaolin [13, 14]. Its use as a cement partial replacement provides better resistance to 
+aggressive agents and it improves the mechanical properties of concretes [11, 15-17], mainly at contents of 8 
+to 10% [11]. TAFRAOUI et al. [18] found that metakaolin can provide an increase in concrete CPR similar 
+to silica fume. Regarding the increase in concrete compressive strength, DUAN et al. [19] found metakaolin 
+to be more effective than silica fume and GBFS. Since metakaolin can be produced with lower energy con-
+
+Autor Responsável: Guilherme Cunha Guignone 
+
+Data de envio: 19/07/2018 
+
+Data de aceite: 20/05/2019 
+
+10.1590/S1517-707620190004.0837 
+
+ 
+ 
+ 
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+sumption than cement, its use also presents economic and environmental advantages [11].  
+
+Carbonation and chloride penetration are widely known aggressive mechanisms that cause reinforced 
+concrete  deterioration. These mechanisms (combined or separately) are considered in service  life (SL) pre-
+diction models of reinforced concrete structures. The SL prediction by chloride penetration is important, es-
+pecially for structures near the sea. Prediction by spontaneous  mechanisms (real-life situation) is time con-
+suming, being necessary the use of accelerated mechanisms of chlorides penetration, performed in laboratory 
+tests. In the  case  of  diffusion by immersion test,  the exposure  to the aggressive agent is increased [20-21]. 
+Alternatively, in the migration test an electric current is used to propel the ionic movement from the cathode 
+to the anode. From these tests results, represented by chlorides diffusion coefficients, it can be estimated the 
+SL of the reinforced concrete structures [22-24]. 
+
+Nevertheless, there is still debate on the most adequate methods for obtaining chloride diffusion coef-
+ficients and regarding its results sensitivity [23, 25-27]. The coefficients can be obtained by several methods, 
+such  as:  1)  immersion  in  saline  solution,  presenting  a  chlorides  concentration  profile,  as  according  to  bulk 
+diffusion test (BDT) - NT BUILD 443 [28]; 2) steady-state migration, by reading the conductivity, according 
+to multiregime method - UNE 83987 [29]; and 3) migration with a colorimetric indicator, according to rapid 
+migration test (RMT) - NT BUILD 492 [30]. Each method presents its advantages and limitations. The NT 
+BUILD 443 [26] is more laborious and time-consuming in relation to the migration tests. Regarding the mi-
+grations  tests,  UNE  83987  [29]  uses  12  V  and  NT  BUILD  492  [30]  can  use  up  to 60  V  in  its  procedures. 
+However, a high value of potential difference may influence test results, causing excessive heat and damag-
+ing the concrete specimens [31]. Furthermore, some authors state that the use of pozzolans can cause oscilla-
+tions in migration test results due to the reduction in the conductivity of specimens [32]. For the test using 
+colorimetric  indicator,  discussions  regarding  the  calculation  method  for  SL  prediction  from  its  coefficients 
+are also common [27]. Thus, the comparison of results from these different methods is of significant contri-
+bution in order  to provide an improved  diagnostic and increase the reliability of the chloride resistance as-
+sessment.  
+
+In this context, this study aims at assessing the possible further improvement of concrete CPR caused 
+by  metakaolin  combined  with  HSBFC,  and  its  effects  on  increasing  the  structure  SL.  In  most  studies,  me-
+takaolin is used with ordinary Portland cement (without SCM), thus, presenting a lack of investigations using 
+commercial blended cements, such as HSBFC (CPIII 40 RS), commonly present in the Brazilian coastal re-
+gion - the one under study. Studies suggested that this combination can improve the mechanical performance 
+of concretes [19, 33, 34], and that this combination can be beneficial in relation to CPR. Nevertheless, there 
+still a lack of studies on SL prediction and concrete durability of the combined use of these materials, mainly 
+regarding CPR evaluated by different test methods. Therefore, this study analyses the chloride diffusion coef-
+ficient  by  different  methods  and  performs  a  SL  prediction  of  concretes  using  metakaolin  combined  with 
+HSBFC. 
+
+2.  MATERIALS AND METHODS 
+
+2.1 Materials 
+
+Materials  used  for  producing  the  specimens  included  sulphate  resistant  cement  CPIII  40  RS  (classified  as 
+HSBFC, with GGBFS content ranging from 60 to 70%). This is a widely used cement in the Brazilian district 
+of Espírito Santo, location where this study was conducted, due to its effectiveness against aggressive agents, 
+such as chloride ions. High reactivity metakaolin was used as cement partial replacement in the contents of 4, 
+8 and 12 % - being the intermediate value (8%) the recommended by the manufacturer and commonly used 
+in the region. Additionally, this value is close to 10%, a content found by some studies to be beneficial for 
+mechanical and durability properties of concrete [11, 19, 34, 35]. The superior (12%) and inferior (4%) val-
+ues  were  adopted  for  comparison.  The  physical  and  chemical  properties  of  metakaolin  and  cement  can  be 
+seen in Table 1. Local natural quartz sand previously  washed and oven dried at 105 to 110 ºC was used as 
+fine aggregate, along with granitic coarse aggregate, as seen in Table 2. The superplasticizer used was poly-
+carboxylate based of normal setting time, liquid, with density 1,09 g/cm³.   
+
+ 
+ 
+ 
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+Table 1: Physical and chemical properties of cement and metakaolin. 
+
+CHEMICAL PROPERTIES 
+
+CPIII 40 RS (HSBFC) 
+
+METAKAOLIN 
+
+SiO (%) 
+
+Al2O3 (%) 
+Fe2O3 (%) 
+CaO (%) 
+
+K2O (%) 
+Na2O (%) 
+MgO (%) 
+
+SO3 (%) 
+Loss on ignition (%) 
+
+PHYSICAL PROPERTIES 
+True density (g/cm3) 
+Bulk density (g/cm3) 
+
+Fineness by sieve #200 (% retained) 
+
+28.22 
+
+8.36 
+
+1.78 
+
+50.01 
+
+0.40 
+
+0.26 
+
+6.05 
+
+1.77 
+
+2.45 
+
+58.7 
+
+33.10 
+
+1.80 
+
+0.20 
+
+1.80 
+
+0.20 
+
+0.20 
+
+0.20 
+
+2.50 
+
+CPIII 40 RS (HSBFC) 
+
+METAKAOLIN 
+
+3.01 
+
+1.01 
+
+0.4 
+
+2.55 
+
+0.62 
+
+0.92 
+
+Note: The chemical properties were provided by the cement and metakaolin manufacturers, determined using X-ray fluo-
+
+rescence (XRF).  
+
+Table 2: Aggregates properties. 
+
+MATERIAL 
+
+TRUE  
+DENSITY (kg/dm3) 
+
+BULK  
+DENSITY (kg/dm3) 
+
+ FINENESS 
+
+ MINERALOGY/ 
+
+ MODULUS 
+
+ LITHOLOGY 
+
+Sand 
+
+2.65 
+
+Gravel (4,75/12,5mm) 
+
+2.73 
+
+Gravel (9,5/25mm) 
+
+2.75 
+
+1.49 
+
+1.45 
+
+1.47 
+
+2.40 
+
+5.96 
+
+6.95 
+
+Quartz 
+
+Granite 
+
+Granite 
+
+The physical and chemical characterisation of the metakaolin was performed to verify its pozzolanic 
+activity, as according to the requirements of Brazilian standard NBR 12653 [36] and can be seen in Table 3. 
+Additionally, the average conductivity value according to the  method of  LUXÁN et al. [37] was used as a 
+complement. It can be concluded that metakaolin fulfilled all the requirements according to the standard re-
+garding pozzolanic activity. The test results of pozzolanic activity with lime, from NBR 5751 [38], with ce-
+ment, from NBR 15894-2 [39], and according to LUXÁN et al. [37] presented values 92%, 52% and 158%, 
+respectively, higher than the requirements, confirming the material reactivity. Furthermore,  in Figure 1 can 
+be seen the comparison of these test results  of metakaolin and other SCM,  such as silica fume, ornamental 
+stone processing waste, and soda-lime glass waste.  
+
+Table 3: Metakaolin properties and the requirements for pozzolans according to NBR 12653 [36]. 
+
+PROPERTIES 
+
+Retained on sieve #325 
+
+METAKAOLIN 
+
+8.14% 
+
+Pozzolanic activity with lime (MPa) at 7 days [38] 
+
+11.53 MPa 
+
+Pozzolanic activity with cement (%) at 7 days [39] 
+
+SiO2 + Al2O3 + Fe2O3 (%) ¹ 
+SO3 (%) ¹ 
+Loss on ignition (%) 
+
+Available alkalis in Na2Oeq * (%) ¹ 
+Pozzolanic activity according to LUXÁN et al. [35] 
+
+137% 
+
+93.6% 
+
+0.2% 
+
+2.5% 
+
+1.38 % 
+
+Notes: ¹ X-ray fluorescence (XRF). * Na2Oeq = Na2O + 0.658 K2O. 
+
+NBR  12653  [36]  REQUIREMENTS 
+
+FOR POZZOLAN CLASS N  
+
+< 20% 
+
+≥ 6MPa 
+
+≥ 90% 
+
+≥ 70% 
+
+≤ 4% 
+
+≤ 10% 
+
+≤ 1.5% 
+
+1.03 (ms/cm) 
+
+> 0.40 (ms/cm) 
+
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+Figure 1: Pozzolanic activity of metakaolin and other SCMs. (A) LUXÁN et al. [37]; (B) NBR 5751 [38]. 
+
+2.2 Specimens preparation 
+
+Specimens were produced using a vertical axis mixer and then cured in a moist chamber for 28, 91 and 150 
+days. Table 4 presents the concrete mixtures proportions and the slump values. The water/cement (w/c) ratio 
+was fixed at 0.55, being the upper limit value for concretes in aggressive maritime environment according to 
+NBR 6118 [40]. The superplasticizer content adopted was 0.3% (by cement mass), within the manufacturer 
+limits  (0.2-2.0%),  due  to  a  previous  mix  design  study,  aiming  to  provide  good  plasticity  and  a  slump  of 
+100±20 mm for the control mixture (REF) with the lowest superplasticizer content. Initially, the 0.2% content 
+was attempted, and the slump range was reached for the REF mixture; however, the production of the speci-
+mens for the 8 and 12% (ME8 and ME12) metakaolin mixtures was problematic, whereas for the 0.3% su-
+perplasticizer content, it was conceivable, even with a low slump value (30 and 20 mm, respectively).  
+
+Table 4: Concrete mixture proportions. 
+
+MIXTURE  ME (%) ² 
+
+W/C 
+
+CEMENT 
+
+ME 
+
+SAND 
+
+GRAVEL 
+
+RATIO 
+
+(kg/m³) 
+
+(kg/m³) 
+
+(kg/m³) 
+
+(kg/m³) 
+
+REF 
+
+ME4 
+
+ME8 
+
+ME12 
+
+0 
+
+4 
+
+8 
+
+12 
+
+0.55 
+
+0.55 
+
+0.55 
+
+0.55 
+
+325 
+
+312 
+
+299 
+
+286 
+
+0 
+
+13 
+
+26 
+
+39 
+
+813 
+
+813 
+
+813 
+
+813 
+
+1118 
+
+1118 
+
+1118 
+
+1118 
+
+SP (l) ³ 
+
+0.975 
+
+0.936 
+
+0.897 
+
+0.858 
+
+SLUMP 
+
+(mm) 
+
+150 
+
+80 
+301 
+201 
+
+1 Despite the low values, it was possible to prepare the specimens according to NBR 5738 [41]. 2 ME= Metakaolin ³ SP = 
+Superplasticizer 
+
+2.3 Testing procedures and service life prediction 
+
+Table 5 presents a summary of the standards used for the test procedures along with the size and quantity of 
+cylindrical specimens and age of testing. 
+
+Table 5: Standards, specimens and age of testing. 
+
+PROPERTIES 
+
+STANDARD 
+
+DIAMETER  x  HEIGHT 
+
+(QUANTITY) 
+
+MATERIAL  AGE (DAYS) 
+
+Pozzolanic activity with lime 
+
+NBR 5751 [38] 
+
+50 mm x 100 mm (6)  Mortar 
+
+Pozzolanic activity with cement 
+
+NBR 15894-2 [39] 
+
+50 mm x 100 mm (6)  Mortar 
+
+7  
+
+28  
+
+Compressive strength 
+
+NBR 5739 [42] 
+
+100 mm x 200 mm (4)  Concrete 
+
+28; 91 
+
+Rapid chloride permeability test (RCPT)   ASTM C 1202 [43]  100 mm x 50 mm (3) 
+
+Concrete 
+
+28; 91 
+
+Rapid migration test (RMT)  
+
+NT BUILD 492 [30]  100 mm x 50 mm (3) 
+
+Concrete 
+
+28; 91 
+
+Multiregime method  
+
+UNE 83987 [29] 
+
+100 mm x 20 mm (3) 
+
+Concrete 
+
+28 
+
+Bulk diffusion test (BDT)  
+
+NT BUILD 443 [28]  100 mm x 50 mm (4) 
+
+Concrete 
+
+28 (curing) + 
+
+150 (exposition)  
+
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+2.3.1 Compressive strength 
+
+The test followed the procedures described in the standard NBR 5739 [42]. Four specimens of each mixture 
+were tested at 28, 91 and 150 days. 
+
+2.3.2 Rapid chloride permeability test (RCPT) - ASTM C 1202 
+
+The rapid chloride permeability test (RCPT) followed the procedures of WHITING [44], as recommended by 
+the standard ASTM C 1202 [43]. For each mixture, three specimens (50 mm thick and 100 mm in diameter) 
+were extracted from the central part of the single original cylinder specimen (200 mm height, 100 mm diame-
+ter), procedure statistically validated by HELENE and MEDEIROS [45], and then tested at 28 and 91 days. 
+The test consisted in exposing one side of the specimen to a sodium chloride solution (3% NaCl by mass) and 
+the other to a sodium hydroxide solution (0.3 N NaOH). In each solution, a conducting copper plate was in-
+troduced, and connected to a 60 ± 0.1 V source. Electric current readings were taken every 30 min, totalling 6 
+h  of  test.  The  electric  current  multiplied  by  time,  expressed  in  coulombs  (C),  represents  the  concrete  re-
+sistance to chloride ions penetration. The Figure 2 presents the apparatus used and its diagram. This experi-
+ment is commonly adopted in the literature, in studies involving the concrete resistance to chloride penetra-
+tion [46-48]. 
+
+Figure 2: Rapid chloride permeability test according to ASTM C 1202 [41].  (A) Test diagram; (B) Ongoing test. 
+
+2.3.3 Rapid migration test (RMT) - NT BUILD 492 
+
+Proposed by LUPING and NILSSON [50] and consolidated in the standard NT BUILD 492 [30], the proce-
+dures of this method use potential difference and a colorimetric indicator (spray of AgNO3 – 0.1 M). It pro-
+vides quantitative data, as final chloride penetration depth and chloride diffusion coefficient. The test can last 
+from 24 h, for ordinary concrete, to 96 h, for high performance concrete. The test duration and the voltage to 
+be adopted will depend of the initial passing current reading in the concrete specimen when applied a poten-
+tial different of 30 V. In this study, the average test duration for each specimen was 24 h. The test procedure 
+is represented in Figure 3. 
+
+Figure 3: Procedure of migration test according to NT BUILD 492 [28]. (A) Original concrete specimen; (B) Extraction 
+of test specimens; (C) Coating of side face; (D) Saturation; (E) Cells assembly; (F) Spray of AgNO3. 
+
+To calculate the apparent chloride ion diffusion coefficient, the Equation 1 must be used, as according 
+to NT BUILD 492 [30]. Where: Dnssm is the non-steady-state migration coefficient multiplied by 10-12 (m2/s); 
+
+ 
+ 
+  
+ 
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+U is the absolute value of the applied potential (V); T is the average value of the initial and final temperatures 
+in the anolyte solution (ºC); L is the thickness of the specimen (mm); xd is the average value of the chloride 
+penetration depth (mm), and t is the test duration (h). This equation has also been used by Kim et al. [28]. 
+
+(1) 
+
+2.3.4 Steady-state chloride migration test (Multiregime method) - UNE 83987 
+
+For comparing the RMT - NT BUILD 492 [30] test results of non-steady-state chloride migration, the steady-
+state chloride migration test from UNE 83987 [29] was performed. The test is based in the migration of the 
+ions present in an electrolyte to an opposite pole, as a response to an electric field when applied 12 V. The 
+concrete  specimen is placed between different solutions. In of the  solutions, containing chloride ions (1 M 
+NaCl), the potential difference applied attracts the ions from the negative to the positive electrolyte (anolyte), 
+migrating  and  crossing  the  concrete  specimen  (Figure  4A).  The  increase  of  chlorides  concentration  in  the 
+anolyte is measured by the determination of the electric conductivity. The initial time period where the con-
+centration of chlorides migration is negligible is determined as ‗time lag‘ (t), as seen in Figure 4C, being used 
+for the determination of the non-steady-state chloride diffusion coefficient (Dns). After this period, the flow of 
+chloride ions becomes constant, corresponding to the steady-state chloride diffusion coefficient (Ds). The test 
+is finished when both coefficients are determined. The 100 x 20 mm specimens used in this test are obtained 
+from the 100 x 200 mm original specimen core. PVC tubes (100 mm diameter) were used for the assembly of 
+the apparatus, as adopted by MEDEIROS [51], according to Figure 5. 
+
+Figure 4: Steady-state chloride migration test. (A) and (B): test procedure; (C): schematic graph of test results. 
+
+Daily conductivity readings in the anolyte were made. The conductivity is then converted to chlorides 
+concentrations by an equation, evaluating its development over time. According to the standard, the test time 
+for  ordinary  concretes  is  approximately  two  weeks;  however,  for  high  performance  concrete,  this  time  can 
+increase significantly, having been around eight weeks for the present study. 
+
+Figure 5: Chloride migration test. (A) Ongoing test; (B) Conductivity and potential difference readings. 
+
+2.3.5 Bulk Diffusion Test (BDT) - Diffusion by immersion - NT BUILD 443 
+
+The bulk diffusion test (BDT) is a method for obtaining chloride diffusion by immersion, represented in the 
+NT BUILD 443 [28], and consists in keeping the concrete specimens immersed in a chloride solution (165g 
+of  NaCl  by  litre)  to  induce  accelerated  diffusion  mechanisms.  The  specimens  were  cured  for  28  days  and 
+immersed for 150 days. The aim of performing this test was to compare the coefficients obtained from a dif-
+
+𝐷𝑛𝑠𝑠𝑚= 0.0239  273+𝑇 𝐿  𝑈−2 𝑡 𝑥𝑑−0.0238   273+𝑇 𝐿𝑥𝑑𝑈−2    
+ 
+ 
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+fusion test with those obtained by migration tests (UNE 83987 [29] and NT BUILD 492 [30]). The standard 
+recommends splitting the cylindrical specimens in two, perpendicular to its axis. One half is used as the test 
+specimen, being the sawed face exposed in the NaCl solution, in the other half, the initial chlorides concen-
+tration is determined. The immersed test specimen is placed in a hermetically sealed plastic container, being 
+the solution agitated weekly. The chlorides profile is obtained by milling the material, parallel to the exposed 
+surface. At least 8 layers must be milled. The thickness of the layers must be adjusted accordingly to the ex-
+pected chloride profile, such that at least six places encompass the profile between the exposed surface and 
+the  depth  reached  by  the  chlorides.  The  content  of  chloride  soluble  in  acid  in  the  specimens  is  determined 
+according to NT BUILD 208 [52]. The test results, superficial chlorides concentration  (Cs) and non-steady-
+state chlorides diffusion coefficient (Dns), are determined adjusting the Equation 2 for the chlorides content 
+measured, by a linear regression analysis according to the least squares. 
+
+(2) 
+
+Where: C (x, t) (mass,  %) is the chlorides concentrations, measured in the depth ‗x‘ at the exposure 
+time ‗t‘; Cs (mass, %) is the boundary condition of the exposed surface; Ci  (mass, %) is the initial chlorides 
+concentration measured; x is the depth below the exposed surface (m); Dns is the non-steady-state chlorides 
+diffusion coefficient (m2/s); t is the exposure time (s); erf is the Gauss error function. 
+
+2.3.6 Service life prediction 
+
+With  the  chloride  diffusion  coefficient  and  adopting  the  Fick‘s  second  law  of  diffusion  in  the  non-steady-
+state,  it  becomes  possible  to  draw  a  graph  relating  the  chloride  penetration  depth  with  the  SL  of  the  rein-
+forced structure [24, 51, 53]. The Equations 3 and 4 are developed from the Fick‘s second law.   
+
+(3) 
+
+(4) 
+
+Where:  D  is  the  chloride  diffusion  coefficient  (cm²/year),  t  is  the  SL  (years),  erf  is  the  Gauss  error 
+function (z), PCl is the chloride penetration depth in which the chloride concentration reached a critical point 
+for  depassivation  of  reinforcement  (cm);  C0  is  the  initial  chlorides  concentration  inside  the  specimens 
+(mass, %); Cs is the chlorides concentration in the specimens surface (%); CCl is the chlorides concentration 
+over the PCl depth and time t (%). 
+            For producing the graph, it was necessary to fix some parameters. The upper limit value considered 
+for  depassivation  of  reinforcement  was  0.4%,  related  to  the  cement  mass.  This  value  is  the  upper  limit  of 
+chlorides  for  reinforced  concrete  according  to  The  International  Federation  for  Structural  Concrete  (CEB-
+FIP)  [54].  This  is  also  an  average  value  between  the  Brazilian  standard  NBR  6118  [40]  of  0.5%  and  the          
+American standard ACI-318 [55] of 0.3%. Additionally, 0.4% is the recommended value by HELENE [24] 
+and BROWNE [56]. The chlorides concentration in the concrete surface  (Cs) adopted was 0.9%, value rec-
+ommended by Helene [24] as a reference for concretes with w/c ratio of 0.48 to 0.68, cement consumption of 
+280 to 400 kg/m³ and subjected to salt spray. However, this value is object of discussion. NUNES et al. [57] 
+evaluated concrete structures older than 15 years and at different distances from the sea, obtaining the follow-
+ing values: Cs = 3.1% at 0 m sea distance; Cs = 1.1%, at 160 m; and Cs = 0.6%, at 630 m. GUIMARÃES et al. 
+[58] suggest the following value for Cs: 3.2% at 0 m sea distance; 1.1% at 160 m; and 0.6% at a distance be-
+tween 680 and 5,000 m from the sea. Thus, the 0.9% value adopted in this study is consistent with the pre-
+sented literature, and a sensitivity analysis of ±0.3% was performed, being equivalent to a concrete structural 
+application 160-680 m distant from the sea.  
+
+3.  RESULTS AND DISCUSSION 
+
+A brief analysis of the test results is presented first,  followed by a thorough analysis and discussion of the 
+different test methods. 
+
+3.1 Compressive strength 
+
+Figure 6 presents compressive strength results at 28, 91 and 150 days. It can be noted that at 28 days, the me-
+
+tnsDxerfiCsCsCtxC4/),(001)()(2CCCCClsclzerfDtzP001)()(2CCCCClsclzerfDtzP  
+ 
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+takaolin at 4 and 8% content (ME4 and ME8) provided an increase of compressive strength of 6%, compared 
+to the control mixture (REF). This is justified by the pore filling effect provided by the fine metakaolin parti-
+cles, along with the calcium silicate hydrate (C-S-H) gel formation in the hydrated cement compounds pro-
+vided by the pozzolanic activity. [16, 17]. The pozzolanic reaction converts a material rich in silica and with-
+out cementing properties into C-S-H. Generally, the compressive strength gain remained until 150 days. At 
+the 12% content (ME12),  the cement replacement by  metakaolin  did  not affect  negatively the compressive 
+strength, despite the decrease of clinker content (since a HSBFC is being used) - providing less Ca(OH)2 (or 
+CH) for occurring the pozzolanic activity. 
+
+DUAN et al. [19] evaluated concrete mixtures partially replacing cement by 10 and 20% metakaolin, 
+and the combined replacement of 10% metakaolin and 10% GBFS. It was noted an increase in compressive 
+strength at 28 days for the combined content; however, at 180 days, the compressive strength increase was 
+the same for the 10% metakaolin and the combined content. Similarly, this research noted that there was no 
+significant increase after 91 days, remaining the compressive strength somewhat stable, within the deviation 
+limits. This is possibly also justified by the near completion of the pozzolanic reaction, when the cement ena-
+bling compounds (CH) are not available to further produce the chemical reactions. 
+
+Figure 6: Compressive strength of concretes at 28, 91 and 150 days.  
+Note: The percentage values indicate the results variation related to the reference concrete of same age. 
+
+3.2 Rapid chloride permeability test (RCPT) - ASTM C 1202 
+
+A reduction is noted in the total charge passed of 35, 41 and 54% for the ME4, ME8 and ME12 mixtures, 
+respectively, compared to the REF, at 28 days (Figure 7). This presents an increase in CPR of mixtures with 
+higher  metakaolin  content.  Furthermore,  at  91  days,  it  can  be  noted  a  decrease  higher  than  50%  of  charge 
+passed for the ME8 and ME12 mixtures, in comparison with the REF. The results at 28 days are consonant to 
+that of BERNAL et al. [34], which assessed the CPR of concretes replacing HSBFC by metakaolin at 10 and 
+20% content, noting that the chloride ion penetration reduced at 28 days due to the use of metakaolin; how-
+ever, at 91 days, there was not significant difference between the mixtures.  
+
+Figure 7: Total charge passed of mixtures.  
+Note: The percentage values indicate the results variation related to the reference concrete of same age. 
+
+ 
+ 
+ 
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+3.3 Rapid migration test (RMT) - NT BUILD 492 
+
+In  Figure  8,  it  can  be  seen  the  chlorides  concentration  in  the  specimens  using  the  colorimetric  indicator. 
+ME12  presented  a  lower  penetration  depth  compared  to  the  other  mixtures,  demonstrating  a  better  CPR  at 
+this metakaolin content. The final depth results were obtained by the average of seven depth readings, as seen 
+in Figure 8E, and the coefficients were determined by Eq.1. A high precision digital calliper was used for the 
+depth readings. 
+
+Figure 8: Specimens after spray of AgNO3 – NT BUILD 492 [28]. (A) REF; (B) ME4; (C) ME8; (D) ME12; (E) Meas-
+urement of chloride penetration depths. 
+
+3.4 Steady-state chloride migration test (Multiregime method) - UNE 83987 
+
+Figure 9 presents the chloride concentration profile of the multiregime method for REF and ME8 mixtures. 
+The REF mixture presented an earlier start of the steady-state compared to the ME8 mixture; thus, highlight-
+ing the improved CPR of the mixture with metakaolin. From the profile graphs of the mixtures, it can be de-
+termined the chloride migration coefficients. 
+
+Figure 9: Steady-state chloride migration test results - UNE 83987 [29]. (A) REF mixture; (B) ME8 mixture. 
+
+3.5 Bulk Diffusion Test (BDT) - Diffusion by immersion - NT BUILD 443 
+Table 6 presents the superficial (Cs), initial (Ci) and final layer (14 mm) chlorides concentration of the mix-
+tures along with the Dns. It can be noted that at 14 mm depth, the only mixture with a concentration higher 
+than 0.05% was the REF, supporting that metakaolin can reduce the chloride concentration in greater depth. 
+Furthermore, there is a reduction of 29 and 9% in Dns for the ME8 and ME12 mixtures, respectively, in com-
+parison  with  REF,  confirming  the  positive  effect  of  metakaolin  in  increasing  CPR,  as  also  observed  in  the 
+migration test results.  For the ME4  mixture, the influence  of  metakaolin on Dns  is  not significant,  possibly 
+due to the low influence of metakaolin at this content in improving the compactness of the cement paste and 
+the interfacial transition zone.  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+Table 6: Bulk diffusion test results - NT Build 443 [28]. 
+
+MIXTURES 
+
+Cs (%) 
+
+ Ci (%) 
+
+ CHLORIDES IN THE FINAL LAYER - 14 mm (%) 
+
+ Dns  (x 10-12 m²/s) 
+
+REF 
+
+ME4 
+
+ME8 
+
+ME12 
+
+0.358 
+
+0.368 
+
+0.445 
+
+0.518 
+
+ 0.0262 
+
+ 0.067 
+
+ 0.0248 
+
+ 0.019 
+
+ 0.0295 
+
+ 0.022 
+
+ 0.0246 
+
+ 0.019 
+
+ 1.97 
+
+ 2.05 
+
+ 1.40 
+
+ 1.79 
+
+3.6 Different methods – Mixtures classification and comparison of results 
+Table 7 presents Dnssm (NT BUILD 492 [30]), Dns (UNE 83987 [29]) and the qualitative classification of the 
+mixtures, according to ASTM C 1202 [41] and GJØRV [53]. It can be noted that all mixtures are classified as 
+low or very low chloride ion penetration (according to ASTM C 1202 [43]) or having very high or ultra-high 
+CPR (according to GJØRV [53]). This confirms the effectiveness of combining metakaolin with HSBFC in 
+providing resistance against chlorides in an aggressive  maritime environment. The REF mixtures presented 
+coefficients in the range of 3 to 3.3 x 10-12 m2/s, approximately, being these results consonant to GJØRV [6], 
+SENGUL [7] and BIJEN [8], who evaluated concrete mixtures with high GBFS content.  DUAN et al. [19] 
+evaluated concrete mixtures partially replacing cement by metakaolin and GBFS in 10 % content, separately, 
+and the combined replacement of 10% metakaolin and 10% GBFS. The authors noted that the combined re-
+placement  provided  the  lowest  coefficient  (NT  BUILD  492  [30],  at  28  days),  1.5  x  10-12  m2/s,  which  was 
+somewhat close to the one found in this study (1.81 x 10-12 m2/s) for the ME8 mixture; whereas for the me-
+takaolin and GBFS  separate  replacements, the  coefficient  was 2 and 4 x 10-12  m2/s, respectively, being  the 
+control mixture (no replacement) with 10.0 x 10-12 m2/s. 
+
+Table 7: Total charge passed, chloride coefficients from migration tests and mixtures classification. 
+
+MIXTURE 
+
+AGE  
+
+(DAYS) 
+
+RCPT – ASTM 
+
+ RMT – NT 
+
+ MULTIREGIME – 
+
+ ASTM C 1202 
+
+C1202 [43] 
+
+ BUILD 492 [30] 
+
+ UNE 83987 [29] 
+
+ [43] 
+
+ GJØRV [59] 
+
+CHARGE 
+
+PASSED  
+
+(Coulombs) 
+
+ Dnssm  
+ (x 10-12 m²/s) 
+
+ Dns  
+ (x 10-12 m²/s) 
+
+ CHLORIDES  
+
+ CPR  CLASSIFICA-
+
+ PENETRATION  
+
+TION  (Chloride  dif-
+
+ (Charge passed) 
+
+fusion coefficient)  
+
+REF 
+
+ME4 
+
+ME8 
+
+ME12 
+
+REF 
+
+ME4 
+
+ME8 
+
+ME12 
+
+28 
+
+28 
+
+28 
+
+28 
+
+91 
+
+91 
+
+91 
+
+91 
+
+1017 
+
+ 3.67 
+
+666 (-35%) 
+
+ 2.25 (-39%) 
+
+603 (-41%) 
+
+ 1.81 (-50%) 
+
+468 (-54%) 
+
+ 1.79(-51%) 
+
+ - 
+
+ - 
+
+ - 
+
+ - 
+
+909 
+
+ 2.98 
+
+ 3.33 
+
+ Low 
+
+ Very low 
+
+ Very low 
+
+ Very low 
+
+ Very low 
+
+648 (-29%) 
+
+ 2.06 (-44%) 
+
+ 2.65 (-20%) 
+
+ Very low 
+
+405 (-56%) 
+
+ 1.49 (-50%) 
+
+ 2.37 (-29%) 
+
+ Very low 
+
+315 (-66%) 
+
+ 1.39 (-53%) 
+
+ 1.66 (-40%) 
+
+ Very low 
+
+ Very high 
+
+ Ultra-high 
+
+ Ultra-high 
+
+ Very high 
+
+ Very high 
+
+ Ultra-high 
+
+ Ultra-high 
+
+ Ultra-high 
+
+This study shows that the HSBFC partial replacement by metakaolin at 8 and 12% content can reduce 
+the chloride coefficients at 91 days by up to 53%, approximately (Table 7). Thus, the pozzolanic activity of 
+metakaolin, as verified by the characterisation study (Table 3), added to the cementing properties of GBFS 
+can  provide  a  more  compact  concrete  microstructure,  as  it  was  noted  in  the  microstructure  studies  of  TA-
+TRAOUI et al. [18], DUAN et al. [19] and LI et al. [60]. According to ZIBARA et al. [61], the chloride dif-
+fusion through concrete depends, mainly, of its microstructure and of the capacity of these ions fixation. For 
+mixtures  with  ordinary  Portland  cement,  the  key  fixation  mechanism  is  the  formation  of  Friedel's  salt  and 
+aluminates related complexes from the tricalcium aluminate (C3A) [62]. This fixation mechanism is similar 
+for  the  concrete  mixtures  with  SCM;  thus,  the  metakaolin,  by  having  in  its  chemical  composition  33.10% 
+alumina (Al2O3) (Table 1), fosters the formation of C3A compounds and helps to increase the chloride ions 
+fixation. 
+
+             In Figure 10, a comparison of chloride ions migration and diffusion test results is presented. The av-
+erage chloride diffusion coefficient obtained for the REF mixture was 2.76, reaching 1.61 for the ME12, rein-
+suring the positive effect of metakaolin. The average coefficient of variation (CV) of the mixtures  amongst 
+
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+the tests is 21%. As means of comparison,  this value is close to the accepted (20.2%) in the ASTM C1556 
+[63], the American standard equivalent to the NT BUILD 443 [28], for tests performed at different laborato-
+ries. It can also be identified a higher correspondence between the test results of NT BUILD 443  [28] with 
+NT BUILD 492 [30], presenting a CV between both tests results of 13%, similar to the CV accepted (12.3%) 
+by the  ASTM  C 1202  [43] standard. This higher correspondence between both tests  agrees to the observa-
+tions of LUPING and SØRENSEN [23] and SCHIESSL and LAY [64]. LUPING and SØRENSEN [21] rec-
+ommend the NT BUILD 443 [26] as a reference test method for verifying chloride penetration into concrete. 
+Nevertheless, they also state that a rapid non-steady-state method, equivalent to NT BUILD 492 [30], can be 
+used  as  an  alternative  method  due  to  its  simplicity,  rapidity,  good  precision  and  compatibility  with  NT 
+BUILD 443 [28] results.  Furthermore, it can be noted an increase of chloride resistance at 150 days. This can 
+be justified by the improvement of the interfacial transition zone (ITZ) between cement paste and aggregate, 
+as  observed  by  DUAN  et  al.  [19]  in  concretes  with  metakaolin  and  GBFS  at  180  days.  Due  to  this  fact,  a 
+more compact microstructure is obtained, enhancing the CPR. The beneficial aspect of using metakaolin at 
+later ages was also noted by MENHOSH et al. [65]. 
+
+Figure 10: Representation of chlorides diffusion coefficient by different methods. 
+
+Since  the  RMT  test  (NT  BUILD  492  [30]) presented  to  be  a  good  test  alternative  to  its  more  time-
+consuming  counterparts  (NT BUILD  443  [28]  and  UNE  83987 [29]),  a  further  comparison  is  presented  in 
+Figure 11. A good relationship was noted between NT BUILD 491 and the total charge passed, from ASTM 
+C  1202  [43]  (Figure  11A)  (qualitative  test  without  coefficient  results).  Additionally,  with  the  increase  of 
+compressive  strength,  the  values  of  chloride  diffusion  coefficient  decrease,  thus,  producing  more  chloride 
+resistant concretes (Fig. 11B). 
+
+Figure 11: Relation between chloride diffusion coefficient from NT BUILD 492 [30] and: (A) Total charge passed from 
+ASTM C 1202 [43]; (B) Compressive strength. 
+
+           The summary of this study results can be seen in Table 8.  It can be verified that the mixture with 8% 
+metakaolin content (ME8) presented as the most efficient mixture analysed, reconciling the benefits of good 
+mechanical strength and elevated CPR.  
+
+ 
+ 
+ 
+ 
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+Table 8: Summary of the study results. 
+
+TEST 
+
+PERCENTAGE CHANGE a 
+
+Compressive strength (28 days) 
+
+Compressive strength (91 days) 
+
+Compressive strength (150 days) 
+
+28-day chloride diffusion coefficient (m²/s) (NT BUILD 492) 
+
+91-day chloride diffusion coefficient (m²/s) (NT BUILD 492) 
+
+91-day chloride diffusion coefficient (m²/s) (UNE 83987) 
+
+ME4 
+
+6% 
+
+6% 
+
+6% 
+
+-39% 
+
+-31% 
+
+-20% 
+
+150-day chloride diffusion coefficient (m²/s) (NT BUILD 443) 
+
+4% 
+
+28-day total charged passed (coulombs) (ASTM C 1202) 
+
+91-day total charged passed (coulombs) (ASTM C 1202) 
+
+-35% 
+
+-29% 
+
+Note: ᵃ Related to the REF mixture. 
+
+ME8 
+
+6% 
+
+9% 
+
+7% 
+
+-51% 
+
+-50% 
+
+-29% 
+
+-29% 
+
+-41% 
+
+-56% 
+
+ME12 
+
+Insignificant 
+
+Insignificant 
+
+Insignificant 
+
+-51% 
+
+-53% 
+
+-50% 
+
+-9% 
+
+-54% 
+
+-66% 
+
+3.7 Statistical analysis of the chloride diffusion coefficient test results 
+
+The chloride diffusion coefficient presented in Figure 12 is resulting from the Analysis of Variance (ANO-
+VA) obtained from the different test methods used. Statistical analysis has been employed to verify not only 
+the comparative analysis between different methods, but also the influence of HSBFC partial replacement by 
+metakaolin. The significance  level () adopted was 5%. The null hypothesis analysis (H0) adopted implied 
+that all the averages are statistically equal, thus, the metakaolin use did not generate significant results. The 
+p-value obtained from this analysis was 0.01%, which was inferior to the significance level adopted of 5%. 
+Thus, it can be concluded that at least one of the averages is different from the other, thereby, demonstrating 
+that  the  metakaolin  provided  significant  changes  in  the  concrete.  Furthermore,  it  was  adopted  the  Tukey‘s 
+test (Figure 13), aiming to compare the average of each treatment pair, determining the difference between 
+them for a given confidence interval. 
+
+Figure 12: Individual values of chloride diffusion coefficient. 
+
+From this statistical analysis, it can be identified the values relating the chloride diffusion coefficient 
+and the content of cement partial replacement by  metakaolin (Figure 12). It can be noted a decrease in the 
+chloride diffusion coefficient due to the use of metakaolin. The ME4, ME8 and ME12 provided a reduction 
+of 22.44, 40.94 and 44.63%, respectively, related to the REF. For the Tukey‘s test (Figure 13), the analysis is 
+performed in groups of two, therefore, those that do not share a group can be considered significant with each 
+other. If the interval of the pair of averages does not include the zero, the difference between the averages is 
+significant. Thus, it can be identified that the average chloride diffusion coefficient varied significantly from 
+the REF related ME8 and ME12; whereas the ME4 did not present a significant increase in CPR. 
+
+ME12ME8ME4REF3,0000E-122,7500E-122,5000E-122,2500E-122,0000E-121,7500E-121,5000E-12ConcretesChloride diffusion coefficient 
+ 
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+Figure 13: Tukey‘s test of chloride diffusion coefficient. 
+
+3.8 Service life prediction 
+
+The average values from the ANOVA were used to estimate the structure SL according to the Fick‘s law of 
+diffusion,  becoming  possible  to  build  graphs  relating  the  chloride  penetration  depth  and  the  structure  SL 
+(Figure 14). The value of Cs used was 0.9±0.3%, consistent with the presented literature. Additionally, the SL 
+used in this study is equivalent to the initiation period (time to initiate depassivation) and does not include the 
+propagation period of the corrosion. The use of Fick‘s Law for service life prediction was used for compara-
+tive purposes, and its absolute values should be considered with caution. According to Helene [24], it is one 
+of the most important methodologies used for estimating the service life using chloride diffusion coefficient.   
+
+           This coefficient in concrete structures is influenced by the electrolytes available, concrete microstruc-
+ture  (permeability),  oxygen  availability,  temperature  and  the  microclimate  (wind  and  rain)  of  the  region 
+where the  structure is built [24,51]. These factors combined can increase the chloride diffusion coefficient, 
+fostering the chlorides ingression in the reinforced structure and initiating the corrosion mechanisms. 
+
+           The reinforcement depth of 4 cm is specified in the Brazilian standard ABNT NBR 6118 [40] for rein-
+forced  concrete  structures  exposed  to  marine  environments.  Considering  a  Cs  of  0.9%, the  predicted  SL  at 
+this depth for ME8 and ME12 mixtures are 25 and 26 years, respectively, representing an increase of approx-
+imately 70% compared to the REF (15 years). A similar value of SL attained by the ME12 mixture at 4 cm 
+depth (26 years) is only reached in the REF mixture for a reinforcement depth of 6 cm (33 years); thus, for a 
+considered  structure  SL  of  25  years,  the  metakaolin  can  provide  a  reduction  of  reinforcement  depth  of  ap-
+proximately 30%. By adopting the 5 cm reinforcement depth – the highest value specified in the mentioned 
+standard – the SL predicted for the REF is 23 years, whereas for the ME8 and ME12, the predicted SL is 39 
+and 41 years, respectively. Moreover, similar values of the SL predicted for the REF at 5 cm can be reached 
+by using the ME8 and ME12 mixtures with 4 cm reinforcement depth. The pozzolanic activity of metakaolin, 
+by reacting with the hydrated compounds of cement at later ages, provided significant gains in CPR, delaying 
+the corrosion initiation - equivalent to the SL estimated. 
+
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+Figure 14: SL prediction of mixtures at different reinforcement depths. 
+
+According  to  the  Brazilian  standard  NBR  15575-2  [66],  named  as  ‗the  performance  standard‘,  the 
+minimum  recommended  SL  for  reinforced  concrete  structures  (such  as  foundations,  pillars,  beams,  slabs, 
+load-bearing walls, retaining walls) is 50 years. For a Cs of 0.9%, this SL could only be reached with 6 cm 
+reinforcement depth and the ME8 or ME12 mixture. At an application with moderate salt spray (Cs of 0.6% - 
+over 630 m distant  from the sea, as reported by NUNES et al.  [57] and GUIMARÃES et al. [58]),  a rein-
+forcement depth of 4 cm  must be used  for ME8 and ME12  mixtures to  meet the  performance  standard re-
+quirements.  Using  this  depth,  the  estimated  SL  for  ME12  mixture  is  85  years,  whereas  for  the  REF  is  47 
+years. Additionally, for 3 cm reinforcement depth, the minimum (50 years) is almost reached for the ME12 
+mixture (48 years).  
+
+It should be emphasised that there are some limitations to the SL prediction, as it depends of other fac-
+tors besides the chlorides concentration, such as oxygen availability, presence of electrolyte (humidity) and 
+the concentration differences. Thus, this analysis serves more as a comparative measure, than an absolute one. 
+
+4.  CONCLUSIONS 
+
+1. The use of metakaolin as a HSBFC partial replacement presents to be a viable option aiming at improving 
+the technological, ecological and economic aspects of concrete, by increasing the CPR (thus, the SL), and by 
+reducing the required reinforcement depth.  
+
+2. The use of metakaolin as HSBFC partial replacement at 4 and 8% content could slightly improve the com-
+pressive strength, and at 8 and 12% content, it significantly increased CPR. 
+
+3. The 8% metakaolin content mixture presented as the most efficient for overall mechanical and durability 
+properties  of  concrete.  At  91  days,  the  compressive  strength  increased  9%  and  the  total  charge  passed  re-
+duced 56%, in comparison to the control mixture. Furthermore, the average diffusion coefficient (three test 
+methods) reduced 40.94%. 
+
+4. The concretes produced with HSBFC without metakaolin presented a very high CPR, according to a quali-
+tative assessment of the diffusion coefficient. Nevertheless, the use of metakaolin as partial HSBFC replace-
+ment could significantly increase the predicted SL, approximately 70% at 8 and 12% metakaolin content. 
+
+5. Compatibility was identified between the results of the non-steady-state chloride diffusion coefficient ob-
+tained by the chlorides migration and diffusion tests, with a CV of 21%. Between the migration tests, the one 
+with the better correspondence with the BDT (NT BUILD 443) was the RMT (NT BUILD 492). 
+
+6. As noted in the literature, this study showed that the metakaolin use in concretes with high GBFS content 
+can provide significant benefits related to the increase of CPR. Nevertheless, this study showed that this hap-
+pens also at later ages (over 150 days). 
+
+7. The  literature  argued  that  the  use  of  high  voltage  provided  significant  variation  in  the  test  results.  Con-
+versely, this  study showed a  similarity between diffusion coefficients  from  RMT (NT BUILD 492),  which 
+used high voltage, and BDT (NT BUILD 443). 
+
+ 
+ 
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+8. The SL prediction analysis showed that the mixture without metakaolin usually required a concrete cover 
+increase of over 1 cm to attain a SL similar to mixtures with 8 and 12% metakaolin. At the specified baseline 
+scenario, the minimum SL of 50 years could only be attained by using 8 or 12% metakaolin as HSBFC re-
+placement.  
+
+5.  BIBLIOGRAPHY 
+
+[1] BJEGOVIC, D., STIRMER, N., SERDAR, M., ―Ecological Aspects of Concrete production‖, In: Second 
+International Conference on Sustainable Construction Materials and Technologies, pp. 1483-1492, Ancona, 
+Italy, Jun. 2010. 
+
+[2] SILVA, S. H., LONDERO, C., MEDEIROS, M. H. F., et al., ―Escolha do tipo de cimento capaz de 
+proteger o concreto quanto à corrosão das armaduras sob ação de íons cloreto através de análise hierárquica‖, 
+Revista ALCONPAT, v. 5, n. 3, pp. 174-189, Sep. 2015. 
+
+[3] POLDER, R.B., ―Effects of slag and fly ash on reinforcement corrosion in concrete in chloride environ-
+ment: Research from the Netherlands‖, HERON, v. 57, n. 3, pp. 197-210, 2012. 
+
+[4] ARSKOG, V., FERREIRA, M., LIU, G., GJØRV, O.E., ―Effect on cement type on the resistance of con-
+crete against chloride penetration‖, In: Proceedings of the Fifth International Conference on Concrete under 
+Severe Conditions-Environment and Loading, pp. 367-374, v. 1, Paris, France, Jun. 2007. 
+
+[5] LIU, G., GJØRV, O. E., ―Early age resistance of concrete against chloride penetration‖, In: Proceedings 
+of the Fourth International Conference on Concrete under Severe Conditions – Environment and Loading, 
+pp. 165-172, v. 1., Seoul, South Korea, Jun. 2004. 
+
+[6] GJØRV, O. E., ―Effect of blast furnace slag for increased concrete sustainability‖, In: Proceedings of the 
+International Symposium on Sustainability in the Cement and Concrete Industry, pp. 248-256, Oslo, Norway, 
+Sep. 2007. 
+
+[7] SENGUL, O., Effects of pozzolanic materials on mechanical properties and chloride diffusivity of con-
+crete, Thesis (PhD), Istanbul Technical University, Institute of Science and Technology, Istanbul, Turkey, 
+2005. 
+
+[8] BIJEN, J., Blast furnace slag for durable marine structures, VNC/BetoPrisma, Hertogenbosch, Nether-
+lands, 1998.  
+
+[9] WORLDSTEEL ASSOCIATION. Steel Statistical Yearbook 2016, https://www.worldsteel.org/steel-by-
+topic/statistics/steel-statistical-yearbook-.html. Accessed in October 2017. 
+
+[10] NEVILLE, A. M., Propriedades do concreto, 2 ed., São Paulo, Brazil, Pini, 1997. 
+
+[11] LACERDA, C. S., HELENE, P. Estudo da influência da substituição de cimento Portland por metacau-
+lim em concreto, Boletim Técnico da Escola Politécnica da USP, BT/PCC/419. 2005. 
+
+[12] SABIR, B. B., WILD, S., BAI, J., ―Metakaolin and calcined clays as pozzolans for concrete: a review‖, 
+Cement & Concrete Composites, v. 23, n. 6, pp. 441-454, Dec. 2001. 
+
+[13] GLEIZE, P. J. P., CYR, M., ESCADEILLAS, G., ―Effects of Metakaolin on Autogenous Shrinkage of 
+Cements Pastes‖, Cement and Concrete Research, v. 29, n.2, pp. 80-87, Feb. 2007. 
+
+[14] SOUZA, P. S. L., ―Verificação da influencia do uso de metacaulim de alta reatividade nas propriedades 
+mecânicas do concreto de alta resistência‖, Thesis (PhD)., Engineering School, Universidade Federal do Rio 
+Grande do Sul, Porto Alegre, Brazil, 2003.  
+
+[15] LI, Z., DING, Z., ―Property improvement of Portland cement by incorporating with metakaolin and 
+slag‖, Cement and Concrete Research, v. 33, n. 4, pp. 579-584, Apr. 2003. 
+
+[16] BROOKS, J. J., JOHARI M. M. A., ―Effects of Metakaolin on creep and shrinkage of concrete‖, Cement 
+& Concrete Composites, v. 23, n. 6, pp. 495-502, Dec. 2001. 
+
+[17] GRUBER, K. A., RAMLOCHAN, T., BODDY, A., HOOTON R. D., THOMAS, M. D. A., ―Increasing 
+concrete durability with high-reactivity metakaolin‖, Cement & Concrete Composites, v. 23, n. 6, pp. 479-84, 
+Dec. 2001. 
+
+[18] TAFRAOUI, A., ESCADEILLAS, G., VIDAL, T., ―Durability of the ultra high performances concrete 
+containing metakaolin‖, Construction and Building Materials, v. 112, pp. 980-987, Jun. 2016. 
+
+[19] DUAN, P., ZHONGHE, S., CHEN, W., et al., ―Effects of metakaolin, silica fume and slag on pore 
+structure, interfacial transition zone and compressive strength of concrete‖, Construction and Building Mate-
+rials, v. 44, pp. 1-6, Jul. 2013. 
+
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+[20] CASTELLOTE,  M., ANDRADE, C., ALONSO, C., ―Measurement of the steady and non-steady-state 
+chloride diffusion coefficients in a migration test by means of monitoring the conductivity in the anolyte 
+chamber Comparison with natural diffusion tests‖, Cement & Concrete Research, v. 31, pp. 1411-1420, Dec. 
+2001. 
+
+[21] MEDEIROS, R. A., LIMA, M. G., BRITO, P. C., et al., ―Chloride penetration into concrete in an off-
+shore platform-analysis of exposure conditions‖, Ocean Engineering, v. 103, pp. 78-87, May. 2015. 
+
+[22] EVANS, C., RICHARDSON, M. G., ―Service life of chloride contaminated concrete structures‖, In: 
+Proceedings of the Concrete Research in Ireland Colloquium, pp. 131-137, Dublin, Ireland,  Sept. 2005. 
+
+[23] LUPING, T., SØRENSEN, H. E., ―Precision of the Nordic test methods for measuring the chloride dif-
+fusion/migration coefficients of concrete‖, Materials and Structures/ Matériaux et Constructions, v. 34, pp. 
+479-485, Oct. 2001. 
+
+[24] HELENE, P. Contribuição ao estudo da corrosão em armaduras de concreto armado, Thesis (PhD), Pol-
+ytechnic School, Universidade de São Paulo, São Paulo, Brazil, 1993. 
+
+[25] HENRY, D., BAROGHEL, V., CHAUSSADENT, T., ―Evaluation of chloride penetration into concrete 
+by various methods‖, In: Second International RILEM Workshop on Testing and Modelling the Chloride, v. 
+13, pp. 471-486, Paris, France,  Sept. 2001. 
+
+[26] LUPING, T., SØRENSEN, H. E., Evaluation of the Rapid Test Methods for Measuring the Chloride 
+Diffusion Coefficients of Concrete, NORDTEST Project Nº 1388-98, Swedish National Testing and Research 
+Institute Building Technology, 1998. 
+
+[27] ANDRADE, C., SANJUAN, M. A., RECUERO, A., RIO, O., ―Calculation of chloride diffusivity in 
+concrete from migration experiments, in non-steady-state conditions‖, Cement and Concrete Research, v. 24, 
+n. 7, pp. 1214-1228, 1994. 
+
+[28] NORDTEST METHOD, NT BUILD 443 - Concrete, hardened: accelerated chloride penetration, Oslo, 
+Norway, 1995. 
+
+[29] UNE 83987:2014, Durabilidad del hormigón, Métodos de ensayo, Determinación de los coeficientes de 
+difusión de los iones cloruro en el hormigón endurecido, Método multirrégimen, 2014. 
+
+[30] NORDTEST METHOD, NT BUILD 492 - Concrete, mortar and cement-based repair materials: chloride 
+migration coefficient from non-steady-state migration experiments, Oslo, Norway, 1999. 
+
+[31] ANDRADE, C., ―Calculation of chloride diffusion coefficients in concrete from ionic migration meas-
+urements‖, Cement and Concrete Research, v. 23, n. 3, pp. 724-742, 1993. 
+
+[32] AMIRREZA, P., RAMEZANIANPOUR, A. A., RAJAIE, H., ―New method development for evaluation 
+concrete chloride ion permeability‖, Construction and Building Materials, v. 93, pp. 790–797, Sep. 2015. 
+
+[33] EGUCHI, K., TAKEWAKA, K., YAMAGUCHI, T., et al., ―A study on durability of blast furnace slag 
+cement concrete mixed with metakaolin-based artificial pozzolan in actual marine environment‖, In: Third 
+International Conference on Sustainable Construction Materials and Technologies, Kyoto, Japan, Aug. 2013. 
+
+[34] BERNAL, S., A., GUTIÉRREZ, R., M., PROVIS, J., L., ―Engineering and durability properties of con-
+cretes based on alkali-activated granulated blast furnace slag/metakaolin blends‖, Construction and Building 
+Materials, v. 33, pp. 99-108, Aug. 2012. 
+
+[35] MEDEIROS, M. H. F., GOBBI, A., GROENWOLD, J. A., et al., ―Previsão de vida útil de concreto ar-
+mado de alta resistência com adição de metacaulim e sílica ativa em ambientes marinhos‖, Revista Escola de 
+Minas, v. 66, n. 1, pp. 59-65, Jan. 2013. 
+
+[36] ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS – ABNT, NBR 12653: Materiais 
+Pozolânicos - Especificação, Rio de Janeiro, 2015. 
+
+[37] LUXÁN, M. P., MADRUGA, F., SAAVEDRA, J., ―Rapid evaluation of pozzolanic activity of natural 
+products by conductivity measurement‖, Cement and Concrete Research, v. 19, n. 1, pp. 63-68, Jan. 1989. 
+
+[38] ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS – ABNT, NBR 5751: Materiais pozolânicos 
+- Determinação de atividade pozolânica com cal aos sete dias, Rio de Janeiro, 2015. 
+
+[39]  ______, NBR 15894-2: Metacaulim para uso com cimento Portland em concreto, argamassa e pasta – 
+Determinação do índice de desempenho com cimento aos sete dias, Rio de Janeiro, 2010. 
+
+[40] ______, NBR 6118 NB1: Projeto de estruturas de concreto – procedimento, Rio de Janeiro, 1968, rev. 
+April, 2014. 
+
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+[41] ______, NBR 5738: Concreto - Procedimento para moldagem e cura de corpos de prova, Rio de Janeiro, 
+2015. 
+
+[42] ______, NBR 5739: Concreto – Ensaio de compressão de corpos-de-prova cilíndricos, Rio de Janeiro. 
+2007. 
+
+[43] AMERICAN SOCIETY FOR TESTING AND MATERIALS – ASTM, Standard test method for elec-
+trical indication of concrete‘s ability to resist chloride ion penetration - ASTM C 1202, Philadelphia, 2012. 
+
+[44] WHITING, D., Rapid determination of the chloride permeability of concrete, Final Report No. 
+FHWA/RD-81/119, Federal Highway Administration, August 1981, NTIS, n. 82140724, 1981. 
+
+[45] HELENE, P., R., L., MEDEIROS, M., H., F., BORBA, A., Y., et al., ―Ensaio de migração de cloretos 
+para concreto: influência do número de fatias extraídas‖, Revista Escola de Minas, v. 65, n.4, pp. 475-481, 
+Out. 2012. 
+
+[46] JAIN, J. A., NEITHALATH, N. ―Chloride transport in fly ash and glass powder modified concretes – 
+Influence of test methods on microstructure‖, Cement and Concrete Composites, v. 32, pp. 148-156, Nov. 
+2010. 
+
+[47] NASSAR, R., SOROUSHIAN, P.,―Strength and durability of recycled aggregate concrete containing 
+milled glass as partial replacement for cement‖, Construction and Building Materials, v. 29, pp. 368-377, 
+Nov. 2012. 
+
+[48] MITTRI, S.H, VIEIRA, G.C., DEGEN, M. K., et al., ―Utilisation of heat-treated ornamental stone pro-
+cessing waste as an addition to concretes to improve compressive strength and reduce chloride ion penetra-
+tion‖ Construction and Building Materials, v. 188, pp. 444-455, Nov. 2018. 
+
+[49] KIM, J., MOON J. H., SHIM, J.W., et al., ―Durability properties of a concrete with waste glass sludge 
+exposed to freeze-and-thaw condition de-icing salt. Construction and Building Materials. V. 66, n. 66, pp. 
+398-402, 2014. 
+
+[50] LUPING, T., NILSSON, L., ―Rapid determination of the chloride diffusivity in concrete by applying an 
+electrical field‖, ACI Materials Journal, v. 89, n.1, pp. 49-53, Jan. 1993. 
+
+[51] MEDEIROS, M.H.F., Contribuição ao estudo da durabilidade de concretos com proteção superficial 
+frente à ação de íons cloretos, Thesis (PhD), Universidade de São Paulo, São Paulo, Brazil, 2008. 
+
+[52] NORDTEST METHOD, NT BUILD 208 - Concrete, hardened: Chloride content by volhard titration, 
+Oslo, Norway, 1996. 
+
+[53] RIBEIRO, D. V., Corrosão em estruturas de concreto armado: teoria, controle e métodos de análise, 
+Rio de Janeiro, Brazil, Elsevier, 2014. 
+
+[54] CEB, Durable Concrete Structures – Design Guide, Comité Euro-International du Betón – CEB, Bulle-
+tin d‘Information 183, Thomas Telford, London, 1992. 
+
+[55] AMERICAN CONCRETE INSTITUTE (ACI), Committee 318, Building Code Requirements for Struc-
+tural Concrete (ACI 318-95) and Commentary (ACI 318R-95), Detroit, USA, 369 p., 1995. 
+
+[56]  BROWNE, R., et al., Marine durability survey of the tongue sand tower, concrete in the ocean program, 
+CIRIA UEG Technical Report 5, Cement and Concrete Association, London, 1980. 
+
+[57]  NUNES, J. L.O., GUIMARÃES, A. T. C., SILVEIRA, B. P., et al., ―Intensidade de ataque de cloretos: 
+considerações sobre a distância do concreto em relação à água do mar‖, In: Proceeding of the Seminário e 
+Workshop em Engenharia Oceânica – SEMENGO, pp. 73-79, Rio Grande, Brazil, Jun. 2004. 
+
+[58] GUIMARÃES, A.T.C., CASTRO, P., NUNES, J.L.O., ―Teor de Cloretos Próximos a Superfície do 
+Concreto em Ambientes Marítimos‖, In: Proceedings of the 49º Congresso Brasileiro do Concreto, Bento 
+Gonçalves, Brasil, Sept. 2007. 
+
+[59] GJØRV, O. E., ―Service life of concrete structures and performance-based quality control‖, In: Interna-
+tional Workshop on Innovations in Concrete Materials, pp. 220-222, Whistler, Canada, Feb. 2001. 
+
+[60] LI, C., SUN, H., LI, L., ―A review: The comparison between alkali-activated slag (Si+Ca) and me-
+takaolin (Si+Al) cements‖, Cement and Concrete Research, v. 40, n. 9, pp. 1341–1349, Sep. 2010. 
+
+[61] ZIBARA, H., HOOTON, R. D., THOMAS, M. D. A, STANISH, K., ―Influence of the C/S and C/A rati-
+os of hydration products on the chloride ion binding capacity of lime-SF and lime-MK mixtures‖, Cement 
+and Concrete Research, v. 38, n. 3, pp. 422-426, Mar. 2008. 
+
+[62] SAIKIA, N., KATO, S., KOJIMA, T., ―Thermogravimetric investigation on the chloride binding behav-
+iour of MK-lime paste‖, Thermochimica Acta, v. 444, n. 1, pp. 16-25, May 2006. 
+
+GUIGNONE, G.C.; VIEIRA, G.L.; ZULCÃO, R., et al. revista Matéria, v.24, n.4, 2019. 
+
+[63] AMERICAN SOCIETY FOR TESTING AND MATERIALS – ASTM, Standard test method for deter-
+mining the apparent chloride diffusion coefficient of cementitious mixtures by bulk diffusion: ASTM C 1556, 
+Philadelphia, 2016. 
+
+[64] SCHIESSL, P., LAY, S., ―Influence of concrete composition‖, In: Böhni, H. (ed), Corrosion in Rein-
+forced Concrete Structures, chapter 4, Cambridge, UK, Woodhead Publishing Limited, 2005. 
+
+[65] MENHOSH, A. A., WANGA, Y., WANG, Y., et al., ―Long term durability properties of concrete modi-
+fied with metakaolin and polymer admixture‖ Construction and Building Materials, v. 172, pp. 41-51, May. 
+2018. 
+
+[66] ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS - ABNT, NBR 15575-2: Edificações hab-
+itacionais — Desempenho - Parte 2: Requisitos para os sistemas estruturais, Rio de Janeiro, 2013. 
+
+ORCID 
+Guilherme Cunha Guignone         http://orcid.org/0000-0002-1007-8739  
+Geilma Lima Vieira                      http://orcid.org/0000-0001-6148-3307 
+Robson Zulcão                              http://orcid.org/0000-0003-3381-0360 
+Gabriel Mion                                 http://orcid.org/0000-0002-7523-9564 
+Gercyr Baptista                             http://orcid.org/0000-0002-8305-2935 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

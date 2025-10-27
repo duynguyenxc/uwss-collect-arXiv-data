@@ -1,5 +1,43 @@
 # Smoke Test Report (local)
 
+## PG-first large-run (Phase A–E) — Latest
+### Commands
+```powershell
+# Env (UA rotation; no proxy)
+$env:UWSS_UA_FILE = "config/user_agents.txt"
+
+# Indexes
+python -m src.uwss.cli --db-url $env:UWSS_DB_URL db-create-indexes
+
+# Discover
+python -m src.uwss.cli --db-url $env:UWSS_DB_URL discover-semanticscholar --config config/config.yaml --max 100 --cache-ttl-sec 86400 --log-json
+python -m src.uwss.cli --db-url $env:UWSS_DB_URL discover-eupmc --config config/config.yaml --max 50 --cache-ttl-sec 86400 --log-json
+
+# Score (with negative keywords)
+python -m src.uwss.cli --db-url $env:UWSS_DB_URL score-keywords --config config/config.yaml --negative-keywords-file config/ai_keywords.txt
+
+# Fetch + Extract
+python -m src.uwss.cli --db-url $env:UWSS_DB_URL fetch --limit 100 --config config/config.yaml --log-json
+python -m src.uwss.cli --db-url $env:UWSS_DB_URL extract-full-text --content-dir data/content --limit 100
+
+# Validate + Export
+python -m src.uwss.cli --db-url $env:UWSS_DB_URL validate --json-out data/export/pg_smoke_validate.json
+python -m src.uwss.cli --db-url $env:UWSS_DB_URL export --out data/export/pg_smoke_large.jsonl --require-match --negative-keywords-file config/ai_keywords.txt --log-json
+```
+
+### Results summary
+- Discover: +55 (S2), +0 (EUPMC) với cấu hình keyword hiện tại.
+- Score: 70 bản ghi cập nhật.
+- Fetch: Enriched OA 34; Downloaded 11 (một số 403 từ publisher, chấp nhận được khi không dùng proxy).
+- Extract: 63 bản ghi có `content_path/content_chars`.
+- Validate: `dup_title` = 0; nhóm `dup_doi` phản ánh DOI rỗng (không phải trùng DOI thực).
+- Export: 68 bản ghi ra `data/export/pg_smoke_large.jsonl` (require-match + negative keywords).
+
+### Observations
+- Pipeline Postgres chạy ổn định; logging/metrics rõ ràng.
+- Resolver cải thiện PDF hit-rate (meta-refresh + selector phổ biến).
+- UA rotation đã bật; có thể tăng thêm proxy để giảm 403 khi mở rộng quy mô.
+
 ## Scope
 - Validate critical path end-to-end on small samples: migrate → discover (Crossref/EUPMC/S2/arXiv) → enrich+fetch → scrape-full-content → export.
 - Ensure incremental resume works and identification fields are complete.

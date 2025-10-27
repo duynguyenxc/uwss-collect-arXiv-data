@@ -1,0 +1,1068 @@
+Alkalinity and Cl-/Oh- affecting reinforcement corrosion in 
+alkali activated concrete
+
+MANGAT, Pritpal <http://orcid.org/0000-0003-1736-8891> and OJEDOKUN, 
+Olalekan <http://orcid.org/0000-0002-9573-4976>
+
+Available from Sheffield Hallam University Research Archive (SHURA) at:
+
+https://shura.shu.ac.uk/33440/
+
+This document is the Accepted Version [AM]
+
+Citation:
+
+MANGAT, Pritpal and OJEDOKUN, Olalekan (2024). Alkalinity and Cl-/Oh- affecting 
+reinforcement corrosion in alkali activated concrete. In: GHAFOORI, Nader, 
+GANJIAN, Eshmaiel, MOREL, Jean-Claude, FABBRI, Antonin and KHORAMI, 
+Morteza, (eds.) 6th International Conference on Sustainable Construction Materials 
+and Technologies (SCMT6). Coventry, Coventry University, 588-600. [Book Section] 
+
+Copyright and re-use policy
+
+See http://shura.shu.ac.uk/information.html
+
+Sheffield Hallam University Research Archive
+http://shura.shu.ac.uk
+
+P.S. Mangat1 and Olalekan O. Ojedokun2 
+
+1p.s.mangat@shu.ac.uk; Centre for Infrastructure Management, Materials and 
+Engineering Research Institute, Sheffield Hallam University, Sheffield S1 1WB, UK 
+
+2o.ojedokun@shu.ac.uk; Centre for Infrastructure Management, Materials and 
+Engineering Research Institute, Sheffield Hallam University, Sheffield S1 1WB, UK 
+
+ALKALINITY AND Cl-/OH- AFFECTING 
+REINFORCEMENT CORROSION IN ALKALI 
+ACTIVATED CONCRETE 
+
+ABSTRACT  
+
+The paper reports the effect of hydroxyl ion (OH) and chloride (Cl) concentrations of pore 
+fluid on reinforcement corrosion in AAC under long term chloride exposure. The OH and 
+Cl are influenced by the activator molarity. AAC has much higher OH than the control 
+Portland cement (PC) concrete at early ages of chloride exposure and the corresponding 
+Cl/OH ratios are lower for AAC. However, under long term chloride exposure, the Cl/OH 
+ratios of AAC start exceeding the PC concrete due to the superior chloride binding capacity 
+of Portland cement. The critical threshold Cl/OH ratio for corrosion initiation in AAC is 
+between 2 and 3.28, whereas it is < 1 for PC concrete. The steel reinforcement in AAC 
+remains free from chloride induced corrosion for a longer period and up to higher Cl-/OH- 
+ratios than PC concrete due to the presence of elemental Sulphur (sulfides) on the steel 
+surface in AAC. 
+
+Keywords:  Alkali  activated  concrete  (AAC);  hydroxyl  and  chloride  concentrations; 
+alkalinity; reinforcement corrosion; Cl/OH ratio 
+
+1 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+1.0  INTRODUCTION   
+
+Hydrated  products  of  Portland  Cement  (PC)  concrete  produce  saturated  pore  solution 
+containing calcium hydroxide Ca(OH)2 and different ions depending on the type of cement 
+and supplementary cementitious materials like fly ash, slag and silica fume (Ghods et al., 
+2009). These ionic species are principally alkali oxides of calcium, sodium and potassium 
+in the cement component, unlike alkali activated concrete (AAC). Sulphate ions could also 
+be present in the concrete pore solution due to gypsum added during cement production or 
+from contaminated aggregate or mixing water (Neville, 2011). The pH of PC concrete pore 
+solution increases from about 12.5 to 13.5 by the presence of these alkali oxides (Na+ and 
+K+) (Angst et al., 2009; Poursaee and Hansson, 2009). However, the pH decreases when 
+mineral  admixtures  are  added  (Neville,  2011).  For  example,  a  10%  replacement  of  PC 
+cement with silica fume reduced the pH of the concrete pore solution from 13.5 to 12.6 
+(Ortolan, Mancio and Tutikian, 2016). This is due to the secondary pozzolanic reactions of 
+the supplementary cementitious material which requires calcium hydroxide Ca(OH)2 from 
+the concrete pore solution to activate these reactions. For a fly-ash-based system, the glassy 
+material is only activated when the pH of the concrete pore solution is about 13.2 (Neville, 
+2011) but for ground granulated blast-furnace slag (GGBS), the glassy material is activated 
+at a lower pH of about 11.5 (Song and Jennings, 1999). Information on the chemistry of 
+AAC pore solution is limited in literature unlike that of PC concrete pore solution which is 
+fairly well documented. 
+The pH of PC concrete pore solution at considerably low values less than 12 is suggested 
+to aid the participation of bound chloride in the corrosion initiation in reinforced concrete 
+(Glass and Buenfeld, 2000). It was argued that a low pH favours the dissolution of chloride 
+ions that are physically or chemically bound to the hydration products thereby increasing 
+the  free  chloride  content  in  concrete  (Page  and  Vennesland,  1983).  Contrary  to  the 
+dissolution of bound chlorides into the pore solution at low pH when the source chloride is 
+NaCl, Robert (Roberts, 1962) observed the solubility of Friedel’s salt at high pH when the 
+chloride source is from CaCl2. The chemically bound chloride concentrations are released 
+into the concrete pore solution at high pH. The effect of pH on the bound chloride solubility 
+in the concrete pore solution is, therefore, greatly influenced by the source chloride. NaCl 
+is used as the source chloride for this study. Recent investigation on the chloride binding 
+capacity  of  alkali  activated  cementitious  concrete  shows  that  PC  concrete  has  better 
+chloride binding capacity than AAC concrete due to its effective binding capacity for both 
+the physically and chemically bound chlorides whereas the AAC concrete is effective in 
+binding only the physically bound chlorides while the chemically bound chloride is limited 
+(Mangat and Ojedokun, 2019).  
+Hydroxyl  ion  concentrations  is  as  important  as  the  chloride  concentrations  in  the  pore 
+solution of concrete because it affects the initiation and rate of corrosion of steel in concrete 
+(Neville, 2011). There is the likelihood of depassivation of steel embedded in concrete with 
+an increase in the chloride/hydroxyl ion concentrations, although no valid conclusion exists 
+on its threshold values. However, the threshold value of 0.61 for the chloride/hydroxyl ion 
+concentration proposed by Hausmann (Hausmann, 1967) for the initiation of corrosion in 
+cement based materials does not normally apply. For example, Lambert et al. (Lambert, 
+Page and Vassie, 1991) presented a chloride/hydroxyl concentration threshold of 3 for steel 
+
+2 
+
+ 
+ 
+rods embedded in PC concrete. The chloride/hydroxyl concentration as high as 320 did not 
+result in corrosion of steel fibres embedded in fly-ash concrete (Mangat and Gurusamy, 
+1988).  Similarly  high  threshold  value  of  chloride/hydroxyl  concentration  in  silica  fume 
+concrete  was  observed  by  Page  and  Havdahl    (Page  and  Havdahl,  1985)  for  corrosion 
+initiation. The reasons attributed to such high values were the lower chloride binding and 
+pH which increases the Cl−/OH− ratio in its pore solution. Hausmann (Hausmann, 1967) 
+based  the  chloride/hydroxyl  concentration  threshold  of  0.61  on  an  idealized  solution  to 
+represent the pore solution of hydrated cement. This model electrolyte cannot simulate an 
+oxygen depletion or limited mobility of chloride ion within the cement matrix unlike the 
+concrete pore solution (Page and Vennesland, 1983). This makes it unreliable for predicting 
+corrosion  behaviour  of  steel  in  concrete.  The  threshold  of  chloride/hydroxyl  ion 
+concentrations  in  AAC  is  expected  to  be  different  from  PC  concrete  because  of  the 
+differences in the compositions of their pore solutions. 
+The  alkalinity  of  concrete  pore  solution  is  a  determinant  factor  for  the  formation  of  a 
+passive  thin  film  comprising  of  iron  oxide  around  the  steel  surface,  which  inhibits  the 
+corrosion process of embedded steel or fibres in concrete. The prolonged action of free 
+chloride as well as lower alkalinity in PC concrete destroys this protective film (Neville, 
+2011). However, it is argued that a reduction in alkalinity of the pore solution due to partial 
+replacement of PC cement with supplementary cementitious (pozzolanic) material does not 
+necessarily result in the depletion of the protective thin film around the embedded steel 
+surface  (Ortolan,  Mancio  and  Tutikian,  2016).  Therefore,  the  electrochemical  reaction 
+between the free chloride and embedded steel in supplementary cementitious concrete is 
+partially affected by the low alkalinity of the concrete pore solution.  
+The corrosion initiating relationship between the free chloride and pH of pore solution in 
+AAC  concrete  is  not  established  in  literature.  This  paper  will  address  the  relationship 
+between the two parameters as well as their relationship with bound chlorides. 
+
+2.0  EXPERIMENTAL PROGRAMME 
+
+2.1  Details of Mixes, Curing and Testing 
+
+Three AAC concrete mixes 1, 2 and 3 and a control PC concrete were investigated. Their 
+details are as follows: Binder: fine aggregate: coarse aggregate proportions of AAC mixes 
+are 1: 0.72: 1.8, Liquid/binder ratio = 0.47. Activator dilution of mixes AAC 1,2 and 3 is 
+0%, 3.88% and 7.76%. Binder: fine aggregate: coarse aggregate proportions of PC concrete 
+mixes is 1:1.3: 2.22, w/c=0.47. Concrete slabs of dimensions 250 x 250 x 75 mm were cast 
+into polystyrene moulds. After casting, the moulds were covered with polythene sheets and 
+cured for 24 hrs in the laboratory air at 20 ± 20C and approximately 65% R.H. The slabs 
+were demoulded 24 hrs after casting and cured in tap water at 20 ± 20C for a further 27 
+days before exposure to chloride solution. Two units of 250 x 250 x 75 mm slab specimens 
+were produced per mix. Eight slab specimens were produced in total. Further details are 
+given elsewhere (Mangat, Ojedokun 2019, 2020, Mangat, Ojedokun and Lambert 2021). 
+
+2.2  Testing 
+
+3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Bulk diffusion tests according to (NT BUILD 443, 1995; DD CEN/TS 12390-11, 2010) 
+were adopted to measure the long-term chloride diffusion into the AAC and PC concrete 
+specimens. DD CEN/TS 12390-11 (DD CEN/TS 12390-11, 2010) and NordTest 443 (NT 
+BUILD 443, 1995) test methods which are commonly used to determine the chloride bulk 
+diffusion in concrete have similar procedures apart from the concentration of the chloride 
+exposure  solution.  DD  CEN/TS  12390-11  (DD  CEN/TS  12390-11,  2010)  specifies  3% 
+NaCl solution (by weight) whereas NordTest 443 (NT BUILD 443, 1995) specifies 165 g 
+± 1g NaCl per dm3 solution (16.5% NaCl solution by weight). A 5% NaCl solution in tap 
+water  was  prepared  for chloride  exposure  of  the  test  specimens.  The  5%  NaCl  solution 
+provides an accelerated chloride diffusion test which gives higher chloride concentrations 
+at given depths than under normal marine exposure. Therefore, the permissible chloride 
+concentrations  allowed  in  DD  CEN/TS  12390-11  (DD  CEN/TS  12390-11,  2010)  for 
+different types of chloride exposure cannot be directly related to the data presented in this 
+paper. The transportation mode of chloride ion was by diffusion only. This was achieved 
+by curing the test specimens in water for 28 days after casting to fully achieve saturation 
+of concrete pores, thereby eliminating the initial sorption effect upon chloride exposure. 
+All the faces of the chloride diffusion test specimens were coated with 1 mm thick layer of 
+bituminous paint except the 250 x 250 mm bottom face of the slab (in its as cast position) 
+to be exposed to the 5% NaCl solution.   
+
+2.3  Pore Fluid Sample extraction 
+
+Concrete pore fluid was extracted at a mean depth of 10mm, 30mm and 50mm from the 
+chloride-exposed surface of the AAC 1, 2, 3 and PC concrete slabs. The pore fluid samples 
+were  used  to  determine  the  free  chloride  and  hydroxyl  ion  concentrations  (BS  1881-
+124:2015+A1, 2021) at 180, 270, 540, 860 and 1750 days exposure to the chloride solution. 
+In addition to pore fluid extraction, concrete powder samples were extracted by drilling at 
+8mm,  15mm,  20mm,  25mm,  35mm,  50mm  and  65mm  depths  from  chloride-exposed 
+surfaces of the AAC 1, 2, 3 and PC concrete slabs. These specimens were used to determine 
+the free chloride and hydroxyl ion concentrations at 180, 270, and 1750 days Cl exposure. 
+
+2.3.1 Concrete pore fluid sample 
+
+Four  cores  of  50mm  diameter  x  60mm  depth  were  obtained  from  each  AAC  and  PC 
+concrete slab. The concrete coring was performed after 180, 270, 540, 860 and 1750 days 
+of Cl exposure in a solution of 5% NaCl by weight. Each core was sawn into three discs of 
+50mm diameter x 20mm depth representing depths of 0 - 20mm (10mm mean depth), 20 - 
+40mm (30mm mean depth) and 40 - 60mm (50mm mean depth) from the concrete face 
+exposed to the Cl solution. The pore solution extraction was performed on the 20mm thick 
+concrete discs obtained from the cores of AAC and control PC concrete slabs. This was 
+carried out by placing three discs from the  same depth,  for example, 0 - 20mm  (10mm 
+mean depth) obtained from the three cores for each mix, into a pore fluid extraction device. 
+The  pore  solution  extraction  device,  with  the  three  discs  inside  it,  was  placed  in  a 
+compression  testing  machine  and  a  compressive  load  was  applied  at  a  steady  rate  of 
+
+4 
+
+ 
+ 
+ 
+ 
+ 
+ 
+10kN/sec. The pore solution was extracted by a suction action without allowing contact 
+with air. It was immediately stored in plastic vials, labelled, and sealed with parafilm. The 
+same procedure was repeated on concrete core discs representing 10mm, 30mm and 50mm 
+mean depth. 
+
+2.3.2 Concrete powder sample 
+
+Extraction of dry powder samples was carried out in accordance with the relevant standards 
+(NT BUILD 443, 1995; DD CEN/TS 12390-11, 2010). Two 250 x 250 x 75mm concrete 
+slabs  per  mix  at  each  test  age  were  sawn  into  two  equal  halves  along  the  plane 
+perpendicular to the uncoated concrete face. Dry powder samples were extracted at 8, 15, 
+25,  35,  50  and  65mm  depths  from  the  uncoated  concrete  face  through  which  chloride 
+diffusion occurs. A minimum  of  six holes were  drilled per  profile depth by means of a 
+hammer drill using 4mm diameter SDS drill bits. Powder samples collected at each profile 
+depth were combined to provide approximately 15grams of a sample extracted from the 
+two slab specimens of each concrete mix. The powder samples  from each profile depth 
+were sieved through 150µm sieve to obtain a finely ground sample which was carefully 
+stored in a self-sealing plastic bag and labelled accordingly. The retained coarse material 
+was discarded while the finer powder samples were used to determine free chloride and 
+hydroxyl ion concentrations.  
+
+3.0  EXPERIMENTAL RESULTS AND DISCUSSION 
+
+3.1  Free Hydroxyl concentrations  
+
+The free hydroxyl ion concentration profiles of AAC 1, 2, 3 and PC concrete at early (180 
+and 270 days) and later (540, 860 and 1750 days) chloride exposure periods are shown in 
+Figures 1a and 1b respectively. The profiles of free chloride, and Cl-/OH- ratios are shown 
+in Figures 2a, b and 3a,b respectively. The data in Figures 1,2 and 3 represent mean depths 
+from the chloride-exposed surface of 10 mm, 30 mm and 50 mm.  
+
+5 
+
+ 
+ 
+ 
+ 
+ 
+L
+
+/
+l
+o
+m
+n
+o
+i
+t
+a
+r
+t
+n
+e
+c
+n
+o
+c
+
+l
+y
+x
+o
+r
+d
+y
+H
+
+0.4
+
+0.35
+
+0.3
+
+0.25
+
+0.2
+
+0.15
+
+0.1
+
+0.05
+
+0
+
+0
+
+AAC 1 (180days)
+PC (180days)
+AAC 3 (270days)
+
+AAC 2 (180days)
+AAC 1 (270days)
+PC (270days)
+
+AAC 3 (180days)
+AAC 2 (270days)
+
+10
+
+20
+
+30
+Depth (mm)
+
+40
+
+50
+
+60
+
+Fig. 1a: Hydroxyl concentrations of AAC 1, 2, 3 and control PC concrete at 180- and 270-days 
+exposure 
+
+L
+
+/
+l
+o
+m
+n
+o
+i
+t
+a
+r
+t
+n
+e
+c
+n
+o
+c
+
+l
+y
+x
+o
+r
+d
+y
+H
+
+0.04
+
+0.035
+
+0.03
+
+0.025
+
+0.02
+
+0.015
+
+0.01
+
+0.005
+
+0
+
+0
+
+AAC 1 (860days)
+PC (860days)
+AAC 3(1750days)
+
+AAC 2 (860days)
+AAC 1(1750days)
+PC (1750days)
+
+AAC 3 (860days)
+AAC 2(1750days)
+
+10
+
+20
+
+30
+
+40
+
+50
+
+60
+
+Depth (mm)
+
+Fig. 1b: Hydroxyl concentrations of AAC 1, 2, 3 and control PC concrete at 540, 860 and 1750 
+days exposure 
+
+The  free  hydroxyl  ion  concentrations  of  all  AAC  mixes  are  very  much  higher  than  PC 
+concrete as shown in Figure 1a. The free hydroxyl ion concentrations are within the range 
+of 0.011 mol/L to 0.074 mol/L for PC concrete compared to 0.099 mol/L to 0.363 mol/L 
+for AAC at 180- and 270-days chloride exposure. A clear distinction in the alkalinity of 
+AAC is amplified by the alkali activator concentration that was utilized in the AAC mixes. 
+The alkalinity is greater at the inner core of the slab specimens. AAC 1 and 2 exhibited the 
+highest free hydroxyl ion concentrations of 0.363 mol/L in relation to PC concrete having 
+0.074 mol/L at 50 mm mean depth after 180 days chloride exposure. A similar trend is 
+observed for 270 days of chloride exposure (Fig. 1a). However, the difference between free 
+hydroxyl ion concentrations of PC relative to AAC at 860 and 1750 days in Fig. 1b is lower 
+
+6 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+than at 180 and 270 days in Fig 1a. There is a notable depletion of hydroxyl ions towards 
+the concrete surface for all profiles shown in Figures 1a and 1b. The depletion is steeper 
+between 10 mm and 30 mm depths in AAC at both 180 and 270 days chloride exposure. 
+For example, the hydroxyl ion concentrations of AAC 1 at 180 days of exposure are 0.155 
+mol/L, 0.347 mol/L and 0.363 mol/L at 10 mm, 30 mm, and 50 mm depths respectively. 
+The depletion of hydroxyl ions towards the concrete surface could be caused by leaching 
+of alkali content from the concrete surface (Lloyd, Provis and Van Deventer, 2010). The 
+depletion of hydroxyl ions at the concrete surface could also be caused by the effect of 
+carbonation. All precautions were taken to prevent carbonation which, therefore, is unlikely 
+to be a cause of pH reduction near the surface zone. Another possible explanation for the 
+gradual depletion of hydroxyl ions towards the concrete surface in concrete submerged in 
+water was attributed to  the  outward diffusion of  hydroxyl ions (Mangat  and Gurusamy, 
+1987). Tritthart (Tritthart, 2009) proposed that under chloride exposure competition exists 
+between OH- and Cl- at the adsorption sites of the hydration products. It was observed that 
+as more chloride ions were chemically adsorbed, fewer adsorption sites were left for other 
+ions  such  as  OH-  which  could  not  be  absorbed  simultaneously.  This  hypothesis  was 
+suggested as the reason for higher binding capacity for concrete with a low pH. This is 
+unlikely for AAC because its poor binding capacity was largely due to the small amount 
+of Friedel’s salt (acid 
+
+soluble  chloride)  or  any  form  of  crystallized  salt,  leaving  only  the  kuzel’s  salt  (water-
+soluble chloride) to be actively involved in the chloride binding (Mangat and Ojedokun, 
+2020).  Luping  and  Nilsson  (Luping  and  Nilsson,  1993)  suggested  the  possibility  of 
+undissolved  alkali  content  which  is  enclosed  in  the  unhydrated  slag  cement  to  be 
+responsible for boosting the pH of concrete pore solution especially at  the inner core of 
+concrete.  AAC 2 has the highest hydroxyl ion concentration of 0.204 mol/L and 0.147 
+mol/L at 10 mm depth at both 180- and 270-days Cl exposure respectively but maintains 
+the same alkalinity as AAC 1 at inner depth of 50 mm. Despite AAC 2 being 3.88% diluted 
+with water, it produced maximum alkalinity within its pore structure relative to AAC 1 and 
+3. This suggests that AAC 1 has excess concentration of alkali activator which was leached 
+into the curing solution upon sufficient wetting of its binder gel. However, the leaching 
+was  minimal  at  greater  depths  of  30  mm,  showing  less  depletion  of  hydroxyl  ion 
+concentration.    
+
+3.2  Free chloride concentrations  
+
+The free chloride concentration profiles of AAC 1, 2, 3 and PC concrete at early (180 and 
+270 days) and later (540, 860 and 1750 days) of chloride exposure periods are shown in 
+Figures 2a and 2b respectively. The free chloride profiles of control PC concrete are lower 
+than  AAC  1,  2  and  3  as  shown  in  Figures  2a  and  2b.  For  example,  free  chloride 
+concentrations  at  270  days  exposure  of  AAC  1,  2,  3  and  PC  concrete  are  0.020  mol/L, 
+0.023 mol/L, 0.025 mol/L, 0.022 mol/L respectively at 10mm depth. The migration of free 
+chloride within AAC is mainly restricted by its pore structure which is directly related to 
+alkali activator concentration. AAC 1 with the lowest dilution of alkali activator has the 
+lowest porosity and high volume of closed pores relative to AAC 2 and 3  (Mangat and 
+
+7 
+
+ 
+ 
+ 
+ 
+Ojedokun, 2018). These are the two distinctive pore properties that resulted in lower free 
+chloride  concentrations  and  have  reduced  the  diffusion  of  free  chloride  in  AAC  1 
+significantly.  
+
+AAC 1 (180days)
+PC (180days)
+AAC 3 (270days)
+
+AAC 2 (180days)
+AAC 1 (270days)
+PC (270days)
+
+AAC 3 (180days)
+AAC 2 (270days)
+
+0.03
+
+0.025
+
+0.02
+
+0.015
+
+0.01
+
+0.005
+
+0
+
+0
+
+10
+
+20
+
+30
+Depth (mm)
+
+40
+
+50
+
+60
+
+L
+
+/
+l
+o
+m
+n
+o
+i
+t
+a
+r
+t
+n
+e
+c
+n
+o
+c
+
+e
+d
+i
+r
+o
+l
+h
+C
+
+Fig. 2a: Chloride concentrations of AAC 1, 2, 3 and control PC concrete at 180- and 270-days 
+exposure 
+
+AAC 1 (860days)
+
+AAC 2 (860days)
+
+AAC 3 (860days)
+
+AAC 1 (1750days)
+
+AAC 2(1750days)
+
+AAC 3(1750days)
+
+PC (860days)
+
+PC (1750days)
+
+L
+
+/
+l
+o
+m
+n
+o
+i
+t
+a
+r
+t
+n
+e
+c
+n
+o
+c
+
+e
+d
+i
+r
+o
+l
+h
+C
+
+0.08
+
+0.07
+
+0.06
+
+0.05
+
+0.04
+
+0.03
+
+0.02
+
+0.01
+
+0
+
+0
+
+10
+
+20
+
+30
+
+40
+
+50
+
+60
+
+Depth (mm)
+
+Fig. 2b: Chloride concentrations of AAC 1, 2, 3 and control PC concrete at 540, 860 and 1750 
+days exposure 
+
+In  addition  to  pore  structure,  the  chemical  and  physical  binding  of  chlorides  in  the  PC 
+matrix  influenced  the  reduction  of  free  chloride  concentrations  (Mangat  and  Ojedokun, 
+2019, 2020)  as  shown in  Figures  5a and 5b.  Conventional PC concrete has  higher total 
+bound chloride due to the presence of C3A and C4AF in its PC binder relative to AAC. The 
+
+8 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+unhydrated portion of aluminate (C3A) and aluminoferrite (C4AF) of PC binders takes up 
+the  free  chloride  in  its  pore  solution  during  the  exposure  period,  to  form  Friedel’s  salt 
+(Ca6Al2O6.CaCl2.10H2O) and calcium chloroferrite (Sumranwanich and Tangtermsirikul, 
+2004). The lack of aluminate (C3A) and aluminoferrite (C4AF) in the AAC compositions 
+resulted in higher amount of free chloride concentrations in AAC. The chloride binding 
+capacity of concrete controls its free chloride concentrations which initiate steel corrosion 
+when  their  permissible  limits  are  exceeded.  There  is  steep  decline  in  the  free  chloride 
+concentration from the surface to the core particularly in PC concrete at 270 days exposure. 
+This suggests that a higher  amount of  chlorides are physically and chemically bound to 
+the  binder  gel  as  they  migrate  towards  the  inner  core  of  the  concrete  (Mangat  and 
+Ojedokun, 2020).  
+
+3.3  Free Chloride/ Hydroxyl ion Ratio [Cl-/OH-] 
+The  free  chloride  to  hydroxyl  ion  concentration  ratio,  which  is  a  critical  threshold 
+parameter for corrosion initiation in steel reinforcement, is shown in Figures 3a and 63b 
+for AAC 1, 2, 3 and PC concrete at early (180 and 270 days) and later (540, 860 and 1750 
+days) of chloride exposure periods respectively.  
+
+o
+i
+t
+a
+r
+
+H
+O
+
+/
+l
+
+C
+
+2.5
+
+2
+
+1.5
+
+1
+
+0.5
+
+0
+
+0
+
+AAC 1 (180days)
+PC (180days)
+AAC 3 (270days)
+
+AAC 2 (180days)
+AAC 1 (270days)
+PC (270days)
+
+AAC 3 (180days)
+AAC 2 (270days)
+
+10
+
+20
+
+30
+
+40
+
+50
+
+60
+
+Depth (mm)
+
+Fig. 3a: Cl-/OH- ratios of AAC 1, 2, 3 and control PC concrete at 180- and 270-days exposure 
+
+9 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AAC 1 (860days)
+PC (860days)
+AAC 3(1750days)
+
+AAC 2 (860days)
+AAC 1 (1750days)
+PC (1750days)
+
+AAC 3 (860days)
+AAC 2(1750days)
+
+o
+i
+t
+a
+r
+
+H
+O
+
+/
+l
+
+C
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0
+
+0
+
+10
+
+20
+
+30
+
+40
+
+50
+
+60
+
+Depth (mm)
+
+Fig. 3b: Cl-/OH- ratios of AAC 1, 2, 3 and control PC concrete at 860 and 1750 days exposure 
+
+3.3.1 Cl exposure period 
+
+Figure 1a shows that at early age (180 and 270) days of exposure to the chloride solution, 
+the hydroxyl ion concentration of the AAC concrete is much higher than the PC concrete 
+while  Figure  2a  shows  the  converse  result  regarding  chloride  diffusion.  However,  the 
+hydroxyl  ion  concentration  dominates  its  influence  on  the  Cl-/OH-  ratios  which  remain 
+much lower for PC concrete relative to AAC.  Figures 1b and 2b show a reversal of the Cl-
+/OH- ratios with the AAC concrete having much higher values of Cl-/OH- than PC concrete, 
+this  is  caused  by  a  reduction  in  the  differential  of  chloride  and  hydroxyl  concentration 
+between PC and AAC at the later ages due to chloride binding. A gradual decline in the Cl-
+/OH- ratio from 10mm to 50mm depths is observed for all AAC mixes at 180- and 270-
+days Cl exposure as shown in Fig. 3aa. The impact of low alkalinity in PC concrete relative 
+to AAC as shown in Fig. 1 resulted in a high value of Cl-/OH- ratio. Also, a sharp decline 
+of Cl-/OH- ratio is observed between 10mm to 30mm depths, especially in PC concrete 
+(Fig. 3). The physical and chemical binding of free chloride, particularly for PC concrete 
+at  30mm  depth,  played  a  major  role  in  the  reduction  of  Cl-/OH-  ratio.  The  significant 
+reduction of hydroxyl concentration particularly at 10 mm depths of PC concrete at 270 
+days of Cl exposure contributed significantly to the increased Cl-/OH- ratio over time. For 
+example, the Cl-/OH- ratio at 10mm depths of AAC 1, 2, 3 and PC are 0.16, 0.13, 0.25 and 
+2.0 at 270 days exposure. The Cl-/OH- ratio of AAC is an order of magnitude lower than 
+the PC concrete. The effect of high alkalinity in AAC accounts for the significant reduction 
+in Cl-/OH- ratio.  
+
+3.3.2 Effect of activator dilution 
+
+The  influence  of  activator  dilution  on  the  free  Cl-/OH-  ratio  of  AAC  1,  2  and  3  is  less 
+pronounced at 180 and 270 days of chloride exposure as shown in Figure 3a than at 860 
+
+10 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+and 1750 days as shown in Fig 3b. The activator dilution has a negative influence on the 
+free Cl-/OH- ratio.  
+The high hydroxyl ion content in AAC resulted in low Cl-/OH- ratios after the exposure 
+period of 180 and 270 days compared with PC concrete as shown in Figure 3 PC concrete 
+had the highest free Cl-/OH- ratio of 2 at 10 mm depth compared to AAC 1, 2 and 3 which 
+have  0.16,  0.13  and  0.25  respectively  at  270  days  chloride  exposure.  Similar  trend  is 
+observed at 180 days Cl exposure and at all depths (30 and 50mm). Even with the lowest 
+free chloride content, a higher free Cl-/OH- ratio is observed in PC concrete. On the other 
+hand, AAC has higher free chloride content but a lower free Cl-/OH- ratio due to its higher 
+hydroxyl concentration which has a dominant influence in reducing Cl-/OH- ratios. The Cl-
+/OH- ratio is considered important for the corrosion initiation of steel in concrete.  
+
+3.4  Reinforcement corrosion 
+
+The  impact  of  Cl-/OH-  ratio  on  the  corrosion  initiation  of  steel  reinforcements  in  PC 
+concrete is well documented in literature (Lambert, 2002) which is not the case for AAC. 
+In  addition  to  Cl-/OH-  ratio  facilitating  the  corrosion  of  steel  reinforcements  in  AAC 
+concrete, the presence of elemental sulfur at the steel surface has significantly impeded the 
+propagation  of  corrosion  (Mangat,  Ojedokun  and  Lambert,  2021).  It  would  have  been 
+expected that a higher corrosion activity would occur in steel reinforced AAC due to its 
+very high Cl-/OH- ratios relative to PC concrete after long term chloride exposure (Figure 
+3b). However, this is not the case as shown in Fig. 4. The Cl/OH ratios at 30mm depth from 
+the surface (cover provided to the reinforcement bars) in AAC 1, 2, 3 and PC concrete after 
+1750 days of Cl exposure are 1.57, 2, 3.28 and 1 respectively (Fig. 3b). The extraction of 
+steel reinforcements embedded at 30mm cover in AAC and PC concrete submerged in 5% 
+NaCl solution up to 1750 days revealed that ACC 1 and 2 showed no sign of corrosion 
+activity. However, AAC 3 showed some signs of corrosion activity but much less than the 
+PC concrete as shown in Fig. 4. The critical threshold Cl/OH ratio for corrosion initiation 
+in AAC is between 2 and 3.28, whereas it is < 1 for PC concrete.  
+
+AAC 3 
+
+PC 
+
+Figure 4: Corrosion of steel reinforcement in AAC 3 and PC concrete after 1750 
+days exposure  
+
+Elemental  Sulfur  observed  on  steel  reinforcements  in  AAC  provided  extra  protection 
+against  corrosion  activity,  similar  to  Ca(OH)2  forming thin  film  around reinforced  steel 
+concrete (Mangat, Ojedokun and Lambert, 2021). The primary source of sulfur content in 
+AAC is from GGBS binder which reacts during geopolymerization to form various oxides 
+
+11 
+
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2-,  S2O3
+
+2-  and  SO4
+
+such  as  H2S,  Sn2-,  SO3
+2-.  Elemental  Sulfur  decreases  the  amount  of 
+dissolved oxygen concentration in the pore solution of AAC  leading to highly reducing 
+redox environment (Vollpracht et al., 2016).  The Cl-/OH- ratio in PC concrete is controlled 
+by  the  removal  of  chloride  ions  from  the  pore  solution  by  chloride  binding  and 
+simultaneously  replaced  by  OH-  through  the  buffering  effect  of  hydration  product  Ca 
+(OH)2, thereby limiting absorption sites for further chloride ingress. There is no similar 
+buffering  effect  in  AAC,  however,  its  corrosion  activities  are  greatly  influenced  by  the 
+presence of sulfides which regulate the cathodic reaction causing steel corrosion. 
+
+4.0  CONCLUSIONS  
+
+The following conclusions can be drawn from this study based on the results presented; the 
+hydroxyl ion concentration of AAC exposed to a 5% chloride solution is higher than PC 
+concrete.  The  differential  is  very  high  at  early  exposure  period  (up  to  270  days)  but 
+decreases  with  longer  term  exposure.  The  free  chloride  concentration  of  AAC  is  much 
+higher than PC concrete due to the high chloride binding capacity of the latter. The Cl-/OH- 
+ratios of PC concrete are higher than AAC at early periods of chloride exposure (up to 270 
+days) but suffer a reversal at later periods (over 560 days) due to the much higher chloride 
+binding capacity of PC concrete. The critical threshold Cl/OH ratio for corrosion initiation 
+in AAC is between 2 and 3.28, whereas it is < 1 for PC concrete. The Steel reinforcement 
+embedded in AAC remains free from chloride induced corrosion for a longer period and 
+up  to  higher  Cl-/OH- ratios  than  PC  concrete  due  to  the  presence  of  elemental  Sulphur 
+(sulfides) on the steel surface in AAC. 
+
+ACKNOWLEDGMENTS 
+The authors gratefully acknowledge the continuing support of Materials and Engineering 
+Research Institute, Sheffield Hallam University. 
+
+REFERENCES 
+
+Angst, U. et al. (2009) ‘Critical chloride content in reinforced concrete - A review’, 
+
+Cement and Concrete Research, 39, pp. 1122–1138. doi: 
+10.1016/j.cemconres.2009.08.006. 
+
+BS 1881-124:2015+A1 (2021) Testing Concrete Methods for analysis of hardened 
+
+concrete. 
+
+DD CEN/TS 12390-11 (2010) DD CEN/TS 12390-11: Testing hardened concrete, Part 
+
+11: Determination of the chloride resistance of concrete, unidirectional diffusion. 
+Ghods, P. et al. (2009) ‘The effect of concrete pore solution composition on the quality of 
+passive oxide films on black steel reinforcement’, Cement and Concrete Composites, 
+31(1), pp. 2–11. doi: 10.1016/j.cemconcomp.2008.10.003. 
+
+Glass, G. K. and Buenfeld, N. R. (2000) ‘The influence of chloride binding on the 
+
+chloride induced corrosion risk in reinforced concrete’, Corrosion Science. doi: 
+10.1016/S0010-938X(99)00083-9. 
+
+Hausmann, D. A. (1967) ‘Steel corrosion in concrete -- how does it work?’, Materials 
+
+12 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Protection, 6(11), pp. 19–23. Available at: https://trid.trb.org/view.aspx?id=98137 
+(Accessed: 13 July 2017). 
+
+Lambert, P. (2002) ‘Corrosion Mechanisms – an Introduction to Aqueous Corrosion’, pp. 
+
+1–5. 
+
+Lambert, P., Page, C. L. and Vassie, P. R. W. (1991) ‘Investigations of reinforcement 
+
+corrosion. 2. Electrochemical monitoring of steel in chloride-contaminated concrete’, 
+Materials and Structures, 24(5), pp. 351–358. doi: 10.1007/BF02472068. 
+
+Lloyd, R. R., Provis, J. L. and Van Deventer, J. S. J. (2010) ‘Pore solution composition 
+and alkali diffusion in inorganic polymer cement’, Cement and Concrete Research, 
+40, p. 2010. doi: 10.1016/j.cemconres.2010.04.008. 
+
+Luping, T. and Nilsson, L. O. (1993) ‘Chloride binding capacity and binding isotherms of 
+OPC pastes and mortars’, Cement and Concrete Research, 23, pp. 247–253. doi: 
+10.1016/0008-8846(93)90089-R. 
+
+Mangat, P. S. and Gurusamy, K. (1988) ‘Corrosion resistance of steel fibres in concrete 
+under marine exposure’, Cement and Concrete Research, 18(1), pp. 44–54. doi: 
+10.1016/0008-8846(88)90120-2. 
+
+Mangat, P. S. and Ojedokun, O. O. (2018) ‘Influence of curing on pore properties and 
+
+strength of alkali activated mortars’, Construction and Building Materials. Elsevier, 
+188, pp. 337–348. doi: 10.1016/J.CONBUILDMAT.2018.07.180. 
+
+Mangat, P. S. and Ojedokun, O. O. (2019) ‘Bound chloride ingress in alkali activated 
+
+concrete’, Construction and Building Materials, 212, pp. 375–387. doi: 
+https://doi.org/10.1016/j.conbuildmat.2019.03.302. 
+
+Mangat, P. S. and Ojedokun, O. O. (2020) ‘Free and bound chloride relationships 
+
+affecting reinforcement cover in alkali activated concrete’, Cement and Concrete 
+Composites, p. 103692. doi: 10.1016/j.cemconcomp.2020.103692. 
+
+Mangat, P. S., Ojedokun, O. O. and Lambert, P. (2021) ‘Chloride-initiated corrosion in 
+alkali activated reinforced concrete’, Cement and Concrete Composites, 115. doi: 
+10.1016/j.cemconcomp.2020.103823. 
+
+Neville, A. M. (2011) Properties of Concrete, Pearson Education Limited. Pearson 
+
+Education Limited. 
+
+NT BUILD 443 (1995) Concrete, Hardened: Accelerated Chloride Penetration. 
+Ortolan, V. K., Mancio, M. and Tutikian, B. F. (2016) ‘Evaluation of the influence of the 
+pH of concrete pore solution on the corrosion resistance of steel reinforcement’, 
+Journal of Building Pathology and Rehabilitation, 1(10), pp. 1–7. doi: 
+10.1007/s41024-016-0011-8. 
+
+Page, C. L. and Havdahl, J. (1985) ‘Electrochemical monitoring of corrosion of steel in 
+microsilica cement pastes’, Materials and Structures. Kluwer Academic Publishers, 
+18(1), pp. 41–47. doi: 10.1007/BF02473363. 
+
+Page, C. L. and Vennesland (1983) ‘Pore solution composition and chloride binding 
+
+capacity of silica-fume cement pastes’, Matériaux et Construction, 16(1), pp. 19–25. 
+doi: 10.1007/BF02474863. 
+
+Poursaee, A. and Hansson, C. M. (2009) ‘Potential pitfalls in assessing chloride-induced 
+corrosion of steel in concrete’, Cement and Concrete Research, 39(5), pp. 391–400. 
+doi: 10.1016/j.cemconres.2009.01.015. 
+
+Roberts, M. H. (1962) ‘Effect of calcium chloride on the durability of pre-tensioned wire 
+
+13 
+
+ 
+ 
+in prestressed concrete’, Magazine of Concrete Research, 14(42), pp. 143–154. doi: 
+10.1680/macr.1962.14.42.143. 
+
+Song, S. and Jennings, H. M. (1999) ‘Pore solution chemistry of alkali-activated ground 
+granulated blast-furnace slag’, Cement and Concrete Research, 29(2), pp. 159–170. 
+doi: 10.1016/S0008-8846(98)00212-9. 
+
+Sumranwanich, T. and Tangtermsirikul, S. (2004) ‘A model for predicting time-
+
+dependent chloride binding capacity of cement-fly ash cementitious system’, 
+Materials and Structures. Kluwer Academic Publishers, 37(6), pp. 387–396. doi: 
+10.1007/BF02479635. 
+
+Tritthart, J. (2009) ‘Pore solution of concrete: The equilibrium of bound and free 
+
+chloride’, Materials and Corrosion. WILEY‐VCH Verlag, 60(8), pp. 579–585. doi: 
+10.1002/maco.200905277. 
+
+Vollpracht, A. et al. (2016) ‘The pore solution of blended cements: a review’, Materials 
+and Structures/Materiaux et Constructions. doi: 10.1617/s11527-015-0724-1. 
+
+14 
+
+ 
+ 
+ 
+ 
+ 
+ 
+

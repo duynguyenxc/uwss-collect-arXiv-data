@@ -1,0 +1,1119 @@
+Scientia Iranica A (2022) 29(3), 964{972
+
+Sharif University of Technology
+Scientia Iranica
+Transactions A: Civil Engineering
+http://scientiairanica.sharif.edu
+
+Simulation of the force-displacement behavior of
+reinforced concrete beams under di(cid:11)erent degrees and
+locations of corrosion
+
+M.A. Shayanfara, A. Hatamib, M. Zabihi-Samanic;
+A.R. Faroughid
+
+(cid:3), B. Babakhanid, and
+
+a. The Centre of Excellence for Fundamental Studies in Structural Engineering, Iran University of Science and Technology,
+
+Narmak, Tehran, P.O. Box 16765-163, Iran.
+
+b. School of Civil Engineering, Iran University of Science and Technology, Narmak, Tehran, P.O. Box 16765-163, Iran.
+c. Department of Civil Engineering, Parand Branch, Islamic Azad University, Parand, Iran.
+d. Department of Civil Engineering, East Tehran Branch, Islamic Azad University, Tehran, Iran.
+
+Received 9 February 2020; received in revised form 28 April 2021; accepted 5 July 2021
+
+KEYWORDS
+Corrosion in
+reinforced concrete
+structures;
+Bending capacity;
+Finite element
+analysis;
+ABAQUS software;
+P-(cid:1) diagram.
+
+Abstract. Concerns about corrosion damage have been intensi(cid:12)ed due to the failure in
+marine structures and bridges.
+In this study, several simulations and tests have been
+accomplished to investigate the e(cid:11)ect of corrosion on bending and shear capacities of
+reinforced concrete beams. By using ABAQUS software, this research is set to analyze the
+other e(cid:11)ects of corrosion on reinforced beams. The accuracy of simulation results has been
+veri(cid:12)ed by existing experiment results. Several concrete beams with di(cid:11)erent degrees of
+corrosion are modeled in ABAQUS software. The results of simulation were compared with
+experimental results. Moreover, force-displacement diagrams are produced to investigate
+the corrosion e(cid:11)ects more precisely. This study investigates e(cid:11)ects of corrosion location,
+amount and intensity of corrosion, concrete compressive strength, and bar yielding stress
+on reinforced concrete beams strength. Furthermore, the e(cid:11)ects of di(cid:11)erent locations and
+di(cid:11)erent corrosion degrees in steel rebar area and integration between steel and concrete
+are evaluated due to corrosion. Results demonstrate that corrosion e(cid:11)ect on the loading
+capacity of beams in the tension region is greater than that in the compressive part.
+Furthermore, the corrosion around support regions is remarkable.
+
+' 2022 Sharif University of Technology. All rights reserved.
+
+1. Introduction
+
+The durability of Reinforced Concrete (RC) struc-
+tures is more suitable than other existing structural
+
+*. Corresponding author.
+
+E-mail addresses: shayanfar@iust.ac.ir (M.A. Shayanfar);
+Ali.hatami@yahoo.com (A. Hatami); mzabihi@iust.ac.ir (M.
+Zabihi-Samani); bahrouz@iau.ac.ir (B. Babakhani);
+Faroughi@iauet.ac.ir (A.R. Faroughi)
+
+doi: 10.24200/sci.2021.55422.4214
+
+materials. However, steel corrosion is possible in
+special environment conditions.
+In the past, most
+of related studies concentrated on concrete strength
+In the present, the e(cid:11)ects of
+against sulfate attacks.
+durability related to steel corrosion are investigated,
+speci(cid:12)cally in the case of marine structures and bridges
+[1,2]. Rebar corrosion is a progressive process that
+is accomplished by transition of iron ions from steel.
+Ions (Fe2+) transition in electrochemical reaction is
+carried out in concrete pores. This solvation occurs
+in a limited volume of water solution of concrete pore
+
+M.A. Shayanfar et al./Scientia Iranica, Transactions A: Civil Engineering 29 (2022) 964{972
+
+965
+
+around steel. Solved iron ions react with hydroxide
+ions (OH(cid:0)) and oxygen molecules (O2) that provide
+di(cid:11)erent solid productions [3]. The results of this pro-
+cess are reduction of steel weight and rebar area. These
+productions in pore spaces of concrete cause expansion
+pressure. This internal pressure causes environmental
+tension stresses around the steel rebar. Therefore,
+tension cracks and layer rupture occur in concrete
+cover along steel rebars. As a result, the compressive
+strength of concrete and adhesion between rebar and
+concrete are reduced [4,5]. Several researchers have
+demonstrated that corrosion commonly occurs in chlo-
+ride and carbonate ambience [6,7]. Mostly, steel bars
+in RC are protected from corrosion due to protective
+layer of high alkali(cid:12)ed concrete around bar. With the
+passage of time and based on two states of chloride
+ions or carbonation, alkalization of concrete reduces
+the probability of corrosion along with humidity and
+oxygen [8,9]. Furthermore, corrosion hits concrete
+structures in polluted cities. Due to acidic rainfall and
+penetration of carbon dioxide to concrete, uniform type
+carbonation is occurred [10,11]. Given its signi(cid:12)cance,
+rebar corrosion in concrete structures has been noticed
+and investigated by numerous investigations [12{14].
+Further research has been accomplished to study the
+displacement-force diagram in shear concrete beam
+[15,16].
+In other research, several samples with 0%,
+10%, and 30% corrosion under the same experiments
+were provided and tested. Hassan et al. [17] provided
+the displacement-force diagrams for reinforced concrete
+beams under di(cid:11)erent degrees of corrosion [18]. Other
+studies have managed to illustrate the displacement-
+force behavior of columns under corrosion by Shayanfar
+et al.
+[19]. One of the solutions to deal with rebar
+corrosion is the use of composite rebars [20]. Due to
+the corrosive environmental conditions in marine and
+o(cid:11)shore structures, rebar corrosion is very high in these
+areas. Severe rebar corrosion can reduce the capacity
+of the structure.
+If this problem is not controlled,
+it can reduce the seismic capacity of these structures
+[21]. Further researches have been done to rehabilitate
+structures to reduce corrosion damage. The use of
+polymer and composite coatings is one of the solutions
+to deal with this problem [22{24]. Most studies have
+investigated experimental samples and this procedure
+is an expensive and long-term process that requires
+special facilities. The novelty of the current research
+lies in evaluating the characteristics of RC beams in
+corrosion with experimental and numerical investiga-
+tions. Furthermore, the proposed model can determine
+the amount of tolerable corrosion in beam reduction
+capacity. Furthermore, e(cid:11)ects of di(cid:11)erent locations
+and corrosion degrees are also considered. Variations of
+the cross-section of steel, mechanical characteristics of
+concrete and steel, and integration of steel and concrete
+are also investigated.
+
+2. The e(cid:11)ects of rebar corrosion on RC
+
+structures
+
+The e(cid:11)ects of corrosion on structural capacity used in
+Section 4 are introduced in this part.
+
+2.1. Bars area reduction
+One of the main e(cid:11)ects of corrosion is the reduction of
+cross-section area in steel bars.
+several studies have
+proposed experimental equations to estimate cross-
+section area reduction of steel bars due to local cor-
+rosion [25,26].
+
+As(corr) =
+
+(cid:25) (D0
+
+n p (t))
+
+;
+
+(cid:0)
+4
+
+(1)
+
+where As(corr) is the rebar area after corrosion, D0 bar
+diameter before corrosion, n one- or two-side corrosion
+attack, and p(t) the corrosion depth. A number
+of researchers have proposed the same experimental
+equation to consider cross-section area reduction of
+steel bars due to global corrosion [27,28]. To simulate
+the percentage of di(cid:11)erence in bar corrosion,
+it is
+modeled using parameter %x. A new cross-section in
+ABAQUS software is expressed as follows:
+
+(cid:25)(D2
+0 )
+4 (cid:2)
+
+l
+
+(cid:18)
+
+(cid:26)
+
+(cid:2)
+
+(cid:2)
+
+(cid:19)
+
+(%x) =
+
+(cid:25)(D2
+1)
+4 (cid:2)
+
+l
+
+(cid:26)
+
+(cid:2)
+
+!
+
+D1
+
+(cid:19)
+
+(2)
+
+(cid:18)
+D0:
+
+= p%x
+
+(cid:2)
+
+In Eq. (2), (cid:26) is steel density, x percentage of corrosion
+or weight loss percentage, and D1 diameter of rebar
+after corrosion.
+
+2.2. The reduction of bar tensile strength
+Another important e(cid:11)ect of corrosion is the reduction
+of steel bars yielding stress. Several researchers have
+presented a formula between steel bars yielding strain
+and corrosion degree. This formula utilizes concrete
+cover and rebar dimension [29]. Furthermore, other
+experimental results demonstrate 30% and 50% rates
+of reduction in maximum strain. This corrosion result
+is caused by 15% and 28% decreases in the cross-
+section area of bar [30,31]. Further studies have pointed
+out that the yielding and ultimate stress of steel are
+reduced slightly following corrosion increment [32,33].
+Based on the experimental results, the modi(cid:12)ed yield-
+ing stress of steel bars can be expressed as follows:
+
+fy(corr) =
+
+1
+
+0:005
+
+As(corr)
+A0
+
+fy0;
+
+(3)
+
+(cid:0)
+
+(cid:19)
+
+(cid:18)
+where fy(corr)
+is the modi(cid:12)ed steel yielding stress
+after corrosion, As(corr) cross-sectional area of bar
+after corrosion, A0 cross-sectional area of bar before
+corrosion, and fy0 basic steel yielding stress before
+corrosion.
+
+966
+
+M.A. Shayanfar et al./Scientia Iranica, Transactions A: Civil Engineering 29 (2022) 964{972
+
+2.3. Reduction strength between concrete and
+
+steel
+
+Most of conducted studies were carried out on the
+displacement-force diagram of RC beams under corro-
+sion with experimental methods. The complex nature
+of corrosion phenomenon and involvement of numerous
+parameters including the cross-sectional area of bar,
+change in integration of concrete and steel, and e(cid:11)ect
+on concrete strength should be considered. These
+parameters cannot be simply investigated through
+experimental tests [33]. Simulation results are also
+explored to demonstrate the corrosion e(cid:11)ects with
+approximate equations [34,35]. Shayanfar and Sa(cid:12)ey
+completed a simpler equation as an e(cid:14)cient model for
+a strain-pliable region. The formula can consider the
+reduction of concrete cohesion strength and predict the
+occurrence of cracks due to corrosion [36]. According
+to previous studies, tension sti(cid:11)ness curve is composed
+of two separated states, called (cid:12)nal crack state. There-
+fore, the uniaxial tension strain-stress curve of the RC
+element is divided into three states. E(cid:11)ect of crack
+width and depth of corrosion are investigated through
+(cid:12)nite element simulation [37].
+
+2.4. Concrete strength reduction a(cid:11)ected by
+
+corrosion crack
+
+Eq. (4) was used for simulating concrete treatment in
+pressure. By increasing the rust of steel in corrosion
+reaction (iron oxide), radial compressive force was
+created all over bar areas. This process causes tension
+stresses in concrete around bar.
+In the case of low-
+and medium-level corrosion, cracks and delamination
+occurred. The accuracy of Eq. (4) was proved through
+several experiments [38]:
+
+(cid:21) = 2:288 Cw
+
+1:733;
+
+(cid:0)
+
+(4)
+
+where Cw is the corrosion level and is the percentage of
+
+compressive strength reduction. The e(cid:11)ects of severe
+corrosion could waste all concrete cover (spalling). In
+this study, these e(cid:11)ects are ignored.
+
+3. Corrosion modeling in software
+
+For validation of the models in the study, the results
+obtained from ABAQUS software analysis for the RC
+beam have been compared with previous laboratory
+results [20]. To consider the e(cid:11)ects of bar corrosion,
+the parameters described in Section 2 were utilized.
+The prediction of the displacement-force curve for
+a RC beam was made under corrosion in di(cid:11)erent
+conditions of location and intensity. At last, results
+were compared with each other.
+
+3.1. Modeling of benchmark beam in ABAQUS
+
+software
+
+A benchmark beam was utilized for validating the
+simulation and obtaining a displacement-force curve
+for RC beams. Figure 1 presents the characteristics
+of ABAQUS model. Solid element (C3D20) has been
+used for modeling concrete and rebar in (cid:12)nite element
+modeling. Moreover, the interaction between rebar and
+concrete is de(cid:12)ned as an embedded region. General
+speci(cid:12)cations of materials are given in Table 1. A
+RC structure is a composite structure made up of two
+In general,
+materials with di(cid:11)erent characteristics.
+the external load has already been applied to concrete
+surface. By using bonding, the reinforcing bars receive
+a part of their load only from the surrounding concrete.
+\Bond stress" is the name assigned to the shear stress
+at the bar-concrete interface. The stress of steel bar has
+been modi(cid:12)ed by transferring load between the bar and
+the surrounding concrete. A composite beam is formed
+from two materials, where the bonding is e(cid:14)ciently
+developed. In composite structures, bonding between
+
+Figure 1. Reinforced concrete characteristics of the case study toward modeling method validation.
+
+Table 1. Speci(cid:12)cations of the material.
+
+Material
+
+Speci(cid:12)c weight (kg/m3) Young’s modulus (N/m2) Poisson’s ratio
+
+Rebar
+
+Concrete
+
+7750
+
+2200
+
+2.5 E11
+
+2.05 E10
+
+0.3
+
+0.2
+
+M.A. Shayanfar et al./Scientia Iranica, Transactions A: Civil Engineering 29 (2022) 964{972
+
+967
+
+Figure 2. Displacement-force diagram of the beam in
+software in Figure 1.
+
+di(cid:11)erent components of RC plays a primary role. These
+complex phenomena led engineers in the past to rely
+heavily on experimental formulas for designing concrete
+structures. These equations have been derived from nu-
+merous experiments. For these reasons, the integration
+of bonds has been done signi(cid:12)cantly in recent works
+[39,40]. The properties of this interaction depend on
+several factors: friction, mechanical interaction, chem-
+ical adhesion, and di(cid:11)erent alternative representations
+of reinforcement. Moreover, smeared, embedded and
+discrete reinforcement models had several di(cid:11)erences.
+The (cid:12)rst one is rarely used and therefore, depends on
+the nature of the used structure. The discrete and em-
+bedded representations are formulated and introduced
+in the developed program [41{43].
+
+This beam is modeled in software and all param-
+eters are obtained based on the de(cid:12)ned equations in
+Section 2. For the case study, the beam shown in Figure
+2 was utilized.
+
+3.2. Simulation results validation
+The simulation results were validated in comparison
+with displacement-force curve of experimental results.
+Figure 3 demonstrates that simulation and experimen-
+tal results were in appropriate compliance. Therefore,
+it can be concluded that simulation process is reliable
+and provides similar results to experiments.
+
+Figure 3. Modeling results comparison of Example 1 and
+software model (ABAQUS).
+
+Figure 4. Case study model characteristics for studying
+di(cid:11)erent corrosion e(cid:11)ects (dimensions are in mm).
+
+Figure 5. Displacement-force chart of the beam in
+Figure 6 (before corrosion).
+
+4. Di(cid:11)erent corrosion e(cid:11)ects on
+
+displacement-force curve of reinforced
+concrete beam
+
+Several simulation models were investigated to predict
+di(cid:11)erent corrosion e(cid:11)ects on displacement-force curve
+of RC beams. For this purpose, a RC beam was stud-
+ied. The characteristics of beam are shown in Figure 4.
+Before taking any action for corrosion simulation, the
+beam was modeled in natural conditions. The results of
+RC beam without corrosion are presented in Figure 5.
+It can be seen that the beam demonstrated 26500 N
+axial force strength before destruction.
+
+4.1. 10% corrosion e(cid:11)ect in whole RC beam
+RC beam with 10% corrosion is investigated in this
+section. Based on Eq. (3), the remaining diameter of
+steel rebars was de(cid:12)ned after corrosion. The modi(cid:12)ed
+section area can be simulated as follows:
+
+Up bars (compressive bars) with 8-millimeter dimen-
+sion:
+
+D1 = p0:9
+
+D0
+
+(cid:2)
+
+!
+
+D1 = p0:9
+
+(cid:2)
+
+(8) = 7:59 mm:
+
+Bellow bars (tension bars) with 10-millimeter dimen-
+sion:
+
+D1 = p0:9
+
+D0
+
+(cid:2)
+
+!
+
+D1 = p0:9
+
+(cid:2)
+
+(10) = 9:49 mm:
+
+Stirrups (cross bars) with 6-millimeter dimension:
+
+968
+
+M.A. Shayanfar et al./Scientia Iranica, Transactions A: Civil Engineering 29 (2022) 964{972
+
+Figure 6. Beam displacement-force chart under 10%
+corrosion (model under 26500 N load in 1 second period).
+
+D1 = p0:9
+
+D0
+
+(cid:2)
+
+!
+
+D1 = p0:9
+
+(cid:2)
+
+(6) = 5:69 mm:
+
+Based on the de(cid:12)nitions presented in Section 2, other
+parameters such as concrete and steel strength re-
+duction were considered. Figure 6 demonstrates the
+displacement-force curve of beam under 10% corrosion.
+The beam can withstand up to 26500 N axial force
+loads in 1 second. The 17.5 mm displacement occurred.
+More simulations for di(cid:11)erent corrosions percentage
+were performed.
+
+4.2. 30% corrosion e(cid:11)ect in the whole RC
+
+beam
+
+Figure 7 shows the displacement-force curve of the
+case study, as shown in Figure 4. In this beam, 30%
+corrosion in rebars is utilized. The dimension of steel
+rebar after corrosion is organized as follows:
+
+(cid:136) Up bars
+
+(compressive armatures) with a 8-
+millimeter dimension were converted into D =
+p0:7
+
+(8) = 6:69 mm dimension;
+
+(cid:136) Bellow bars (tension rebar) with a 10-millimeter di-
+(10) = 8:37 mm
+
+mension were converted into p0:7
+dimension;
+
+(cid:2)
+
+(cid:2)
+
+(cid:136) Stir-ups (cross bars) with a 6-millimeter dimension
+(6) = 5:02 mm dimen-
+
+were converted into p0:7
+sion.
+
+(cid:2)
+
+According to Figure 8, the displacement-force curve of
+the same beam was compared under di(cid:11)erent degrees
+
+Figure 7. Beam displacement-force chart under 30%
+corrosion (model under 26500 N load in 1 second period).
+
+Figure 8. Comparison of beam behavior under di(cid:11)erent
+corrosion degrees (models under 26500 N load in 1 second
+period).
+
+Figure 9. Beam behavior comparison of the example
+under di(cid:11)erent corrosions percentages in Figure 3.
+
+Figure 10. Case study of concrete beam under corrosion
+e(cid:11)ect in the compressive section of region.
+
+of corrosion. After 1 second from start of loading,
+the applied load reaches to 26500 N in 0%, 10%, and
+30% corroded beams. For the same time and force,
+the displacement of 30% corroded beam signi(cid:12)cantly
+increased in comparison with others.
+Beam de(cid:13)ection criteria are L
+
+360 = 5:5 mm and
+L
+240 = 8:3 mm; extracted charts are drawn from the
+displacement-force curves in Figures 9 and 10. The
+results are compared as shown in Table 2.
+
+4.3. The e(cid:11)ects of corrosion in di(cid:11)erent
+
+locations with the same degree of
+corrosion
+
+In the case of the one-degree corrosion of a very RC
+
+M.A. Shayanfar et al./Scientia Iranica, Transactions A: Civil Engineering 29 (2022) 964{972
+
+969
+
+Table 2. Behavior comparison of a constant model under di(cid:11)erent corrosion percentages.
+
+Displacement amount
+
+5 mm
+
+10 mm
+
+15 mm
+
+0% corrosion
+
+22500 (N)
+
+26500 (N)
+
+{
+
+10% corrosion
+
+30% corrosion
+
+20700 (N)
+
+24600 (N)
+
+26258 (N)
+
+17500 (N)
+
+20500 (N)
+
+24470 (N)
+
+Figure 11. The reinforced concrete beam behavior under
+corrosion in compressive part and with no corrosion beam
+and beam under 30% corrosion along its length in
+comparison.
+
+Figure 13. The behavior under corrosion in the beam
+tension part and its comparison with the start and end of
+beam with 30% corrosion.
+
+Figure 12. The case study of concrete beam under
+corrosion e(cid:11)ect in the tension section of region.
+
+beam given in Figure 4, a displacement-force chart
+under 30% corrosion was drawn in di(cid:11)erent locations.
+Figure 11 shows the RC beam behavior at di(cid:11)erent
+corrosion levels: 30% corrosion in the compressive part,
+30% in all of sections, and no corrosion. Figures 9
+and 10 demonstrate that 10% of the global corrosion
+e(cid:11)ect on beam capacity reduction is greater than 30%
+corrosion in the compressive region. Figure 12 shows
+30% corrosion e(cid:11)ect in the following part (tension) in
+comparison with no corrosion beam and 30% corrosion
+in all parts of the beam. From the comparison of
+Figures 11 and 13, it is concluded that corrosion is
+more e(cid:11)ective in tension part than that in compressive
+part. For 10 mm displacement in the middle span,
+26500 N force is required in the case of no corrosion
+beam. The same displacement occurs for 30% corrosion
+beam with 20500 N force. The results show that due
+to 30% corrosion, the beam had a 20% decrease in
+resistance. The same displacement could be seen with
+30% corrosion in compressive and tension areas by
+25500 N and 22800 N force.
+
+Figure 14. The concrete beam of the case study under
+corrosion e(cid:11)ect of stirrups around supports region.
+
+Figure 15. Reinforced concrete beam behavior under
+corrosion of stirrups around support with no corrosion
+beam and beam under 30% corrosion along its length
+(models under 26500 N load in 1 second period).
+
+Figures 14 and 15 illustrate the displacement-
+force curve for 30% corrosion in the support part
+in comparison with non-corrosion beam and beam
+under 30% total corrosion. The longitudinal rebars
+are not a(cid:11)ected by corrosion and stirrups are a(cid:11)ected.
+
+970
+
+M.A. Shayanfar et al./Scientia Iranica, Transactions A: Civil Engineering 29 (2022) 964{972
+
+Table 3. The force amount and reinforced concrete beam capacity reduction percentage under 30% corrosion in di(cid:11)erent
+regions.
+
+[1]
+
+[2]
+
+[3]
+
+[4]
+
+[5]
+
+5.55 mm
+
+8.33 mm
+
+Force (N)
+
+23,228
+
+22,320
+
+20,272
+
+21,531
+
+18,058
+
+Capacity reduction
+
+{
+
+3.9%
+
+12.7%
+
+7.3%
+
+22.2%
+
+Force (N)
+
+25,628
+
+24,662
+
+21,998
+
+23,902
+
+19,868
+
+Capacity reduction
+
+{
+
+3.7%
+
+14.2%
+
+6.7%
+
+22.5%
+
+and corrosion e(cid:11)ect in the compressive region was
+lower than that in other two states;
+
+-
+
+In 10% and 30% of the whole corrosion cases, the
+force capacity reductions were calculated as 7% and
+14%, respectively;
+
+- 5.5- and 8.3-millimeter displacements of the middle
+span were utilized as de(cid:13)ection control criteria in
+beams. The capacity reduction values were cal-
+culated as 22%, 13%, 7%, and 4% for the whole
+corrosion, tension region corrosion, stirrups corro-
+sion around support, and compressive region cases,
+respectively.
+
+Results demonstrated that corrosion e(cid:11)ect on loading
+capacity of beams in the tension region was greater
+than that in the compressive part. Furthermore, the
+corrosion around support regions is remarkable.
+
+References
+
+1. Val, D.V. and Chernin, L. \Serviceability reliability
+of reinforced concrete beams with corroded reinforce-
+ment", Journal of Structural Engineering, 135(8), pp.
+896{905 (2009).
+
+2. Zabihi Samani, M., Mokhtari, S.P., and Raji, F. \Ef-
+fects of (cid:13)y ash on mechanical properties of concrete",
+Journal of Applied Engineering Sciences, 8, pp. 35{40
+(2018).
+
+3. Ghanooni-Bagha, M., Shayanfar, M.A., Reza-Zadeh,
+O., et al. \The e(cid:11)ect of materials on the reliability
+of reinforced concrete beams in normal and intense
+corrosions", Eksploatacja i Niezawodnosc-Maintenance
+and Reliability, 19(3), pp. 393{402 (2017).
+
+4. Ghanooni-Bagha, M., Shayanfar, M.A., Shirzadi-
+Javid, A., et al. \Corrosion-induced reduction in com-
+pressive strength of self-compacting concretes contain-
+ing mineral admixtures", Construction and Building
+Materials, 113(15), pp. 221{228 (2016).
+
+5. Shayanfar, M.A., Barkhordari, M.A., and Ghanooni-
+Bagha, M. \Estimation of corrosion occurrence in RC
+structure using reliability based PSO optimization",
+Periodica Polytechnica Civil Engineering, 59(4), pp.
+531{542 (2015).
+
+Figure 16. Reinforced concrete beam behavior under
+30% corrosion in di(cid:11)erent regions.
+
+The results demonstrate that tension capacities have
+been reduced. Furthermore, compressive properties,
+concrete, and integration of steel and concrete are
+a(cid:11)ected by corrosion. Finally, a comparison of the
+displacement-force curve under 30% corrosion is drawn
+in di(cid:11)erent locations in Figure 16. To make a better
+comparison, possible corrosion cases are shown in
+Table 3. The maximum force value and beam capacity
+reduction amount were shown in each case. The results
+were illustrated for two speci(cid:12)ed criteria based on span
+length (5.55 mm, 8.33 mm).
+
+5. Conclusion
+
+The corrosion location and amount in any region
+and special environmental conditions di(cid:11)ered. In this
+study, the displacement-force curve of a Reinforced
+Concrete (RC) beam was studied under di(cid:11)erent cor-
+rosion e(cid:11)ects and locations. Based on the conducted
+analysis, the following results were obtained:
+
+- Corrosion e(cid:11)ects on global beam behavior in the
+whole length and around and external environments
+of beam were greater than corrosion e(cid:11)ect in the
+tension or compressive parts and stirrups;
+
+- Generally, corrosion e(cid:11)ect on the loading capacity
+of beams in the tension region was greater than
+corrosion in the compressive part. Furthermore, the
+corrosion around support regions was remarkable
+
+M.A. Shayanfar et al./Scientia Iranica, Transactions A: Civil Engineering 29 (2022) 964{972
+
+971
+
+6. Bertolini, B.E., Pedeferri, P., Redaelli, E., et al. \Cor-
+rosion of Steel in Concrete", Prevention, Diagnosis,
+Repair. WILEY-VCH Verlag GmbH and Co. KGaA,
+Weinheim (2014).
+
+20. Omrani, M.H., Dehestani, M., and Yousefpour, H.
+\Flexural behavior of lightweight concrete beams re-
+inforced with GFRP bars and prestressed with steel
+strands", Structural Concrete, 22, pp. 69{80 (2021).
+
+7. Amini, F. and ZabihiSamani, M. \A wavelet-based
+adaptive pole assignment method for structural con-
+trol", Computer-Aided Civil and Infrastructure Engi-
+neering, 29(6), pp. 464{477 (2014).
+
+8. Peter, M.A., Muntean, A., Meier, A., et al. \Com-
+petition of several carbonation reactions in concrete:
+A parametric study", Cement and Concrete Research,
+38(12), pp. 1385{1393 (2008).
+
+9. Honarvar, H., Shayanfar, M.A., Babakhani, B., et
+al. \Numerical analysis of steel-concrete composite
+beam with blind bolt under simultaneous (cid:13)exural and
+torsional loading", Civil Engineering Infrastructures
+Journal, 53(2), pp. 379{393 (2020).
+
+10. Dekoster, M., Buyle-Bodin, F., Maurel, O., et al.
+\Modelling of the (cid:13)exural behaviour of RC beams sub-
+jected to localised and uniform corrosion", Engineering
+Structures, 25(10), pp. 1333{1341 (2003).
+
+11. Sabbagh-Yazdi, S.R., Farhoud, A., and Zabihi-Samani,
+M. \Transient Galerkin (cid:12)nite volume solution of dy-
+namic stress intensity factors", Asian Journal of Civil
+Engineering, 20(3), pp. 371{381 (2019).
+
+12. Guzm(cid:19)an, S., G(cid:19)alvez, J.C., and Sancho, J.M. \Cover
+cracking of reinforced concrete due to rebar corrosion
+induced by chloride penetration", Cement and Con-
+crete Research, 41(8), pp. 893{902 (2011).
+
+13. Malumbela, G., Moyo, P., and Alexander, M. \In(cid:13)u-
+ence of corrosion crack patterns on the rate of crack
+widening of RC beams", Construction and Building
+Materials, 25(5), pp. 2540{2553 (2011).
+
+14. Younsi, A., Turcry, P., Rozi(cid:19)ere, E.,
+
+al.
+\Performance-based design and carbonation of con-
+crete with high (cid:13)y ash content", Cement and Concrete
+Composites, 33(10), pp. 993{1000 (2011).
+
+et
+
+15. Toongoenthong, K.
+
+and Maekawa, K.
+
+\Multi-
+mechanical approach to structural performance assess-
+ment of corroded RC members in shear", Journal
+of Advanced Concrete Technology, 3(1), pp. 107{122
+(2005).
+
+16. Zabihi-Samani, M., Shayanfar, M., Sa(cid:12)ey, A., et al.
+\Simulation of the behavior of corrosion damaged re-
+inforced concrete beams with/without CFRP retro(cid:12)t",
+Civil Engineering Journal, 4(5), pp. 958{970 (2018).
+
+17. DiCarlo, F., Meda, A., and Rinaldi, Z. \Numerical
+evaluation of the corrosion in(cid:13)uence on the cyclic
+behaviour of RC columns", Engineering Structures,
+153(15), pp. 264{278 (2017).
+
+18. Hassan, A.A.A., Hossain, K.M.A., and Lachemi, M.
+\Structural assessment of corroded self-consolidating
+concrete beams", Engineering Structures, 32(3), pp.
+874{885 (2010).
+
+19. Shayanfar, M., Bigonah, M., Sobhani, D., et al.
+\The e(cid:11)ectiveness investigation of new retro(cid:12)tting
+techniques for RC frame against progressive collapse",
+Civil Engineering Journal, 4(9), pp. 2132{2142 (2018).
+
+21. Qin, F., Liu, T., Yang, F., et al. \Simulation on
+aseismic behaviors of reinforced concrete corroded in
+marine environment", Journal of Coastal Research,
+94(1), pp. 21{25 (2019).
+
+22. Afshin, H., Shirazi Mohammad, R.N., and Abedi,
+K. \Experimental and numerical study about seismic
+retro(cid:12)tting of corrosion-damaged reinforced concrete
+columns of bridge using combination of FRP wrapping
+and steel pro(cid:12)les", Steel and Composite Structures,
+30(3), pp. 231{251 (2019).
+
+23. Bareiro, W.G., AndradeSilva, F., and Sotelino, E.D.
+\Thermo-mechanical behavior of stainless-steel (cid:12)ber
+reinforced refractory concrete: Experimental and nu-
+merical analysis", Construction and Building Materi-
+als, 240(20) p. 117881 (2020).
+
+24. Yu, F., Song, Z., Mansouri, I., et al. \Experimen-
+tal study and (cid:12)nite element analysis of PVC-CFRP
+con(cid:12)ned concrete column-Ring beam joint subjected
+to eccentric compression", Construction and Building
+Materials, 254, p. 119081 (2020).
+
+25. Berto, L., Simioni, P., and Saetta, A. \Numerical
+modelling of bond behaviour in RC structures a(cid:11)ected
+by reinforcement corrosion", Engineering Structures,
+30(5), pp. 1375{1385 (2008).
+
+26. Zabihi-Samani, M. and Ghanooni-Bagha, M. \Optimal
+semi-active structural control with a wavelet-based
+cuckoo-search fuzzy logic controller", Iranian Journal
+of Science and Technology, Transactions of Civil En-
+gineering, 43(4), pp. 619{634 (2018).
+
+27. Alipour, A., Shafei, B., and Shinozuka, M. \Life cycle
+cost analysis of reinforced concrete highway bridges
+in chloride contaminated environments", In Structures
+Congress, pp. 644{653 (2010).
+
+28. Val, D.V. and Melchers, R.E. \Reliability of de-
+teriorating RC slab bridges", Journal of Structural
+Engineering, 123(12), pp. 1638{1644 (1997).
+
+29. Shayanfar, M.A., Ghalehnovi, M., and Sa(cid:12)ey, A.
+\Corrosion e(cid:11)ects on tension sti(cid:11)ening behavior of
+reinforced concrete", Computers and Concrete, 4(5),
+pp. 403{424 (2007).
+
+30. Zabihi-Samani, M. \Design of optimal slit steel damper
+under cyclic loading for special moment frame by
+cuckoo search", International Journal of Steel Struc-
+tures, 19(4), pp. 1260{1271 (2019).
+
+31. Du, Y.G., Clark, L.A., and Chan, A.H.C. \Residual
+capacity of corroded reinforcing bars", Magazine of
+Concrete Research, 57(3), pp. 135{147 (2005).
+
+32. Apostolopoulos, C.A., Demis, S., and Papadakis, V.G.
+\Chloride-induced corrosion of steel reinforcement-
+Mechanical performance and pit depth analysis", Con-
+
+972
+
+M.A. Shayanfar et al./Scientia Iranica, Transactions A: Civil Engineering 29 (2022) 964{972
+
+struction and Building Materials, 38, pp. 139{146
+(2013).
+
+33. Wei-liang, J. and Yu-xi, Z. \E(cid:11)ect of corrosion on bond
+behavior and bending strength of reinforced concrete
+beams", Journal of Zhejiang University-SCIENCE A.,
+2(3), pp. 298{308 (2001).
+
+34. Bertolini, L. \Steel corrosion and service life of rein-
+forced concrete structures", Structure and Infrastruc-
+ture Engineering, 4(2), pp. 123{137 (2008).
+
+35. Al-Sulaimani, G.J., Kaleemullah, M., Basunbul, I.A.,
+et al. \In(cid:13)uence of corrosion and cracking on bond be-
+havior and strength of reinforced concrete members",
+Aci Structural Journal, 87, pp. 220{231 (1990).
+
+36. Shayanfar, M. and Sa(cid:12)ey, A. \A new approach for
+nonlinear (cid:12)nite element analysis of reinforced concrete
+structures with corroded reinforcements", Computers
+and Concrete, 5(2), pp. 155{174 (2008).
+
+37. Ghanooni-bagha, M., Shayanfar, M.A., and Farnia,
+M.H. \Cracking e(cid:11)ects on chloride di(cid:11)usion and cor-
+rosion initiation in RC structures via (cid:12)nite element
+simulation", Scientia Iranica, 27(5), pp. 2301{2315
+(2020).
+
+38. Shayanfar, M.A., Barkhordari, M.A., and Ghanooni-
+longitudinal rebar corrosion
+Bagha, M. \E(cid:11)ect of
+on the compressive strength reduction of concrete in
+reinforced concrete structure", Advances in Structural
+Engineering, 19(6), pp. 897{907 (2016).
+
+39. Kwak, H.G. and Kim, S.P. \Bond-slip behavior under
+loads", Engineering Structures,
+
+monotonic uniaxial
+23(3), pp. 298{309 (2001).
+
+40. Khalfallah, S. \Tension sti(cid:11)ening bond modelling of
+cracked (cid:13)exural reinforced concrete beams", Journal
+of Civil Engineering and Management, 14(2), pp. 131{
+137 (2008).
+
+41. Khalfallah, S. and Ouchenane, M. \A numerical simu-
+lation of bond for pull out tests: The direct problem",
+Asian Journal of Civil Engineering, 8(5), pp. 491{505
+(2007).
+
+42. Bigonah, M., Soltani, H., Zabihi-Samani, M., et al.
+\Performance evaluation on e(cid:11)ects of all types of in(cid:12)ll
+against the progressive collapse of reinforced concrete
+frames", Asian Journal of Civil Engineering, 21, pp.
+395{409 (2020).
+
+43. Rezaei, M., Ranjbar Karkanaki, A., and Zabihi
+Samani, M. \Experimental investigation of deep beams
+containing high-performance (cid:12)ber-reinforced cemen-
+titious composite", Iranian Journal of Science and
+Technology, Transactions of Civil Engineering, 46(1),
+pp. 55{65 (2021). https://doi.org/10.1007/s40996-021-
+00653-4
+
+Biographies
+
+MohsenAli Shayanfar received PhD degree at
+McGill University in 1995. Now, he is an Associate
+
+Professor at Iran University of Science and Technology,
+Tehran, Iran. His research interests include nonlinear
+(cid:12)nite element method, reliability analysis, durabil-
+ity prediction of concrete structure, seismic rehabil-
+itation, optimal structural control, wavelet analysis
+and health monitoring, construction management, and
+meta-heuristic.
+
+Ali Hatami received MSc degree of Civil/Structural
+Engineering at Iran University of Science and Tech-
+nology in 2016. His research orientation is towards
+modeling the corrosion phenomenon and its e(cid:11)ects on
+structures. His research interests include nonlinear
+(cid:12)nite element method, corrosion, reliability analysis,
+and durability prediction of concrete structure.
+
+Masoud Zabihi-Samani is an Assistant Professor
+in the (cid:12)eld of Structural Engineering. He received
+his PhD degree from Iran University of Science and
+Technology in 2014. He is a Professor at the Civil
+Engineering Department at Parand Branch of Islamic
+Azad University where he taught several graduate and
+undergraduate courses, supervised 4 PhDs, and more
+than 40 master students. His areas of research include
+vibration control of structural systems, time endurance
+method, active and semi-active control, system identi-
+(cid:12)cation, wavelet and curvelet analyses, and corrosion
+of concrete structures, in which he has published more
+than 60 peer-reviewed journal and conference papers
+nationally and internationally.
+
+Behrouz Babakhani received PhD degree at ARAK
+branch of Islamic Azad University in 2018.
+His
+research orientation is towards modeling the corrosion
+phenomenon and its e(cid:11)ects on structures. On this
+basis, regular programs have been set up in two areas
+of laboratory and theoretical research. One of the low-
+cost and widely used methods for investigating the
+e(cid:11)ects of corrosion is (cid:12)nite element modeling. His
+research interests include corrosion, reliability analysis,
+and durability prediction of concrete structure.
+
+Ali-Reza Faroughi is an Assistant Professor in the
+(cid:12)eld of Structural Engineering. He received his PhD
+degree from Science and Research Branch of Islamic
+Azad University in 2016. He is a Professor and a
+Faculty member of Civil Engineering Department at
+Islamic Azad University, East Tehran Branch where
+he taught several graduate and undergraduate courses
+and supervised more than 30 master students. Fur-
+thermore, he is a member of working Group on the
+5th edition of 2800 Standard Spectrum and Iranian
+Engineering Software Committee (IESC). His research
+interests include seismic design of structures, rehabili-
+tation, and risk analysis of structure.
+
+

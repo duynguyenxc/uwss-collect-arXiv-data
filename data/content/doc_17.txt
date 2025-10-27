@@ -1,0 +1,601 @@
+Journal of Science and Technology in Civil Engineering, HUCE, 2023, 17 (4): 37–47
+
+EXPERIMENTAL STUDY ON THE BEHAVIOR OF
+ECCENTRICALLY COMPRESSED CORROSION-DAMAGED
+REINFORCED CONCRETE COLUMNS
+Nguyen Manh Hunga, Nguyen Trung Hieua,∗, Nguyen Van Tuanb, Pham Xuan Data
+aFaculty of Building and Industrial Construction, Hanoi University of Civil Engineering,
+55 Giai Phong road, Hai Ba Trung district, Hanoi, Vietnam
+bFaculty of Building Materials, Hanoi University of Civil Engineering,
+55 Giai Phong road, Hai Ba Trung district, Hanoi, Vietnam
+
+Article history:
+Received 12/10/2023, Revised 18/12/2023, Accepted 18/12/2023
+
+Abstract
+
+This paper presents an experimental study of corrosion-damaged reinforced concrete (RC) columns under ec-
+centric compression. Three RC concrete column specimens, identical in geometry, reinforcing steel bars, and
+concrete mix, were fabricated. One undamaged control specimen served as the control group, while the other
+two column specimens underwent corrosion due to chloride ion exposure. All specimens were subjected to a
+minor eccentric compressive load. The test results have revealed the behavior of RC columns damaged by steel
+corrosion. Additionally, a comparison of the load-bearing capacity of corrosion-damaged RC columns was
+conducted between calculation and experiment. The results indicate a close alignment between calculated and
+experimental outcomes. Furthermore, the degree of decrease in the load-bearing capacity of corrosion-damaged
+RC columns over time was evaluated based on the axial load-moment interaction diagram. This evaluation con-
+sidered the influence of the reduction in concrete strength and the cross-sectional area of the reinforcement.
+
+Keywords: corrosion; RC column; eccentric load; load-moment interaction diagram; experimental study.
+
+https://doi.org/10.31814/stce.huce2023-17(4)-04 © 2023 Hanoi University of Civil Engineering (HUCE)
+
+1. Introduction
+
+The corrosion of reinforcement is one of the major causes of deterioration in reinforced concrete
+(RC) structures. It primarily affects structures exposed to aggressive environments, such as coastal
+areas with chloride contamination, or industrial facilities like paper mills and fertilizer factories. Ad-
+ditionally, urban areas can also be impacted by the carbonation phenomenon. Research institutions
+worldwide have provided statistics showing that reinforcement corrosion is the leading cause of struc-
+tural damage and premature degradation in RC concrete [1–3]. Numerous investigations have reported
+rapid deterioration of RC structures in coastal areas, even within 10 years of construction [4, 5]. This
+deterioration is often attributed to the low quality and inadequate thickness of the concrete cover.
+
+Corrosion of reinforcement leads to an increase in volume, resulting in cracking and detachment
+of both the protective concrete layer and the steel bar. This corrosion can occur in specific cross-
+sectional areas (such as the side of a column) or across the entire cross-section of the structure [6, 7].
+One common phenomenon observed in damaged RC structures due to reinforcement corrosion is
+the reduction of the concrete cross-section and the cross-sectional area of the reinforcement. This
+reduction leads to a decrease in the bonding between the reinforcement and the concrete, ultimately
+resulting in a reduction of the bearing capacity of the structure [7–11].
+
+∗Corresponding author. E-mail address: hieunt@huce.edu.vn (Hieu, N. T.)
+
+37
+
+Hung, N. M., et al. / Journal of Science and Technology in Civil Engineering
+
+Eccentric compression of RC columns is a common phenomenon in construction practice. The
+load acting on the center creates an uneven stress distribution over the cross-section and the bearing
+state of the section will be different depending on large or small eccentricity conditions. Especially,
+as the eccentricity is large, the tension zone is mainly ensured through the work of the tensile re-
+inforcement. Therefore, it will significantly affect the bearing capacity of the column as corrosion
+of reinforcement occurs in this area [12–15]. Indeed, studies on corroded RC columns, particularly
+those subjected to eccentric compression, are relatively limited. Rodiguez et al. [10] conducted an
+experimental study involving 24 RC column specimens that were subjected to monotonic axial com-
+pressive loads. The results of the study indicated a decrease in the compressive bearing capacity of the
+corroded columns over time. Revathy et al. [14] conducted an experimental study to investigate the
+behavior of corroded RC columns. Small-sized RC columns were prepared and artificially corroded
+to various corrosion levels, ranging from 10% to 25% loss of steel mass. The study aimed to evaluate
+the effects of corrosion on the ductility, ultimate strength, and final strain of the RC columns. Xia
+et al. [15] conducted a test involving 24 RC columns, out of which 20 were subjected to corrosion
+and 4 remained uncorroded. The study revealed that the corrosion of reinforcing steel bars in RC
+columns led to various types of concrete damage, including cracking, spalling, and delamination of
+the concrete cover. This deterioration not only resulted in a reduction of the mechanical properties of
+the columns but also increased the loading eccentricity. The increased eccentricity further accelerated
+the failure of the columns.
+
+This study aims to investigate the behavior of corrosion-damaged RC columns under eccentric
+compressive loads. The obtained results will provide valuable insights into the performance and dura-
+bility of RC columns exposed to aggressive environments. The experimental study was carried out at
+the Laboratory of Testing and Construction Inspection, Ha Noi University of Civil Engineering.
+
+2. Experimental research
+
+2.1. Specimen and material properties
+
+Figure 1. Details of test specimens
+
+A total of three specimens were fabricated and subjected to a combination of axial load and flex-
+ural moment. The test specimens consisted of one control specimen, named C-0, and two corrosion-
+damaged specimens, named C-C-1 and C-C-2. All columns were comprised of a test zone in the
+
+38
+
+Hung, N. M., et al. / Journal of Science and Technology in Civil Engineering
+
+center of the specimens with a rectangular cross-section of 200 × 250 mm and a corbel with a cross-
+section of 200 × 400 mm at each end of the columns, resulting in a total height of 1600 mm. Each
+column specimen was longitudinally reinforced in the test region with four deformed rebars with an
+18 mm diameter, corresponding to a steel reinforcement ratio of 2.0%. The transverse reinforcement
+was made of 6 mm diameter ties with a spacing of 100 mm in the test zone, and a reduced spacing
+of 50 mm was adopted in the corbel end to avoid localized damage. The concrete cover was 20 mm.
+Details of the test specimens are provided in Fig. 1.
+
+Table 1 presents concrete mix proportioning with an achieved 28-day compressive strength of
+31.5 MPa. This strength was determined by three cuber samples with a size of 150 × 150 × 150 mm.
+The longitudinal bars ∅18 and stirrups ∅6 had yield strengths of 410 and 330 MPa, respectively.
+
+Table 1. Concrete mix proportioning (kg/m3)
+
+Cement
+(kg)
+
+390
+
+Sand
+(kg)
+
+680
+
+Crushed stone
+(10-20mm) (kg)
+
+1210
+
+Water
+(kg)
+
+178
+
+Water/Cement
+(W/C) ratio
+
+The 28-day compressive
+strength (MPa)
+
+0.45
+
+31.5
+
+2.2. Accelerated corrosion test by electrochemical method
+
+Fig. 2 shows a schematic description of the accelerated corrosion test by the electrochemical
+corrosion method. After the age of 28 days, two test specimens C-C-1 and C-C-2 were placed in
+a storage tank and immersed in a 5% NaCl solution. In the accelerated corrosion test, the direct
+current (D.C) was employed to simulate the corrosion of reinforcing bars that occur under actual
+environmental conditions for RC structures The DC density of 25 µA/mm2 was chosen based on the
+cross-sectional area of the reinforcement and previous studies conducted by [16–19]. This current
+density was maintained continuously throughout the experiment to minimize the test duration.
+
+Figure 2. Setup for accelerated corrosion test by electrochemical method
+
+The test was continued until two stopping conditions were met: (1) cracks appeared along the
+longitudinal reinforcement length and (2) cracks consistent with actual corrosion damage to RC struc-
+tures became discernible to the naked eye. Taking into account the factors mentioned above and the
+experimental conditions, an experimental duration of approximately 60 days was selected.
+
+After conducting the accelerated corrosion test, two specimens were retrieved from the tank and
+left to air-dry. Following this, the distribution of cracks that had arisen due to the corroded reinforce-
+ment on the column surface was measured and depicted (Fig. 3). More details about the crack results
+can be found in Fig 6. Following the finishing of the compressive test, the corroded longitudinal
+bars were extracted from the test columns, cleaned of rust, and weighed to determine the weight loss
+resulting from corrosion.
+
+39
+
+Hung, N. M., et al. / Journal of Science and Technology in Civil Engineering
+
+(a) C-C-1 specimen
+
+(b) C-C-2 specimen
+
+Figure 3. Illustration of surface crack on the test specimens C-C-1 and C-C-2
+
+2.3. Testing column specimens under eccentric compressive load
+
+Fig. 4 illustrates the eccentric compression test setup, while Fig. 5 shows a test in progress. Each
+specimen was tested under monotonically increasing eccentric load. A hydraulic actuator was em-
+ployed to apply axial load to the test specimens. The upper ends of the test specimens were connected
+to the actuator, while the lower ends were supported by a steel reaction frame. Both of the end sup-
+ports were designed as hinged connections, initially set with an eccentricity e0 of 30 mm, simulating
+columns experiencing minor eccentric compression. This eccentricity equals the distance between
+the applied load and the centroid of the column’s cross-section in the test region. To ensure the lat-
+eral stability of each specimen, both in-plane and out-of-plane, suitable steel supports were used, as
+illustrated in Fig. 5.
+
+Figure 4. Test setup
+
+Figure 5. Image of a test in progress
+
+40
+
+Hung, N. M., et al. / Journal of Science and Technology in Civil Engineering
+
+To determine the horizontal displacement of the column due to the applied load and monitor the
+functionality of the joints at both ends, three electronic horizontal displacement transducers (Linear
+Variable Differential Transducers - LVDTs) are installed. These LVDTs are positioned at the two
+ends of the column and the cross-section located within the column height is designated as LVDT-1,
+LVDT-2, and LVDT-3.
+
+The lateral displacement at the midpoint of the column, f , will be determined using the following
+
+formula (1):
+
+f = f2 − 0.5 ( f1 + f3)
+
+(1)
+
+where f1, f2 and f3 is the reading on the corresponding measuring instruments of LVDT-1, LVDT-2
+and LVDT-3.
+
+3. Results and discussions
+
+3.1. Crack status and corrosion degree of longitudinal steel bars
+
+Fig 6 presents the crack patterns observed on all four sides of the two test specimens, namely C-
+C-1 and C-C-2, following the completion of the accelerated corrosion test. Over the course of 60 days,
+cracks became visible on the surface of the column specimens, primarily running along the length of
+the longitudinal steel bars within the columns. These cracks exhibited widths ranging from 0.3 mm to
+0.9 mm. The observed crack patterns confirm that the accelerated corrosion test effectively replicates
+the corrosion of steel bars, closely resembling real-world environmental conditions.
+
+(a) C-C-1 specimen
+
+(b) C-C-2 specimen
+
+Figure 6. Crack maps attributable to steel corrosion on the four sides of test columns
+
+Fig. 7 depicts the rust condition observed on the longitudinal reinforcement steel bars, while
+Table 2 provides information on the weight loss resulting from corrosion. The values presented in
+Table 2 represent the averages of results obtained from two longitudinal reinforcement samples, each
+measuring 500 mm in length and extracted from the middle of the test specimen. With regard to
+stirrups, the measurement results indicate that stirrup corrosion averaged around 6.5% in the two test
+specimens C-C-1 and C-C-2.
+
+41
+
+Hung, N. M., et al. / Journal of Science and Technology in Civil Engineering
+
+(a) The longitudinal steel bar (∅18)
+
+(b) The stirrup (∅6)
+
+Figure 7. Images of rust condition on the longitudinal steel bar
+Table 2. Degree of corrosion of reinforcement ∅18
+
+Specimen
+
+Initial mass (g)
+
+Mass of specimens after corrosion (g)
+
+The mass loss (%)
+
+C-C-1
+C-C-2
+
+976
+976
+
+904
+921
+
+72
+56
+
+3.2. Behavior of test specimens under eccentric compressive load
+
+a. Failure mode
+
+Fig. 8 illustrates the photos of the control and corroded specimens at failure, along with the corre-
+sponding failure regions. The failure mode for both the control and corroded specimens was typical.
+Cracks were observed in the compression zone, leading to a reduction in the bearing capacity of the
+test specimens. This mode of failure is suitable for cases with small eccentric effects.
+
+(a) C-0 specimen
+
+(b) C-C-1 specimen
+
+Figure 8. Failure of tested specimens
+
+42
+
+Hung, N. M., et al. / Journal of Science and Technology in Civil Engineering
+
+b. Load-lateral displacement relationship
+
+The compressive load versus lateral mid-height displacement curves for both the control and
+damaged columns are depicted in Fig. 9. The summary of the ultimate load and the corresponding
+lateral mid-height displacement is provided in Table 3.
+
+Figure 9. Load-lateral displacement at the mid-height of test specimens relationship
+
+The results presented in Fig. 9 indicate that the stiffness of the two tested columns, which were
+damaged by reinforcement corrosion, has been reduced. When compared to the control specimen
+(C-0) subjected to the same applied load, the damaged columns exhibit larger lateral displacements.
+However, the degree of stiffness reduction is relatively small and becomes noticeable only when the
+applied load exceeds 400 kN.
+
+Regarding the ultimate load experienced by the test columns, the findings shown in Fig. 9 and Ta-
+ble 3 demonstrate a significant decrease in the bearing capacity of the columns affected by corrosion.
+The corrosion of reinforcement leads to the formation of cracks in the protective concrete layer, while
+the reduction in reinforcement diameter is the primary cause of this capacity reduction.
+
+Table 3. Ultimate axial load and corresponding lateral displacement
+
+Specimens
+
+Ultimate axial load Pul
+(kN)
+
+Corresponding lateral displacement
+(mm)
+
+% decrease in Pul
+
+C-0
+C-C-1
+C-C-2
+
+856
+734
+719
+
+3.8
+3.1
+3.5
+
+-
+-14.2 %
+-16.0%
+
+3.3. Comparison of the loadbearing capacity of corrosiondamaged RC columns according to calcu-
+
+lation and experiment
+
+After 60 days of accelerated corrosion testing, the extent of deterioration in concrete compressive
+strength was assessed for the C-C-1 and C-C-2 specimens. Following the completion of the com-
+pressive tests on the corroded column samples, crack-free concrete sections from each column were
+selected for drilling concrete samples. In the case of each tested column, three cylindrical samples
+measuring D × H = 70 × 140 mm were extracted to determine compressive strength. The average
+
+43
+
+Hung, N. M., et al. / Journal of Science and Technology in Civil Engineering
+
+compressive strength of the concrete beams was calculated and then normalized to a standard cylin-
+der sample size of 150 × 300 mm, with a value of 30.2 MPa. The average reduction in compressive
+strength between the pre- and post-corrosion test measurements was found to be 4.1%, indicating that
+the decline in concrete compressive strength over the 60-day accelerated corrosion test period was
+negligible
+
+For the longitudinal reinforcement bar, after the column compressive test, two corroded longitu-
+dinal steel bars were extracted from the area close to the corbel for use in the tensile strength test.
+The test results revealed an average tensile strength value of 402 MPa, indicating a decrease of 1.95%
+from the tensile strength of uncorroded steel
+
+Fig. 10 shows the axial load-moment (P-M) interaction diagrams for the control and corrosion-
+damaged column specimens according to TCVN 5574:2018 [20]. The experimental results of the
+ultimate axial load and corresponding flexural moment are represented as data points. It is evident
+from the figure that the predicted results closely align with the experimental results.
+
+Figure 10. Comparison of predicted and experimental results
+
+4. Assessment of decrease in load-bearing capacity of corrosion-damaged RC columns over
+
+time
+When the reinforcement is corroded, not only does the cross-sectional area decrease, but the me-
+chanical properties of the reinforcement, such as tensile strength and maximum relative deformation,
+are also reduced. In this experiment, the reduction of strength and cross-sectional area of the rein-
+forcement is determined using experimental formulas suggested by Du et al. [6] as follows:
+
+fy,corr = (1 − 0.005Qcorr) fy
+
+As,corr = As0 (1 − 0.01Qcorr)
+
+Qcorr = 1 −
+
+(cid:33)2
+
+(cid:32)
+
+dcorr
+d0
+
+(2)
+
+(3)
+
+(4)
+
+where fy and fcorr represent the tensile strength of the reinforcement in the initial and corroded situa-
+tions, respectively. As,0 and As,corr indicate the initial cross-sectional area and corroded cross-sectional
+
+44
+
+Hung, N. M., et al. / Journal of Science and Technology in Civil Engineering
+
+area, respectively. Qcorr denotes the level of corroded reinforcement as a percentage. d and dcorr rep-
+resent the initial and corroded diameters of the reinforcement, respectively.
+
+According to [21], the reduction in the diameter of the reinforcement due to steel corrosion is
+
+determined as follows:
+
+dcorr = d0 − 0.0232Icorr (t) tp
+
+(5)
+In formula (5), Icorr represents the velocity of steel corrosion (µA/cm2), and tp is the time in
+years referring to the period from the point of corroded reinforcement to the point of calculating
+the reduction in the diameter of the reinforcement. According to [6], the value of Icorr depends on
+two parameters: the water-to-cement (W/C) ratio and the thickness of the concrete cover, c. It is
+determined as follows:
+
+Icorr (t) = 32.1
+
+t−0.29
+p
+
+(6)
+
+(cid:17)−1.64
+
+(cid:16)
+
+1 − W
+C
+c
+
+Based on the formula provided earlier and the experimental data presented in Table 2, it is possi-
+ble to predict the reduction in the diameter of the reinforcement over time for an RC column located
+in a coastal area, where steel corrosion occurred 10 years after the initial use. By applying the appro-
+priate values to the formula, the predicted reduction of the reinforcement’s diameter over time can be
+calculated. The resulting predictions are illustrated in Fig. 11.
+
+Figure 11. Reduction of steel diameter over time due to corrosion
+
+Regarding the decrease in concrete compressive strength due to steel corrosion, Mohsen et al.
+[22] conducted several electrochemical corrosion experiments in an environment containing chloride
+ions. The results indicate that the reduction in concrete strength depends on the corrosion rate of
+the reinforcement. The researchers have proposed an experimental formula to determine the concrete
+strength when steel corrosion occurs, as follows:
+
+f (cid:48)
+c,corr
+
+= (1 − λ) f (cid:48)
+c
+
+(7)
+
+c and f (cid:48)
+
+where f (cid:48)
+c,corr represent the concrete strength in the initial and corroded reinforcement situa-
+tions, respectively. λ represents the percentage of decreased compressive strength of concrete, which
+is determined by the corrosion level of the reinforcement and the water-to-cement (W/C) ratio. Specif-
+ically, when W/C is equal to 0.45, the values for λ are determined as follows:
+
+λ = 2.29Qcorr − 1.73
+
+45
+
+(8)
+
+Hung, N. M., et al. / Journal of Science and Technology in Civil Engineering
+
+Based on the predicted results of the reduction in concrete compressive strength, the diameter of
+steel reinforcement, the interaction diagrams P-M of the RC column are established and presented
+in Fig. 12 for the 30-year, 40-year, and 50-year time points from the date of use. These diagrams
+clearly illustrate the level of reduction in the load-bearing capacity of the RC column over time. This
+information is crucial for the repair and strengthening of RC columns during their service life to
+ensure the required longevity and structural integrity.
+
+Figure 12. Interactive diagram P-M over time
+
+5. Conclusions
+
+This paper presents an experimental investigation of corrosion-damaged and eccentrically com-
+pressed RC columns with a rectangular section. Three specimens were tested to failure, with one
+serving as a control specimen and the other two intentionally damaged by steel corrosion. Based on
+the obtained results, several conclusions can be drawn:
+
+- The accelerated corrosion test proved to be a suitable method for rapidly inducing the corrosion
+of reinforcement steel bars in RC columns. The selection of the appropriate DC played a crucial role
+in simulating the corrosion that occurs in actual environmental conditions for RC structures.
+
+- Corrosion-damaged RC columns exhibited a decrease in stiffness and load-bearing capacity.
+The results showed that with an average corrosion rate of 7.0%, the load-bearing capacity of the RC
+column decreased by 18%.
+
+- The degree of reduction in the load-bearing capacity of the corrosion-damaged RC column over
+time was evaluated based on the predicted results of the reduction in concrete compressive strength
+and the diameter of steel reinforcement. This result serves as the foundation for the strengthening of
+corrosion-damaged RC columns, ensuring their longevity and structural integrity.
+
+It is essential to further study the effect of steel reinforcement in RC columns subjected to large
+eccentric compressive loads. This aspect is crucial for understanding the behavior and performance
+of RC columns under such loading conditions.
+
+These conclusions highlight the importance of considering corrosion effects in the design, main-
+tenance, and evaluation of RC structures. Understanding the impact of corrosion on the structural per-
+formance of RC columns is vital for ensuring their long-term durability and safety. Further research
+in this area can contribute to the development of more effective corrosion prevention and mitigation
+strategies in RC structures.
+
+46
+
+Hung, N. M., et al. / Journal of Science and Technology in Civil Engineering
+
+Acknowledgements
+
+This work was financially supported by Hanoi University of Civil Engineering (HUCE), Vietnam
+
+under grant No. 27-22/KHXD-TD.
+
+References
+[1] B¨ohni, H. (2005). Corrosion in reinforced concrete structures. Woodhead Publishing Limited.
+[2] Sæther, I. (2011). Bond deterioration of corroded steel bars in concrete. Structure and Infrastructure
+
+Engineering, 7(6):415–429.
+
+[3] Zandi, K. (2015). Corrosion-induced cover spalling and anchorage capacity. Structure and Infrastructure
+
+Engineering, 11(12):1547–1564.
+
+[4] Bertolini, L. (2008). Steel corrosion and service life of reinforced concrete structures. Structure and
+
+Infrastructure Engineering, 4(2):123–137.
+
+[5] Pacheco-Torgal, F., Melchers, R., Shi, X., De Belie, N., Van Tittelboom, K., Perez, A. S. (2017). Eco-
+
+efficient repair and rehabilitation of concrete infrastructures. Woodhead Publishing.
+
+[6] Du, Y. G., Clark, L. A., Chan, A. H. C. (2005). Residual capacity of corroded reinforcing bars. Magazine
+
+of Concrete Research, 57(3):135–147.
+
+[7] Cairns, J., Plizzari, G. A., Du, Y. G., Law, D. W., Franzoni, C. (2005). Mechanical properties of corrosion-
+
+damaged reinforcement. ACI Materials Journal, 102(4):256–264.
+
+[8] Lu, C., Jin, W., Liu, R. (2011). Reinforcement corrosion-induced cover cracking and its time prediction
+
+for reinforced concrete structures. Corrosion Science, 53(4):1337–1347.
+
+[9] Zhang, R., Castel, A., Franc¸ois, R. (2009). The corrosion pattern of reinforcement and its influence on
+serviceability of reinforced concrete members in chloride environment. Cement and Concrete Research,
+39(11):1077–1086.
+
+[10] Rodriguez, J., Ortega, L. M., Casal, J. (1997). Load carrying capacity of concrete structures with corroded
+
+reinforcement. Construction and Building Materials, 11(4):239–248.
+
+[11] Wang, X.-H., Liang, F.-Y. (2008). Performance of RC columns with partial length corrosion. Nuclear
+
+Engineering and Design, 238(12):3194–3202.
+
+[12] Nguyen, T. H., Pham, X. D., Tran, K. D. (2021). Experimental study on the behavior of eccentrically
+compressed reinforced concrete columns strengthened with CFRP composite sheets. Journal of Science
+and Technology in Civil Engineering (STCE) - HUCE, 15(4):172–181.
+
+[13] Shi, Q. X., Li, X. J., Niu, D. T., Yang, Y. D. (2001). Experimental study of bearing capacity of corroded
+
+reinforced concrete eccentric compressive members. Ind. Constr., 31(5):14–17.
+
+[14] Revathy, J., Suguna, K., Raghunath, P. (2009). Effect of Corrosion Damage on the Ductility Performance
+
+of Concrete Columns. American Journal of Engineering and Applied Sciences, 2(2):324–327.
+
+[15] Xia, J., Jin, W.-L., Li, L.-Y. (2016). Performance of Corroded Reinforced Concrete Columns under the
+
+Action of Eccentric Loads. Journal of Materials in Civil Engineering, 28(1).
+
+[16] Zhang, H., Wu, J., Jin, F., Zhang, C. (2019). Effect of corroded stirrups on shear behavior of reinforced
+recycled aggregate concrete beams strengthened with carbon fiber-reinforced polymer. Composites Part
+B: Engineering, 161:357–368.
+
+[17] Almusallam, A. A., Al-Gahtani, A. S., Aziz, A. R., Rasheeduzzafar (1996). Effect of reinforcement
+
+corrosion on bond strength. Construction and Building Materials, 10(2):123–129.
+
+[18] Nguyen, T. H., Nguyen, V. T., Phan, M. T. (2022). Experimental study on the flexural behaviour of cor-
+roded concrete beams reinforced with hybrid steel/GFRP bars. Structure and Infrastructure Engineering,
+1–12.
+
+[19] Wright, J. W., Pantelides, C. P. (2021). Axial compression capacity of concrete columns reinforced with
+
+corrosion-resistant metallic reinforcement. Journal of Infrastructure Preservation and Resilience, 2(1).
+
+[20] TCVN 5574:2018. Design of concrete and reinforced concrete structures. Vietnamese Standard.
+[21] Andrade, C., Alonso, C. (2001). On-site measurements of corrosion rate of reinforcements. Construction
+
+and Building Materials, 15(2–3):141–145.
+
+[22] Shayanfar, M. A., Barkhordari, M. A., Ghanooni-Bagha, M. (2016). Effect of longitudinal rebar corrosion
+on the compressive strength reduction of concrete in reinforced concrete structure. Advances in Structural
+Engineering, 19(6):897–907.
+
+47
+
+
