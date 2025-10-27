@@ -14,6 +14,7 @@ from urllib3.util.retry import Retry
 from sqlalchemy import select
 from datetime import datetime
 import mimetypes
+import re
 
 from ..store import create_sqlite_engine, Document
 from ..store.db import create_engine_from_url
@@ -101,6 +102,53 @@ def _sha256_bytes(data: bytes) -> str:
 	return h.hexdigest()
 
 
+def _get_env_user_agents() -> list[str]:
+	ua_file = os.getenv("UWSS_UA_FILE")
+	ua_list = []
+	if ua_file and Path(ua_file).exists():
+		try:
+			ua_list = [ln.strip() for ln in Path(ua_file).read_text(encoding="utf-8").splitlines() if ln.strip()]
+		except Exception:
+			ua_list = []
+	else:
+		ua_csv = os.getenv("UWSS_UA_LIST", "")
+		if ua_csv:
+			ua_list = [x.strip() for x in ua_csv.split("|") if x.strip()]
+	return ua_list
+
+
+def _pick_user_agent(contact_email: Optional[str] = None) -> str:
+	ua_list = _get_env_user_agents()
+	if ua_list:
+		return random.choice(ua_list)
+	return f"uwss/0.1 ({contact_email})" if contact_email else "uwss/0.1"
+
+
+def _pick_proxy() -> Optional[str]:
+	# UWSS_PROXIES supports csv or file
+	px_file = os.getenv("UWSS_PROXY_FILE")
+	candidates: list[str] = []
+	if px_file and Path(px_file).exists():
+		try:
+			candidates = [ln.strip() for ln in Path(px_file).read_text(encoding="utf-8").splitlines() if ln.strip()]
+		except Exception:
+			candidates = []
+	else:
+		px_csv = os.getenv("UWSS_PROXIES", "")
+		if px_csv:
+			candidates = [x.strip() for x in px_csv.split("|") if x.strip()]
+	return random.choice(candidates) if candidates else None
+
+
+def _apply_proxy(session: requests.Session, proxy_url: Optional[str]) -> None:
+	if not proxy_url:
+		return
+	session.proxies.update({
+		"http": proxy_url,
+		"https": proxy_url,
+	})
+
+
 def download_open_links(db_path: Path, out_dir: Path, limit: int = 10, contact_email: Optional[str] = None, db_url: Optional[str] = None) -> int:
 	out_dir.mkdir(parents=True, exist_ok=True)
 	engine, SessionLocal = (create_engine_from_url(db_url) if db_url else create_sqlite_engine(db_path))
@@ -117,6 +165,8 @@ def download_open_links(db_path: Path, out_dir: Path, limit: int = 10, contact_e
 	adapter = HTTPAdapter(max_retries=retry)
 	s.mount("http://", adapter)
 	s.mount("https://", adapter)
+	# optional proxy
+	_apply_proxy(s, _pick_proxy())
 
 	# Observability counters
 	metrics = {
@@ -141,7 +191,7 @@ def download_open_links(db_path: Path, out_dir: Path, limit: int = 10, contact_e
 			url = getattr(doc, "pdf_url", None) or getattr(doc, "source_url", None)
 			if not url:
 				continue
-			headers = {"User-Agent": f"uwss/0.1 ({contact_email})" if contact_email else "uwss/0.1"}
+			headers = {"User-Agent": _pick_user_agent(contact_email)}
 			# Per-host throttle + jitter
 			host = None
 			try:
@@ -180,7 +230,10 @@ def download_open_links(db_path: Path, out_dir: Path, limit: int = 10, contact_e
 			if not content_type:
 				guess, _ = mimetypes.guess_type(url)
 				content_type = guess or ""
-			ext = ".pdf" if "application/pdf" in content_type or url.lower().endswith(".pdf") else ".html"
+			# detect via Content-Disposition
+			cd = r.headers.get("Content-Disposition", "")
+			is_pdf = ("application/pdf" in content_type.lower()) or url.lower().endswith(".pdf") or ("filename=" in cd.lower() and cd.lower().endswith(".pdf"))
+			ext = ".pdf" if is_pdf else ".html"
 			base = safe_filename(doc.doi or doc.title or f"doc_{doc.id}") or f"doc_{doc.id}"
 			# add id suffix to avoid name collision
 			name = f"{base}_id{doc.id}{ext}"
@@ -265,7 +318,7 @@ def resolve_publisher_links(db_path: Path, limit: int = 50, contact_email: Optio
 			pdf_url = getattr(doc, "pdf_url", None)
 			if pdf_url and ("doi.org" not in pdf_url.lower()):
 				continue
-			headers = {"User-Agent": f"uwss/0.1 ({contact_email})" if contact_email else "uwss/0.1"}
+			headers = {"User-Agent": _pick_user_agent(contact_email)}
 			try:
 				r = client.get(landing, headers=headers, timeout=20, allow_redirects=True)
 			except Exception:
@@ -274,6 +327,21 @@ def resolve_publisher_links(db_path: Path, limit: int = 50, contact_email: Optio
 				continue
 			final_url = r.url or landing
 			html = r.text or ""
+			# handle meta refresh
+			try:
+				soup0 = BeautifulSoup(html, "html.parser")
+				mrf = soup0.find("meta", attrs={"http-equiv": re.compile("refresh", re.I)})
+				if mrf and mrf.get("content"):
+					m = re.search(r"url=([^;]+)", mrf.get("content"), flags=re.I)
+					if m:
+						from urllib.parse import urljoin
+						next_url = urljoin(final_url, m.group(1).strip())
+						r1 = client.get(next_url, headers=headers, timeout=20, allow_redirects=True)
+						if r1.status_code == 200:
+							final_url = r1.url or next_url
+							html = r1.text or html
+			except Exception:
+				pass
 			# If this is a Semantic Scholar page, find View via Publisher link
 			if "semanticscholar.org" in final_url.lower():
 				try:
@@ -319,7 +387,7 @@ def resolve_publisher_links(db_path: Path, limit: int = 50, contact_email: Optio
 					session.add(doc)
 					updated_pdf += 1
 					continue
-				# any anchor to *.pdf
+				# any anchor to *.pdf or labeled pdf
 				for a in soup.find_all("a"):
 					href = (a.get("href") or "").strip()
 					txt = (a.get_text(" ", strip=True) or "").lower()
