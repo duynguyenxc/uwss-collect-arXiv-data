@@ -741,13 +741,20 @@ def build_parser() -> argparse.ArgumentParser:
 	p_score.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 	p_score.add_argument("--min", type=float, default=0.0)
 	p_score.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
+	p_score.add_argument("--negative-keywords-file", default=None)
 
 	def _cmd_score(args: argparse.Namespace) -> int:
 		from .score import score_documents
 		data = load_config(Path(args.config))
 		validate_config(data)
 		keywords = data["domain_keywords"]
-		updated = score_documents(Path(args.db), keywords, args.min, db_url=getattr(args, "db_url", None))
+		neg = None
+		if args.negative_keywords_file:
+			try:
+				neg = [ln.strip() for ln in Path(args.negative_keywords_file).read_text(encoding="utf-8").splitlines() if ln.strip()]
+			except Exception:
+				neg = None
+		updated = score_documents(Path(args.db), keywords, args.min, db_url=getattr(args, "db_url", None), negative_keywords=neg)
 		console.print(f"[green]Scored {updated} documents[/green]")
 		return 0
 

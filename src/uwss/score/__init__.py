@@ -4,7 +4,7 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
-from typing import Dict, Iterable, List, Set
+from typing import Dict, Iterable, List, Set, Optional
 
 from sqlalchemy import select
 
@@ -46,12 +46,14 @@ def _score_text(tokens: List[str], bi_tokens: List[str], kw_uni: Set[str], kw_bi
 
 
 
-def score_documents(db_path: Path, keywords: List[str], min_score: float = 0.0, db_url: str | None = None) -> int:
+def score_documents(db_path: Path, keywords: List[str], min_score: float = 0.0, db_url: str | None = None, negative_keywords: Optional[List[str]] = None) -> int:
 	engine, SessionLocal = (create_engine_from_url(db_url) if db_url else create_sqlite_engine(db_path))
 	session = SessionLocal()
 	try:
 		lex = _build_keyword_lexicon(keywords)
+		neg_lex = _build_keyword_lexicon(negative_keywords or []) if negative_keywords else {"uni": set(), "bi": set(), "phrases": set()}
 		kw_uni, kw_bi = lex["uni"], lex["bi"]
+		n_uni, n_bi = neg_lex["uni"], neg_lex["bi"]
 		q = session.execute(select(Document))
 		updated = 0
 		for (doc,) in q:
@@ -72,6 +74,13 @@ def score_documents(db_path: Path, keywords: List[str], min_score: float = 0.0, 
 			s_abs = _score_text(tokens_abs, bigrams_abs, kw_uni, kw_bi)
 			# weight title higher
 			score = min(1.0, 0.8 * s_title + 0.2 * s_abs)
+			# negative keywords penalty (if present in title/abstract)
+			if negative_keywords:
+				neg_hits = (len(set(tokens_title) & n_uni) + len(set(tokens_abs) & n_uni) +
+							len(set(bigrams_title) & n_bi) + len(set(bigrams_abs) & n_bi))
+				if neg_hits > 0:
+					# strong penalty but not strictly zero to allow manual review if needed
+					score = max(0.0, score * 0.2)
 			doc.relevance_score = float(score)
 			# keywords_found: include phrases whose any token appears (or bigram present)
 			found = []
