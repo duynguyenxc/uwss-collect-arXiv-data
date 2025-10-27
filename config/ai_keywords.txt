@@ -1,12 +1,12 @@
-﻿artificial intelligence
+﻿deep learning
+neural network
 machine learning
-deep learning
-neural networks
-transformer model
-large language model
-foundation model
+transformer
+convolutional
 computer vision
-natural language processing
-reinforcement learning
-graph neural network
-self-supervised learning
+image segmentation
+object detection
+LLM
+GAN
+big data
+blockchain
