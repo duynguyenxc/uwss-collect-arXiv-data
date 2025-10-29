@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="883218ad-3f05-44fa-b7a0-cc40b43cf2c9" name="Changes" comment="" />
+    <list default="true" id="883218ad-3f05-44fa-b7a0-cc40b43cf2c9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHASE_1_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHASE_2_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHASE_4_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHASE_A_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHASE_B_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHASE_C_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHASE_D_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHASE_DomainFiltering_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHASE_E_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHASE_Observability_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/REPORT_FOR_PROFESSOR.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SMOKE_TEST_REPORT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_RESULTS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/improvement_report.md" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
