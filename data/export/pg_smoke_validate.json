@@ -1,11 +1,156 @@
 {
   "dup_doi": [
     {
+      "doi": "10.1016/j.cemconcomp.2011.05.005",
+      "count": 2
+    },
+    {
+      "doi": "10.1002/maco.200905302",
+      "count": 2
+    },
+    {
+      "doi": "10.1201/9781003348979-2",
+      "count": 2
+    },
+    {
+      "doi": "10.1201/b22237-2",
+      "count": 2
+    },
+    {
+      "doi": "10.1617/s11527-016-0916-3",
+      "count": 2
+    },
+    {
+      "doi": "10.1016/j.conbuildmat.2023.131248",
+      "count": 2
+    },
+    {
+      "doi": "10.18400/tekderg.430536",
+      "count": 2
+    },
+    {
+      "doi": "10.1007/s40069-016-0138-7",
+      "count": 2
+    },
+    {
+      "doi": "10.20964/2022.12.101",
+      "count": 2
+    },
+    {
       "doi": "",
-      "count": 10
+      "count": 26
+    },
+    {
+      "doi": "10.1617/s11527-020-01526-4",
+      "count": 2
+    },
+    {
+      "doi": "10.1007/s11709-013-0223-9",
+      "count": 2
+    },
+    {
+      "doi": "10.14359/6047",
+      "count": 2
     }
   ],
-  "dup_title": [],
+  "dup_title": [
+    {
+      "title": "corrosion and chloride diffusivity of reinforced concrete cracked under sustained flexure",
+      "count": 2
+    },
+    {
+      "title": "preface",
+      "count": 2
+    },
+    {
+      "title": "evaluating effect of chloride attack and concrete cover on the probability of corrosion",
+      "count": 2
+    },
+    {
+      "title": "long-term corrosion behavior of reinforced concrete: impact of supplementary cementitious materials and reservoir size under accelerated chloride ingress",
+      "count": 2
+    },
+    {
+      "title": "repair of reinforced concrete structures",
+      "count": 4
+    },
+    {
+      "title": "corrosion inhibitors for reinforced concrete",
+      "count": 5
+    },
+    {
+      "title": "assessment methods for reinforced concrete structures",
+      "count": 4
+    },
+    {
+      "title": "copyright",
+      "count": 2
+    },
+    {
+      "title": "causes of corrosion and concrete deterioration",
+      "count": 4
+    },
+    {
+      "title": "chloride migration measurement for chloride and sulfide contaminated concrete",
+      "count": 2
+    },
+    {
+      "title": "lattice modelling of corrosion induced cracking and bond in reinforced concrete",
+      "count": 2
+    },
+    {
+      "title": "effect of chloride on accelerated corrosion of steel rebar in alkali-activated fly ash and paper sludge ash–reinforced concrete",
+      "count": 2
+    },
+    {
+      "title": "sensitivity of chloride-induced corrosion rate of steel in concrete to cover depth, crack width and concrete quality",
+      "count": 2
+    },
+    {
+      "title": "\"carbonation, amount of chloride ion, and corrosion of steel reinforced concrete buildings in hanshin region\"",
+      "count": 2
+    },
+    {
+      "title": "corrosion in reinforced concrete structures",
+      "count": 2
+    },
+    {
+      "title": "corrosion of reinforcement in concrete",
+      "count": 2
+    },
+    {
+      "title": "corrosion of steel in concrete",
+      "count": 5
+    },
+    {
+      "title": "monitoring of corrosion in reinforced concrete structures",
+      "count": 2
+    },
+    {
+      "title": "index",
+      "count": 2
+    },
+    {
+      "title": "prediction of long-term durability of unidirectional/multidirectional basalt fiber- and hybrid fiber-reinforced polymer profiles under concrete environment",
+      "count": 2
+    },
+    {
+      "title": "laboratory simulation of corrosion damage in reinforced concrete",
+      "count": 2
+    },
+    {
+      "title": "concrete and steel composition",
+      "count": 2
+    },
+    {
+      "title": "critical chloride content for reinforced concrete and its relationship to concrete resistivity",
+      "count": 2
+    },
+    {
+      "title": "modelling and calculating corrosion, deterioration and life cycle costing of reinforced concrete structures",
+      "count": 2
+    }
+  ],
   "missing_core": [],
   "invalid_year": [],
   "missing_files": []
