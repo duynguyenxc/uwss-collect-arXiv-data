@@ -384,6 +384,7 @@ def build_parser() -> argparse.ArgumentParser:
 	p_arxiv_oai.add_argument("--max", type=int, default=None, help="Stop after N inserted records")
 	p_arxiv_oai.add_argument("--resume", action="store_true", help="Resume using saved resumptionToken")
 	p_arxiv_oai.add_argument("--log-json", action="store_true")
+	p_arxiv_oai.add_argument("--metrics-out", default=None, help="Optional JSON file to write harvest metrics")
 	
 	def _cmd_arxiv_oai(args: argparse.Namespace) -> int:
 		from .arxiv.harvest_oai import harvest_oai_records
@@ -408,9 +409,32 @@ def build_parser() -> argparse.ArgumentParser:
 			s.close()
 		console.print(f"[green]arXiv OAI-PMH: inserted={res['inserted']} failed={res['failed']} pages={res['pages']} elapsed={res['elapsed_sec']}s[/green]")
 		_log_json(args.log_json, "arxiv_oai_done", **res)
+		if getattr(args, "metrics_out", None):
+			try:
+				Path(args.metrics_out).parent.mkdir(parents=True, exist_ok=True)
+				Path(args.metrics_out).write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding="utf-8")
+				console.print(f"[green]Saved metrics to {args.metrics_out}[/green]")
+			except Exception:
+				pass
 		return 0
 
 	p_arxiv_oai.set_defaults(func=_cmd_arxiv_oai)
+
+	# arxiv-policy-snapshot
+	p_pol = sub.add_parser("arxiv-policy-snapshot", help="Capture arXiv Identify/robots and save under docs/policies/arxiv")
+	p_pol.add_argument("--config", default=str(Path("config") / "config.yaml"))
+	p_pol.add_argument("--out-dir", default=str(Path("docs") / "policies" / "arxiv"))
+
+	def _cmd_arxiv_policy(args: argparse.Namespace) -> int:
+		from .arxiv.policy_snapshot import snapshot_arxiv_policy
+		data = load_config(Path(args.config))
+		contact_email = data.get("contact_email")
+		res = snapshot_arxiv_policy(Path(args.out_dir), contact_email=contact_email)
+		console.print(f"[green]Saved arXiv policy artifacts to {args.out_dir}[/green]")
+		_log_json(True, "arxiv_policy_snapshot", **res)
+		return 0
+
+	p_pol.set_defaults(func=_cmd_arxiv_policy)
 
 	# discover-eupmc
 	p_eupmc = sub.add_parser("discover-eupmc", help="Fetch candidate metadata from Europe PMC")
