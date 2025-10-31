@@ -445,6 +445,7 @@ def build_parser() -> argparse.ArgumentParser:
 	p_fetch_arxiv.add_argument("--throttle-sec", type=float, default=None)
 	p_fetch_arxiv.add_argument("--jitter-sec", type=float, default=None)
 	p_fetch_arxiv.add_argument("--log-json", action="store_true")
+	p_fetch_arxiv.add_argument("--metrics-out", default=None)
 	p_fetch_arxiv.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
 
 	def _cmd_arxiv_fetch(args: argparse.Namespace) -> int:
@@ -463,6 +464,13 @@ def build_parser() -> argparse.ArgumentParser:
 			s.close()
 		console.print(f"[green]arXiv PDF: downloaded={res['downloaded']} failed={res['failed']} attempted={res['attempted']}[/green]")
 		_log_json(args.log_json, "arxiv_pdf_done", **res)
+		if getattr(args, "metrics_out", None):
+			try:
+				Path(args.metrics_out).parent.mkdir(parents=True, exist_ok=True)
+				Path(args.metrics_out).write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding="utf-8")
+				console.print(f"[green]Saved metrics to {args.metrics_out}[/green]")
+			except Exception:
+				pass
 		return 0
 
 	p_fetch_arxiv.set_defaults(func=_cmd_arxiv_fetch)
