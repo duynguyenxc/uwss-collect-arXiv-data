@@ -436,6 +436,37 @@ def build_parser() -> argparse.ArgumentParser:
 
 	p_pol.set_defaults(func=_cmd_arxiv_policy)
 
+	# arxiv-fetch-pdf (canonical, lawful)
+	p_fetch_arxiv = sub.add_parser("arxiv-fetch-pdf", help="Download canonical arXiv PDFs with throttle/backoff")
+	p_fetch_arxiv.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_fetch_arxiv.add_argument("--outdir", default=str(Path("data") / "files"))
+	p_fetch_arxiv.add_argument("--limit", type=int, default=50)
+	p_fetch_arxiv.add_argument("--config", default=str(Path("config") / "config.yaml"))
+	p_fetch_arxiv.add_argument("--throttle-sec", type=float, default=None)
+	p_fetch_arxiv.add_argument("--jitter-sec", type=float, default=None)
+	p_fetch_arxiv.add_argument("--log-json", action="store_true")
+	p_fetch_arxiv.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
+
+	def _cmd_arxiv_fetch(args: argparse.Namespace) -> int:
+		from .fetch.arxiv_pdf import fetch_arxiv_pdfs
+		from .store import Base
+		data = load_config(Path(args.config))
+		contact_email = data.get("contact_email")
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		Base.metadata.create_all(engine)
+		s = SessionLocal()
+		try:
+			throttle = args.throttle_sec if args.throttle_sec is not None else float(os.getenv("UWSS_THROTTLE_SEC", "1.0"))
+			jitter = args.jitter_sec if args.jitter_sec is not None else float(os.getenv("UWSS_JITTER_SEC", "0.5"))
+			res = fetch_arxiv_pdfs(s, Path(args.outdir), limit=args.limit, contact_email=contact_email, throttle_sec=throttle, jitter_sec=jitter)
+		finally:
+			s.close()
+		console.print(f"[green]arXiv PDF: downloaded={res['downloaded']} failed={res['failed']} attempted={res['attempted']}[/green]")
+		_log_json(args.log_json, "arxiv_pdf_done", **res)
+		return 0
+
+	p_fetch_arxiv.set_defaults(func=_cmd_arxiv_fetch)
+
 	# discover-eupmc
 	p_eupmc = sub.add_parser("discover-eupmc", help="Fetch candidate metadata from Europe PMC")
 	p_eupmc.add_argument("--config", default=str(Path("config") / "config.yaml"))
