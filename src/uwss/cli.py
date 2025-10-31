@@ -948,6 +948,29 @@ def build_parser() -> argparse.ArgumentParser:
 
 	p_xf.set_defaults(func=_cmd_xf)
 
+	# arxiv-parse-grobid (Phase 3)
+	p_gb = sub.add_parser("arxiv-parse-grobid", help="Parse local arXiv PDFs via GROBID and store TEI/text")
+	p_gb.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_gb.add_argument("--content-dir", default=str(Path("data") / "content"))
+	p_gb.add_argument("--limit", type=int, default=20)
+	p_gb.add_argument("--grobid-url", default=os.getenv("UWSS_GROBID_URL", "http://localhost:8070"))
+	p_gb.add_argument("--log-json", action="store_true")
+	def _cmd_gb(args: argparse.Namespace) -> int:
+		from .parse.grobid_client import parse_with_grobid
+		from .store import Base
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		Base.metadata.create_all(engine)
+		s = SessionLocal()
+		try:
+			res = parse_with_grobid(s, Path(args.content_dir), limit=args.limit, grobid_url=args.grobid_url)
+		finally:
+			s.close()
+		console.print(f"[green]GROBID parse: ok={res['parsed_ok']} fail={res['parsed_fail']} attempted={res['attempted']}[/green]")
+		_log_json(args.log_json, "grobid_parse_done", **res)
+		return 0
+
+	p_gb.set_defaults(func=_cmd_gb)
+
 	# scrape-full-content (from landing/source URL)
 	p_sfc = sub.add_parser("scrape-full-content", help="Fetch landing/source URL and extract full content to data/content")
 	p_sfc.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
