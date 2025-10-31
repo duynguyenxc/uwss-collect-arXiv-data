@@ -140,6 +140,35 @@ def build_parser() -> argparse.ArgumentParser:
 
 	p_mig.set_defaults(func=_cmd_migrate)
 
+	# db-add-columns (add new columns on Postgres/SQLite for pdf_status/pdf_fetched_at)
+	p_cols = sub.add_parser("db-add-columns", help="Add new columns (pdf_status, pdf_fetched_at) if missing")
+	p_cols.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+
+	def _cmd_cols(args: argparse.Namespace) -> int:
+		from sqlalchemy import text as sql_text
+		engine, _ = _get_engine_session(args, Path(args.db))
+		with engine.connect() as conn:
+			try:
+				conn.execute(sql_text("ALTER TABLE documents ADD COLUMN IF NOT EXISTS pdf_status VARCHAR(40)"))
+			except Exception:
+				# SQLite older versions don't support IF NOT EXISTS in ADD COLUMN; ignore
+				try:
+					conn.execute(sql_text("ALTER TABLE documents ADD COLUMN pdf_status VARCHAR(40)"))
+				except Exception:
+					pass
+			try:
+				conn.execute(sql_text("ALTER TABLE documents ADD COLUMN IF NOT EXISTS pdf_fetched_at TIMESTAMP"))
+			except Exception:
+				try:
+					conn.execute(sql_text("ALTER TABLE documents ADD COLUMN pdf_fetched_at DATETIME"))
+				except Exception:
+					pass
+			conn.commit()
+		console.print("[green]Ensured pdf_status/pdf_fetched_at columns exist.[/green]")
+		return 0
+
+	p_cols.set_defaults(func=_cmd_cols)
+
 	# db-create-indexes (works for SQLite and Postgres)
 	p_idx = sub.add_parser("db-create-indexes", help="Create helpful indexes (doi, lower(title), url_hash_sha1)")
 	p_idx.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
@@ -444,6 +473,9 @@ def build_parser() -> argparse.ArgumentParser:
 	p_fetch_arxiv.add_argument("--config", default=str(Path("config") / "config.yaml"))
 	p_fetch_arxiv.add_argument("--throttle-sec", type=float, default=None)
 	p_fetch_arxiv.add_argument("--jitter-sec", type=float, default=None)
+	p_fetch_arxiv.add_argument("--max-mb", type=float, default=60.0, help="Max PDF size in MB (HEAD check)")
+	p_fetch_arxiv.add_argument("--dry-run", action="store_true", help="HEAD only, do not download")
+	p_fetch_arxiv.add_argument("--since-days", type=int, default=None, help="Only consider docs older than N days or missing local_path")
 	p_fetch_arxiv.add_argument("--log-json", action="store_true")
 	p_fetch_arxiv.add_argument("--metrics-out", default=None)
 	p_fetch_arxiv.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
@@ -459,7 +491,17 @@ def build_parser() -> argparse.ArgumentParser:
 		try:
 			throttle = args.throttle_sec if args.throttle_sec is not None else float(os.getenv("UWSS_THROTTLE_SEC", "1.0"))
 			jitter = args.jitter_sec if args.jitter_sec is not None else float(os.getenv("UWSS_JITTER_SEC", "0.5"))
-			res = fetch_arxiv_pdfs(s, Path(args.outdir), limit=args.limit, contact_email=contact_email, throttle_sec=throttle, jitter_sec=jitter)
+			res = fetch_arxiv_pdfs(
+				s,
+				Path(args.outdir),
+				limit=args.limit,
+				contact_email=contact_email,
+				throttle_sec=throttle,
+				jitter_sec=jitter,
+				max_mb=float(getattr(args, "max_mb", 60.0)),
+				dry_run=bool(getattr(args, "dry_run", False)),
+				since_days=getattr(args, "since_days", None),
+			)
 		finally:
 			s.close()
 		console.print(f"[green]arXiv PDF: downloaded={res['downloaded']} failed={res['failed']} attempted={res['attempted']}[/green]")

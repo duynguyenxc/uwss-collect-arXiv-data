@@ -65,6 +65,9 @@ def migrate_db(db_path: Path) -> None:
 		if "checksum_sha256" not in names:
 			conn.execute(sql_text("ALTER TABLE documents ADD COLUMN checksum_sha256 VARCHAR(64)"))
 			conn.commit()
+		if "pdf_status" not in names:
+			conn.execute(sql_text("ALTER TABLE documents ADD COLUMN pdf_status VARCHAR(40)"))
+			conn.commit()
 		if "mime_type" not in names:
 			conn.execute(sql_text("ALTER TABLE documents ADD COLUMN mime_type VARCHAR(100)"))
 			conn.commit()
@@ -79,6 +82,9 @@ def migrate_db(db_path: Path) -> None:
 			conn.commit()
 		if "content_chars" not in names:
 			conn.execute(sql_text("ALTER TABLE documents ADD COLUMN content_chars INTEGER"))
+			conn.commit()
+		if "pdf_fetched_at" not in names:
+			conn.execute(sql_text("ALTER TABLE documents ADD COLUMN pdf_fetched_at DATETIME"))
 			conn.commit()
 		# Ensure visited_urls registry table exists
 		conn.execute(sql_text(

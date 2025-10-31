@@ -4,13 +4,14 @@ import os
 import time
 import random
 import hashlib
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional, Dict, Any
 
 import requests
 
 from ..store import Document, VisitedUrl
+from sqlalchemy import or_, and_
 
 
 def _safe_filename(base: str) -> str:
@@ -38,6 +39,9 @@ def fetch_arxiv_pdfs(
     contact_email: Optional[str] = None,
     throttle_sec: float = 1.0,
     jitter_sec: float = 0.5,
+    max_mb: float = 60.0,
+    dry_run: bool = False,
+    since_days: Optional[int] = None,
 ) -> Dict[str, Any]:
     """Download canonical arXiv PDFs for arXiv-sourced documents.
 
@@ -52,13 +56,13 @@ def fetch_arxiv_pdfs(
         "Connection": "close",
     }
 
-    q = (
-        session.query(Document)
-        .filter(Document.source == "arxiv")
-        .filter(Document.pdf_url != None)
-        .filter((Document.local_path == None) | (Document.local_path == ""))
-        .limit(limit)
-    )
+    q = session.query(Document).filter(Document.source == "arxiv").filter(Document.pdf_url != None)
+    if since_days is not None and since_days >= 0:
+        cutoff = datetime.utcnow() - timedelta(days=since_days)
+        q = q.filter(or_(Document.local_path == None, Document.local_path == "", Document.fetched_at == None, Document.fetched_at < cutoff))
+    else:
+        q = q.filter(or_(Document.local_path == None, Document.local_path == ""))
+    q = q.limit(limit)
     rows = q.all()
 
     downloaded = 0
@@ -67,6 +71,7 @@ def fetch_arxiv_pdfs(
     forbidden_403 = 0
     errors_5xx = 0
     timeouts = 0
+    too_large = 0
     retries_total = 0
     bytes_downloaded = 0
     latencies_ms: list[int] = []
@@ -87,6 +92,50 @@ def fetch_arxiv_pdfs(
             session.add(d)
             downloaded += 1
             continue
+        # HEAD size cap & dry-run
+        try:
+            head = requests.head(url, headers=headers, timeout=30, allow_redirects=True)
+            cl = head.headers.get("Content-Length")
+            if cl and max_mb is not None:
+                try:
+                    if int(cl) > int(max_mb * 1024 * 1024):
+                        d.pdf_status = "too_large"
+                        d.pdf_fetched_at = datetime.utcnow()
+                        too_large += 1
+                        session.add(d)
+                        session.commit()
+                        # write meta sidecar quickly
+                        meta_path = out_dir / (fname.replace(".pdf", ".meta.json"))
+                        try:
+                            import json
+                            meta = {
+                                "url_used": url,
+                                "status": head.status_code,
+                                "content_length": int(cl),
+                                "too_large": True,
+                                "cap_mb": max_mb,
+                                "fetched_at": d.pdf_fetched_at.isoformat() + "Z",
+                            }
+                            meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+                        except Exception:
+                            pass
+                        # skip download entirely
+                        # pacing
+                        time.sleep(throttle_sec + random.random() * jitter_sec)
+                        continue
+                except Exception:
+                    pass
+            if dry_run:
+                d.pdf_status = "dry_run"
+                d.pdf_fetched_at = datetime.utcnow()
+                session.add(d)
+                session.commit()
+                time.sleep(throttle_sec + random.random() * jitter_sec)
+                continue
+        except Exception:
+            # ignore head errors; proceed with GET/retries below
+            pass
+
         # retry for transient errors
         attempt = 0
         max_retries = 3
@@ -111,10 +160,13 @@ def fetch_arxiv_pdfs(
                     checksum = sha.hexdigest()
                     d.local_path = str(fpath)
                     d.status = "fetched"
+                    d.pdf_status = "ok"
                     d.mime_type = resp.headers.get("Content-Type")
                     d.file_size = total_bytes
                     d.checksum_sha256 = checksum
-                    d.fetched_at = datetime.utcnow()
+                    now = datetime.utcnow()
+                    d.fetched_at = now
+                    d.pdf_fetched_at = now
                     downloaded += 1
                     bytes_downloaded += total_bytes
                     # write meta.json
@@ -142,6 +194,7 @@ def fetch_arxiv_pdfs(
                     elif 500 <= resp.status_code < 600:
                         errors_5xx += 1
                     d.status = "fetch_failed"
+                    d.pdf_status = "error" if 500 <= resp.status_code < 600 else ("forbidden" if resp.status_code == 403 else ("not_found" if resp.status_code == 404 else "error"))
                 # visited url
                 try:
                     vu = VisitedUrl(url=url, first_seen=datetime.utcnow(), last_seen=datetime.utcnow(), status=str(resp.status_code))
@@ -152,9 +205,11 @@ def fetch_arxiv_pdfs(
                 timeouts += 1
                 failed += 1
                 d.status = "fetch_failed"
+                d.pdf_status = "timeout"
             except Exception:
                 failed += 1
                 d.status = "fetch_failed"
+                d.pdf_status = "error"
             finally:
                 latency_ms = int((time.time() - start_ts) * 1000)
                 latencies_ms.append(latency_ms)
@@ -184,6 +239,7 @@ def fetch_arxiv_pdfs(
         "forbidden_403": forbidden_403,
         "errors_5xx": errors_5xx,
         "timeouts": timeouts,
+        "too_large": too_large,
         "retries": retries_total,
         "bytes_downloaded": bytes_downloaded,
         "latency_ms": {"p50": pct(0.5), "p95": pct(0.95), "max": (max(lat_sorted) if lat_sorted else None)},

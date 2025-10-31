@@ -33,6 +33,8 @@ class Document(Base):
 	keywords_found: Mapped[Optional[str]] = mapped_column(Text, nullable=True)  # JSON list of matched keywords
 	relevance_score: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
 	status: Mapped[str] = mapped_column(String(40), default="not_fetched")
+	# PDF fetch specific status and timestamps
+	pdf_status: Mapped[Optional[str]] = mapped_column(String(40), nullable=True)
 	source: Mapped[Optional[str]] = mapped_column(String(50), nullable=True)  # crossref|arxiv|openalex|...
 	topic: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
 	# content summary and types
@@ -41,6 +43,7 @@ class Document(Base):
 
 	# provenance
 	fetched_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+	pdf_fetched_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
 	http_status: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
 	extractor: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
 	license: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
