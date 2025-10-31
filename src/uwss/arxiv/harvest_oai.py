@@ -25,13 +25,23 @@ def _clip(text: Optional[str], max_len: int) -> Optional[str]:
 def _parse_oai_record(record_el: ET.Element) -> Dict[str, Any]:
     ns = {
         "oai": "http://www.openarchives.org/OAI/2.0/",
+        "oai_dc": "http://www.openarchives.org/OAI/2.0/oai_dc/",
         "dc": "http://purl.org/dc/elements/1.1/",
     }
     header = record_el.find("oai:header", ns)
     metadata = record_el.find("oai:metadata", ns)
     if metadata is None:
         return {}
-    dc = metadata.find("dc:dc", ns)
+    # arXiv uses oai_dc:dc; fall back to dc:dc if present
+    dc = metadata.find("oai_dc:dc", ns)
+    if dc is None:
+        dc = metadata.find("dc:dc", ns)
+    if dc is None:
+        # try any child element ending with 'dc'
+        for child in list(metadata):
+            if child.tag.endswith("}dc"):
+                dc = child
+                break
     if dc is None:
         return {}
 
@@ -114,6 +124,7 @@ def harvest_oai_records(
             token = st.checkpoint_value
 
     inserted = 0
+    processed = 0
     failed = 0
     pages = 0
     start_ts = time.time()
@@ -143,6 +154,10 @@ def harvest_oai_records(
             try:
                 obj = _parse_oai_record(rec)
                 if not obj or not (obj.get("title") or obj.get("doi")):
+                    processed += 1
+                    # cap by processed count too
+                    if max_records and processed >= max_records:
+                        break
                     continue
                 # Deduplicate by arXiv ID, DOI, title
                 existing = None
@@ -153,6 +168,9 @@ def harvest_oai_records(
                 if existing is None and obj.get("title"):
                     existing = session.query(Document).filter(Document.title == obj["title"]).first()
                 if existing:
+                    processed += 1
+                    if max_records and processed >= max_records:
+                        break
                     continue
                 doc = Document(
                     source_url=obj.get("landing_url") or "",
@@ -170,10 +188,11 @@ def harvest_oai_records(
                 )
                 session.add(doc)
                 inserted += 1
+                processed += 1
             except Exception:
                 failed += 1
-            # Optional limit
-            if max_records and inserted >= max_records:
+            # Optional limit on processed
+            if max_records and processed >= max_records:
                 break
         session.commit()
 
@@ -194,7 +213,7 @@ def harvest_oai_records(
             session.commit()
 
         token = next_token
-        if (max_records and inserted >= max_records) or not token:
+        if (max_records and processed >= max_records) or not token:
             break
         time.sleep(throttle_sec)
 
