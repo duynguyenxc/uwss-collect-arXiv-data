@@ -374,6 +374,44 @@ def build_parser() -> argparse.ArgumentParser:
 
 	p_arxiv.set_defaults(func=_cmd_arxiv)
 
+	# arxiv-harvest-oai (official OAI-PMH)
+	p_arxiv_oai = sub.add_parser("arxiv-harvest-oai", help="Harvest arXiv via OAI-PMH ListRecords (official)")
+	p_arxiv_oai.add_argument("--config", default=str(Path("config") / "config.yaml"))
+	p_arxiv_oai.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_arxiv_oai.add_argument("--from", dest="from_date", default=None, help="YYYY-MM-DD start date")
+	p_arxiv_oai.add_argument("--until", dest="until_date", default=None, help="YYYY-MM-DD end date")
+	p_arxiv_oai.add_argument("--set", dest="set_spec", default=None, help="Optional arXiv set/category")
+	p_arxiv_oai.add_argument("--max", type=int, default=None, help="Stop after N inserted records")
+	p_arxiv_oai.add_argument("--resume", action="store_true", help="Resume using saved resumptionToken")
+	p_arxiv_oai.add_argument("--log-json", action="store_true")
+	
+	def _cmd_arxiv_oai(args: argparse.Namespace) -> int:
+		from .arxiv.harvest_oai import harvest_oai_records
+		from .store import Base
+		data = load_config(Path(args.config))
+		contact_email = data.get("contact_email")
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		Base.metadata.create_all(engine)
+		s = SessionLocal()
+		try:
+			res = harvest_oai_records(
+				s,
+				contact_email=contact_email,
+				from_date=getattr(args, "from_date", None),
+				until_date=getattr(args, "until_date", None),
+				set_spec=getattr(args, "set_spec", None),
+				max_records=getattr(args, "max", None),
+				resume=bool(getattr(args, "resume", False)),
+			throttle_sec=float(os.getenv("UWSS_THROTTLE_SEC", "1.0")),
+			)
+		finally:
+			s.close()
+		console.print(f"[green]arXiv OAI-PMH: inserted={res['inserted']} failed={res['failed']} pages={res['pages']} elapsed={res['elapsed_sec']}s[/green]")
+		_log_json(args.log_json, "arxiv_oai_done", **res)
+		return 0
+
+	p_arxiv_oai.set_defaults(func=_cmd_arxiv_oai)
+
 	# discover-eupmc
 	p_eupmc = sub.add_parser("discover-eupmc", help="Fetch candidate metadata from Europe PMC")
 	p_eupmc.add_argument("--config", default=str(Path("config") / "config.yaml"))
