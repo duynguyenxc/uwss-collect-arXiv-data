@@ -1,263 +1,72 @@
-# 🚀 **UWSS - UNIVERSAL WEB-SCRAPING SYSTEM**
+# UWSS – Universal Web‑Scraping System (arXiv‑first)
 
-> **Production-ready automated system for collecting academic data from multiple sources, with intelligent processing and high-quality data export capabilities.**
+Universal, config‑driven harvesting pipeline. Current focus: official arXiv integration using OAI‑PMH for metadata and canonical PDF download, with safe, reproducible operations.
 
-## 🎯 **PROJECT OVERVIEW**
+## Key ideas
+- Postgres‑first (or SQLite for local): database is the single source of truth.
+- Config‑driven: keywords, throttling, email/UA are set in `config/config.yaml`.
+- Official sources only: arXiv OAI‑PMH for metadata, canonical `arxiv.org/pdf/...` for PDFs.
+- Idempotent + resume: checkpoints and upserts allow safe re‑runs.
+- Local‑first files: PDFs and extracted content are stored on disk; S3 upload is optional.
 
-**UWSS (Universal Web-Scraping System)** is a complete, production-ready system that automatically collects academic data from multiple sources. The system has been fully developed, tested, and optimized to provide:
-
-- **Multi-source data collection** from Crossref, arXiv, OpenAlex, and web crawling
-- **Intelligent relevance scoring** using advanced token + bigram matching
-- **Complete data processing pipeline** with cleaning, deduplication, and validation
-- **High-quality data export** in JSONL/CSV formats with full provenance
-- **Docker containerization** ready for cloud deployment
-- **100% data quality validation** with zero duplicates or missing fields
-
-## 🏗️ **SYSTEM CAPABILITIES**
-
-### **What UWSS Solves**
-- **Manual data collection**: Automates the tedious process of collecting academic papers
-- **Multi-source integration**: Combines data from Crossref, arXiv, OpenAlex, and web crawling
-- **Quality assurance**: Intelligent relevance scoring and comprehensive data validation
-- **Data standardization**: Automatic cleaning, deduplication, and format normalization
-
-### **Key Features**
-- **20 CLI commands** for complete system control
-- **Advanced scoring algorithm** with token + bigram matching and title weighting
-- **Robust error handling** with HTTP retries and exponential backoff
-- **Docker containerization** for consistent deployment
-- **Cloud-ready architecture** with AWS ECS, S3, and RDS support
-
-## ⚙️ **HOW IT WORKS**
-
+## Quick start
+1) Optional: validate config
 ```
-1. DISCOVERY
-   ├── OpenAlex API → Search papers
-   ├── Crossref API → Academic metadata
-   ├── arXiv API → Preprints
-   └── Scrapy → Web crawling
-
-2. PROCESSING
-   ├── Scoring → Evaluate relevance
-   ├── Cleaning → Remove duplicates
-   ├── Normalization → Standardize data
-   └── Validation → Quality check
-
-3. OUTPUT
-   ├── Download → Download PDF/HTML files
-   ├── Export → JSONL/CSV formats
-   └── Statistics → Statistical reports
-```
-
-## 🛠️ **TECHNOLOGIES USED**
-
-### **Backend**
-- **Python 3.8+**: Main language
-- **SQLAlchemy**: ORM for database
-- **SQLite**: Local database (can switch to PostgreSQL)
-
-### **Data Sources**
-- **OpenAlex API**: Academic papers database
-- **Crossref API**: DOI metadata
-- **arXiv API**: Preprints
-- **Scrapy**: Web crawling framework
-
-### **Processing**
-- **Requests**: HTTP client with retry logic
-- **BeautifulSoup**: HTML parsing
-- **pdfminer.six**: PDF text extraction
-- **Token + Bigram**: Relevance scoring
-
-### **Deployment**
-- **Docker**: Containerization
-- **AWS**: Cloud deployment (ECS, S3, RDS)
-
-## 📁 **PROJECT STRUCTURE**
-
-```
-uwss/
-├── src/uwss/                    # Core package
-│   ├── store/                   # Database models
-│   ├── discovery/               # API integrations
-│   ├── crawl/                   # Download & web crawling
-│   ├── score/                   # Relevance scoring
-│   ├── clean/                   # Data cleaning
-│   ├── extract/                 # Text extraction
-│   ├── upload/                  # S3 integration
-│   └── cli.py                   # Command-line interface
-├── config/                      # Configuration files
-│   ├── config.yaml              # Main config
-│   └── keywords_concrete.txt    # Domain keywords
-├── data/                        # Local data
-│   ├── uwss.sqlite              # SQLite database
-│   ├── files/                   # Downloaded PDF/HTML files
-│   └── export/                  # Export results
-├── Dockerfile                   # Container config
-├── requirements.txt             # Python dependencies
-└── README.md                    # This file
-```
-
-### **Purpose of files/folders**
-
-- **`src/uwss/`**: Main system code
-- **`config/`**: Keywords and sources configuration
-- **`data/`**: Local data (database, files, exports)
-- **`Dockerfile`**: For containerizing the application
-- **`requirements.txt`**: List of required Python libraries
-
-## 🚀 **SETUP AND RUN LOCALLY**
-
-### **System requirements**
-- **Python 3.8+**: Can be installed from python.org
-- **RAM**: Minimum 2GB (recommended 4GB+)
-- **Disk**: ~500MB for dependencies + data
-- **OS**: Windows, macOS, Linux all supported
-
-### **Step 1: Clone and setup environment**
-```bash
-# Clone repository
-git clone <repository-url>
-cd uwss
-
-# Create virtual environment (recommended)
-python -m venv .venv
-
-# Activate virtual environment
-# Windows:
-.venv\Scripts\activate
-# macOS/Linux:
-source .venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### **Step 2: Initialize database**
-```bash
-# Validate config
 python -m src.uwss.cli config-validate --config config/config.yaml
-
-# Initialize database
-python -m src.uwss.cli db-init --db data/uwss.sqlite
-
-# Run migration (add new columns)
-python -m src.uwss.cli db-migrate --db data/uwss.sqlite
+```
+2) Snapshot arXiv policy artifacts (compliance)
+```
+python -m src.uwss.cli arxiv-policy-snapshot
+```
+3) Harvest a small batch via OAI‑PMH
+```
+python -m src.uwss.cli arxiv-harvest-oai --from 2024-10-01 --max 20 --resume --metrics-out data/runs/arxiv_h.json
+```
+4) Download PDFs (canonical arXiv URLs)
+```
+python -m src.uwss.cli arxiv-fetch-pdf --limit 10 --metrics-out data/runs/arxiv_p.json
+```
+5) Extract full text (local PDF → text)
+```
+python -m src.uwss.cli extract-full-text --db data/uwss.sqlite --content-dir data/content --limit 10
+```
+6) Export (JSONL/CSV)
+```
+python -m src.uwss.cli export --db data/uwss.sqlite --out data/export/arxiv.jsonl --require-match --oa-only
 ```
 
-### **Step 3: Run basic pipeline**
-```bash
-# Discover data (example: 10 records from each source)
-python -m src.uwss.cli discover-openalex --config config/config.yaml --db data/uwss.sqlite --max 10
-python -m src.uwss.cli discover-crossref --config config/config.yaml --db data/uwss.sqlite --max 10
-python -m src.uwss.cli discover-arxiv --config config/config.yaml --db data/uwss.sqlite --max 10
+Tips
+- Throttling: set `UWSS_THROTTLE_SEC` and `UWSS_JITTER_SEC` (e.g., 1.0 / 0.5) for polite pacing.
+- Postgres instead of SQLite: add `--db-url $env:UWSS_DB_URL` to any command.
 
-# Process data
-python -m src.uwss.cli score-keywords --config config/config.yaml --db data/uwss.sqlite
-python -m src.uwss.cli normalize-metadata --db data/uwss.sqlite
-python -m src.uwss.cli dedupe-resolve --db data/uwss.sqlite
+## Where data goes
+- DB: `data/uwss.sqlite` (or Postgres via `--db-url`). Tables: `documents`, `visited_urls`, `ingestion_state`.
+- PDFs: `data/files/arxiv_*.pdf` with sidecar `arxiv_*.meta.json` (status, headers, SHA256).
+- Extracted content: `data/content/` (text from PDF/HTML; Phase 3 adds GROBID TEI/JSON).
+- Metrics: `data/runs/*.json` when `--metrics-out` is provided.
+- Policy: `docs/policies/arxiv/` (Identify, robots, links).
 
-# Quality check
-python -m src.uwss.cli validate --db data/uwss.sqlite
-python -m src.uwss.cli stats --db data/uwss.sqlite
+## Architecture (current)
+- Harvest: arXiv OAI‑PMH (ListRecords) → parse DC → normalize → upsert to DB (resume via resumptionToken).
+- Fetch: canonical PDF with retry/backoff + throttle/jitter; atomic `.part→rename`; SHA256 + meta.json.
+- Extract: local PDF/HTML → text; stores `content_path` and basic stats (Phase 3 adds GROBID).
+- Score/export: keyword scoring + negatives → export JSONL/CSV.
 
-# Export data
-python -m src.uwss.cli export --db data/uwss.sqlite --out data/export/results.jsonl
-```
+## Configuration
+See `config/config.yaml`:
+- `contact_email`, `user_agent`: used for polite UA across requests.
+- `rate_limits.throttle_sec/jitter_sec`: default pacing.
+- `domain_keywords/negative_keywords`: used by scoring/export.
+- Optional arXiv window via CLI `--from/--until`; sets can be passed with `--set`.
 
-### **Step 4: Download files (optional)**
-```bash
-# Download Open Access files
-python -m src.uwss.cli fetch --db data/uwss.sqlite --outdir data/files --limit 5
-```
+## Roadmap (short)
+- Phase 3: GROBID integration (PDF → TEI/XML → structured JSON), store `content_path`, checksums, `extractor='grobid'`.
+- Phase 4: S3 enablement (bucket/prefix toggle), checksums, optional requester‑pays for arXiv bulk.
+- Hardening: `pdf_status`/`pdf_fetched_at`, HEAD size cap, pinned→latest order, `--dry-run`/`--since`.
 
-## 📊 **SYSTEM PERFORMANCE**
+## Compliance
+- Only public/allowed content is fetched.
+- arXiv metadata via OAI‑PMH; PDFs via canonical arXiv links.
+- Policy snapshot stored under `docs/policies/arxiv`.
 
-### **Proven Results**
-- **218 high-quality records** collected and processed
-- **135MB PDF content** from 34 downloaded files
-- **100% data quality** with zero duplicates or missing fields
-- **3 data sources** integrated: Crossref (200), Scrapy (18), Unpaywall (24)
-- **15-minute complete pipeline** from discovery to export
 
-### **Database (`data/uwss.sqlite`)**
-- Contains metadata of all documents with full provenance
-- 25+ fields including DOI, title, authors, venue, year, relevance score
-- Automatic backup and migration capabilities
-- SQLite for local development, PostgreSQL for cloud deployment
-
-### **Export Files (`data/export/`)**
-- **`results.jsonl`**: Complete data with metadata and provenance
-- **`validation.json`**: Quality check results (100% clean)
-- **`stats.json`**: Comprehensive statistics and metrics
-- **S3 export support**: Direct upload to AWS S3 buckets
-
-### **Downloaded Files (`data/files/`)**
-- Downloaded PDF/HTML files with unique naming (`_id{doc.id}`)
-- Text extraction capabilities for content analysis
-- 135MB total content from academic papers
-- Ready for S3 upload and cloud storage
-
-## 🔧 **CUSTOMIZATION FOR DIFFERENT MACHINES**
-
-### **Weak machine (RAM < 4GB)**
-```bash
-# Reduce number of records to process
-python -m src.uwss.cli discover-openalex --max 5
-python -m src.uwss.cli fetch --limit 2
-```
-
-### **Powerful machine (RAM > 8GB)**
-```bash
-# Increase number of records to process
-python -m src.uwss.cli discover-openalex --max 50
-python -m src.uwss.cli fetch --limit 20
-```
-
-### **Slow network**
-```bash
-# Add throttling
-python -m src.uwss.cli fetch --throttle-sec 1.0 --jitter-sec 0.5
-```
-
-## 🐳 **DOCKER (Optional)**
-
-```bash
-# Build image
-docker build -t uwss:latest .
-
-# Run container
-docker run --rm -v "${PWD}/data:/app/data" -v "${PWD}/config:/app/config" uwss:latest python -m src.uwss.cli stats --db data/uwss.sqlite
-```
-
-## 📚 **REFERENCE DOCUMENTATION**
-
-- **`REPORT.md`**: Detailed development process report
-- **`LOCAL_SETUP_GUIDE.md`**: Detailed setup guide
-- **`deploy-cloud.md`**: AWS deployment guide
-- **`TEST_RESULTS.md`**: Test and validation results
-
-## ⚠️ **IMPORTANT NOTES**
-
-- **Rate Limiting**: System has throttling to avoid spamming APIs
-- **Data Quality**: Not guaranteed 100% accuracy, manual review needed
-- **Storage**: PDF files can take up significant space
-- **Network**: Stable internet connection required
-
-## 🎯 **PROJECT STATUS**
-
-**✅ COMPLETED AND PRODUCTION-READY**
-
-UWSS is a fully developed, tested, and optimized system that provides:
-
-- **Complete automation**: End-to-end pipeline from discovery to export
-- **Production quality**: 100% data validation with zero errors
-- **Cloud deployment**: Docker containerization with AWS ECS support
-- **Comprehensive documentation**: Professional setup guides and technical reports
-- **Proven performance**: 218 records, 135MB content, 15-minute processing time
-
-**The system is ready for immediate use in academic research, data mining, and applications requiring high-quality data collection from multiple sources.**
-
----
-
-*Universal Web-Scraping System - Automating academic data collection*
-# uwss-upgrade
