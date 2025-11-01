@@ -1,0 +1,1999 @@
+{
+  "attempted": 200,
+  "downloaded": 198,
+  "failed": 2,
+  "not_found_404": 2,
+  "forbidden_403": 0,
+  "errors_5xx": 0,
+  "timeouts": 0,
+  "too_large": 0,
+  "retries": 0,
+  "bytes_downloaded": 497641221,
+  "latency_ms": {
+    "p50": 553,
+    "p95": 4237,
+    "max": 17837
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "New probabilistic interest measures for association rules",
+      "arxiv_id": "0803.0966",
+      "local_path": "data\\files_clean\\arxiv_0803.0966.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/0803.0966.pdf",
+      "file_size": 1359014,
+      "sha256": "2e2642eab4cb9da2f871dcacb76467a50b51ca53536598229c69f4b8f80e8a30",
+      "fetched_at": "2025-11-01T16:09:02.261517Z"
+    },
+    {
+      "id": 2,
+      "title": "Real Submanifolds in Complex Spaces: Upgrades",
+      "arxiv_id": "1503.07177",
+      "local_path": "data\\files_clean\\arxiv_1503.07177.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1503.07177.pdf",
+      "file_size": 201311,
+      "sha256": "dfdf162dbe3a0f98bcfcd1969c336fc1d366e6fdd95649c1450a1d6bcc812ead",
+      "fetched_at": "2025-11-01T16:09:04.093329Z"
+    },
+    {
+      "id": 3,
+      "title": "Charging of capacitors with double switch. The principle of operation of auto-zero and chopper-stabilized DC amplifiers",
+      "arxiv_id": "1511.04328",
+      "local_path": "data\\files_clean\\arxiv_1511.04328.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1511.04328.pdf",
+      "file_size": 4846783,
+      "sha256": "c17182cc4b0238f5d8d37079999413811965c7216e4d58608dad9ff5ac42d87d",
+      "fetched_at": "2025-11-01T16:09:07.549731Z"
+    },
+    {
+      "id": 5,
+      "title": "Nesting statistics in the O(n) loop model on random planar maps",
+      "arxiv_id": "1605.02239",
+      "local_path": "data\\files_clean\\arxiv_1605.02239.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1605.02239.pdf",
+      "file_size": 1655138,
+      "sha256": "269a71828ab1e69a2d57ca5dc392e4b491cb1b8bba542a3cf8826e5dde3a95a2",
+      "fetched_at": "2025-11-01T16:09:12.036208Z"
+    },
+    {
+      "id": 6,
+      "title": "On deformation spaces of quadratic rational maps",
+      "arxiv_id": "1606.00723",
+      "local_path": "data\\files_clean\\arxiv_1606.00723.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1606.00723.pdf",
+      "file_size": 539765,
+      "sha256": "66e5911348d989828d1da0edb561331293bd3d360c2b41c64cdd3db2f4a9ddd9",
+      "fetched_at": "2025-11-01T16:09:14.282593Z"
+    },
+    {
+      "id": 7,
+      "title": "Limiting empirical spectral distribution for the non-backtracking matrix of an ErdÅs-RÃ©nyi random graph",
+      "arxiv_id": "1710.11015",
+      "local_path": "data\\files_clean\\arxiv_1710.11015.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1710.11015.pdf",
+      "file_size": 1268563,
+      "sha256": "14e98d8b848bfb2aa67c5647cac08e0efecf05ddb303578d118ea3f37a9ff4c2",
+      "fetched_at": "2025-11-01T16:09:16.633042Z"
+    },
+    {
+      "id": 8,
+      "title": "Matrices with Gaussian noise: optimal estimates for singular subspace perturbation",
+      "arxiv_id": "1803.00679",
+      "local_path": "data\\files_clean\\arxiv_1803.00679.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1803.00679.pdf",
+      "file_size": 847380,
+      "sha256": "70b910a48476409cdb69eb04c10798f55012da1e3417a2b66320a98d6899789d",
+      "fetched_at": "2025-11-01T16:09:19.119251Z"
+    },
+    {
+      "id": 9,
+      "title": "Cellular $E_k$-algebras",
+      "arxiv_id": "1805.07184",
+      "local_path": "data\\files_clean\\arxiv_1805.07184.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1805.07184.pdf",
+      "file_size": 2477267,
+      "sha256": "cec26844bfbb385244074951df74a8af7cf25831932614c73ffb0223f3bbc2c6",
+      "fetched_at": "2025-11-01T16:09:21.337203Z"
+    },
+    {
+      "id": 10,
+      "title": "Synthetically Trained Icon Proposals for Parsing and Summarizing Infographics",
+      "arxiv_id": "1807.10441",
+      "local_path": "data\\files_clean\\arxiv_1807.10441.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1807.10441.pdf",
+      "file_size": 7691690,
+      "sha256": "5e95a0394b9fd6f048ff96e8617a9fc3d00ec2eeebce05e43823cb66df090c7a",
+      "fetched_at": "2025-11-01T16:09:28.472339Z"
+    },
+    {
+      "id": 11,
+      "title": "Approximating Bimatrix Nash Equilibrium Via Trilinear Minimax",
+      "arxiv_id": "1809.01717",
+      "local_path": "data\\files_clean\\arxiv_1809.01717.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1809.01717.pdf",
+      "file_size": 260997,
+      "sha256": "c37387ba6acd6625224e39012cfba88bec2027a08ab80d86e1da47bb19dd1aa4",
+      "fetched_at": "2025-11-01T16:09:30.570103Z"
+    },
+    {
+      "id": 12,
+      "title": "Bi-parameter Potential theory and Carleson measures for the Dirichlet space on the bidisc",
+      "arxiv_id": "1811.04990",
+      "local_path": "data\\files_clean\\arxiv_1811.04990.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1811.04990.pdf",
+      "file_size": 824083,
+      "sha256": "b71374b89886bdf1667a47f3fe5c3c95d225534cbaa6c65b5a714118374296f7",
+      "fetched_at": "2025-11-01T16:09:32.638790Z"
+    },
+    {
+      "id": 13,
+      "title": "Extra pearls in graph theory",
+      "arxiv_id": "1812.06627",
+      "local_path": "data\\files_clean\\arxiv_1812.06627.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1812.06627.pdf",
+      "file_size": 1476647,
+      "sha256": "884810a1ae7fb2efdad53ab6c86969c6b5c90f8730661851a5a9cd284394d696",
+      "fetched_at": "2025-11-01T16:09:35.394581Z"
+    },
+    {
+      "id": 14,
+      "title": "Alexander polynomials of simple-ribbon knots",
+      "arxiv_id": "1905.04915",
+      "local_path": "data\\files_clean\\arxiv_1905.04915.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1905.04915.pdf",
+      "file_size": 491334,
+      "sha256": "166292604f2560673ec1777fc90a5551ccbb51403a84bb23d6c17d54dda9886d",
+      "fetched_at": "2025-11-01T16:09:37.464746Z"
+    },
+    {
+      "id": 15,
+      "title": "On the singularity structure of Kahan discretizations of a class of quadratic vector fields",
+      "arxiv_id": "2003.01659",
+      "local_path": "data\\files_clean\\arxiv_2003.01659.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2003.01659.pdf",
+      "file_size": 335413,
+      "sha256": "602342af77442584705260356dd796cc622d0e5f60e80e5efb3993f24caf85a5",
+      "fetched_at": "2025-11-01T16:09:39.388813Z"
+    },
+    {
+      "id": 16,
+      "title": "Statistical Quantile Learning for Large, Nonlinear, and Additive Latent Variable Models",
+      "arxiv_id": "2003.13119",
+      "local_path": "data\\files_clean\\arxiv_2003.13119.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2003.13119.pdf",
+      "file_size": 3141575,
+      "sha256": "80df3dec2277ff707842e63f40111ecc02b0a829dbf23cf1290aa5b1a04fda22",
+      "fetched_at": "2025-11-01T16:09:42.051956Z"
+    },
+    {
+      "id": 17,
+      "title": "Analogical proportions",
+      "arxiv_id": "2006.02854",
+      "local_path": "data\\files_clean\\arxiv_2006.02854.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2006.02854.pdf",
+      "file_size": 376637,
+      "sha256": "e5e11329b9f8d8d52f54c82e850cf4741f8a03c49e90e46bc8b91411f5f98636",
+      "fetched_at": "2025-11-01T16:09:44.056619Z"
+    },
+    {
+      "id": 18,
+      "title": "Self-dual Maps I : antipodality",
+      "arxiv_id": "2008.12853",
+      "local_path": "data\\files_clean\\arxiv_2008.12853.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2008.12853.pdf",
+      "file_size": 642600,
+      "sha256": "09a31b9b47eb2928b12bd0be83990c2df46e00507c1ada738a57febf08979655",
+      "fetched_at": "2025-11-01T16:09:45.922216Z"
+    },
+    {
+      "id": 19,
+      "title": "Ball packings for links",
+      "arxiv_id": "2010.00580",
+      "local_path": "data\\files_clean\\arxiv_2010.00580.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2010.00580.pdf",
+      "file_size": 4988360,
+      "sha256": "99800f8d3b319814b95a8670e4b01d25b0d3a14946fbd39e66def11720d1503b",
+      "fetched_at": "2025-11-01T16:09:50.168624Z"
+    },
+    {
+      "id": 20,
+      "title": "Refinement of Bratteli-Vershik models",
+      "arxiv_id": "2010.02617",
+      "local_path": "data\\files_clean\\arxiv_2010.02617.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2010.02617.pdf",
+      "file_size": 277728,
+      "sha256": "e732ae547061ea52abc6263c8bcb2647415756c66b55c92d09c44c74c95f44b6",
+      "fetched_at": "2025-11-01T16:09:51.851673Z"
+    },
+    {
+      "id": 21,
+      "title": "Benchmarking the ab initio hydrogen equations of state for the interior structure of Jupiter",
+      "arxiv_id": "2012.09454",
+      "local_path": "data\\files_clean\\arxiv_2012.09454.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2012.09454.pdf",
+      "file_size": 414996,
+      "sha256": "ad217b7b8500d283229dff8dc7bdc7cc8819e70ede03ed99c0da20fe74b36c62",
+      "fetched_at": "2025-11-01T16:09:53.618307Z"
+    },
+    {
+      "id": 22,
+      "title": "Feature Space Exploration For Planning Initial Benthic AUV Surveys",
+      "arxiv_id": "2105.11598",
+      "local_path": "data\\files_clean\\arxiv_2105.11598.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2105.11598.pdf",
+      "file_size": 19326514,
+      "sha256": "b10a94e21f690861f546e91c4a221322e3693f8909a1b93117182ac4749abacd",
+      "fetched_at": "2025-11-01T16:10:05.693336Z"
+    },
+    {
+      "id": 23,
+      "title": "Hodge and TeichmÃ¼ller",
+      "arxiv_id": "2106.04665",
+      "local_path": "data\\files_clean\\arxiv_2106.04665.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2106.04665.pdf",
+      "file_size": 185308,
+      "sha256": "0018d2a60ce4378cba3301d0e53fb2071929f4a8e4e398d1f140c143a08b2a06",
+      "fetched_at": "2025-11-01T16:10:07.422125Z"
+    },
+    {
+      "id": 24,
+      "title": "Self-dual maps II: links and symmetry",
+      "arxiv_id": "2106.05376",
+      "local_path": "data\\files_clean\\arxiv_2106.05376.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2106.05376.pdf",
+      "file_size": 1762484,
+      "sha256": "5f3220d49568445eba647a8b0dfe952fc2a26b516930b8f24ab0ac1d40a87bc9",
+      "fetched_at": "2025-11-01T16:10:10.221762Z"
+    },
+    {
+      "id": 25,
+      "title": "A Declarative Goal-oriented Framework for Smart Environments with LPaaS",
+      "arxiv_id": "2106.13083",
+      "local_path": "data\\files_clean\\arxiv_2106.13083.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2106.13083.pdf",
+      "file_size": 329758,
+      "sha256": "3441fccc6032897e78b2b1834e8061c3cf829ecc29474aadf3bf572c18fefefd",
+      "fetched_at": "2025-11-01T16:10:12.180466Z"
+    },
+    {
+      "id": 26,
+      "title": "TCAD Modeling of Cryogenic nMOSFET ON-State Current and Subthreshold Slope",
+      "arxiv_id": "2107.07139",
+      "local_path": "data\\files_clean\\arxiv_2107.07139.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2107.07139.pdf",
+      "file_size": 650615,
+      "sha256": "5d4424f6c477c869a1c2f03d96419b1abd75d46431d273210b29e8eb02601e4f",
+      "fetched_at": "2025-11-01T16:10:14.623536Z"
+    },
+    {
+      "id": 27,
+      "title": "A natural basis for intersection numbers",
+      "arxiv_id": "2108.00226",
+      "local_path": "data\\files_clean\\arxiv_2108.00226.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2108.00226.pdf",
+      "file_size": 692378,
+      "sha256": "e79df2797b6629bc4ef5ca83e2f3807bb97c112dea867128598dba4dd751b83e",
+      "fetched_at": "2025-11-01T16:10:17.180175Z"
+    },
+    {
+      "id": 28,
+      "title": "Step-by-Step HHL Algorithm Walkthrough to Enhance the Understanding of Critical Quantum Computing Concepts",
+      "arxiv_id": "2108.09004",
+      "local_path": "data\\files_clean\\arxiv_2108.09004.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2108.09004.pdf",
+      "file_size": 846531,
+      "sha256": "30f0299c9d5b1d2e8721c33774b64bdc6c3525228abd5c1eb52526ef43943e33",
+      "fetched_at": "2025-11-01T16:10:19.031051Z"
+    },
+    {
+      "id": 29,
+      "title": "The Unique Tangent Cone Property for Weakly Holomorphic Maps into Projective Algebraic Varieties",
+      "arxiv_id": "2108.10371",
+      "local_path": "data\\files_clean\\arxiv_2108.10371.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2108.10371.pdf",
+      "file_size": 526484,
+      "sha256": "6d93f4336701b24709c145abed4479759aa20f93611f95fee35fae9ea5dab60c",
+      "fetched_at": "2025-11-01T16:10:21.057222Z"
+    },
+    {
+      "id": 30,
+      "title": "To Charge or to Sell? EV Pack Useful Life Estimation via LSTMs, CNNs, and Autoencoders",
+      "arxiv_id": "2110.03585",
+      "local_path": "data\\files_clean\\arxiv_2110.03585.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2110.03585.pdf",
+      "file_size": 1183633,
+      "sha256": "9ab95ba8d0fd335ab59a1489b04ee888b2c08b1946926c59a9253f85e9b8a973",
+      "fetched_at": "2025-11-01T16:10:23.405518Z"
+    },
+    {
+      "id": 31,
+      "title": "The Stefan problem and free targets of optimal Brownian martingale transport",
+      "arxiv_id": "2110.03831",
+      "local_path": "data\\files_clean\\arxiv_2110.03831.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2110.03831.pdf",
+      "file_size": 618081,
+      "sha256": "a2796019e1a8313030fa15c213ca7cf84b8593f2ad5d9b63d64d062e01612127",
+      "fetched_at": "2025-11-01T16:10:25.090382Z"
+    },
+    {
+      "id": 32,
+      "title": "RCT: Random Consistency Training for Semi-supervised Sound Event Detection",
+      "arxiv_id": "2110.11144",
+      "local_path": "data\\files_clean\\arxiv_2110.11144.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2110.11144.pdf",
+      "file_size": 796519,
+      "sha256": "198933c72a22f9744fc5412040e867bfa14610658eb9a1063c2752c263988c71",
+      "fetched_at": "2025-11-01T16:10:27.064469Z"
+    },
+    {
+      "id": 33,
+      "title": "Construction of Fuchsian Schottky group with conformal boundary at infinity",
+      "arxiv_id": "2110.13263",
+      "local_path": "data\\files_clean\\arxiv_2110.13263.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2110.13263.pdf",
+      "file_size": 245192,
+      "sha256": "e194790dd9bbf5d21764fbd41bbce648f414853f324b54e12288c7e2683261b4",
+      "fetched_at": "2025-11-01T16:10:29.438560Z"
+    },
+    {
+      "id": 34,
+      "title": "Partial Order in Chaos: Consensus on Feature Attributions in the Rashomon Set",
+      "arxiv_id": "2110.13369",
+      "local_path": "data\\files_clean\\arxiv_2110.13369.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2110.13369.pdf",
+      "file_size": 1361233,
+      "sha256": "ccba8a5e26ab23d70fad7dd1d126d17a5477aeb25e6e2751703b9b14aa564dbb",
+      "fetched_at": "2025-11-01T16:10:31.598863Z"
+    },
+    {
+      "id": 35,
+      "title": "Dimension Reduction with Prior Information for Knowledge Discovery",
+      "arxiv_id": "2111.13646",
+      "local_path": "data\\files_clean\\arxiv_2111.13646.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2111.13646.pdf",
+      "file_size": 2317939,
+      "sha256": "c1ea7d0604cc94247f6de69bcf63d44d55c6b27576ff63521df1665ab11f936d",
+      "fetched_at": "2025-11-01T16:10:33.984879Z"
+    },
+    {
+      "id": 36,
+      "title": "Approximations of interface topological invariants",
+      "arxiv_id": "2112.02686",
+      "local_path": "data\\files_clean\\arxiv_2112.02686.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2112.02686.pdf",
+      "file_size": 2755756,
+      "sha256": "ffe92590a33de3484a5d77288f8f76834ad346b4605e37082eda72eb99da22ea",
+      "fetched_at": "2025-11-01T16:10:36.903584Z"
+    },
+    {
+      "id": 37,
+      "title": "Full background decomposition of the CONUS experiment",
+      "arxiv_id": "2112.09585",
+      "local_path": "data\\files_clean\\arxiv_2112.09585.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2112.09585.pdf",
+      "file_size": 6361899,
+      "sha256": "d7fb0ff08cbfdcb0397361f6a444ba4f58e1fd5092687e8a6b1d560ed30af80b",
+      "fetched_at": "2025-11-01T16:10:45.291748Z"
+    },
+    {
+      "id": 38,
+      "title": "On the Kirchhoff equation with prescribed mass and general nonlinearities",
+      "arxiv_id": "2112.10293",
+      "local_path": "data\\files_clean\\arxiv_2112.10293.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2112.10293.pdf",
+      "file_size": 1032168,
+      "sha256": "29bf82541b6d2f977863b0725440df307d3cfb4a34fae5c6a6544166dd42f264",
+      "fetched_at": "2025-11-01T16:10:47.813731Z"
+    },
+    {
+      "id": 39,
+      "title": "Quantitative bounds for critically bounded solutions to the three-dimensional Navier-Stokes equations in Lorentz spaces",
+      "arxiv_id": "2201.04656",
+      "local_path": "data\\files_clean\\arxiv_2201.04656.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2201.04656.pdf",
+      "file_size": 334984,
+      "sha256": "eaa9b514afbbdea8bad6dd53139cf6ad7718036f5d1f78c695b94989e82c5956",
+      "fetched_at": "2025-11-01T16:10:49.584333Z"
+    },
+    {
+      "id": 40,
+      "title": "Grid-Forming and Spatially Distributed Control Design of Dynamic Virtual Power Plants",
+      "arxiv_id": "2202.02057",
+      "local_path": "data\\files_clean\\arxiv_2202.02057.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2202.02057.pdf",
+      "file_size": 10254237,
+      "sha256": "8b9de9fe364a6ceadfddfff94c0bfa0ac28cd8eb83a58894faeb46a12ec433d7",
+      "fetched_at": "2025-11-01T16:10:56.652738Z"
+    },
+    {
+      "id": 41,
+      "title": "Detectability of the gravitational-wave background produced by magnetar giant flares",
+      "arxiv_id": "2203.07905",
+      "local_path": "data\\files_clean\\arxiv_2203.07905.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2203.07905.pdf",
+      "file_size": 399109,
+      "sha256": "bff453f339ac370ed48462706c4644f607bd3bd4c2318c6a68229c0c3b963092",
+      "fetched_at": "2025-11-01T16:10:58.727023Z"
+    },
+    {
+      "id": 42,
+      "title": "Exploring Oversampling in RBF Least-Squares Collocation Method of Lines for Surface Diffusion",
+      "arxiv_id": "2203.08579",
+      "local_path": "data\\files_clean\\arxiv_2203.08579.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2203.08579.pdf",
+      "file_size": 3158344,
+      "sha256": "59ea5e49936c4ecd44b97022cdcbd950887be3d8b33d660fbf026186f4afcdd9",
+      "fetched_at": "2025-11-01T16:11:01.937757Z"
+    },
+    {
+      "id": 43,
+      "title": "A simulation-free seismic survey design by maximizing the spectral gap",
+      "arxiv_id": "2204.02801",
+      "local_path": "data\\files_clean\\arxiv_2204.02801.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2204.02801.pdf",
+      "file_size": 3040009,
+      "sha256": "0b06ecf41bd5193d8e5535e7ca546e033468b40e4d09342cf2978adacdfee64e",
+      "fetched_at": "2025-11-01T16:11:05.814124Z"
+    },
+    {
+      "id": 44,
+      "title": "Identification of radiopure tungsten for low background applications",
+      "arxiv_id": "2204.03540",
+      "local_path": "data\\files_clean\\arxiv_2204.03540.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2204.03540.pdf",
+      "file_size": 7022607,
+      "sha256": "4cc8248936bfa212dfd4a5fb354b5c33a8aebb9e22a9edf665d47bf2f8d06c75",
+      "fetched_at": "2025-11-01T16:11:10.294196Z"
+    },
+    {
+      "id": 45,
+      "title": "Local convergence rates of the nonparametric least squares estimator with applications to transfer learning",
+      "arxiv_id": "2204.05003",
+      "local_path": "data\\files_clean\\arxiv_2204.05003.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2204.05003.pdf",
+      "file_size": 733950,
+      "sha256": "c9af891a7cc1dc11e817d6c326a5aa6813dc76e5003d57c05932b853b1337b64",
+      "fetched_at": "2025-11-01T16:11:12.149380Z"
+    },
+    {
+      "id": 46,
+      "title": "Accelerated Magnonic Motional Cooling with Deep Reinforcement Learning",
+      "arxiv_id": "2204.07710",
+      "local_path": "data\\files_clean\\arxiv_2204.07710.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2204.07710.pdf",
+      "file_size": 4354537,
+      "sha256": "5bf0ff90320948ca57a9cc1f1b65e32eb59179cc0dca445e18101539a839c36b",
+      "fetched_at": "2025-11-01T16:11:18.202931Z"
+    },
+    {
+      "id": 47,
+      "title": "Boosting Pruned Networks with Linear Over-parameterization",
+      "arxiv_id": "2204.11444",
+      "local_path": "data\\files_clean\\arxiv_2204.11444.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2204.11444.pdf",
+      "file_size": 470923,
+      "sha256": "113e8a395f454ebf608ad6136947fa75ff7bf6cec1dd58b2d31bc416c04d869c",
+      "fetched_at": "2025-11-01T16:11:20.152229Z"
+    },
+    {
+      "id": 48,
+      "title": "Microlocal Theory of Legendrian Links and Cluster Algebras",
+      "arxiv_id": "2204.13244",
+      "local_path": "data\\files_clean\\arxiv_2204.13244.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2204.13244.pdf",
+      "file_size": 1357599,
+      "sha256": "53ae26dc5558300b947f34eb8c47d4f3a4b4eaa5e3401dde9dd1b730bcfefe45",
+      "fetched_at": "2025-11-01T16:11:22.478782Z"
+    },
+    {
+      "id": 49,
+      "title": "Gaussian fluctuations of a nonlinear stochastic heat equation in dimension two",
+      "arxiv_id": "2204.13866",
+      "local_path": "data\\files_clean\\arxiv_2204.13866.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2204.13866.pdf",
+      "file_size": 622631,
+      "sha256": "f5b8c26e299611cb9a3f06164fdd6c335834ccd0ccd502e1c6a3e6499e15f6d1",
+      "fetched_at": "2025-11-01T16:11:24.736791Z"
+    },
+    {
+      "id": 50,
+      "title": "Endpoint eigenfunction bounds for the Hermite operator",
+      "arxiv_id": "2205.03036",
+      "local_path": "data\\files_clean\\arxiv_2205.03036.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2205.03036.pdf",
+      "file_size": 491887,
+      "sha256": "abf1ad4ea3c83940e1933dd8bdf4d7ec37493c68924c4a6c04973f1d412316cf",
+      "fetched_at": "2025-11-01T16:11:26.991072Z"
+    },
+    {
+      "id": 51,
+      "title": "Translating Hanja Historical Documents to Contemporary Korean and English",
+      "arxiv_id": "2205.10019",
+      "local_path": "data\\files_clean\\arxiv_2205.10019.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2205.10019.pdf",
+      "file_size": 2536724,
+      "sha256": "8ef91bbe7492da53d6ef584c14bf86bb21efe937437d07c03c44582c31424ebb",
+      "fetched_at": "2025-11-01T16:11:30.336471Z"
+    },
+    {
+      "id": 52,
+      "title": "Cross-lingual Lifelong Learning",
+      "arxiv_id": "2205.11152",
+      "local_path": "data\\files_clean\\arxiv_2205.11152.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2205.11152.pdf",
+      "file_size": 2916526,
+      "sha256": "755401848c72418be46a63c948d50b8698563ea5f9ef621e3f19e6d849eed24c",
+      "fetched_at": "2025-11-01T16:11:33.558426Z"
+    },
+    {
+      "id": 53,
+      "title": "DOGE-Train: Discrete Optimization on GPU with End-to-end Training",
+      "arxiv_id": "2205.11638",
+      "local_path": "data\\files_clean\\arxiv_2205.11638.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2205.11638.pdf",
+      "file_size": 560189,
+      "sha256": "4ae3b10868ac01066f33b8fe5fbb392f778a6f3c484aefb149d65c857ca576d0",
+      "fetched_at": "2025-11-01T16:11:35.716096Z"
+    },
+    {
+      "id": 54,
+      "title": "Tricritical behavior in a neural model with excitatory and inhibitory units",
+      "arxiv_id": "2207.02320",
+      "local_path": "data\\files_clean\\arxiv_2207.02320.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2207.02320.pdf",
+      "file_size": 2147427,
+      "sha256": "e02975dd6f29b1feed643333b5a83eea43d357367caeab5b6378ca1fe30b561e",
+      "fetched_at": "2025-11-01T16:11:38.286795Z"
+    },
+    {
+      "id": 55,
+      "title": "On The Mutations Loops of Valued Quivers",
+      "arxiv_id": "2207.03142",
+      "local_path": "data\\files_clean\\arxiv_2207.03142.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2207.03142.pdf",
+      "file_size": 216072,
+      "sha256": "d97f43a427d9484488f1cb66e095c15bc279bb89b374772358d1f6232e69b0b1",
+      "fetched_at": "2025-11-01T16:11:39.979409Z"
+    },
+    {
+      "id": 56,
+      "title": "Regular directed path and Moore flow",
+      "arxiv_id": "2208.00918",
+      "local_path": "data\\files_clean\\arxiv_2208.00918.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2208.00918.pdf",
+      "file_size": 461195,
+      "sha256": "e8bafd6f15447cfc85d50ed301be33a06824814a1f1e8d3cc67b0c57a1568baf",
+      "fetched_at": "2025-11-01T16:11:42.274402Z"
+    },
+    {
+      "id": 57,
+      "title": "Distributionally Robust Model-Based Offline Reinforcement Learning with Near-Optimal Sample Complexity",
+      "arxiv_id": "2208.05767",
+      "local_path": "data\\files_clean\\arxiv_2208.05767.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2208.05767.pdf",
+      "file_size": 1433838,
+      "sha256": "563d6771a1b5b3d555c0240aad645ea563fc36a75d56a93a98492d91ce7b4201",
+      "fetched_at": "2025-11-01T16:11:44.675441Z"
+    },
+    {
+      "id": 58,
+      "title": "The relative class number one problem for function fields, III",
+      "arxiv_id": "2208.11277",
+      "local_path": "data\\files_clean\\arxiv_2208.11277.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2208.11277.pdf",
+      "file_size": 273547,
+      "sha256": "3f9933692281f6740b0f5f98e274b99cd078f84a78742b33090bb426e6eb2d3b",
+      "fetched_at": "2025-11-01T16:11:46.849244Z"
+    },
+    {
+      "id": 59,
+      "title": "Bring's curve: Old and New",
+      "arxiv_id": "2208.13692",
+      "local_path": "data\\files_clean\\arxiv_2208.13692.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2208.13692.pdf",
+      "file_size": 873491,
+      "sha256": "567eff9fb44ef3e59cc9ebed6de32806be91a756cffb152a0448e747346580d5",
+      "fetched_at": "2025-11-01T16:11:48.812368Z"
+    },
+    {
+      "id": 60,
+      "title": "Hurwitz numbers for reflection groups II: Parabolic quasi-Coxeter elements",
+      "arxiv_id": "2209.00066",
+      "local_path": "data\\files_clean\\arxiv_2209.00066.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2209.00066.pdf",
+      "file_size": 934887,
+      "sha256": "834ab5f12618f904e1b0d91324b29ecfc82389012e03aad759c4b9f724cb7e99",
+      "fetched_at": "2025-11-01T16:11:51.039517Z"
+    },
+    {
+      "id": 61,
+      "title": "An extended variational formula for the Bismut-Cheeger eta form and its applications",
+      "arxiv_id": "2209.00502",
+      "local_path": "data\\files_clean\\arxiv_2209.00502.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2209.00502.pdf",
+      "file_size": 328661,
+      "sha256": "7104a8598bd86ccd274c2a138ea071d2470c9fb69af1ef41c48be78916c9657f",
+      "fetched_at": "2025-11-01T16:11:52.784119Z"
+    },
+    {
+      "id": 62,
+      "title": "Stability of the spectral gap and ground state indistinguishability for a decorated AKLT model",
+      "arxiv_id": "2209.01141",
+      "local_path": "data\\files_clean\\arxiv_2209.01141.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2209.01141.pdf",
+      "file_size": 495059,
+      "sha256": "592a22a1aaaaf8b1d730f824d936568b168ce3ba35a24dee608711d5bf0960bb",
+      "fetched_at": "2025-11-01T16:11:55.345110Z"
+    },
+    {
+      "id": 63,
+      "title": "CoreDeep: Improving Crack Detection Algorithms Using Width Stochasticity",
+      "arxiv_id": "2209.04648",
+      "local_path": "data\\files_clean\\arxiv_2209.04648.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2209.04648.pdf",
+      "file_size": 806219,
+      "sha256": "e0735b48df43416ab9bc3b6043b5e8e51bac09337c2fb9a994218251f8215747",
+      "fetched_at": "2025-11-01T16:11:57.356601Z"
+    },
+    {
+      "id": 64,
+      "title": "Self-dual Maps III: projective links",
+      "arxiv_id": "2210.04053",
+      "local_path": "data\\files_clean\\arxiv_2210.04053.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2210.04053.pdf",
+      "file_size": 999260,
+      "sha256": "07c6e1eb168143ecc26cab76bc157aa273d03c66acc8ec7aa2aac30781d1bcd8",
+      "fetched_at": "2025-11-01T16:11:59.500205Z"
+    },
+    {
+      "id": 65,
+      "title": "Time-resolved Hanbury Brown-Twiss interferometry of on-chip biphoton frequency combs using Vernier phase modulation",
+      "arxiv_id": "2210.05620",
+      "local_path": "data\\files_clean\\arxiv_2210.05620.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2210.05620.pdf",
+      "file_size": 1210351,
+      "sha256": "3a83bca47a098407b323ef668ae530e6020fbd46d37230b5cedac4c15b0fc806",
+      "fetched_at": "2025-11-01T16:12:02.454681Z"
+    },
+    {
+      "id": 66,
+      "title": "The Mirror-Prox Sliding Method for Non-smooth decentralized saddle-point problems",
+      "arxiv_id": "2210.06086",
+      "local_path": "data\\files_clean\\arxiv_2210.06086.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2210.06086.pdf",
+      "file_size": 270677,
+      "sha256": "5e099e4e00bd1e0e1a6f96397f34ec398b7ccf3c7c7d94a259180489ff41e906",
+      "fetched_at": "2025-11-01T16:12:04.741153Z"
+    },
+    {
+      "id": 67,
+      "title": "Coupled dynamics of endemic disease transmission and gradual awareness diffusion in multiplex networks",
+      "arxiv_id": "2210.11819",
+      "local_path": "data\\files_clean\\arxiv_2210.11819.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2210.11819.pdf",
+      "file_size": 916787,
+      "sha256": "c0c1796b368036e443fa13ed3769c1ae3aff7c742ca64bc194fe371869ed555f",
+      "fetched_at": "2025-11-01T16:12:06.848904Z"
+    },
+    {
+      "id": 68,
+      "title": "Analysis of Estimating the Bayes Rule for Gaussian Mixture Models with a Specified Missing-Data Mechanism",
+      "arxiv_id": "2210.13785",
+      "local_path": "data\\files_clean\\arxiv_2210.13785.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2210.13785.pdf",
+      "file_size": 2416737,
+      "sha256": "d688a2e5120e3ddce9b8e95084d9136ec7fb046fbe7b9d53b788f62f2e3a08a3",
+      "fetched_at": "2025-11-01T16:12:09.126934Z"
+    },
+    {
+      "id": 69,
+      "title": "Neutrinos from the Brightest Gamma-Ray Burst?",
+      "arxiv_id": "2210.15625",
+      "local_path": "data\\files_clean\\arxiv_2210.15625.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2210.15625.pdf",
+      "file_size": 4887250,
+      "sha256": "8c500e6d081344c11ffa002e93a21f1470f6170b480809488622f439d8615708",
+      "fetched_at": "2025-11-01T16:12:12.200134Z"
+    },
+    {
+      "id": 70,
+      "title": "Solving Math Word Problems via Cooperative Reasoning induced Language Models",
+      "arxiv_id": "2210.16257",
+      "local_path": "data\\files_clean\\arxiv_2210.16257.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2210.16257.pdf",
+      "file_size": 678672,
+      "sha256": "6ba730ee138e4899a28598bd43d05da0f26e161ab464ba2803c8e9e714685aa8",
+      "fetched_at": "2025-11-01T16:12:13.969909Z"
+    },
+    {
+      "id": 71,
+      "title": "Signal-to-noise ratio aware minimaxity and higher-order asymptotics",
+      "arxiv_id": "2211.05954",
+      "local_path": "data\\files_clean\\arxiv_2211.05954.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2211.05954.pdf",
+      "file_size": 1363556,
+      "sha256": "2a646d27e7a64b540940258d57518462e1f2935557dda4e414235245100bf5b9",
+      "fetched_at": "2025-11-01T16:12:16.131902Z"
+    },
+    {
+      "id": 72,
+      "title": "On the nature of overcharging and charge inversion in electrical double layers",
+      "arxiv_id": "2212.00141",
+      "local_path": "data\\files_clean\\arxiv_2212.00141.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2212.00141.pdf",
+      "file_size": 28683577,
+      "sha256": "15645ccd9fb3ead32de3654715bb18f76844d75410cd15b13ef546a263d823c8",
+      "fetched_at": "2025-11-01T16:12:27.003289Z"
+    },
+    {
+      "id": 73,
+      "title": "Explainability as statistical inference",
+      "arxiv_id": "2212.03131",
+      "local_path": "data\\files_clean\\arxiv_2212.03131.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2212.03131.pdf",
+      "file_size": 1648854,
+      "sha256": "16b355f021e21f6eb8642b032caa0d1e2b7ac3b506e272a13e107cc44e77a28d",
+      "fetched_at": "2025-11-01T16:12:29.113480Z"
+    },
+    {
+      "id": 74,
+      "title": "FAIR AI Models in High Energy Physics",
+      "arxiv_id": "2212.05081",
+      "local_path": "data\\files_clean\\arxiv_2212.05081.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2212.05081.pdf",
+      "file_size": 1659734,
+      "sha256": "8952acb2a4342809f6e7e331213f53b0603b727ec7a6ce9fd6662ab0919d3746",
+      "fetched_at": "2025-11-01T16:12:31.634092Z"
+    },
+    {
+      "id": 75,
+      "title": "Optimizing Prompts for Text-to-Image Generation",
+      "arxiv_id": "2212.09611",
+      "local_path": "data\\files_clean\\arxiv_2212.09611.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2212.09611.pdf",
+      "file_size": 4195649,
+      "sha256": "a4e633220327e643376537230cc302bae3164ca7fc8ad40da7e5657b80f0873a",
+      "fetched_at": "2025-11-01T16:12:36.071041Z"
+    },
+    {
+      "id": 76,
+      "title": "A Projected Upper Bound for Mining High Utility Patterns from Interval-Based Event Sequences",
+      "arxiv_id": "2212.11364",
+      "local_path": "data\\files_clean\\arxiv_2212.11364.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2212.11364.pdf",
+      "file_size": 379991,
+      "sha256": "1e0d98a8ac45188192c57eb42d0b56966e3db634315d14d7b4518c5f24b99705",
+      "fetched_at": "2025-11-01T16:12:38.096494Z"
+    },
+    {
+      "id": 77,
+      "title": "Topological information device operating at the Landauer limit",
+      "arxiv_id": "2212.14862",
+      "local_path": "data\\files_clean\\arxiv_2212.14862.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2212.14862.pdf",
+      "file_size": 631753,
+      "sha256": "307a5cf8aa8d2ea94f4dee2174964ef6aaca3bd79f027ac5731df1bd9ceb1555",
+      "fetched_at": "2025-11-01T16:12:40.181212Z"
+    },
+    {
+      "id": 78,
+      "title": "Stability of Hardy-Littlewood-Sobolev inequalities with explicit lower bounds",
+      "arxiv_id": "2301.04097",
+      "local_path": "data\\files_clean\\arxiv_2301.04097.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2301.04097.pdf",
+      "file_size": 300353,
+      "sha256": "1e5b906ca5dba9f37c925be92ff69dd3feb5b3725e4da32e84dcaba4a5a593eb",
+      "fetched_at": "2025-11-01T16:12:42.297165Z"
+    },
+    {
+      "id": 79,
+      "title": "Miura-reciprocal transformations and localizable Poisson pencils",
+      "arxiv_id": "2301.04475",
+      "local_path": "data\\files_clean\\arxiv_2301.04475.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2301.04475.pdf",
+      "file_size": 399686,
+      "sha256": "6ef7fdda9019dc50d3879502be9e6e69eaec24f0b2bfe55ff514ffe980e277ac",
+      "fetched_at": "2025-11-01T16:12:44.353358Z"
+    },
+    {
+      "id": 80,
+      "title": "Deformation measurement of a soil mixing retaining wall using terrestrial laser scanning",
+      "arxiv_id": "2301.04811",
+      "local_path": "data\\files_clean\\arxiv_2301.04811.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2301.04811.pdf",
+      "file_size": 1211885,
+      "sha256": "78ee52d88a6d7df05572098589b72f04a762ba2b5c1e29daf80068b3d92270c3",
+      "fetched_at": "2025-11-01T16:12:46.347182Z"
+    },
+    {
+      "id": 81,
+      "title": "Robustness of flat bands on the perturbed Kagome and the perturbed Super-Kagome lattice",
+      "arxiv_id": "2301.05076",
+      "local_path": "data\\files_clean\\arxiv_2301.05076.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2301.05076.pdf",
+      "file_size": 282947,
+      "sha256": "fc62ed70624f0323f471f0e77e393541ec2f02788e80378a575c82f4de833690",
+      "fetched_at": "2025-11-01T16:12:48.398542Z"
+    },
+    {
+      "id": 82,
+      "title": "A motivic construction of the de Rham-Witt complex",
+      "arxiv_id": "2301.05846",
+      "local_path": "data\\files_clean\\arxiv_2301.05846.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2301.05846.pdf",
+      "file_size": 431281,
+      "sha256": "dabe38cc6e53c2155aa27de5609231b07fb0c9af9c455980ac8dc8d8be0e4487",
+      "fetched_at": "2025-11-01T16:12:51.573895Z"
+    },
+    {
+      "id": 83,
+      "title": "Self-Sustained Oscillations in a Low Viscosity Round Jet",
+      "arxiv_id": "2301.13593",
+      "local_path": "data\\files_clean\\arxiv_2301.13593.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2301.13593.pdf",
+      "file_size": 7183863,
+      "sha256": "de9dd5e1405fc69a8bdc5d5f37eda2c2c45330aae008e53a7637eee7bf252212",
+      "fetched_at": "2025-11-01T16:12:55.399894Z"
+    },
+    {
+      "id": 84,
+      "title": "Optimized time-lapse acquisition design via spectral gap ratio minimization",
+      "arxiv_id": "2302.01534",
+      "local_path": "data\\files_clean\\arxiv_2302.01534.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2302.01534.pdf",
+      "file_size": 2803477,
+      "sha256": "236e58c995e22a8071d173a478ff36ec2bda7f5e7e5487bba652d800a21ce0e5",
+      "fetched_at": "2025-11-01T16:12:58.691225Z"
+    },
+    {
+      "id": 85,
+      "title": "Mesoscopic averaging of the two-dimensional KPZ equation",
+      "arxiv_id": "2302.06689",
+      "local_path": "data\\files_clean\\arxiv_2302.06689.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2302.06689.pdf",
+      "file_size": 675762,
+      "sha256": "b1023ae56a51f4e1b9a92ce05c3c33cc0224304596b64450ef4c5ef6664491b6",
+      "fetched_at": "2025-11-01T16:13:01.153923Z"
+    },
+    {
+      "id": 86,
+      "title": "Bounding entropy for one-parameter diagonal flows on $SL_{d}(\\mathbb{R})/SL_{d}(\\mathbb{Z})$ using linear functionals",
+      "arxiv_id": "2302.07122",
+      "local_path": "data\\files_clean\\arxiv_2302.07122.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2302.07122.pdf",
+      "file_size": 620620,
+      "sha256": "20984c32231f0579f42b0ed6448ec204156ab40a55d7e92ea134c9486da9dcf2",
+      "fetched_at": "2025-11-01T16:13:03.365652Z"
+    },
+    {
+      "id": 87,
+      "title": "MultiScale Probability Map guided Index Pooling with Attention-based learning for Road and Building Segmentation",
+      "arxiv_id": "2302.09411",
+      "local_path": "data\\files_clean\\arxiv_2302.09411.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2302.09411.pdf",
+      "file_size": 2475613,
+      "sha256": "4f7b457b1856d249f25d9ba73ccef6390324562830bcbb599bfc873063027f0d",
+      "fetched_at": "2025-11-01T16:13:06.841309Z"
+    },
+    {
+      "id": 88,
+      "title": "Distributional Offline Policy Evaluation with Predictive Error Guarantees",
+      "arxiv_id": "2302.09456",
+      "local_path": "data\\files_clean\\arxiv_2302.09456.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2302.09456.pdf",
+      "file_size": 1409808,
+      "sha256": "8bfad1ac0b2905a8541815651a94973c4b945535df57a7f5ddf6e42cf228f469",
+      "fetched_at": "2025-11-01T16:13:09.418880Z"
+    },
+    {
+      "id": 89,
+      "title": "Real-World Choreographic Programming: Full-Duplex Asynchrony and Interoperability",
+      "arxiv_id": "2303.03983",
+      "local_path": "data\\files_clean\\arxiv_2303.03983.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2303.03983.pdf",
+      "file_size": 635953,
+      "sha256": "b32a9d10b8caa6baa414f43d225b88536c4df0fa5f8c753e2290e9ec84b84a74",
+      "fetched_at": "2025-11-01T16:13:11.449120Z"
+    },
+    {
+      "id": 91,
+      "title": "Chaotic dynamics of off-equatorial orbits around pseudo-Newtonian compact objects with dipolar halos",
+      "arxiv_id": "2303.14740",
+      "local_path": "data\\files_clean\\arxiv_2303.14740.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2303.14740.pdf",
+      "file_size": 21129506,
+      "sha256": "0c64c6ae0c0a8223d39b9ce99bfed3a3bb7ff834ee94c2facaf6b05ac786120f",
+      "fetched_at": "2025-11-01T16:13:19.248606Z"
+    },
+    {
+      "id": 92,
+      "title": "Sources of torsion in Poincare gauge theory",
+      "arxiv_id": "2303.14921",
+      "local_path": "data\\files_clean\\arxiv_2303.14921.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2303.14921.pdf",
+      "file_size": 357915,
+      "sha256": "ba9d166188ac981f6e511ebc9103134adb02a5965bff64492b9f7dd9addff0b3",
+      "fetched_at": "2025-11-01T16:13:21.371002Z"
+    },
+    {
+      "id": 93,
+      "title": "Device Image-IV Mapping using Variational Autoencoder for Inverse Design and Forward Prediction",
+      "arxiv_id": "2304.00738",
+      "local_path": "data\\files_clean\\arxiv_2304.00738.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2304.00738.pdf",
+      "file_size": 1699309,
+      "sha256": "2839f87b2914a676b46ac7908c63316c4d2c3242bc2a0e6a7f4e49046956e527",
+      "fetched_at": "2025-11-01T16:13:24.085160Z"
+    },
+    {
+      "id": 94,
+      "title": "Generalizing the intention-to-treat effect of an active control against placebo from historical placebo-controlled trials to an active-controlled trial: A case study of the efficacy of daily oral TDF/FTC in the HPTN 084 study",
+      "arxiv_id": "2304.03476",
+      "local_path": "data\\files_clean\\arxiv_2304.03476.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2304.03476.pdf",
+      "file_size": 585638,
+      "sha256": "92ddedc41bc95f7ddc4369267296f5bdf8e2285e40a30dd8bb4baa6e21dd7530",
+      "fetched_at": "2025-11-01T16:13:26.244144Z"
+    },
+    {
+      "id": 95,
+      "title": "Weierstrass Bridges",
+      "arxiv_id": "2304.04944",
+      "local_path": "data\\files_clean\\arxiv_2304.04944.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2304.04944.pdf",
+      "file_size": 4594778,
+      "sha256": "4049028fd72f7c4cdd6a1df03f8b5c8bf3427b8dab16d517924f75c40a269c29",
+      "fetched_at": "2025-11-01T16:13:29.453806Z"
+    },
+    {
+      "id": 96,
+      "title": "Paired operators and paired kernels",
+      "arxiv_id": "2304.07252",
+      "local_path": "data\\files_clean\\arxiv_2304.07252.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2304.07252.pdf",
+      "file_size": 172557,
+      "sha256": "089629c901f79d994551fc66c89f96b672df296084e5ab48f839f7583fae7ae1",
+      "fetched_at": "2025-11-01T16:13:31.441184Z"
+    },
+    {
+      "id": 97,
+      "title": "Identities for vacillating tableaux via growth diagrams",
+      "arxiv_id": "2304.07657",
+      "local_path": "data\\files_clean\\arxiv_2304.07657.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2304.07657.pdf",
+      "file_size": 228165,
+      "sha256": "b87045017ee64924f03f0932c017891d10d4abb4da157056bd704fa30c67859b",
+      "fetched_at": "2025-11-01T16:13:33.495151Z"
+    },
+    {
+      "id": 98,
+      "title": "Quantum ergodicity on the Bruhat-Tits building for $\\text{PGL}(3, F)$ in the Benjamini-Schramm limit",
+      "arxiv_id": "2304.08641",
+      "local_path": "data\\files_clean\\arxiv_2304.08641.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2304.08641.pdf",
+      "file_size": 882233,
+      "sha256": "3a66c7dac18ea3c270b8a65a26d46782ab3a64eb8996971cf8f53e9f9f64dc54",
+      "fetched_at": "2025-11-01T16:13:35.521052Z"
+    },
+    {
+      "id": 99,
+      "title": "Edge-selective extremal damping from topological heritage of dissipative Chern insulators",
+      "arxiv_id": "2304.09040",
+      "local_path": "data\\files_clean\\arxiv_2304.09040.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2304.09040.pdf",
+      "file_size": 7268958,
+      "sha256": "7bb803c801f5abc5a692e29c983320cb471045e142b48044ca81731a50273322",
+      "fetched_at": "2025-11-01T16:13:40.147606Z"
+    },
+    {
+      "id": 100,
+      "title": "Securing Neural Networks with Knapsack Optimization",
+      "arxiv_id": "2304.10442",
+      "local_path": "data\\files_clean\\arxiv_2304.10442.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2304.10442.pdf",
+      "file_size": 437532,
+      "sha256": "7ba0d6045841e225aedadd94578c2c590cb717bb2bba2e9242824a4846d6b268",
+      "fetched_at": "2025-11-01T16:13:42.112912Z"
+    },
+    {
+      "id": 101,
+      "title": "p-DG cyclotomic nilHecke algebras",
+      "arxiv_id": "1711.07159",
+      "local_path": "data\\files_clean\\arxiv_1711.07159.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1711.07159.pdf",
+      "file_size": 830320,
+      "sha256": "57b39b1f183b3177d720637f93d2c97330ccd0c9aa2d979e5928af252156cd4d",
+      "fetched_at": "2025-11-01T16:13:44.589632Z"
+    },
+    {
+      "id": 102,
+      "title": "p-DG cyclotomic nilHecke algebras II",
+      "arxiv_id": "1811.04372",
+      "local_path": "data\\files_clean\\arxiv_1811.04372.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1811.04372.pdf",
+      "file_size": 971119,
+      "sha256": "7672febe2f5dbff2b8e8c5434e3e0d40450a1d82c4dce461393ed7e510e163dc",
+      "fetched_at": "2025-11-01T16:13:46.833107Z"
+    },
+    {
+      "id": 103,
+      "title": "Algebras defined by Lyndon words and Artin-Schelter regularity",
+      "arxiv_id": "1905.11281",
+      "local_path": "data\\files_clean\\arxiv_1905.11281.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1905.11281.pdf",
+      "file_size": 629424,
+      "sha256": "bf7f3797e6c8e9088bfdbe3e01e11f62c92c8192a3fe7449b698cc9386f7b045",
+      "fetched_at": "2025-11-01T16:13:49.002192Z"
+    },
+    {
+      "id": 104,
+      "title": "Singularities of 1/2 Calabi-Yau 4-folds and classification scheme for gauge groups in four-dimensional F-theory",
+      "arxiv_id": "2005.08802",
+      "local_path": "data\\files_clean\\arxiv_2005.08802.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2005.08802.pdf",
+      "file_size": 352658,
+      "sha256": "052a2dbd5e2c7e33296b49f292489487279ad6566df6eb3d949c5d5b544a3db1",
+      "fetched_at": "2025-11-01T16:13:51.414092Z"
+    },
+    {
+      "id": 105,
+      "title": "Logarithmic Donaldson-Thomas theory",
+      "arxiv_id": "2006.06603",
+      "local_path": "data\\files_clean\\arxiv_2006.06603.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2006.06603.pdf",
+      "file_size": 719196,
+      "sha256": "c52b0d13da6a0a5da7c6ead901aa51d88d2446e11872cf250543cc3566a01cb7",
+      "fetched_at": "2025-11-01T16:13:53.663605Z"
+    },
+    {
+      "id": 106,
+      "title": "Quadratic algebras associated with exterior 3-forms",
+      "arxiv_id": "2010.10091",
+      "local_path": "data\\files_clean\\arxiv_2010.10091.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2010.10091.pdf",
+      "file_size": 282534,
+      "sha256": "a8466dafdbfeca4fbf03ab37f3d5fc6fa61665d274add25c6632e4b9ca5cc490",
+      "fetched_at": "2025-11-01T16:13:55.546434Z"
+    },
+    {
+      "id": 107,
+      "title": "The 2-Deligne Tensor Product",
+      "arxiv_id": "2103.16880",
+      "local_path": "data\\files_clean\\arxiv_2103.16880.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2103.16880.pdf",
+      "file_size": 304858,
+      "sha256": "11897acf398d2e1384ec4e2b82dac7dec1f7f847fe576d42643cfe0797bd16de",
+      "fetched_at": "2025-11-01T16:13:57.312165Z"
+    },
+    {
+      "id": 108,
+      "title": "Fast Regression of the Tritium Breeding Ratio in Fusion Reactors",
+      "arxiv_id": "2104.04026",
+      "local_path": "data\\files_clean\\arxiv_2104.04026.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2104.04026.pdf",
+      "file_size": 4784946,
+      "sha256": "2eb60edb380e07ae46e05b6a75d8c488fb05a65d825042123d2c67b766e60faa",
+      "fetched_at": "2025-11-01T16:14:02.171968Z"
+    },
+    {
+      "id": 109,
+      "title": "Variational Quantum and Quantum-Inspired Clustering",
+      "arxiv_id": "2206.09893",
+      "local_path": "data\\files_clean\\arxiv_2206.09893.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2206.09893.pdf",
+      "file_size": 2999000,
+      "sha256": "8f49f848d73a04093d4f6b18fa5fa640dc19ff3ce7e221515dce333f636c5d6b",
+      "fetched_at": "2025-11-01T16:14:04.710155Z"
+    },
+    {
+      "id": 110,
+      "title": "Macroscopic noise amplification by asymmetric dyads in non-Hermitian optical systems for generative diffusion models",
+      "arxiv_id": "2206.12200",
+      "local_path": "data\\files_clean\\arxiv_2206.12200.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2206.12200.pdf",
+      "file_size": 1918110,
+      "sha256": "322ef536edcac275972c3c3fcf66c4a028c16a825894b720ed74f946eb09cb95",
+      "fetched_at": "2025-11-01T16:14:07.117486Z"
+    },
+    {
+      "id": 111,
+      "title": "On a formation of singularities of solutions to soliton equations represented by L,A,B-triples",
+      "arxiv_id": "2207.04707",
+      "local_path": "data\\files_clean\\arxiv_2207.04707.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2207.04707.pdf",
+      "file_size": 150321,
+      "sha256": "65f573531a982f8f521959b7064db978f8869e491fdde9823b64c242a485195d",
+      "fetched_at": "2025-11-01T16:14:08.961103Z"
+    },
+    {
+      "id": 112,
+      "title": "Surfaces via spinors and soliton equations",
+      "arxiv_id": "2207.07856",
+      "local_path": "data\\files_clean\\arxiv_2207.07856.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2207.07856.pdf",
+      "file_size": 219953,
+      "sha256": "80575e22feb624d1640e6a726e387f8c79aab7c1836d24201c5a26a4bc77d70b",
+      "fetched_at": "2025-11-01T16:14:10.703275Z"
+    },
+    {
+      "id": 113,
+      "title": "Fracton Matter",
+      "arxiv_id": "2211.05130",
+      "local_path": "data\\files_clean\\arxiv_2211.05130.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2211.05130.pdf",
+      "file_size": 3121333,
+      "sha256": "2472f82a09e75838ac50311e03ad07006ca188dfe192a12eaa41dc6f48fb4a17",
+      "fetched_at": "2025-11-01T16:14:12.894244Z"
+    },
+    {
+      "id": 114,
+      "title": "Fault-tolerant Post-Selection for Low Overhead Magic State Preparation",
+      "arxiv_id": "2212.00813",
+      "local_path": "data\\files_clean\\arxiv_2212.00813.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2212.00813.pdf",
+      "file_size": 2271165,
+      "sha256": "c92b9343898175bfbd7118cab25e955882f4d2299cf359f90f6a896f466715f3",
+      "fetched_at": "2025-11-01T16:14:15.160590Z"
+    },
+    {
+      "id": 115,
+      "title": "A Distributed Block Chebyshev-Davidson Algorithm for Parallel Spectral Clustering",
+      "arxiv_id": "2212.04443",
+      "local_path": "data\\files_clean\\arxiv_2212.04443.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2212.04443.pdf",
+      "file_size": 1478126,
+      "sha256": "7bcc059f918920d56fe18fee98e4c80e35df365ec463d15aed5ee151d3782178",
+      "fetched_at": "2025-11-01T16:14:17.370151Z"
+    },
+    {
+      "id": 116,
+      "title": "Computers as Bad Social Actors: Dark Patterns and Anti-Patterns in Interfaces that Act Socially",
+      "arxiv_id": "2302.04720",
+      "local_path": "data\\files_clean\\arxiv_2302.04720.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2302.04720.pdf",
+      "file_size": 2929430,
+      "sha256": "ca3dbb7153624b251e471d0ff61ac84f8917c64cff68bc110b5ee784bde49c93",
+      "fetched_at": "2025-11-01T16:14:19.608521Z"
+    },
+    {
+      "id": 117,
+      "title": "On the Detection and Quantification of Nonlinearity via Statistics of the Gradients of a Black-Box Model",
+      "arxiv_id": "2302.07986",
+      "local_path": "data\\files_clean\\arxiv_2302.07986.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2302.07986.pdf",
+      "file_size": 226669,
+      "sha256": "382ad2756e9b3b85e2a32e5bb1e27db16c8e4593f3e75e63e8b89707a8685bfb",
+      "fetched_at": "2025-11-01T16:14:21.561888Z"
+    },
+    {
+      "id": 118,
+      "title": "Greedy routing optimisation in hyperbolic networks",
+      "arxiv_id": "2303.11456",
+      "local_path": "data\\files_clean\\arxiv_2303.11456.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2303.11456.pdf",
+      "file_size": 21648499,
+      "sha256": "0330e498ca5206059567aae4210e0e68b54f2abd93a94c3a5affae5574cbccd9",
+      "fetched_at": "2025-11-01T16:14:33.481770Z"
+    },
+    {
+      "id": 119,
+      "title": "MC-ViViT: Multi-branch Classifier-ViViT to detect Mild Cognitive Impairment in older adults using facial videos",
+      "arxiv_id": "2304.05292",
+      "local_path": "data\\files_clean\\arxiv_2304.05292.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2304.05292.pdf",
+      "file_size": 4540577,
+      "sha256": "e590b37d59faddccbf5c46133c29bc35aca69ebaf0bcb9f6740093c0d204318e",
+      "fetched_at": "2025-11-01T16:14:36.778284Z"
+    },
+    {
+      "id": 120,
+      "title": "Gauge choice for organizing infrared singularities in QCD",
+      "arxiv_id": "2304.11736",
+      "local_path": "data\\files_clean\\arxiv_2304.11736.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2304.11736.pdf",
+      "file_size": 714285,
+      "sha256": "f6721bca7fc8bd3f55123f9553e6485f27ad50ff40d95bdb585ebb0f698ab553",
+      "fetched_at": "2025-11-01T16:14:38.955958Z"
+    },
+    {
+      "id": 121,
+      "title": "Beam Delivery and Beamstrahlung Considerations for Ultra-High Energy Linear Colliders",
+      "arxiv_id": "2305.00573",
+      "local_path": "data\\files_clean\\arxiv_2305.00573.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2305.00573.pdf",
+      "file_size": 2079355,
+      "sha256": "247033e83baef1f6cdac735be82022d179914188e5337291bf94536ee552fd11",
+      "fetched_at": "2025-11-01T16:14:41.709960Z"
+    },
+    {
+      "id": 122,
+      "title": "Doping dependence of chiral superconductivity in near $45^\\circ$ twisted bilayer cuprates",
+      "arxiv_id": "2306.05485",
+      "local_path": "data\\files_clean\\arxiv_2306.05485.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2306.05485.pdf",
+      "file_size": 456887,
+      "sha256": "47ec358502f775ca9434972024d92d7265e03983176dbcfd7108b64ab3023345",
+      "fetched_at": "2025-11-01T16:14:43.508329Z"
+    },
+    {
+      "id": 123,
+      "title": "PoET: A generative model of protein families as sequences-of-sequences",
+      "arxiv_id": "2306.06156",
+      "local_path": "data\\files_clean\\arxiv_2306.06156.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2306.06156.pdf",
+      "file_size": 4731581,
+      "sha256": "faa07ed9209dc1ad0002b0e5ea755385092f7ddac825be0288271eaf53f1ca59",
+      "fetched_at": "2025-11-01T16:14:46.321900Z"
+    },
+    {
+      "id": 124,
+      "title": "Commuting SYK: a pseudo-holographic model",
+      "arxiv_id": "2306.14988",
+      "local_path": "data\\files_clean\\arxiv_2306.14988.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2306.14988.pdf",
+      "file_size": 2137302,
+      "sha256": "40cd329fe02c9acf74642c52104009bdfbf1487d4fa0a8d5eb2d2415ca936963",
+      "fetched_at": "2025-11-01T16:14:48.328862Z"
+    },
+    {
+      "id": 125,
+      "title": "Empirically Constraining the Spectra of Stellar Surface Features Using Time-Resolved Spectroscopy",
+      "arxiv_id": "2307.04785",
+      "local_path": "data\\files_clean\\arxiv_2307.04785.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2307.04785.pdf",
+      "file_size": 3321651,
+      "sha256": "86a84e69e3367e6548a3c2d15eec3b1ec6faaecd5551a7163aa6152ac1e7a041",
+      "fetched_at": "2025-11-01T16:14:51.341099Z"
+    },
+    {
+      "id": 126,
+      "title": "Towards a population-informed approach to the definition of data-driven models for structural dynamics",
+      "arxiv_id": "2307.09862",
+      "local_path": "data\\files_clean\\arxiv_2307.09862.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2307.09862.pdf",
+      "file_size": 3157484,
+      "sha256": "f1a7b049b2c5b94ba3b5501bd7c604fb3421fad83b212b1d7a2a3b1e8fb41fbd",
+      "fetched_at": "2025-11-01T16:14:54.292128Z"
+    },
+    {
+      "id": 127,
+      "title": "Exact Community Recovery in the Geometric SBM",
+      "arxiv_id": "2307.11196",
+      "local_path": "data\\files_clean\\arxiv_2307.11196.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2307.11196.pdf",
+      "file_size": 1465548,
+      "sha256": "8febced813ab1b7fbcd3003d74da6706a709eededae2ffac1e8dbd1fc88f98c3",
+      "fetched_at": "2025-11-01T16:14:56.513936Z"
+    },
+    {
+      "id": 128,
+      "title": "Demazure operators for double cosets",
+      "arxiv_id": "2307.15021",
+      "local_path": "data\\files_clean\\arxiv_2307.15021.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2307.15021.pdf",
+      "file_size": 333463,
+      "sha256": "19ecaa818f4ddc079cfa251d32ac7d4885643eef6791513d309d4f831d926c66",
+      "fetched_at": "2025-11-01T16:14:58.441908Z"
+    },
+    {
+      "id": 129,
+      "title": "Miss It Like Messi: Extracting Value from Off-Target Shots in Soccer",
+      "arxiv_id": "2308.01523",
+      "local_path": "data\\files_clean\\arxiv_2308.01523.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2308.01523.pdf",
+      "file_size": 657597,
+      "sha256": "426f17e29882f99c49172aac9c694c0da0295f12782dd71bbdfaec0633b4d879",
+      "fetched_at": "2025-11-01T16:15:00.534111Z"
+    },
+    {
+      "id": 130,
+      "title": "Comment on \"Reproducibility study of Monte Carlo simulations for nanoparticle dose enhancement and biological modeling of cell survival curves\" by Velten et al. [Biomed Phys Eng Express 2023;9:045004]",
+      "arxiv_id": "2308.06541",
+      "local_path": "data\\files_clean\\arxiv_2308.06541.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2308.06541.pdf",
+      "file_size": 2307169,
+      "sha256": "6f826922ecec065401299cb8df6ff0532c64903c10e81b588bbbc15b394e46f6",
+      "fetched_at": "2025-11-01T16:15:03.016910Z"
+    },
+    {
+      "id": 131,
+      "title": "Isosinglet vectorlike leptons at $e^+e^-$ colliders",
+      "arxiv_id": "2308.08386",
+      "local_path": "data\\files_clean\\arxiv_2308.08386.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2308.08386.pdf",
+      "file_size": 2861877,
+      "sha256": "0fa94697e5095126f5b4a9b1ad596dbaaed0cd4cf44d35a12993262f54da8112",
+      "fetched_at": "2025-11-01T16:15:05.938451Z"
+    },
+    {
+      "id": 132,
+      "title": "Evolution of eccentric stellar disks around supermassive black holes: the complex disk disruption dynamics and the milliparsec stars",
+      "arxiv_id": "2308.12344",
+      "local_path": "data\\files_clean\\arxiv_2308.12344.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2308.12344.pdf",
+      "file_size": 4410873,
+      "sha256": "3906f438ce4cecefd6cf5774cae797e6840b8c7429da6522fa7aeb3b00331285",
+      "fetched_at": "2025-11-01T16:15:08.375238Z"
+    },
+    {
+      "id": 133,
+      "title": "The Standard Model and the Lattice",
+      "arxiv_id": "2310.00061",
+      "local_path": "data\\files_clean\\arxiv_2310.00061.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2310.00061.pdf",
+      "file_size": 115116,
+      "sha256": "73097516373b573fa404130d74c74b2a6f4f9d37e6ea7517db7296a76252458f",
+      "fetched_at": "2025-11-01T16:15:10.077139Z"
+    },
+    {
+      "id": 134,
+      "title": "Track Lab: extensible data acquisition software for fast pixel detectors, online analysis and automation",
+      "arxiv_id": "2310.08974",
+      "local_path": "data\\files_clean\\arxiv_2310.08974.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2310.08974.pdf",
+      "file_size": 4214837,
+      "sha256": "6b0aa43e74084be2f875a19b5fe3068acfb23d165ad30e5ee1ee2abd5813006e",
+      "fetched_at": "2025-11-01T16:15:13.111806Z"
+    },
+    {
+      "id": 135,
+      "title": "A low cost, flexible atmospheric pressure plasma jet device with good antimicrobial efficiency",
+      "arxiv_id": "2310.20001",
+      "local_path": "data\\files_clean\\arxiv_2310.20001.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2310.20001.pdf",
+      "file_size": 15946501,
+      "sha256": "3a0618541da331c69f8f4af7d2af101dc3f853090e72ddde583342f6348bbdc2",
+      "fetched_at": "2025-11-01T16:15:22.363461Z"
+    },
+    {
+      "id": 136,
+      "title": "Analysis of the $Z_b(10650)$ state based on electromagnetic properties",
+      "arxiv_id": "2311.11327",
+      "local_path": "data\\files_clean\\arxiv_2311.11327.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2311.11327.pdf",
+      "file_size": 555862,
+      "sha256": "c17fde4219d69f588be0f8c13923656cf845e80d75b709a25b978aac5f0011dd",
+      "fetched_at": "2025-11-01T16:15:24.096721Z"
+    },
+    {
+      "id": 137,
+      "title": "Eliciting Honest Information From Authors Using Sequential Review",
+      "arxiv_id": "2311.14619",
+      "local_path": "data\\files_clean\\arxiv_2311.14619.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2311.14619.pdf",
+      "file_size": 1633897,
+      "sha256": "d27f93f1af1f8995970798f17ab4568bf852bfcf3333da68e7fc30a1bf978715",
+      "fetched_at": "2025-11-01T16:15:26.504251Z"
+    },
+    {
+      "id": 138,
+      "title": "Quantum Schwarzschild geometry in effective-field-theory models of gravity",
+      "arxiv_id": "2312.00450",
+      "local_path": "data\\files_clean\\arxiv_2312.00450.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2312.00450.pdf",
+      "file_size": 1521214,
+      "sha256": "a55480019634adf80b53dc9eff377739c4156f8c4235ffa4fd3d2acc170502e4",
+      "fetched_at": "2025-11-01T16:15:28.836679Z"
+    },
+    {
+      "id": 139,
+      "title": "Adaptive Improvements of Multi-Objective Branch and Bound",
+      "arxiv_id": "2312.12192",
+      "local_path": "data\\files_clean\\arxiv_2312.12192.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2312.12192.pdf",
+      "file_size": 354614,
+      "sha256": "83bd4ae20d216ff0669ff81e9e68edd1770d42f2355374c25c40b8804200a10d",
+      "fetched_at": "2025-11-01T16:15:30.612283Z"
+    },
+    {
+      "id": 140,
+      "title": "Weakened Magnetic Braking in the Exoplanet Host Star 51 Peg",
+      "arxiv_id": "2401.01944",
+      "local_path": "data\\files_clean\\arxiv_2401.01944.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.01944.pdf",
+      "file_size": 689475,
+      "sha256": "cdede66c2ff6d1e2817dd3dd620bc77a9ffb5ec192729aa86935fd891fc4fd40",
+      "fetched_at": "2025-11-01T16:15:32.600849Z"
+    },
+    {
+      "id": 141,
+      "title": "Inversion Ring in Chromonic Twisted Hedgehogs: Theory and Experiment",
+      "arxiv_id": "2401.02893",
+      "local_path": "data\\files_clean\\arxiv_2401.02893.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02893.pdf",
+      "file_size": 11143685,
+      "sha256": "559c6d080a22696052e424cb1279339e7783c151ff082e3e03fc8081777741aa",
+      "fetched_at": "2025-11-01T16:15:38.904722Z"
+    },
+    {
+      "id": 142,
+      "title": "Knots in circle bundles are determined by their complements",
+      "arxiv_id": "2401.02895",
+      "local_path": "data\\files_clean\\arxiv_2401.02895.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02895.pdf",
+      "file_size": 395207,
+      "sha256": "96f86145611bfadaa83aacdeb4c978cd87d6997ce6a133391f2332fcc78655a2",
+      "fetched_at": "2025-11-01T16:15:40.543293Z"
+    },
+    {
+      "id": 143,
+      "title": "Particle-Wise Higher-Order SPH Field Approximation for DVR",
+      "arxiv_id": "2401.02896",
+      "local_path": "data\\files_clean\\arxiv_2401.02896.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02896.pdf",
+      "file_size": 683631,
+      "sha256": "c8f9a16c606992106c8ef3ebf8a6dae552e3634da9908b7ed77b70516ae7d79a",
+      "fetched_at": "2025-11-01T16:15:42.772287Z"
+    },
+    {
+      "id": 144,
+      "title": "New detailed characterization of the residual luminescence emitted by the GAGG:Ce scintillator crystals for the HERMES Pathfinder mission",
+      "arxiv_id": "2401.02900",
+      "local_path": "data\\files_clean\\arxiv_2401.02900.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02900.pdf",
+      "file_size": 1539359,
+      "sha256": "df25524047a9f865db3bd09a704e59fe0c6977c218ace3acc85542c8a297a94d",
+      "fetched_at": "2025-11-01T16:15:44.943161Z"
+    },
+    {
+      "id": 145,
+      "title": "Deep Reinforcement Learning for Local Path Following of an Autonomous Formula SAE Vehicle",
+      "arxiv_id": "2401.02903",
+      "local_path": "data\\files_clean\\arxiv_2401.02903.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02903.pdf",
+      "file_size": 8045658,
+      "sha256": "a7680a6d9b586f49600c8e52cd8ac017545440541659ba23e45dc994df33178a",
+      "fetched_at": "2025-11-01T16:15:49.420137Z"
+    },
+    {
+      "id": 146,
+      "title": "Class-wise Generalization Error: an Information-Theoretic Analysis",
+      "arxiv_id": "2401.02904",
+      "local_path": "data\\files_clean\\arxiv_2401.02904.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02904.pdf",
+      "file_size": 8111638,
+      "sha256": "125f84439a47dd0079b32094af88c9e47650672416957658f887990b0344d1e4",
+      "fetched_at": "2025-11-01T16:15:56.096000Z"
+    },
+    {
+      "id": 147,
+      "title": "Introducing Bode: A Fine-Tuned Large Language Model for Portuguese Prompt-Based Task",
+      "arxiv_id": "2401.02909",
+      "local_path": "data\\files_clean\\arxiv_2401.02909.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02909.pdf",
+      "file_size": 623532,
+      "sha256": "fc643d5ad85b6ca24978989472b6803dcdd334290739286d2c93c6b3e056535b",
+      "fetched_at": "2025-11-01T16:15:58.168125Z"
+    },
+    {
+      "id": 148,
+      "title": "KÃ¤hler metrics and toric Lagrangian fibrations",
+      "arxiv_id": "2401.02910",
+      "local_path": "data\\files_clean\\arxiv_2401.02910.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02910.pdf",
+      "file_size": 686711,
+      "sha256": "c75600cd6589f360a48ec2d8cd0c6da55d3df50b211703b4b94b7b03d8a0ab44",
+      "fetched_at": "2025-11-01T16:16:00.341141Z"
+    },
+    {
+      "id": 149,
+      "title": "Decoding the thermal history of the merging cluster Cygnus A",
+      "arxiv_id": "2401.02912",
+      "local_path": "data\\files_clean\\arxiv_2401.02912.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02912.pdf",
+      "file_size": 7260777,
+      "sha256": "6b23e5b16939d45181141ae9cb6a3dde3e2e076d2eb4c39f7f5bc08c0982b0c9",
+      "fetched_at": "2025-11-01T16:16:04.656581Z"
+    },
+    {
+      "id": 150,
+      "title": "Plug-in Diffusion Model for Sequential Recommendation",
+      "arxiv_id": "2401.02913",
+      "local_path": "data\\files_clean\\arxiv_2401.02913.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02913.pdf",
+      "file_size": 671768,
+      "sha256": "217abd4a04461c861fd514913a917730091230ce536b6625ba21b0a4f5f4abbe",
+      "fetched_at": "2025-11-01T16:16:06.606048Z"
+    },
+    {
+      "id": 151,
+      "title": "A unified uncertainty-aware exploration: Combining epistemic and aleatory uncertainty",
+      "arxiv_id": "2401.02914",
+      "local_path": "data\\files_clean\\arxiv_2401.02914.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02914.pdf",
+      "file_size": 640103,
+      "sha256": "d329d3ae9c294c826c1d2dda3fecb2bd3249f5fedcd2266b52d4380c718bdd3f",
+      "fetched_at": "2025-11-01T16:16:08.826282Z"
+    },
+    {
+      "id": 152,
+      "title": "Contragredient Lie algebras in symmetric categories",
+      "arxiv_id": "2401.02915",
+      "local_path": "data\\files_clean\\arxiv_2401.02915.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02915.pdf",
+      "file_size": 606386,
+      "sha256": "4867b05cd78233d8f872de5d133730331cdc5d42cc7390b5faa55729606f0e25",
+      "fetched_at": "2025-11-01T16:16:11.085343Z"
+    },
+    {
+      "id": 153,
+      "title": "Approximation Algorithms for the Weighted Nash Social Welfare via Convex and Non-Convex Programs",
+      "arxiv_id": "2401.02918",
+      "local_path": "data\\files_clean\\arxiv_2401.02918.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02918.pdf",
+      "file_size": 355270,
+      "sha256": "f19ae1dc7d3283ccdc539695b798d9606e7105e4542cc0328b91b0e07068afa8",
+      "fetched_at": "2025-11-01T16:16:12.804758Z"
+    },
+    {
+      "id": 154,
+      "title": "Optimal strategy for trail running with nutrition and fatigue factors",
+      "arxiv_id": "2401.02919",
+      "local_path": "data\\files_clean\\arxiv_2401.02919.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02919.pdf",
+      "file_size": 1052242,
+      "sha256": "33b0395d423d900de1eec080494cf9e291aff5792a6fae107cde3a1d8862fe38",
+      "fetched_at": "2025-11-01T16:16:15.058675Z"
+    },
+    {
+      "id": 155,
+      "title": "Analytically-Driven Resource Management for Cloud-Native Microservices",
+      "arxiv_id": "2401.02920",
+      "local_path": "data\\files_clean\\arxiv_2401.02920.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02920.pdf",
+      "file_size": 686552,
+      "sha256": "83772ba29cd7af28690eab8b961a04f4f8e2aca14ef950936509c062afd8027a",
+      "fetched_at": "2025-11-01T16:16:17.042139Z"
+    },
+    {
+      "id": 156,
+      "title": "Towards ASR Robust Spoken Language Understanding Through In-Context Learning With Word Confusion Networks",
+      "arxiv_id": "2401.02921",
+      "local_path": "data\\files_clean\\arxiv_2401.02921.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02921.pdf",
+      "file_size": 410616,
+      "sha256": "38f5b0a3b809b2d428a49b4b0eeeb1dd8f9b23b642436653bcd6b744055694fb",
+      "fetched_at": "2025-11-01T16:16:19.253101Z"
+    },
+    {
+      "id": 157,
+      "title": "Computation of Fourier coefficients of automorphic forms of type $G_2$",
+      "arxiv_id": "2401.02922",
+      "local_path": "data\\files_clean\\arxiv_2401.02922.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02922.pdf",
+      "file_size": 223513,
+      "sha256": "619f6f01b7afcd84df526202b6ebe04120442ddad1c6c2a29e53fb7b6e305c28",
+      "fetched_at": "2025-11-01T16:16:21.371793Z"
+    },
+    {
+      "id": 158,
+      "title": "Digital Prototype Filter Alternatives for Processing Frequency-Stacked Mobile Subbands Deploying a Single ADC for Beamforming Satellites",
+      "arxiv_id": "2401.02927",
+      "local_path": "data\\files_clean\\arxiv_2401.02927.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02927.pdf",
+      "file_size": 4605663,
+      "sha256": "9e88c73e0590d2094dd2f5eebbd9e1aff5dd06e71723ae8d96fc21f8c8a8533e",
+      "fetched_at": "2025-11-01T16:16:24.317759Z"
+    },
+    {
+      "id": 159,
+      "title": "SPFormer: Enhancing Vision Transformer with Superpixel Representation",
+      "arxiv_id": "2401.02931",
+      "local_path": "data\\files_clean\\arxiv_2401.02931.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02931.pdf",
+      "file_size": 746254,
+      "sha256": "30741ef1d8b443f0d8d676991740c0c73fbe36f819f0a45c7d09690ed3dedb29",
+      "fetched_at": "2025-11-01T16:16:26.428149Z"
+    },
+    {
+      "id": 160,
+      "title": "The Fate of Primary Iron Sulfides in the CM1 Carbonaceous Chondrites: Effects of Advanced Aqueous Alteration on Primary Components",
+      "arxiv_id": "2401.02932",
+      "local_path": "data\\files_clean\\arxiv_2401.02932.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02932.pdf",
+      "file_size": 6329961,
+      "sha256": "a9cade404622181ede38cdd8ce80cd2a1972920329635bced9aca0a00eb1697b",
+      "fetched_at": "2025-11-01T16:16:29.905265Z"
+    },
+    {
+      "id": 161,
+      "title": "Towards a zk-SNARK compiler for Wolfram language",
+      "arxiv_id": "2401.02935",
+      "local_path": "data\\files_clean\\arxiv_2401.02935.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02935.pdf",
+      "file_size": 2002249,
+      "sha256": "33e463efe78fbcc2a076132afe513c5c68364e56e4dd49ffcf8322c10bc07a76",
+      "fetched_at": "2025-11-01T16:16:32.214749Z"
+    },
+    {
+      "id": 162,
+      "title": "Joint analysis of the iron emission in the optical and near-infrared spectrum of I Zw 1",
+      "arxiv_id": "2401.02936",
+      "local_path": "data\\files_clean\\arxiv_2401.02936.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02936.pdf",
+      "file_size": 5028448,
+      "sha256": "9c4c15ede4cff25902a0a3566f1906304c315ed52e9578a67afecc14d5167a7d",
+      "fetched_at": "2025-11-01T16:16:34.876411Z"
+    },
+    {
+      "id": 163,
+      "title": "Locally Adaptive Neural 3D Morphable Models",
+      "arxiv_id": "2401.02937",
+      "local_path": "data\\files_clean\\arxiv_2401.02937.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02937.pdf",
+      "file_size": 32564280,
+      "sha256": "3e8bccc47653bfcac30c1260d7556a8278daa33cddd96095a607469681cbd4fc",
+      "fetched_at": "2025-11-01T16:16:54.403185Z"
+    },
+    {
+      "id": 164,
+      "title": "Analytical solution of the Poiseuille flow of a De Kee viscoplastic fluid",
+      "arxiv_id": "2401.02942",
+      "local_path": "data\\files_clean\\arxiv_2401.02942.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02942.pdf",
+      "file_size": 1041383,
+      "sha256": "61bfb88d97d9b637876431cd3c563e634006eda580a9b831c6ae03a187157d47",
+      "fetched_at": "2025-11-01T16:16:56.415950Z"
+    },
+    {
+      "id": 165,
+      "title": "An a posteriori error analysis based on equilibrated stresses for finite element approximations of frictional contact",
+      "arxiv_id": "2401.02944",
+      "local_path": "data\\files_clean\\arxiv_2401.02944.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02944.pdf",
+      "file_size": 2666541,
+      "sha256": "497e3ef0130376fa2778889b2da0cd418c85e57f1605d1a2522294c8e918e14d",
+      "fetched_at": "2025-11-01T16:16:59.040791Z"
+    },
+    {
+      "id": 166,
+      "title": "On Non-Noetherian Iwasawa Theory",
+      "arxiv_id": "2401.02946",
+      "local_path": "data\\files_clean\\arxiv_2401.02946.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02946.pdf",
+      "file_size": 278291,
+      "sha256": "0df31782b9a2438de179e4871f447baf8b578e506d80754c980e792fbe57b879",
+      "fetched_at": "2025-11-01T16:17:00.774033Z"
+    },
+    {
+      "id": 167,
+      "title": "Critical embeddings",
+      "arxiv_id": "2401.02951",
+      "local_path": "data\\files_clean\\arxiv_2401.02951.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02951.pdf",
+      "file_size": 157455,
+      "sha256": "9ab8f9e13c16d189598ad3915f09e5ad5dc7df105dc19529a697cbf69b000e41",
+      "fetched_at": "2025-11-01T16:17:02.593810Z"
+    },
+    {
+      "id": 168,
+      "title": "Optimizing Dataflow Systems for Scalable Interactive Visualization",
+      "arxiv_id": "2401.02952",
+      "local_path": "data\\files_clean\\arxiv_2401.02952.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02952.pdf",
+      "file_size": 1694513,
+      "sha256": "3dbdcf982b4f72cc3c7a3e18fb0479bf3adc654bb8c4799703e6f347921f5da4",
+      "fetched_at": "2025-11-01T16:17:04.937560Z"
+    },
+    {
+      "id": 169,
+      "title": "Linked factor analysis",
+      "arxiv_id": "2401.02953",
+      "local_path": "data\\files_clean\\arxiv_2401.02953.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02953.pdf",
+      "file_size": 7724243,
+      "sha256": "5b98585b8b2bcd29b06de4de4f62b43244211a8b0fcf0adbd565e494caf6048e",
+      "fetched_at": "2025-11-01T16:17:10.348659Z"
+    },
+    {
+      "id": 170,
+      "title": "DeepSeek LLM: Scaling Open-Source Language Models with Longtermism",
+      "arxiv_id": "2401.02954",
+      "local_path": "data\\files_clean\\arxiv_2401.02954.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2401.02954.pdf",
+      "file_size": 7474751,
+      "sha256": "9be2b427133468d443ff3a6411287a6f64759ed1e9cdd9a07f07486f11b00591",
+      "fetched_at": "2025-11-01T16:17:13.102721Z"
+    },
+    {
+      "id": 171,
+      "title": "Cosmic Microwave Background Mini-review",
+      "arxiv_id": "1005.0555",
+      "local_path": "data\\files_clean\\arxiv_1005.0555.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1005.0555.pdf",
+      "file_size": 1356552,
+      "sha256": "0d619268702c21bb2cbf51a99f30123420bc6120157000e23764131827db0e54",
+      "fetched_at": "2025-11-01T16:17:15.524767Z"
+    },
+    {
+      "id": 172,
+      "title": "Fully spin-dependent transport of triangular graphene flakes",
+      "arxiv_id": "1105.4006",
+      "local_path": "data\\files_clean\\arxiv_1105.4006.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1105.4006.pdf",
+      "file_size": 1669703,
+      "sha256": "523698efe8e4b830b4d710d36307c5b50ce977eba336003bd35e6a1796a1590e",
+      "fetched_at": "2025-11-01T16:17:17.715490Z"
+    },
+    {
+      "id": 173,
+      "title": "First-principles transport calculation method based on real-space finite-difference nonequilibrium Green's function scheme",
+      "arxiv_id": "1207.4317",
+      "local_path": "data\\files_clean\\arxiv_1207.4317.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1207.4317.pdf",
+      "file_size": 1007796,
+      "sha256": "71c1bb52134b5d71b3aed665efd722d113ade0978173c3c4b823cb478abe381b",
+      "fetched_at": "2025-11-01T16:17:20.562979Z"
+    },
+    {
+      "id": 174,
+      "title": "First-principles calculation of scattering potentials of Si-Ge and Sn-Ge dimers on Ge(001) surfaces",
+      "arxiv_id": "1211.0115",
+      "local_path": "data\\files_clean\\arxiv_1211.0115.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1211.0115.pdf",
+      "file_size": 1202362,
+      "sha256": "c3eca52878ff1356b12f9c57c3532259c947e23602f70dc4d4f972fbb5b3f2b8",
+      "fetched_at": "2025-11-01T16:17:22.974328Z"
+    },
+    {
+      "id": 175,
+      "title": "Electron-transport properties of ethyne-bridged diphenyl zinc-porphyrin molecules",
+      "arxiv_id": "1501.01365",
+      "local_path": "data\\files_clean\\arxiv_1501.01365.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1501.01365.pdf",
+      "file_size": 1139853,
+      "sha256": "f335f3c41f02e47560563aa9a301763871aeecdda9703bb43b76240a19bff7fb",
+      "fetched_at": "2025-11-01T16:17:24.722841Z"
+    },
+    {
+      "id": 176,
+      "title": "Expectation thinning operators based on linear fractional probability generating functions",
+      "arxiv_id": "1709.03129",
+      "local_path": "data\\files_clean\\arxiv_1709.03129.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1709.03129.pdf",
+      "file_size": 174871,
+      "sha256": "50ca2d8cd0d08c82929d8470fdb06c190f5d126bffb122c766998ff1fe00526c",
+      "fetched_at": "2025-11-01T16:17:26.441563Z"
+    },
+    {
+      "id": 177,
+      "title": "On Iwasawa's class number formula for $\\mathbb{Z}_p\\rtimes\\mathbb{Z}_p$-extensions",
+      "arxiv_id": "1710.10966",
+      "local_path": "data\\files_clean\\arxiv_1710.10966.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1710.10966.pdf",
+      "file_size": 192373,
+      "sha256": "34c88eb510d27b916968040f58181656a25a74f38eabf85c74f17506e0787004",
+      "fetched_at": "2025-11-01T16:17:28.532692Z"
+    },
+    {
+      "id": 178,
+      "title": "Geometrical Proof of Generalized Mirror Transformation of Projective Hypersurfaces",
+      "arxiv_id": "1712.09819",
+      "local_path": "data\\files_clean\\arxiv_1712.09819.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1712.09819.pdf",
+      "file_size": 188626,
+      "sha256": "e9d3289b54a7bfcc23223a4c81872460d620d130444f41164a80407553d2517f",
+      "fetched_at": "2025-11-01T16:17:30.629276Z"
+    },
+    {
+      "id": 179,
+      "title": "Normal form for GLT sequences, functions of normal GLT sequences, and spectral distribution of perturbed normal matrices",
+      "arxiv_id": "1805.08708",
+      "local_path": "data\\files_clean\\arxiv_1805.08708.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1805.08708.pdf",
+      "file_size": 301496,
+      "sha256": "2e195058f7c699568a51041e4c5056bcaa1076b9cfbe681eef7ffa31ee63b3d6",
+      "fetched_at": "2025-11-01T16:17:32.666955Z"
+    },
+    {
+      "id": 180,
+      "title": "Golden ratios, Lucas Sequences and the Quadratic Family",
+      "arxiv_id": "1806.06007",
+      "local_path": "data\\files_clean\\arxiv_1806.06007.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1806.06007.pdf",
+      "file_size": 21508458,
+      "sha256": "79ad83e4811453e9ddc074bd9a6645b4006ae3f75a562e3cc78a30f15cc28d38",
+      "fetched_at": "2025-11-01T16:17:45.743207Z"
+    },
+    {
+      "id": 181,
+      "title": "Epstein-Zin Utility Maximization on a Random Horizon",
+      "arxiv_id": "1903.08782",
+      "local_path": "data\\files_clean\\arxiv_1903.08782.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1903.08782.pdf",
+      "file_size": 942834,
+      "sha256": "65909b992fd34a90130e635b9c262f743fc5d4b79885edb344ea9d3b9f75d5fa",
+      "fetched_at": "2025-11-01T16:17:48.368250Z"
+    },
+    {
+      "id": 182,
+      "title": "Multi-sphere approximation of realistic particles with a combined 3D thinning and greedy algorithm",
+      "arxiv_id": "1903.10281",
+      "local_path": "data\\files_clean\\arxiv_1903.10281.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1903.10281.pdf",
+      "file_size": 1644667,
+      "sha256": "cb61c227510019f8ea48f07f0604e787f6496ae95b4b011184833361ecf41a78",
+      "fetched_at": "2025-11-01T16:17:50.780964Z"
+    },
+    {
+      "id": 183,
+      "title": "Reaching Consensus Under a Deadline",
+      "arxiv_id": "1905.07173",
+      "local_path": "data\\files_clean\\arxiv_1905.07173.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1905.07173.pdf",
+      "file_size": 862100,
+      "sha256": "c75923dcb423d9e8262044511abb5ce20ce40180daac4ae2f54fb55b0aad44d7",
+      "fetched_at": "2025-11-01T16:17:53.168797Z"
+    },
+    {
+      "id": 184,
+      "title": "$H$-convergence for equations depending on monotone operators in Carnot groups",
+      "arxiv_id": "1906.09252",
+      "local_path": "data\\files_clean\\arxiv_1906.09252.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1906.09252.pdf",
+      "file_size": 205101,
+      "sha256": "4cf1c51d0b6c8acbc66583fbd9228897229ee0af05324ed452342a042a2e47b7",
+      "fetched_at": "2025-11-01T16:17:55.042937Z"
+    },
+    {
+      "id": 185,
+      "title": "On Strong Diameter Padded Decompositions",
+      "arxiv_id": "1906.09783",
+      "local_path": "data\\files_clean\\arxiv_1906.09783.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1906.09783.pdf",
+      "file_size": 1143530,
+      "sha256": "bd61ead2d0ca6295aa5a6052e1bb339470ed1e0c95937c56d27e371119cfc8e5",
+      "fetched_at": "2025-11-01T16:17:56.728551Z"
+    },
+    {
+      "id": 186,
+      "title": "HÃ¶lder regularity for the spectrum of translation flows",
+      "arxiv_id": "1908.09347",
+      "local_path": "data\\files_clean\\arxiv_1908.09347.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1908.09347.pdf",
+      "file_size": 426062,
+      "sha256": "aea45b6bd0dc0f84b88d0c3fc964d70d5ee2934afcaf8f014e6782bf5e6c0c70",
+      "fetched_at": "2025-11-01T16:17:59.246613Z"
+    },
+    {
+      "id": 187,
+      "title": "Exterior square gamma factors for cuspidal representations of $\\mathrm{GL}_n$: simple supercuspidal representations",
+      "arxiv_id": "1908.10482",
+      "local_path": "data\\files_clean\\arxiv_1908.10482.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1908.10482.pdf",
+      "file_size": 337763,
+      "sha256": "616f78a0206e7fea47f00084af884103db944bd34d47a721a6c0433edda00aa0",
+      "fetched_at": "2025-11-01T16:18:01.085953Z"
+    },
+    {
+      "id": 188,
+      "title": "In-gap states and strain-tuned band convergence in layered structure trivalent iridate K0.75Na0.25IrO2",
+      "arxiv_id": "1909.04562",
+      "local_path": "data\\files_clean\\arxiv_1909.04562.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1909.04562.pdf",
+      "file_size": 1201893,
+      "sha256": "675de9c9fe05ba4e32eba469ed834fe2a6a651f95f97d24fa9c5fcfbe258a47f",
+      "fetched_at": "2025-11-01T16:18:03.876822Z"
+    },
+    {
+      "id": 189,
+      "title": "On the Hewitt Stromberg dimension of product sets",
+      "arxiv_id": "1911.11242",
+      "local_path": "data\\files_clean\\arxiv_1911.11242.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/1911.11242.pdf",
+      "file_size": 165421,
+      "sha256": "83d677f7e90996f4b3529f04f178a164bb61e9a8afe2f4faecdaa37dc2baa192",
+      "fetched_at": "2025-11-01T16:18:06.154297Z"
+    },
+    {
+      "id": 190,
+      "title": "Integrability of boundary Liouville conformal field theory",
+      "arxiv_id": "2002.05625",
+      "local_path": "data\\files_clean\\arxiv_2002.05625.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2002.05625.pdf",
+      "file_size": 996726,
+      "sha256": "a51b237135256fb219b0f3ad923d11e42a95eadf01086ec1415f4a54e7f68095",
+      "fetched_at": "2025-11-01T16:18:08.154394Z"
+    },
+    {
+      "id": 191,
+      "title": "Permutation Inference for Canonical Correlation Analysis",
+      "arxiv_id": "2002.10046",
+      "local_path": "data\\files_clean\\arxiv_2002.10046.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2002.10046.pdf",
+      "file_size": 848275,
+      "sha256": "d08a476b99ac1dc2a81539b31b04ee959c4df194a7cf68c2d0ff54ebe68381af",
+      "fetched_at": "2025-11-01T16:18:10.590198Z"
+    },
+    {
+      "id": 192,
+      "title": "On substitution automorphisms with pure singular spectrum",
+      "arxiv_id": "2003.11287",
+      "local_path": "data\\files_clean\\arxiv_2003.11287.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2003.11287.pdf",
+      "file_size": 265041,
+      "sha256": "76b851e0958877b792ef3406ce2c4f52ac92997cb0d8e27f910a6b29ba8c76f0",
+      "fetched_at": "2025-11-01T16:18:12.602247Z"
+    },
+    {
+      "id": 193,
+      "title": "A Theory of the Risk for Optimization with Relaxation and its Application to Support Vector Machines",
+      "arxiv_id": "2004.05839",
+      "local_path": "data\\files_clean\\arxiv_2004.05839.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2004.05839.pdf",
+      "file_size": 1396022,
+      "sha256": "e526771c2bdc0f7145d7ea8313207f872870c7fdbb32785b06be869cfdfe68fc",
+      "fetched_at": "2025-11-01T16:18:14.748782Z"
+    },
+    {
+      "id": 194,
+      "title": "Enhancing RBF-FD Efficiency for Highly Non-Uniform Node Distributions via Adaptivity",
+      "arxiv_id": "2004.06319",
+      "local_path": "data\\files_clean\\arxiv_2004.06319.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2004.06319.pdf",
+      "file_size": 5299136,
+      "sha256": "8898fd431a25d8d8c681572923b7281cecec8d05e63afe071a9bef8254c64dce",
+      "fetched_at": "2025-11-01T16:18:18.365007Z"
+    },
+    {
+      "id": 195,
+      "title": "The C*-algebra of the Boidol group",
+      "arxiv_id": "2006.02224",
+      "local_path": "data\\files_clean\\arxiv_2006.02224.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2006.02224.pdf",
+      "file_size": 313127,
+      "sha256": "924ca259b9caaf3c52a5a3530df71eae2b799749616ea90b2d96fa094fe1b4c4",
+      "fetched_at": "2025-11-01T16:18:20.218557Z"
+    },
+    {
+      "id": 196,
+      "title": "An Adversarial Approach to Structural Estimation",
+      "arxiv_id": "2007.06169",
+      "local_path": "data\\files_clean\\arxiv_2007.06169.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2007.06169.pdf",
+      "file_size": 1140299,
+      "sha256": "cfa90dd35c507537a61d02d0226025a716786620c2d446ea8386e9fe5b8be3e0",
+      "fetched_at": "2025-11-01T16:18:22.342353Z"
+    },
+    {
+      "id": 197,
+      "title": "Cdh Descent for Homotopy Hermitian $K$-Theory of Rings with Involution",
+      "arxiv_id": "2009.09124",
+      "local_path": "data\\files_clean\\arxiv_2009.09124.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2009.09124.pdf",
+      "file_size": 429443,
+      "sha256": "43f6febd7220d6db0fcfeb01a63f6e85913677639413c2c915e010b4e95771e7",
+      "fetched_at": "2025-11-01T16:18:24.444347Z"
+    },
+    {
+      "id": 198,
+      "title": "Iterated differences sets, diophantine approximations and applications",
+      "arxiv_id": "2010.02325",
+      "local_path": "data\\files_clean\\arxiv_2010.02325.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2010.02325.pdf",
+      "file_size": 461947,
+      "sha256": "463ffb02f32e97ac62f7bf855831f2df252e57e891ca23b0a6d1ad317796cc98",
+      "fetched_at": "2025-11-01T16:18:26.637614Z"
+    },
+    {
+      "id": 199,
+      "title": "Long-range order in discrete spin systems",
+      "arxiv_id": "2010.03177",
+      "local_path": "data\\files_clean\\arxiv_2010.03177.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2010.03177.pdf",
+      "file_size": 1600249,
+      "sha256": "eb3b7541c2a7010cb8a7f143a0393de28a235f569e5e9b9cc956e15f91103c0f",
+      "fetched_at": "2025-11-01T16:18:29.258884Z"
+    },
+    {
+      "id": 200,
+      "title": "Transcending Transcend: Revisiting Malware Classification in the Presence of Concept Drift",
+      "arxiv_id": "2010.03856",
+      "local_path": "data\\files_clean\\arxiv_2010.03856.pdf",
+      "pdf_url_used": "https://arxiv.org/pdf/2010.03856.pdf",
+      "file_size": 2658877,
+      "sha256": "e79d3092a97381c4df288bb77a0c04f77e292ca462ce380f68ceee77d904aa1f",
+      "fetched_at": "2025-11-01T16:18:31.853406Z"
+    }
+  ]
+}

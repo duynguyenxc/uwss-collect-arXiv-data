@@ -36,6 +36,14 @@ python -m src.uwss.cli extract-full-text --db data/uwss.sqlite --content-dir dat
 python -m src.uwss.cli export --db data/uwss.sqlite --out data/export/arxiv.jsonl --require-match --oa-only
 ```
 
+Two‑stage precision fetch (recommendation):
+```
+# 1) Export with IDs list of relevant candidates
+python -m src.uwss.cli export --db data/uwss.sqlite --out data/export/filtered.jsonl --require-match --year-min 1995 --ids-out data/export/filtered_ids.txt
+# 2) Fetch only those IDs (avoid off‑topic downloads)
+python -m src.uwss.cli arxiv-fetch-pdf --ids-file data/export/filtered_ids.txt --limit 200
+```
+
 Precision controls examples:
 ```
 # Harvest a narrow window and category
@@ -54,6 +62,17 @@ Tips
 - Extracted content: `data/content/` (text from PDF/HTML; Phase 3 adds GROBID TEI/JSON).
 - Metrics: `data/runs/*.json` when `--metrics-out` is provided.
 - Policy: `docs/policies/arxiv/` (Identify, robots, links).
+
+## Monitoring (quick)
+- Recent files just fetched (last hour):
+```
+python -m src.uwss.cli recent-downloads --hours 1 --limit 10 --source arxiv --json-out data/runs/recent.json
+```
+- Summarize recent runs under `data/runs`:
+```
+python -m src.uwss.cli runs-summary --dir data/runs --limit 50 --out data/runs/summary.json
+```
+These complement per-command metrics written via `--metrics-out` (harvest/fetch/grobid).
 
 ## Architecture (current)
 - Harvest: arXiv OAI‑PMH (ListRecords) → parse DC → normalize → upsert to DB (resume via resumptionToken).

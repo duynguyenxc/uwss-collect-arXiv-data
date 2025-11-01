@@ -79,6 +79,7 @@ def fetch_arxiv_pdfs(
     max_mb: float = 60.0,
     dry_run: bool = False,
     since_days: Optional[int] = None,
+    ids: Optional[set[int]] = None,
 ) -> Dict[str, Any]:
     """Download canonical arXiv PDFs for arXiv-sourced documents.
 
@@ -94,6 +95,11 @@ def fetch_arxiv_pdfs(
     }
 
     q = session.query(Document).filter(Document.source == "arxiv").filter(Document.pdf_url != None)
+    if ids:
+        try:
+            q = q.filter(Document.id.in_(list(ids)))
+        except Exception:
+            pass
     if since_days is not None and since_days >= 0:
         cutoff = datetime.utcnow() - timedelta(days=since_days)
         q = q.filter(or_(Document.local_path == None, Document.local_path == "", Document.fetched_at == None, Document.fetched_at < cutoff))

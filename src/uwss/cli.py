@@ -476,6 +476,7 @@ def build_parser() -> argparse.ArgumentParser:
 	p_fetch_arxiv.add_argument("--max-mb", type=float, default=60.0, help="Max PDF size in MB (HEAD check)")
 	p_fetch_arxiv.add_argument("--dry-run", action="store_true", help="HEAD only, do not download")
 	p_fetch_arxiv.add_argument("--since-days", type=int, default=None, help="Only consider docs older than N days or missing local_path")
+	p_fetch_arxiv.add_argument("--ids-file", default=None, help="Optional file with Document IDs (one per line) to restrict fetching")
 	p_fetch_arxiv.add_argument("--log-json", action="store_true")
 	p_fetch_arxiv.add_argument("--metrics-out", default=None)
 	p_fetch_arxiv.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
@@ -491,6 +492,12 @@ def build_parser() -> argparse.ArgumentParser:
 		try:
 			throttle = args.throttle_sec if args.throttle_sec is not None else float(os.getenv("UWSS_THROTTLE_SEC", "1.0"))
 			jitter = args.jitter_sec if args.jitter_sec is not None else float(os.getenv("UWSS_JITTER_SEC", "0.5"))
+			ids = None
+			if getattr(args, "ids_file", None):
+				try:
+					ids = set(int(x.strip()) for x in Path(args.ids_file).read_text(encoding="utf-8").splitlines() if x.strip())
+				except Exception:
+					ids = None
 			res = fetch_arxiv_pdfs(
 				s,
 				Path(args.outdir),
@@ -501,6 +508,7 @@ def build_parser() -> argparse.ArgumentParser:
 				max_mb=float(getattr(args, "max_mb", 60.0)),
 				dry_run=bool(getattr(args, "dry_run", False)),
 				since_days=getattr(args, "since_days", None),
+				ids=ids,
 			)
 		finally:
 			s.close()
@@ -1034,6 +1042,7 @@ def build_parser() -> argparse.ArgumentParser:
 	p_export = sub.add_parser("export", help="Export documents to JSONL or CSV")
 	p_export.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 	p_export.add_argument("--out", required=True, help="Output file path (.jsonl or .csv)")
+	p_export.add_argument("--ids-out", default=None, help="Optional path to write exported IDs (one per line)")
 	p_export.add_argument("--min-score", type=float, default=0.0)
 	p_export.add_argument("--year-min", type=int, default=None)
 	p_export.add_argument("--oa-only", action="store_true")
@@ -1170,6 +1179,15 @@ def build_parser() -> argparse.ArgumentParser:
 							writer.writerows(rows)
 				else:
 					raise ValueError("Unsupported extension. Use .jsonl or .csv")
+			# Optional IDs file
+			if getattr(args, "ids_out", None):
+				try:
+					id_path = Path(args.ids_out)
+					id_path.parent.mkdir(parents=True, exist_ok=True)
+					id_path.write_text("\n".join(str(r.get("id")) for r in rows), encoding="utf-8")
+					console.print(f"[green]Saved IDs to {args.ids_out}[/green]")
+				except Exception:
+					pass
 			console.print(f"[green]Exported {len(rows)} records to {args.out}[/green]")
 			_log_json(args.log_json, "export_done", out=str(args.out), count=len(rows))
 			return 0
@@ -1518,6 +1536,48 @@ def build_parser() -> argparse.ArgumentParser:
 			s.close()
 
 	p_recent.set_defaults(func=_cmd_recent)
+
+	# runs-summary (quick ledger over data/runs/*.json)
+	p_rsum = sub.add_parser("runs-summary", help="Summarize recent run metrics under data/runs")
+	p_rsum.add_argument("--dir", dest="runs_dir", default=str(Path("data") / "runs"))
+	p_rsum.add_argument("--limit", type=int, default=50)
+	p_rsum.add_argument("--out", default=None)
+
+	def _cmd_rsum(args: argparse.Namespace) -> int:
+		import json, glob, os, time
+		items = []
+		pattern = str(Path(args.runs_dir) / "*.json")
+		paths = sorted(glob.glob(pattern), key=lambda p: os.path.getmtime(p), reverse=True)
+		for p in paths[: int(args.limit)]:
+			try:
+				data = json.loads(Path(p).read_text(encoding="utf-8"))
+				entry = {
+					"file": p,
+					"mtime": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(os.path.getmtime(p))),
+				}
+				# classify
+				if all(k in data for k in ("inserted", "pages")):
+					entry.update({"kind": "harvest", "inserted": data.get("inserted"), "pages": data.get("pages"), "failed": data.get("failed"), "elapsed_sec": data.get("elapsed_sec")})
+				elif all(k in data for k in ("attempted", "downloaded")):
+					entry.update({"kind": "fetch", "attempted": data.get("attempted"), "downloaded": data.get("downloaded"), "failed": data.get("failed"), "bytes": data.get("bytes_downloaded")})
+				elif all(k in data for k in ("attempted", "parsed_ok")):
+					entry.update({"kind": "grobid", "attempted": data.get("attempted"), "ok": data.get("parsed_ok"), "fail": data.get("parsed_fail")})
+				else:
+					entry.update({"kind": "other"})
+				items.append(entry)
+			except Exception:
+				continue
+		console.print(items)
+		if getattr(args, "out", None):
+			try:
+				Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+				Path(args.out).write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+				console.print(f"[green]Saved runs summary to {args.out}[/green]")
+			except Exception:
+				pass
+		return 0
+
+	p_rsum.set_defaults(func=_cmd_rsum)
 
 	# validate
 	p_val = sub.add_parser("validate", help="Validate data quality: duplicates, missing fields, invalid years, broken files")
