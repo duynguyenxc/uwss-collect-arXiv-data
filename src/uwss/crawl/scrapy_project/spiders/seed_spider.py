@@ -74,7 +74,7 @@ class SeedSpider(scrapy.Spider):
 			now = datetime.utcnow()
 			vu = VisitedUrl(url=url, first_seen=now, last_seen=now, status="ok")
 			session.merge(vu)
-			session.commit()
+				session.commit()
 		finally:
 			session.close()
 

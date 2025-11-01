@@ -5,6 +5,7 @@ import time
 import random
 import hashlib
 from datetime import datetime, timedelta
+import re
 from pathlib import Path
 from typing import Optional, Dict, Any
 
@@ -30,6 +31,42 @@ def _guess_arxiv_id(landing_url: Optional[str], pdf_url: Optional[str]) -> Optio
             part = u.split("/abs/")[-1]
             return part
     return None
+
+
+_ARXIV_VERSION_RE = re.compile(r"^(?P<base>\d{4}\.\d{4,5})(?P<ver>v\d+)?$")
+
+
+def _split_arxiv_id_version(arxiv_id: str) -> tuple[str, Optional[str]]:
+    """Split arXiv id into base and version suffix if present.
+
+    Examples:
+    - 2101.01234v2 -> ("2101.01234", "v2")
+    - 2101.01234 -> ("2101.01234", None)
+    """
+    m = _ARXIV_VERSION_RE.match(arxiv_id or "")
+    if not m:
+        return arxiv_id, None
+    return m.group("base"), m.group("ver")
+
+
+def _candidate_pdf_urls(landing_url: Optional[str], pdf_url: Optional[str]) -> list[str]:
+    """Build ordered candidate PDF URLs: pinned (if versioned) → latest.
+
+    Prefer version-pinned URL for reproducibility, then fall back to latest.
+    """
+    arxiv_id = _guess_arxiv_id(landing_url, pdf_url)
+    if not arxiv_id:
+        return [u for u in [pdf_url] if u]
+    base, ver = _split_arxiv_id_version(arxiv_id)
+    candidates: list[str] = []
+    if ver:  # pinned first
+        candidates.append(f"https://arxiv.org/pdf/{base}{ver}.pdf")
+    # latest as fallback
+    candidates.append(f"https://arxiv.org/pdf/{base}.pdf")
+    # if an explicit pdf_url exists and is not already in the list, try it last
+    if pdf_url and pdf_url not in candidates:
+        candidates.append(pdf_url)
+    return candidates
 
 
 def fetch_arxiv_pdfs(
@@ -75,9 +112,10 @@ def fetch_arxiv_pdfs(
     retries_total = 0
     bytes_downloaded = 0
     latencies_ms: list[int] = []
+    downloaded_items: list[Dict[str, Any]] = []
     for d in rows:
-        url = d.pdf_url
-        if not url:
+        cand_urls = _candidate_pdf_urls(d.landing_url, d.pdf_url)
+        if not cand_urls:
             continue
         # build filename
         arxiv_id = _guess_arxiv_id(d.landing_url, d.pdf_url) or hashlib.sha1((d.pdf_url or d.source_url or str(d.id)).encode("utf-8")).hexdigest()[:12]
@@ -92,10 +130,82 @@ def fetch_arxiv_pdfs(
             session.add(d)
             downloaded += 1
             continue
-        # HEAD size cap & dry-run
+        # Try candidates in order (pinned → latest → explicit pdf_url)
+        chosen_url: Optional[str] = None
+        head: Optional[requests.Response] = None
+        # HEAD size cap & dry-run, iterate until acceptable candidate
+        for url_try in cand_urls:
+            try:
+                head = requests.head(url_try, headers=headers, timeout=30, allow_redirects=True)
+                # record visited for HEAD
+                try:
+                    existing = session.get(VisitedUrl, url_try)
+                    now = datetime.utcnow()
+                    if existing:
+                        existing.last_seen = now
+                        existing.status = str(head.status_code)
+                        session.add(existing)
+                    else:
+                        vu = VisitedUrl(url=url_try, first_seen=now, last_seen=now, status=str(head.status_code))
+                        session.add(vu)
+                    session.flush()
+                except Exception:
+                    pass
+                cl = head.headers.get("Content-Length")
+                if cl and max_mb is not None:
+                    try:
+                        if int(cl) > int(max_mb * 1024 * 1024):
+                            # too large for this candidate; try next
+                            continue
+                    except Exception:
+                        pass
+                # if HEAD indicates not found/forbidden, try next candidate
+                if head.status_code in (403, 404):
+                    continue
+                chosen_url = url_try
+                break
+            except Exception:
+                # network issues: fall through to try next or eventually GET first candidate
+                continue
+        # If dry-run, mark and continue once a candidate was considered
+        if dry_run:
+            d.pdf_status = "dry_run"
+            d.pdf_fetched_at = datetime.utcnow()
+            session.add(d)
+            session.commit()
+            time.sleep(throttle_sec + random.random() * jitter_sec)
+            continue
+        # If none chosen from HEAD phase, default to first candidate
+        url = chosen_url or cand_urls[0]
+        # If HEAD deemed too large for selected candidate, record and skip
         try:
-            head = requests.head(url, headers=headers, timeout=30, allow_redirects=True)
-            cl = head.headers.get("Content-Length")
+            if head is not None:
+                cl = head.headers.get("Content-Length")
+                if cl and max_mb is not None and int(cl) > int(max_mb * 1024 * 1024):
+                    d.pdf_status = "too_large"
+                    d.pdf_fetched_at = datetime.utcnow()
+                    too_large += 1
+                    session.add(d)
+                    session.commit()
+                    # write meta sidecar quickly
+                    meta_path = out_dir / (fname.replace(".pdf", ".meta.json"))
+                    try:
+                        import json
+                        meta = {
+                            "url_used": url,
+                            "status": head.status_code,
+                            "content_length": int(cl),
+                            "too_large": True,
+                            "cap_mb": max_mb,
+                            "fetched_at": d.pdf_fetched_at.isoformat() + "Z",
+                        }
+                        meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+                    except Exception:
+                        pass
+                    time.sleep(throttle_sec + random.random() * jitter_sec)
+                    continue
+        except Exception:
+            pass
             if cl and max_mb is not None:
                 try:
                     if int(cl) > int(max_mb * 1024 * 1024):
@@ -185,6 +295,20 @@ def fetch_arxiv_pdfs(
                         meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
                     except Exception:
                         pass
+                    # collect item for run manifest
+                    try:
+                        downloaded_items.append({
+                            "id": d.id,
+                            "title": d.title,
+                            "arxiv_id": _guess_arxiv_id(d.landing_url, d.pdf_url),
+                            "local_path": str(fpath),
+                            "pdf_url_used": url,
+                            "file_size": total_bytes,
+                            "sha256": checksum,
+                            "fetched_at": d.fetched_at.isoformat() + "Z",
+                        })
+                    except Exception:
+                        pass
                 else:
                     failed += 1
                     if resp.status_code == 404:
@@ -195,10 +319,18 @@ def fetch_arxiv_pdfs(
                         errors_5xx += 1
                     d.status = "fetch_failed"
                     d.pdf_status = "error" if 500 <= resp.status_code < 600 else ("forbidden" if resp.status_code == 403 else ("not_found" if resp.status_code == 404 else "error"))
-                # visited url
+                # visited url (GET)
                 try:
-                    vu = VisitedUrl(url=url, first_seen=datetime.utcnow(), last_seen=datetime.utcnow(), status=str(resp.status_code))
-                    session.merge(vu)
+                    existing = session.get(VisitedUrl, url)
+                    now = datetime.utcnow()
+                    if existing:
+                        existing.last_seen = now
+                        existing.status = str(resp.status_code)
+                        session.add(existing)
+                    else:
+                        vu = VisitedUrl(url=url, first_seen=now, last_seen=now, status=str(resp.status_code))
+                        session.add(vu)
+                    session.flush()
                 except Exception:
                     pass
             except requests.Timeout:
@@ -243,6 +375,7 @@ def fetch_arxiv_pdfs(
         "retries": retries_total,
         "bytes_downloaded": bytes_downloaded,
         "latency_ms": {"p50": pct(0.5), "p95": pct(0.95), "max": (max(lat_sorted) if lat_sorted else None)},
+        "items": downloaded_items,
     }
 
 

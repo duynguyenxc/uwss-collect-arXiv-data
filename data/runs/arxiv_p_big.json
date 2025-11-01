@@ -1,0 +1,16 @@
+{
+  "attempted": 10,
+  "downloaded": 10,
+  "failed": 0,
+  "not_found_404": 0,
+  "forbidden_403": 0,
+  "errors_5xx": 0,
+  "timeouts": 0,
+  "retries": 0,
+  "bytes_downloaded": 51915088,
+  "latency_ms": {
+    "p50": 433,
+    "p95": 5371,
+    "max": 5371
+  }
+}

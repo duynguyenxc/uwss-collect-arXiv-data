@@ -26,6 +26,7 @@ python -m src.uwss.cli arxiv-harvest-oai --from 2024-10-01 --max 20 --resume --m
 ```
 python -m src.uwss.cli arxiv-fetch-pdf --limit 10 --metrics-out data/runs/arxiv_p.json
 ```
+Note: fetcher tries version‑pinned URL first (e.g. `.../pdf/IDvN.pdf`) then latest (`.../pdf/ID.pdf`) for reproducibility.
 5) Extract full text (local PDF → text)
 ```
 python -m src.uwss.cli extract-full-text --db data/uwss.sqlite --content-dir data/content --limit 10
@@ -33,6 +34,14 @@ python -m src.uwss.cli extract-full-text --db data/uwss.sqlite --content-dir dat
 6) Export (JSONL/CSV)
 ```
 python -m src.uwss.cli export --db data/uwss.sqlite --out data/export/arxiv.jsonl --require-match --oa-only
+```
+
+Precision controls examples:
+```
+# Harvest a narrow window and category
+python -m src.uwss.cli arxiv-harvest-oai --from 2024-10-01 --until 2024-10-07 --set cs --max 50 --resume
+# Export requiring keyword match (from scoring)
+python -m src.uwss.cli export --db data/uwss.sqlite --out data/export/filtered.jsonl --require-match --year-min 1995
 ```
 
 Tips
@@ -68,5 +77,6 @@ See `config/config.yaml`:
 - Only public/allowed content is fetched.
 - arXiv metadata via OAI‑PMH; PDFs via canonical arXiv links.
 - Policy snapshot stored under `docs/policies/arxiv`.
+
 
 

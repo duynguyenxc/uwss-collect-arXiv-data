@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="883218ad-3f05-44fa-b7a0-cc40b43cf2c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/data/export/pg_run_full.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/export/pg_run_full.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/export/pg_smoke_validate.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/export/pg_smoke_validate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REPORT.md" beforeDir="false" afterPath="$PROJECT_DIR$/REPORT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/uwss.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/data/uwss.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uwss/arxiv/harvest_oai.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/uwss/arxiv/harvest_oai.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "improvement-project",
+    "git-widget-placeholder": "improvement-uwss",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/uwss"
   }

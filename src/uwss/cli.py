@@ -1474,6 +1474,51 @@ def build_parser() -> argparse.ArgumentParser:
 
 	p_stats.set_defaults(func=_cmd_stats)
 
+	# recent-downloads
+	p_recent = sub.add_parser("recent-downloads", help="List recently fetched PDFs (most recent first)")
+	p_recent.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_recent.add_argument("--hours", type=int, default=24, help="Look back window in hours")
+	p_recent.add_argument("--limit", type=int, default=20)
+	p_recent.add_argument("--source", default=None, help="Optional source filter, e.g., arxiv")
+	p_recent.add_argument("--json-out", default=None)
+
+	def _cmd_recent(args: argparse.Namespace) -> int:
+		from sqlalchemy import select
+		from datetime import datetime, timedelta
+		from .store import Document
+		import json
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		s = SessionLocal()
+		try:
+			cutoff = datetime.utcnow() - timedelta(hours=max(0, int(args.hours)))
+			q = select(Document.id, Document.title, Document.year, Document.topic, Document.local_path, Document.pdf_fetched_at, Document.source, Document.checksum_sha256).where(Document.pdf_fetched_at != None).where(Document.pdf_fetched_at >= cutoff)
+			if getattr(args, "source", None):
+				q = q.where(Document.source == args.source)
+			q = q.order_by(Document.pdf_fetched_at.desc()).limit(int(args.limit))
+			rows = s.execute(q).all()
+			items = []
+			for (_id, title, year, topic, path, fetched_at, source, sha) in rows:
+				items.append({
+					"id": int(_id),
+					"title": title,
+					"year": int(year) if year is not None else None,
+					"topic": topic,
+					"local_path": path,
+					"fetched_at": fetched_at.isoformat() + "Z" if fetched_at else None,
+					"source": source,
+					"sha256": sha,
+				})
+			console.print(items)
+			if getattr(args, "json_out", None):
+				Path(args.json_out).parent.mkdir(parents=True, exist_ok=True)
+				Path(args.json_out).write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+				console.print(f"[green]Saved recent list to {args.json_out}[/green]")
+			return 0
+		finally:
+			s.close()
+
+	p_recent.set_defaults(func=_cmd_recent)
+
 	# validate
 	p_val = sub.add_parser("validate", help="Validate data quality: duplicates, missing fields, invalid years, broken files")
 	p_val.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
