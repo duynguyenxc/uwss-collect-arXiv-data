@@ -1,5 +1,31 @@
 # Python
 __pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+
+# OS
+.DS_Store
+
+# Local databases and artifacts
+*.sqlite
+*.db
+
+# Data (large artifacts)
+data/files/**
+data/files_clean/**
+data/content/**
+data/content_clean/**
+data/runs/**
+data/runs_clean/**
+data/export/**
+data/export_clean/**
+
+# Allow keeping empty dirs if needed
+!data/.gitkeep
+
+# Python
+__pycache__/
 *.pyc
 
 # Virtual env
