@@ -1014,6 +1014,71 @@ def build_parser() -> argparse.ArgumentParser:
 
 	p_s3.set_defaults(func=_cmd_s3)
 
+	# export-manifest (one JSONL entry per Document with identification + file provenance)
+	p_manifest = sub.add_parser("export-manifest", help="Export manifest.jsonl with identification and file provenance")
+	p_manifest.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_manifest.add_argument("--out", required=True, help="Path to write manifest (.jsonl)")
+
+	def _cmd_manifest(args: argparse.Namespace) -> int:
+		from sqlalchemy import select
+		from .store import Document
+		import json
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		session = SessionLocal()
+		count = 0
+		try:
+			q = session.execute(select(Document))
+			Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+			with open(args.out, "w", encoding="utf-8") as wf:
+				for (d,) in q:
+					# normalize authors
+					authors_val = None
+					try:
+						import json as _json
+						if isinstance(d.authors, str):
+							a = _json.loads(d.authors)
+							if isinstance(a, list):
+								authors_val = a
+					except Exception:
+						authors_val = None
+					if authors_val is None and isinstance(d.authors, str):
+						parts = [p.strip() for p in (d.authors.split(";") if ";" in d.authors else d.authors.split(",")) if p.strip()]
+						authors_val = parts or None
+					# arxiv id guess
+					arxiv_id = None
+					try:
+						from .fetch.arxiv_pdf import _guess_arxiv_id
+						arxiv_id = _guess_arxiv_id(getattr(d, "landing_url", None), getattr(d, "pdf_url", None))
+					except Exception:
+						arxiv_id = None
+					row = {
+						"document_id": int(d.id),
+						"source": d.source,
+						"arxiv_id": arxiv_id,
+						"doi": d.doi,
+						"title": d.title,
+						"authors": authors_val,
+						"abstract": d.abstract,
+						"year": int(d.year) if d.year is not None else None,
+						"topic": d.topic,
+						"local_path": d.local_path,
+						"checksum_sha256": getattr(d, "checksum_sha256", None),
+						"file_size": getattr(d, "file_size", None),
+						"http_status": getattr(d, "http_status", None),
+						"pdf_status": getattr(d, "pdf_status", None),
+						"pdf_fetched_at": str(getattr(d, "pdf_fetched_at", "")) if getattr(d, "pdf_fetched_at", None) else None,
+						# s3 key may be filled by upload step later; default None
+						"s3_key": None,
+					}
+					wf.write(json.dumps(row, ensure_ascii=False) + "\n")
+					count += 1
+			console.print(f"[green]Wrote manifest for {count} records to {args.out}[/green]")
+			return 0
+		finally:
+			session.close()
+
+	p_manifest.set_defaults(func=_cmd_manifest)
+
 	# delete-doc by id
 	p_del = sub.add_parser("delete-doc", help="Delete a document by id")
 	p_del.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))

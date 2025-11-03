@@ -30,6 +30,21 @@ def upload_files_to_s3(db_path: Path, files_dir: Path, bucket: str, prefix: str 
 				continue
 			key = prefix.rstrip("/") + "/" + p.name
 			s3.upload_file(str(p), bucket, key)
+			# best-effort: backfill s3_key into sidecar meta if present
+			try:
+				meta_path = p.with_suffix(".meta.json")
+				if meta_path.exists():
+					import json
+					data = {}
+					try:
+						data = json.loads(meta_path.read_text(encoding="utf-8"))
+					except Exception:
+						data = {}
+					if data.get("s3_key") != key:
+						data["s3_key"] = key
+						meta_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+			except Exception:
+				pass
 			count += 1
 		return count
 	finally:

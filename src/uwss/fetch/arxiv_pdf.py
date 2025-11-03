@@ -197,13 +197,38 @@ def fetch_arxiv_pdfs(
                     meta_path = out_dir / (fname.replace(".pdf", ".meta.json"))
                     try:
                         import json
+                        authors_val = None
+                        try:
+                            import json as _json
+                            if isinstance(d.authors, str):
+                                a = _json.loads(d.authors)
+                                if isinstance(a, list):
+                                    authors_val = a
+                        except Exception:
+                            authors_val = None
+                        if authors_val is None and isinstance(d.authors, str):
+                            parts = [p.strip() for p in re.split(r"[;,]", d.authors) if p.strip()]
+                            authors_val = parts or None
                         meta = {
+                            "document_id": int(d.id) if d.id is not None else None,
+                            "source": d.source or "arxiv",
+                            "arxiv_id": _guess_arxiv_id(d.landing_url, d.pdf_url),
+                            "doi": d.doi,
+                            "title": d.title,
+                            "authors": authors_val,
+                            "abstract": d.abstract,
+                            "year": int(d.year) if d.year is not None else None,
+                            "topic": d.topic,
+                            "local_path": str(fpath),
                             "url_used": url,
-                            "status": head.status_code,
-                            "content_length": int(cl),
+                            "status": int(head.status_code) if head is not None else None,
+                            "content_length": int(cl) if cl else None,
                             "too_large": True,
                             "cap_mb": max_mb,
-                            "fetched_at": d.pdf_fetched_at.isoformat() + "Z",
+                            "http_status": int(head.status_code) if head is not None else None,
+                            "pdf_status": d.pdf_status,
+                            "pdf_fetched_at": d.pdf_fetched_at.isoformat() + "Z" if d.pdf_fetched_at else None,
+                            "s3_key": None,
                         }
                         meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
                     except Exception:
@@ -224,13 +249,38 @@ def fetch_arxiv_pdfs(
                         meta_path = out_dir / (fname.replace(".pdf", ".meta.json"))
                         try:
                             import json
+                            authors_val = None
+                            try:
+                                import json as _json
+                                if isinstance(d.authors, str):
+                                    a = _json.loads(d.authors)
+                                    if isinstance(a, list):
+                                        authors_val = a
+                            except Exception:
+                                authors_val = None
+                            if authors_val is None and isinstance(d.authors, str):
+                                parts = [p.strip() for p in re.split(r"[;,]", d.authors) if p.strip()]
+                                authors_val = parts or None
                             meta = {
+                                "document_id": int(d.id) if d.id is not None else None,
+                                "source": d.source or "arxiv",
+                                "arxiv_id": _guess_arxiv_id(d.landing_url, d.pdf_url),
+                                "doi": d.doi,
+                                "title": d.title,
+                                "authors": authors_val,
+                                "abstract": d.abstract,
+                                "year": int(d.year) if d.year is not None else None,
+                                "topic": d.topic,
+                                "local_path": str(fpath),
                                 "url_used": url,
-                                "status": head.status_code,
-                                "content_length": int(cl),
+                                "status": int(head.status_code) if head is not None else None,
+                                "content_length": int(cl) if cl else None,
                                 "too_large": True,
                                 "cap_mb": max_mb,
-                                "fetched_at": d.pdf_fetched_at.isoformat() + "Z",
+                                "http_status": int(head.status_code) if head is not None else None,
+                                "pdf_status": d.pdf_status,
+                                "pdf_fetched_at": d.pdf_fetched_at.isoformat() + "Z" if d.pdf_fetched_at else None,
+                                "s3_key": None,
                             }
                             meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
                         except Exception:
@@ -285,10 +335,36 @@ def fetch_arxiv_pdfs(
                     d.pdf_fetched_at = now
                     downloaded += 1
                     bytes_downloaded += total_bytes
-                    # write meta.json
+                    # write enriched meta.json (identification + fetch provenance)
                     try:
                         import json
+                        # attempt to normalize authors field to a list
+                        authors_val = None
+                        try:
+                            import json as _json
+                            if isinstance(d.authors, str):
+                                a = _json.loads(d.authors)
+                                if isinstance(a, list):
+                                    authors_val = a
+                        except Exception:
+                            authors_val = None
+                        if authors_val is None and isinstance(d.authors, str):
+                            # fallback split by ';' or ','
+                            parts = [p.strip() for p in re.split(r"[;,]", d.authors) if p.strip()]
+                            authors_val = parts or None
                         meta = {
+                            # identification
+                            "document_id": int(d.id) if d.id is not None else None,
+                            "source": d.source or "arxiv",
+                            "arxiv_id": _guess_arxiv_id(d.landing_url, d.pdf_url),
+                            "doi": d.doi,
+                            "title": d.title,
+                            "authors": authors_val,
+                            "abstract": d.abstract,
+                            "year": int(d.year) if d.year is not None else None,
+                            "topic": d.topic,
+                            # file + fetch provenance
+                            "local_path": str(fpath),
                             "url_used": url,
                             "status": resp.status_code,
                             "etag": resp.headers.get("ETag"),
@@ -296,7 +372,12 @@ def fetch_arxiv_pdfs(
                             "content_type": resp.headers.get("Content-Type"),
                             "sha256": checksum,
                             "file_size": total_bytes,
+                            "http_status": int(resp.status_code),
+                            "pdf_status": d.pdf_status,
+                            "pdf_fetched_at": d.pdf_fetched_at.isoformat() + "Z" if d.pdf_fetched_at else None,
                             "fetched_at": d.fetched_at.isoformat() + "Z",
+                            # optional placeholders (to be filled after S3 upload)
+                            "s3_key": None,
                         }
                         meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
                     except Exception:
