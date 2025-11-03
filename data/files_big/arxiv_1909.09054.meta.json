@@ -1,0 +1,26 @@
+{
+  "document_id": 514,
+  "source": "arxiv",
+  "arxiv_id": "1909.09054",
+  "doi": null,
+  "title": "A steady Euler flow on the 3-sphere and its associated Faddeev-Skyrme solution",
+  "authors": [
+    "Slobodeanu, Radu"
+  ],
+  "abstract": "We present a steady Euler flow on the round 3-sphere whose velocity vector field has the property of having two independent first integrals, being tangent to the fibres of an almost submersion onto the 2-sphere. This submersion turns out to be a critical point for the quartic Faddeev-Skyrme model with a standard potential.",
+  "year": 2019,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1909.09054.pdf",
+  "url_used": "https://arxiv.org/pdf/1909.09054.pdf",
+  "status": 200,
+  "etag": "CPXttu296IMDEAI=",
+  "last_modified": "Fri, 19 Jan 2024 03:13:36 GMT",
+  "content_type": "application/pdf",
+  "sha256": "4ffe9e2356f018c7f93d3e7eec13e4255a218ce0196434df22786a5ea1c87950",
+  "file_size": 194879,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:16:09.539257Z",
+  "fetched_at": "2025-11-03T05:16:09.539257Z",
+  "s3_key": "uwss/clean_large/by-id/514/pdf.pdf"
+}

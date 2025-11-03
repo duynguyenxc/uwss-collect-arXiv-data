@@ -1,0 +1,28 @@
+{
+  "document_id": 506,
+  "source": "arxiv",
+  "arxiv_id": "1710.10855",
+  "doi": null,
+  "title": "Possible heights of graph transformation groups",
+  "authors": [
+    "Shirazi, Fatemah Ayatollah Zadeh",
+    "Hosseini, Arezoo",
+    "Ahmadabadi, Zahra Nili"
+  ],
+  "abstract": "In the following text we prove that for all finite $p\\geq0$ there exists a topological graph $X$ such that $\\{p,p+1,p+2,\\ldots\\}\\cup\\{+\\infty\\}$ is the collection of all possible heights for transformation groups with phase space $X$. Moreover for all topological graph $X$ with $p$ as height of transformation group $(Homeo(X),X)$, $\\{p,p+1,p+2,\\ldots\\}\\cup\\{+\\infty\\}$ again is the collection of all possible heights for transformation groups with phase space $X$.",
+  "year": 2017,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1710.10855.pdf",
+  "url_used": "https://arxiv.org/pdf/1710.10855.pdf",
+  "status": 200,
+  "etag": "CITVlIv32/wCEAE=",
+  "last_modified": "Sun, 22 Jan 2023 19:39:37 GMT",
+  "content_type": "application/pdf",
+  "sha256": "9cd9b981af6b1ac19a8ebe037df476ebf068276a40eae8bcbbb341966325bbd5",
+  "file_size": 234746,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:15:23.887016Z",
+  "fetched_at": "2025-11-03T05:15:23.887016Z",
+  "s3_key": "uwss/clean_large/by-id/506/pdf.pdf"
+}

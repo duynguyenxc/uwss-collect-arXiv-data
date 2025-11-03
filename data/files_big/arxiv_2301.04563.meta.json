@@ -1,0 +1,30 @@
+{
+  "document_id": 591,
+  "source": "arxiv",
+  "arxiv_id": "2301.04563",
+  "doi": "10.1145/3576037",
+  "title": "I depended on you and you broke me: An empirical study of manifesting breaking changes in client packages",
+  "authors": [
+    "Venturini, Daniel",
+    "Cogo, Filipe Roseiro",
+    "Polato, Ivanilton",
+    "Gerosa, Marco A",
+    "Wiese, Igor Scaliante"
+  ],
+  "abstract": "Complex software systems have a network of dependencies. Developers often configure package managers (e.g., npm) to automatically update dependencies with each publication of new releases containing bug fixes and new features. When a dependency release introduces backward-incompatible changes, commonly known as breaking changes, dependent packages may not build anymore. This may indirectly impact downstream packages, but the impact of breaking changes and how dependent packages recover from these breaking changes remain unclear. To close this gap, we investigated the manifestation of breaking changes in the npm ecosystem, focusing on cases where packages' builds are impacted by breaking changes from their dependencies. We measured the extent to which breaking changes affect dependent packages. Our analyses show that around 12% of the dependent packages and 14% of their releases were impacted by a breaking change during updates of non-major releases of their dependencies. We observed that, from all of the manifesting breaking changes, 44% were introduced both in minor and patch releases, which in principle should be backward compatible. Clients recovered themselves from these breaking changes in half of the cases, most frequently by upgrading or downgrading the provider's version without changing the versioning configuration in the package manager. We expect that these results help developers understand the potential impact of such changes and recover from them.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2301.04563.pdf",
+  "url_used": "https://arxiv.org/pdf/2301.04563.pdf",
+  "status": 200,
+  "etag": "CKGylOGr3vwCEAE=",
+  "last_modified": "Mon, 23 Jan 2023 18:40:36 GMT",
+  "content_type": "application/pdf",
+  "sha256": "922b89808cc1ac861f185472cec10dbf92152fa329235f1a10ae9e8b69ebe210",
+  "file_size": 1028361,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:24.697361Z",
+  "fetched_at": "2025-11-03T05:19:24.697361Z",
+  "s3_key": "uwss/clean/by-id/591/pdf.pdf"
+}

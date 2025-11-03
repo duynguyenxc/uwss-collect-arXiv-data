@@ -1,0 +1,32 @@
+{
+  "document_id": 557,
+  "source": "arxiv",
+  "arxiv_id": "1911.04016",
+  "doi": "10.1109/ms.2021.3098116",
+  "title": "Challenges for Inclusion in Software Engineering: The Case of the Emerging Papua New Guinean Society",
+  "authors": [
+    "Kula, Raula Gaikovina",
+    "Treude, Christoph",
+    "Hata, Hideaki",
+    "Baltes, Sebastian",
+    "Steinmacher, Igor",
+    "Gerosa, Marco Aurelio",
+    "Amini, Winifred Kula"
+  ],
+  "abstract": "Software plays a central role in modern societies, with its high economic value and potential for advancing societal change. In this paper, we characterise challenges and opportunities for a country progressing towards entering the global software industry, focusing on Papua New Guinea (PNG). By hosting a Software Engineering workshop, we conducted a qualitative study by recording talks (n=3), employing a questionnaire (n=52), and administering an in-depth focus group session with local actors (n=5). Based on a thematic analysis, we identified challenges as barriers and opportunities for the PNG software engineering community. We also discuss the state of practices and how to make it inclusive for practitioners, researchers, and educators from both the local and global software engineering community.",
+  "year": 2019,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1911.04016.pdf",
+  "url_used": "https://arxiv.org/pdf/1911.04016.pdf",
+  "status": 200,
+  "etag": "CNfGldLX3PwCEAE=",
+  "last_modified": "Mon, 23 Jan 2023 02:51:36 GMT",
+  "content_type": "application/pdf",
+  "sha256": "697db58e639b662e1556382e73c52289a3bf9671ee07151669a6b676c8f113e4",
+  "file_size": 392776,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:08.683213Z",
+  "fetched_at": "2025-11-03T05:18:08.683213Z",
+  "s3_key": "uwss/clean_large/by-id/557/pdf.pdf"
+}

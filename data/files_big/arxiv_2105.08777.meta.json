@@ -1,0 +1,30 @@
+{
+  "document_id": 566,
+  "source": "arxiv",
+  "arxiv_id": "2105.08777",
+  "doi": "10.1145/3510460",
+  "title": "Women's Participation in Open Source Software: A Survey of the Literature",
+  "authors": [
+    "Trinkenreich, Bianca",
+    "Wiese, Igor",
+    "Sarma, Anita",
+    "Gerosa, Marco",
+    "Steinmacher, Igor"
+  ],
+  "abstract": "Participation of women in Open Source Software (OSS) is very unbalanced, despite various efforts to improve diversity. This is concerning not only because women do not get the chance of career and skill developments afforded by OSS, but also because OSS projects suffer from a lack of diversity of thoughts because of a lack of diversity in their projects. Studies that characterize women's participation and investigate how to attract and retain women are spread across multiple fields, including information systems, software engineering, and social science. This paper systematically maps, aggregates, and synthesizes the state-of-the-art on women's participation in Open Source Software. It focuses on women's representation and the demographics of women who contribute to OSS, how they contribute, the acceptance rates of their contributions, their motivations and challenges, and strategies employed by communities to attract and retain women. We identified 51 articles (published between 2005 and 2021) that investigate women's participation in OSS. According to the literature, women represent about 9.8\\% of OSS contributors; most of them are recent contributors, 20-37 years old, devote less than 5h/week to OSS, and make both non-code and code contributions. Only 5\\% of projects have women as core developers, and women author less than 5\\% of pull-requests but have similar or even higher rates of merge acceptance than men. Besides learning new skills and altruism, reciprocity and kinship are motivations especially relevant for women but can leave if they are not compensated for their contributions. Women's challenges are mainly social, including lack of peer parity and non-inclusive communication from a toxic culture. The literature reports ten strategies, which were mapped to six of the seven challenges. Based on these results, we provide guidelines for future research and practice.",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2105.08777.pdf",
+  "url_used": "https://arxiv.org/pdf/2105.08777.pdf",
+  "status": 200,
+  "etag": "\"sha256:ee743da286e248adfffc5c23df28f1c145d1fb3f6bb9f8f1b702c203e7bd0020\"",
+  "last_modified": "Mon, 23 Jan 2023 09:55:48 GMT",
+  "content_type": "application/pdf",
+  "sha256": "bb7856e6643b226de0d91b4723d4be14299f7a895ff6b928947351b39e0130bd",
+  "file_size": 1825846,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:26.759207Z",
+  "fetched_at": "2025-11-03T05:18:26.759207Z",
+  "s3_key": "uwss/clean_large/by-id/566/pdf.pdf"
+}

@@ -1,0 +1,28 @@
+{
+  "document_id": 517,
+  "source": "arxiv",
+  "arxiv_id": "2002.06805",
+  "doi": "10.1109/tvt.2021.3052550",
+  "title": "PAC Codes: Sequential Decoding vs List Decoding",
+  "authors": [
+    "Rowshan, Mohammad",
+    "Burg, Andreas",
+    "Viterbo, Emanuele"
+  ],
+  "abstract": "In the Shannon lecture at the 2019 International Symposium on Information Theory (ISIT), ArÄ±kan proposed to employ a one-to-one convolutional transform as a pre-coding step before the polar transform. The resulting codes of this concatenation are called polarization-adjusted convolutional (PAC) codes. In this scheme, a pair of polar mapper and demapper as pre- and postprocessing devices are deployed around a memoryless channel, which provides polarized information to an outer decoder leading to improved error correction performance of the outer code. In this paper, the list decoding and sequential decoding (including Fano decoding and stack decoding) are first adapted for use to decode PAC codes. Then, to reduce the complexity of sequential decoding of PAC/polar codes, we propose (i) an adaptive heuristic metric, (ii) tree search constraints for backtracking to avoid exploration of unlikely sub-paths, and (iii) tree search strategies consistent with the pattern of error occurrence in polar codes. These contribute to the reduction of the average decoding time complexity from 50% to 80%, trading with 0.05 to 0.3 dB degradation in error correction performance within FER=10^-3 range, respectively, relative to not applying the corresponding search strategies. Additionally, as an important ingredient in Fano decoding of PAC/polar codes, an efficient computation method for the intermediate LLRs and partial sums is provided. This method is effective in backtracking and avoids storing the intermediate information or restarting the decoding process. Eventually, all three decoding algorithms are compared in terms of performance, complexity, and resource requirements.",
+  "year": 2020,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2002.06805.pdf",
+  "url_used": "https://arxiv.org/pdf/2002.06805.pdf",
+  "status": 200,
+  "etag": "CI7toeO86IMDEAI=",
+  "last_modified": "Fri, 19 Jan 2024 03:08:47 GMT",
+  "content_type": "application/pdf",
+  "sha256": "332e6301e5d8fe16e18635db5171a3ec599704f7eb66c3aeea6e0adf8f33b624",
+  "file_size": 542660,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:16:15.867915Z",
+  "fetched_at": "2025-11-03T05:16:15.867915Z",
+  "s3_key": "uwss/clean_large/by-id/517/pdf.pdf"
+}

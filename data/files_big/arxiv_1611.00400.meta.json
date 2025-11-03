@@ -1,0 +1,28 @@
+{
+  "document_id": 500,
+  "source": "arxiv",
+  "arxiv_id": "1611.00400",
+  "doi": "10.1080/00949655.2017.1392523",
+  "title": "Minimum Average Deviance Estimation for Sufficient Dimension Reduction",
+  "authors": [
+    "Adragni, Kofi P.",
+    "Raim, Andrew M.",
+    "Al-Najjar, Elias"
+  ],
+  "abstract": "Sufficient dimension reduction reduces the dimensionality of data while preserving relevant regression information. In this article, we develop Minimum Average Deviance Estimation (MADE) methodology for sufficient dimension reduction. It extends the Minimum Average Variance Estimation (MAVE) approach of Xia et al. (2002) from continuous responses to exponential family distributions to include Binomial and Poisson responses. Local likelihood regression is used to learn the form of the regression function from the data. The main parameter of interest is a dimension reduction subspace which projects the covariates to a lower dimension while preserving their relationship with the outcome. To estimate this parameter within its natural space, we consider an iterative algorithm where one step utilizes a Stiefel manifold optimizer. We empirically evaluate the performance of three prediction methods, two that are intrinsic to local likelihood estimation and one that is based on the Nadaraya-Watson estimator. Initial results show that, as expected, MADE can outperform MAVE when there is a departure from the assumption of additive errors.",
+  "year": 2016,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1611.00400.pdf",
+  "url_used": "https://arxiv.org/pdf/1611.00400.pdf",
+  "status": 200,
+  "etag": "CPWKnOKC2PwCEAE=",
+  "last_modified": "Sat, 21 Jan 2023 06:21:14 GMT",
+  "content_type": "application/pdf",
+  "sha256": "fa207d26437d529ee584b01e06a3b200a75fab6e538ade0f67b36e0f2ca6ef34",
+  "file_size": 509405,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:15:08.890184Z",
+  "fetched_at": "2025-11-03T05:15:08.890184Z",
+  "s3_key": "uwss/clean_large/by-id/500/pdf.pdf"
+}

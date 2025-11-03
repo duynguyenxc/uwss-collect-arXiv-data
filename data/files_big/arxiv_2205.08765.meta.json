@@ -1,0 +1,26 @@
+{
+  "document_id": 576,
+  "source": "arxiv",
+  "arxiv_id": "2205.08765",
+  "doi": null,
+  "title": "Necessary and sufficient conditions for one-dimensional variational problems with applications to elasticity",
+  "authors": [
+    "Quittner, Pavol"
+  ],
+  "abstract": "This paper deals with necessary and sufficient conditions for weak and strong minimizers of functionals $Î¦(u)=\\int_a^b f(x,u(x),u'(x))\\,dx$, where $u\\in C^1([a,b],{\\mathbb R}^N)$. We first derive conditions which are simpler than the known ones, and then apply them to several particular problems, including stability problems in the elasticity theory. In particular, we solve some open problems in [A. Majumdar, A. Raisch: Stability of twisted rods, helices and buckling solutions in three dimensions, Nonlinearity 27 (2014), 2841--2867] by finding optimal conditions for the stability of a naturally straight Kirchhoff rod under various types of endpoint constraints.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2205.08765.pdf",
+  "url_used": "https://arxiv.org/pdf/2205.08765.pdf",
+  "status": 200,
+  "etag": "\"sha256:4a9fb965a40ff68bc396bf2966b7dff417c7d54219a1f6a0eff1eae20c8095ba\"",
+  "last_modified": "Wed, 24 Jan 2024 02:55:29 GMT",
+  "content_type": "application/pdf",
+  "sha256": "d11ab7e0cd4bcb79635cd93a9c4a12f170d365f9b232fe4a9b4fc00ff1bb1da0",
+  "file_size": 1179094,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:48.425652Z",
+  "fetched_at": "2025-11-03T05:18:48.425652Z",
+  "s3_key": "uwss/clean/by-id/576/pdf.pdf"
+}

@@ -1,0 +1,30 @@
+{
+  "document_id": 539,
+  "source": "arxiv",
+  "arxiv_id": "2112.14404",
+  "doi": null,
+  "title": "Frank-Wolfe-type methods for a class of nonconvex inequality-constrained problems",
+  "authors": [
+    "Zeng, Liaoyuan",
+    "Zhang, Yongle",
+    "Li, Guoyin",
+    "Pong, Ting Kei",
+    "Wang, Xiaozhou"
+  ],
+  "abstract": "The Frank-Wolfe (FW) method, which implements efficient linear oracles that minimize linear approximations of the objective function over a fixed compact convex set, has recently received much attention in the optimization and machine learning literature. In this paper, we propose a new FW-type method for minimizing a smooth function over a compact set defined as the level set of a single difference-of-convex function, based on new generalized linear-optimization oracles (LO). We show that these LOs can be computed efficiently with closed-form solutions in some important optimization models that arise in compressed sensing and machine learning. In addition, under a mild strict feasibility condition, we establish the subsequential convergence of our nonconvex FW-type method. Since the feasible region of our generalized LO typically changes from iteration to iteration, our convergence analysis is completely different from those existing works in the literature on FW-type methods that deal with fixed feasible regions among subproblems. Finally, motivated by the away steps for accelerating FW-type methods for convex problems, we further design an away-step oracle to supplement our nonconvex FW-type method, and establish subsequential convergence of this variant. Numerical results on the matrix completion problem with standard datasets are presented to demonstrate the efficiency of the proposed FW-type method and its away-step variant.",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2112.14404.pdf",
+  "url_used": "https://arxiv.org/pdf/2112.14404.pdf",
+  "status": 200,
+  "etag": "\"sha256:20f0f43b54bda4742ce2330123c93b16549863b75befb280e29d29c46a04882b\"",
+  "last_modified": "Fri, 19 Jan 2024 02:12:19 GMT",
+  "content_type": "application/pdf",
+  "sha256": "12ffbc05064c08a9d4efa88472462e6847abab9e47c535fb6abebbcd976b8f24",
+  "file_size": 1733797,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:34.045964Z",
+  "fetched_at": "2025-11-03T05:17:34.045964Z",
+  "s3_key": "uwss/clean_large/by-id/539/pdf.pdf"
+}

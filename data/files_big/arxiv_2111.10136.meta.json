@@ -1,0 +1,27 @@
+{
+  "document_id": 536,
+  "source": "arxiv",
+  "arxiv_id": "2111.10136",
+  "doi": "10.1016/j.jde.2021.11.010",
+  "title": "Finite time extinction for a class of damped Schr{Ã¶}dinger equations with a singular saturated nonlinearity",
+  "authors": [
+    "BÃ©gout, Pascal",
+    "DÃ­az, JesÃºs Ildefonso"
+  ],
+  "abstract": "We present some sharper finite extinction time results for solutions of a class of damped nonlinear Schr{Ã¶}dinger equations when the nonlinear damping term corresponds to the limit cases of some ``saturating non-Kerr law'' $F(|u|^2)u=\\frac{a}{\\varepsilon+(|u|^2)^Î±}u,$ with $a\\in\\mathbb{C},$ $\\varepsilon\\geqslant0,$ $2Î±=(1-m)$ and $m\\in[0,1).$ To carry out the improvement of previous results in the literature we present in this paper a careful revision of the existence and regularity of weak solutions under very general assumptions on the data. We prove that the problem can be solved in the very general framework of the maximal monotone operators theory, even under a lack of regularity of the damping term. This allows us to consider, among other things, the singular case $m=0.$ We replace the above approximation of the damping term by a different one which keeps the monotonicity for any $\\varepsilon\\geqslant0$. We prove that, when $m=0,$ the finite extinction time of the solution arises for merely bounded right hand side data $f(t,x).$ This is specially useful in the applications in which the Schr{Ã¶}dinger equation is coupled with some other functions satisfying some additional equations.",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2111.10136.pdf",
+  "url_used": "https://arxiv.org/pdf/2111.10136.pdf",
+  "status": 200,
+  "etag": "CKuuzc696IMDEAI=",
+  "last_modified": "Fri, 19 Jan 2024 03:12:32 GMT",
+  "content_type": "application/pdf",
+  "sha256": "0f7e80b40235d6458b9edac96b46e3a629fced2551c26b4319887e878c0a6812",
+  "file_size": 458513,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:25.194080Z",
+  "fetched_at": "2025-11-03T05:17:25.194080Z",
+  "s3_key": "uwss/clean_large/by-id/536/pdf.pdf"
+}

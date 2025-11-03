@@ -1,0 +1,27 @@
+{
+  "document_id": 540,
+  "source": "arxiv",
+  "arxiv_id": "2201.03820",
+  "doi": null,
+  "title": "Eternal Vertex Cover on Bipartite and Co-Bipartite Graphs",
+  "authors": [
+    "Misra, Neeldhara",
+    "Nanoti, Saraswati"
+  ],
+  "abstract": "Eternal Vertex Cover problem is a dynamic variant of the vertex cover problem. We have a two player game in which guards are placed on some vertices of a graph. In every move, one player (the attacker) attacks an edge. In response to the attack, the second player (defender) moves the guards along the edges of the graph in such a manner that at least one guard moves along the attacked edge. If such a movement is not possible, then the attacker wins. If the defender can defend the graph against an infinite sequence of attacks, then the defender wins.\n  The minimum number of guards with which the defender has a winning strategy is called the Eternal Vertex Cover Number of the graph G. On general graphs, the computational problem of determining the minimum eternal vertex cover number is NP-hard and admits a 2-approximation algorithm and an exponential kernel. The complexity of the problem on bipartite graphs is open, as is the question of whether the problem admits a polynomial kernel.\n  We settle both these questions by showing that Eternal Vertex Cover is NP-hard and does not admit a polynomial compression even on bipartite graphs of diameter six. We also show that the problem admits a polynomial time algorithm on the class of cobipartite graphs.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2201.03820.pdf",
+  "url_used": "https://arxiv.org/pdf/2201.03820.pdf",
+  "status": 200,
+  "etag": "CNKK7MGv6IMDEAI=",
+  "last_modified": "Fri, 19 Jan 2024 02:09:27 GMT",
+  "content_type": "application/pdf",
+  "sha256": "f8acae95599961ec6351985dedd8db712286e84d06c8d58d222d2d2bc30fdae6",
+  "file_size": 542596,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:35.808368Z",
+  "fetched_at": "2025-11-03T05:17:35.808368Z",
+  "s3_key": "uwss/clean_large/by-id/540/pdf.pdf"
+}

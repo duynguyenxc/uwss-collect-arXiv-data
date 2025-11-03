@@ -1,0 +1,30 @@
+{
+  "document_id": 594,
+  "source": "arxiv",
+  "arxiv_id": "2301.06565",
+  "doi": "10.1093/mnras/stad3804",
+  "title": "Dissecting the broadband emission from Î³-ray blazar PKS 0735+178 in search of neutrinos",
+  "authors": [
+    "Prince, Raj",
+    "Das, Saikat",
+    "Gupta, Nayantara",
+    "Majumdar, Pratik",
+    "Czerny, BoÅ¼ena"
+  ],
+  "abstract": "The origin of the diffuse flux of TeV-PeV astrophysical neutrinos is still unknown. The $Î³$-ray blazar PKS 0735+178, located outside the 90\\% localization region at 2.2 deg from the best-fit IC-211208A event, was found to be flaring across all wavebands. In addition to leptonic synchrotron (SYN) and synchrotron self-Compton (SSC) emission, we invoke photohadronic ($pÎ³$) interactions inside the jet to model the spectral energy distribution (SED) and neutrino emission. We analyze the 100 days $Î³$-ray and X-ray data and 10 days around the neutrino event is chosen to generate the broadband SED. The temporal light curve indicates that the source was in a high state in optical, UV, $Î³$-ray, and X-ray frequencies during the neutrino detection epoch. In the one-zone lepto-hadronic model, the SSC photons do not provide enough seed photons for $pÎ³$ interactions to explain the neutrino event. However, including an external photon field yields a neutrino event rate of 0.12 in 100 days, for the IceCube detector, using physically motivated values of the magnetic field, an external photon field peaking at optical wavelength, and other jet parameters. The radiation from secondary electrons at X-ray energies severely constrains the neutrino flux to a lower value than found in previous studies. Moreover, the flux of high-energy $Î³$-rays at GeV energies from the decay of neutral pions is subdominant at the high-energy peak of the SED, suggesting a higher correlation of neutrinos flux with X-ray flux is plausible.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2301.06565.pdf",
+  "url_used": "https://arxiv.org/pdf/2301.06565.pdf",
+  "status": 200,
+  "etag": "CLycm63l/oIDEAI=",
+  "last_modified": "Fri, 08 Dec 2023 02:28:07 GMT",
+  "content_type": "application/pdf",
+  "sha256": "ec716758014eda4d3ac76feed99b8f2793055d3d521e78d5041717c35dfc0bfb",
+  "file_size": 632093,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:30.550253Z",
+  "fetched_at": "2025-11-03T05:19:30.550253Z",
+  "s3_key": "uwss/clean/by-id/594/pdf.pdf"
+}

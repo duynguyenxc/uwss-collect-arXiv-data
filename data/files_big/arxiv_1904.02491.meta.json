@@ -1,0 +1,30 @@
+{
+  "document_id": 553,
+  "source": "arxiv",
+  "arxiv_id": "1904.02491",
+  "doi": "10.1103/physrevb.101.014433",
+  "title": "Dynamics of domain walls motion driven by spin-orbit torque in antiferromagnets",
+  "authors": [
+    "Sanchez-Tejerina, Luis",
+    "Puliafito, Vito",
+    "Amiri, Pedram Khalili",
+    "Carpentieri, Mario",
+    "Finocchio, Giovanni"
+  ],
+  "abstract": "Ultrafast dynamics of antiferromagnetic materials is an appealing feature for novel spintronic devices. Several experiments have shown that both, the static states and the dynamical behavior of the antiferromagnetic order, are strictly related to stabilization of domains and domain wall (DW) motion. Hence for a quantitative understanding of statics and dynamics of multidomain states in antiferromagnetic materials a full micromagnetic framework is necessary. Here, we use this model to study the antiferromagnetic DW motion driven by the spin-orbit torque. The main result is the derivation of analytical expressions for the DW width and velocity that exhibit a very good agreement with the numerical simulations in a wide range of parameters. We also find that a mechanism limiting the maximum applicable current in an antiferromagnetic racetrack memory is the continuous nucleation of the domains from the edge, which is qualitatively different from what is observed in ferromagnetic racetracks.",
+  "year": 2019,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1904.02491.pdf",
+  "url_used": "https://arxiv.org/pdf/1904.02491.pdf",
+  "status": 200,
+  "etag": "CL6upon19IMDEAI=",
+  "last_modified": "Wed, 24 Jan 2024 01:52:36 GMT",
+  "content_type": "application/pdf",
+  "sha256": "3f3087c3acb257d6ed69cbf566074295390544a499a16615fd1be29d648b8d82",
+  "file_size": 870098,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:00.115676Z",
+  "fetched_at": "2025-11-03T05:18:00.115676Z",
+  "s3_key": "uwss/clean_large/by-id/553/pdf.pdf"
+}

@@ -1,0 +1,30 @@
+{
+  "document_id": 551,
+  "source": "arxiv",
+  "arxiv_id": "1609.08089",
+  "doi": "10.1145/3124391",
+  "title": "Software Platforms for Smart Cities: Concepts, Requirements, Challenges, and a Unified Reference Architecture",
+  "authors": [
+    "Santana, Eduardo Felipe Zambom",
+    "Chaves, Ana Paula",
+    "Gerosa, Marco Aurelio",
+    "Kon, Fabio",
+    "Milojicic, Dejan"
+  ],
+  "abstract": "Making cities smarter help improve city services and increase citizens' quality of life. Information and communication technologies (ICT) are fundamental for progressing towards smarter city environments. Smart City software platforms potentially support the development and integration of Smart City applications. However, the ICT community must overcome current significant technological and scientific challenges before these platforms can be widely used. This paper surveys the state-of-the-art in software platforms for Smart Cities. We analyzed 23 projects with respect to the most used enabling technologies, as well as functional and non-functional requirements, classifying them into four categories: Cyber-Physical Systems, Internet of Things, Big Data, and Cloud Computing. Based on these results, we derived a reference architecture to guide the development of next-generation software platforms for Smart Cities. Finally, we enumerated the most frequently cited open research challenges, and discussed future opportunities. This survey gives important references for helping application developers, city managers, system operators, end-users, and Smart City researchers to make project, investment, and research decisions.",
+  "year": 2016,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1609.08089.pdf",
+  "url_used": "https://arxiv.org/pdf/1609.08089.pdf",
+  "status": 200,
+  "etag": "\"sha256:f90f68c8ae27a06cf28d62e93914037e54216647c7d151b7cf69b5c74861af92\"",
+  "last_modified": "Sat, 21 Jan 2023 07:05:17 GMT",
+  "content_type": "application/pdf",
+  "sha256": "efe403442b51b83570e89f442ff3311a779fc2b77cc32cc5023bed401eec84d5",
+  "file_size": 1691534,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:56.276250Z",
+  "fetched_at": "2025-11-03T05:17:56.276250Z",
+  "s3_key": "uwss/clean_large/by-id/551/pdf.pdf"
+}

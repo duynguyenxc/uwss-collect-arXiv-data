@@ -1,0 +1,29 @@
+{
+  "document_id": 573,
+  "source": "arxiv",
+  "arxiv_id": "2204.00596",
+  "doi": "10.21468/scipostphys.16.1.017",
+  "title": "Disorder in AdS$_3$/CFT$_2$",
+  "authors": [
+    "Dorband, Moritz",
+    "Grumiller, Daniel",
+    "Meyer, RenÃ©",
+    "Zhao, Suting"
+  ],
+  "abstract": "We perturbatively study marginally relevant quenched disorder in AdS$_3$/CFT$_2$ to second order in the disorder strength. Using the Chern-Simons formulation of AdS$_3$ gravity for the PoincarÃ© patch, we introduce disorder via the chemical potentials. We discuss the bulk and boundary properties resulting from the disorder averaged metric. The disorder generates a small mass and angular momentum. In the bulk and the boundary, we find unphysical features due to the disorder average. Motivated by these features, we propose a PoincarÃ©-Lindstedt-inspired resummation method. We discuss how this method enables us to remove all of the unphysical features and compare with other approaches to averaging.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2204.00596.pdf",
+  "url_used": "https://arxiv.org/pdf/2204.00596.pdf",
+  "status": 200,
+  "etag": "\"sha256:27e0f1720c2ce77d2c183002e1ff175b33e8e8d093722bf361f7251bd0d3d3f4\"",
+  "last_modified": "Tue, 28 Nov 2023 04:30:32 GMT",
+  "content_type": "application/pdf",
+  "sha256": "6ebe451a6ac45cdb7a4c8711081fd72977732ed4a529440cb31501bef404fbcb",
+  "file_size": 1628402,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:41.950780Z",
+  "fetched_at": "2025-11-03T05:18:41.950780Z",
+  "s3_key": "uwss/clean/by-id/573/pdf.pdf"
+}

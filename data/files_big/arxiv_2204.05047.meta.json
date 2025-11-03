@@ -1,0 +1,29 @@
+{
+  "document_id": 574,
+  "source": "arxiv",
+  "arxiv_id": "2204.05047",
+  "doi": "10.1103/physrevd.106.024042",
+  "title": "Energetics and scattering of gravitational two-body systems at fourth post-Minkowskian order",
+  "authors": [
+    "Khalil, Mohammed",
+    "Buonanno, Alessandra",
+    "Steinhoff, Jan",
+    "Vines, Justin"
+  ],
+  "abstract": "Upcoming observational runs of the LIGO-Virgo-KAGRA collaboration, and future gravitational-wave (GW) detectors on the ground and in space, require waveform models more accurate than currently available. High-precision waveform models can be developed by improving the analytical description of compact binary dynamics and completing it with numerical-relativity (NR) information. Here, we assess the accuracy of the recent results for the fourth post-Minkowskian (PM) conservative dynamics through comparisons with NR simulations for the circular-orbit binding energy and for the scattering angle. We obtain that the 4PM dynamics gives better agreement with NR than the 3PM dynamics, and that while the 4PM approximation gives comparable results to the third post-Newtonian (PN) approximation for bound orbits, it performs better for scattering encounters. Furthermore, we incorporate the 4PM results in effective-one-body (EOB) Hamiltonians, which improves the disagreement with NR over the 4PM-expanded Hamiltonian from $\\sim 40\\%$ to $\\sim 10\\%$, or $\\sim 3\\%$ depending on the EOB gauge, for an equal-mass binary, two GW cycles before merger. Finally, we derive a 4PN-EOB Hamiltonian for hyperbolic orbits, and compare its predictions for the scattering angle to NR, and to the scattering angle of a 4PN-EOB Hamiltonian computed for elliptic orbits.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2204.05047.pdf",
+  "url_used": "https://arxiv.org/pdf/2204.05047.pdf",
+  "status": 200,
+  "etag": "\"sha256:80a52559dac6942f3565e572f27bffee0395ffbbd4f5aeef2d0cdd94be90d68c\"",
+  "last_modified": "Wed, 24 Jan 2024 02:56:47 GMT",
+  "content_type": "application/pdf",
+  "sha256": "2893463fb9e100ce6b17331a063ed29977a16fa50365eac2db098e2dea456f3e",
+  "file_size": 2024267,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:44.287096Z",
+  "fetched_at": "2025-11-03T05:18:44.287096Z",
+  "s3_key": "uwss/clean/by-id/574/pdf.pdf"
+}

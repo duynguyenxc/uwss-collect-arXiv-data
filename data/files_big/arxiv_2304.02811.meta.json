@@ -1,0 +1,30 @@
+{
+  "document_id": 463,
+  "source": "arxiv",
+  "arxiv_id": "2304.02811",
+  "doi": "10.1016/j.jcp.2023.112751",
+  "title": "HomPINNs: homotopy physics-informed neural networks for solving the inverse problems of nonlinear differential equations with multiple solutions",
+  "authors": [
+    "Zheng, Haoyang",
+    "Huang, Yao",
+    "Huang, Ziyang",
+    "Hao, Wenrui",
+    "Lin, Guang"
+  ],
+  "abstract": "Due to the complex behavior arising from non-uniqueness, symmetry, and bifurcations in the solution space, solving inverse problems of nonlinear differential equations (DEs) with multiple solutions is a challenging task. To address this, we propose homotopy physics-informed neural networks (HomPINNs), a novel framework that leverages homotopy continuation and neural networks (NNs) to solve inverse problems. The proposed framework begins with the use of NNs to simultaneously approximate unlabeled observations across diverse solutions while adhering to DE constraints. Through homotopy continuation, the proposed method solves the inverse problem by tracing the observations and identifying multiple solutions. The experiments involve testing the performance of the proposed method on one-dimensional DEs and applying it to solve a two-dimensional Gray-Scott simulation. Our findings demonstrate that the proposed method is scalable and adaptable, providing an effective solution for solving DEs with multiple solutions and unknown parameters. Moreover, it has significant potential for various applications in scientific computing, such as modeling complex systems and solving inverse problems in physics, chemistry, biology, etc.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2304.02811.pdf",
+  "url_used": "https://arxiv.org/pdf/2304.02811.pdf",
+  "status": 200,
+  "etag": "\"sha256:a2954d30d9e9047f273bd925ee7e412b27a36242f20cf3890572bc8a7e200a8c\"",
+  "last_modified": "Thu, 18 Jan 2024 03:01:13 GMT",
+  "content_type": "application/pdf",
+  "sha256": "785424b8152f3c8c65b674297179f750439fd5acbd15810986964600375b63f5",
+  "file_size": 4799183,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:11.213461Z",
+  "fetched_at": "2025-11-03T05:13:11.213461Z",
+  "s3_key": "uwss/clean_large/by-id/463/pdf.pdf"
+}

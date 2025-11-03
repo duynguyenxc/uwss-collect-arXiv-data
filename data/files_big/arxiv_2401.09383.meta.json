@@ -1,0 +1,28 @@
+{
+  "document_id": 476,
+  "source": "arxiv",
+  "arxiv_id": "2401.09383",
+  "doi": null,
+  "title": "Synthesizing Hardware-Software Leakage Contracts for RISC-V Open-Source Processors",
+  "authors": [
+    "Mohr, Gideon",
+    "Guarnieri, Marco",
+    "Reineke, Jan"
+  ],
+  "abstract": "Microarchitectural attacks compromise security by exploiting software-visible artifacts of microarchitectural optimizations such as caches and speculative execution. Defending against such attacks at the software level requires an appropriate abstraction at the instruction set architecture (ISA) level that captures microarchitectural leakage. Hardware-software leakage contracts have recently been proposed as such an abstraction. In this paper, we propose a semi-automatic methodology for synthesizing hardware-software leakage contracts for open-source microarchitectures. For a given ISA, our approach relies on human experts to (a) capture the space of possible contracts in the form of contract templates and (b) devise a test-case generation strategy to explore a microarchitecture's potential leakage. For a given implementation of an ISA, these two ingredients are then used to automatically synthesize the most precise leakage contract that is satisfied by the microarchitecture. We have instantiated this methodology for the RISC-V ISA and applied it to the Ibex and CVA6 open-source processors. Our experiments demonstrate the practical applicability of the methodology and uncover subtle and unexpected leaks.",
+  "year": 2024,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2401.09383.pdf",
+  "url_used": "https://arxiv.org/pdf/2401.09383.pdf",
+  "status": 200,
+  "etag": "CNDUu4z55YMDEAI=",
+  "last_modified": "Thu, 18 Jan 2024 03:00:40 GMT",
+  "content_type": "application/pdf",
+  "sha256": "5db42165d54842aab5eea0a9af159c68fd0329a0a7bb39aca8ad42c5c602dcdc",
+  "file_size": 341222,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:54.720582Z",
+  "fetched_at": "2025-11-03T05:13:54.720582Z",
+  "s3_key": "uwss/clean_large/by-id/476/pdf.pdf"
+}

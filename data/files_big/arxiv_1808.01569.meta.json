@@ -1,0 +1,27 @@
+{
+  "document_id": 510,
+  "source": "arxiv",
+  "arxiv_id": "1808.01569",
+  "doi": null,
+  "title": "On Li--Yorke chaotic transformation groups modulo an ideal",
+  "authors": [
+    "Pourattar, Mehrnaz",
+    "Shirazi, Fatemah Ayatollah Zadeh"
+  ],
+  "abstract": "In the following text we introduce the notion of chaoticity modulo an ideal in the sense of Li-Yorke in topological transformation semigroups and bring some of its elementary properties. We continue our study by characterizing a class of abelian infinite Li-Yorke chaotic Fort transformation groups and show all of the elements of the above class is co-decomposable to non-Li-Yorke chaotic transformation groups.",
+  "year": 2018,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1808.01569.pdf",
+  "url_used": "https://arxiv.org/pdf/1808.01569.pdf",
+  "status": 200,
+  "etag": "CNvHqMmY3PwCEAE=",
+  "last_modified": "Sun, 22 Jan 2023 22:09:26 GMT",
+  "content_type": "application/pdf",
+  "sha256": "d51be041548e63dacfdb953d1a81593f9bfc7f4be60b57e0f93c4f0123766e89",
+  "file_size": 206452,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:16:01.394341Z",
+  "fetched_at": "2025-11-03T05:16:01.394341Z",
+  "s3_key": "uwss/clean_large/by-id/510/pdf.pdf"
+}

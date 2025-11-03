@@ -1,0 +1,28 @@
+{
+  "document_id": 613,
+  "source": "arxiv",
+  "arxiv_id": "2305.20075",
+  "doi": "10.3847/1538-4357/ad148f",
+  "title": "The Effective Field Theory of Large Scale Structures of a Fuzzy Dark Matter Universe",
+  "authors": [
+    "Kousha, Hamed Manouchehri",
+    "Hooshangi, Sina",
+    "Abolhasani, Aliakbar"
+  ],
+  "abstract": "Ultra-light scalar fields and their non-interacting class, the so-called fuzzy dark matter (FDM), are candidates for dark matter, introduced to solve the small-scale problems of the standard cold dark matter. In this paper, we address whether the small-scale effects, specifically the quantum pressure, could leave sizable imprints on the large-scale statistics of the matter. For this purpose, We utilize the Effective Field Theory of Large Scale Structures (EFT of LSS) wherein small-scale physics is integrated and represented on large scales by only a set of free parameters. These parameters can be determined by fitting to the cosmological simulations. We use the \\textit{Gadget-2} code to study the evolution of $512^3$ particles in a box of side length $250\\,h^{-1}\\,\\mathrm{Mpc}$. Fitting EFT predictions to the simulation data, we determine the value of the speed of sound. We use the suppressed FDM initial conditions for the FDM case, sufficient to produce accurate -- enough for our purpose -- results on large scales. We perform three FDM simulations with different masses and compare their sound speed with the standard cold dark matter (CDM) simulation. We found that the FDM sound speed is slightly higher than CDM's. The deviation of the sound speed for FDM from CDM is larger for lower FDM masses. We conclude that the impact of the FDM is not limited to the small scales alone, and we can search for them by studying the matter on large scales. Though it is beyond the observations' scope today, it is possible to discriminate it with upcoming observations.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2305.20075.pdf",
+  "url_used": "https://arxiv.org/pdf/2305.20075.pdf",
+  "status": 200,
+  "etag": "\"sha256:f2a20baaf752588df2dd5d17e746d7393ca34c37e1e330cce6c3797851873a19\"",
+  "last_modified": "Wed, 24 Jan 2024 02:57:31 GMT",
+  "content_type": "application/pdf",
+  "sha256": "b6f9843be20f26701052fdb29c6f809b2b88180cb456f368592dc798de6274d0",
+  "file_size": 2728855,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:20:16.737312Z",
+  "fetched_at": "2025-11-03T05:20:16.737312Z",
+  "s3_key": "uwss/clean/by-id/613/pdf.pdf"
+}

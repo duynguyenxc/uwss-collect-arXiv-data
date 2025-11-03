@@ -1,0 +1,28 @@
+{
+  "document_id": 523,
+  "source": "arxiv",
+  "arxiv_id": "2012.02126",
+  "doi": null,
+  "title": "Conservative stochastic PDE and fluctuations of the symmetric simple exclusion process",
+  "authors": [
+    "Dirr, Nicolas",
+    "Fehrman, Benjamin",
+    "Gess, Benjamin"
+  ],
+  "abstract": "In this paper, we provide a continuum model for the fluctuations of the symmetric simple exclusion process about its hydrodynamic limit. The model is based on an approximating sequence of stochastic PDEs with nonlinear, conservative noise. In the small-noise limit, we show that the fluctuations of the solutions are to first-order the same as the fluctuations of the particle system. Furthermore, the SPDEs correctly simulate the rare events in the particle process. We prove that the solutions satisfy a zero-noise large deviations principle with rate function equal to the rate function describing the deviations of the symmetric simple exclusion process from its hydrodynamic limit.",
+  "year": 2020,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2012.02126.pdf",
+  "url_used": "https://arxiv.org/pdf/2012.02126.pdf",
+  "status": 200,
+  "etag": "CO3suLq76IMDEAI=",
+  "last_modified": "Fri, 19 Jan 2024 03:02:53 GMT",
+  "content_type": "application/pdf",
+  "sha256": "dda55f9674982da9bfa28072c4b59a79a7ef2ad2202bf077cb7a7e0263d99d1c",
+  "file_size": 1029471,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:16:58.959634Z",
+  "fetched_at": "2025-11-03T05:16:58.959634Z",
+  "s3_key": "uwss/clean_large/by-id/523/pdf.pdf"
+}

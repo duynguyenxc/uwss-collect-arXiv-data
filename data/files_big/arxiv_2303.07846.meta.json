@@ -1,0 +1,28 @@
+{
+  "document_id": 600,
+  "source": "arxiv",
+  "arxiv_id": "2303.07846",
+  "doi": null,
+  "title": "Sample-efficient Adversarial Imitation Learning",
+  "authors": [
+    "Jung, Dahuin",
+    "Lee, Hyungyu",
+    "Yoon, Sungroh"
+  ],
+  "abstract": "Imitation learning, in which learning is performed by demonstration, has been studied and advanced for sequential decision-making tasks in which a reward function is not predefined. However, imitation learning methods still require numerous expert demonstration samples to successfully imitate an expert's behavior. To improve sample efficiency, we utilize self-supervised representation learning, which can generate vast training signals from the given data. In this study, we propose a self-supervised representation-based adversarial imitation learning method to learn state and action representations that are robust to diverse distortions and temporally predictive, on non-image control tasks. In particular, in comparison with existing self-supervised learning methods for tabular data, we propose a different corruption method for state and action representations that is robust to diverse distortions. We theoretically and empirically observe that making an informative feature manifold with less sample complexity significantly improves the performance of imitation learning. The proposed method shows a 39% relative improvement over existing adversarial imitation learning methods on MuJoCo in a setting limited to 100 expert state-action pairs. Moreover, we conduct comprehensive ablations and additional experiments using demonstrations with varying optimality to provide insights into a range of factors.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2303.07846.pdf",
+  "url_used": "https://arxiv.org/pdf/2303.07846.pdf",
+  "status": 200,
+  "etag": "\"sha256:6b1e05b28e1096a65dd12ca99a1ac657d7c04853c131fb2297f4642be15f70e2\"",
+  "last_modified": "Wed, 24 Jan 2024 02:54:15 GMT",
+  "content_type": "application/pdf",
+  "sha256": "f0b2d15d961569d4a1db326a8165f58e59a1f32741935f286433fa25bced92d5",
+  "file_size": 1048593,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:46.934785Z",
+  "fetched_at": "2025-11-03T05:19:46.934785Z",
+  "s3_key": "uwss/clean/by-id/600/pdf.pdf"
+}

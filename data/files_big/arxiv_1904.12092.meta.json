@@ -1,0 +1,29 @@
+{
+  "document_id": 512,
+  "source": "arxiv",
+  "arxiv_id": "1904.12092",
+  "doi": "10.1007/s00180-020-01029-4",
+  "title": "Spatio-Temporal Change of Support Modeling with R",
+  "authors": [
+    "Raim, Andrew M.",
+    "Holan, Scott H.",
+    "Bradley, Jonathan R.",
+    "Wikle, Christopher K."
+  ],
+  "abstract": "Spatio-temporal change of support methods are designed for statistical analysis on spatial and temporal domains which can differ from those of the observed data. Previous work introduced a parsimonious class of Bayesian hierarchical spatio-temporal models, which we refer to as STCOS, for the case of Gaussian outcomes. Application of STCOS methodology from this literature requires a level of proficiency with spatio-temporal methods and statistical computing which may be a hurdle for potential users. The present work seeks to bridge this gap by guiding readers through STCOS computations. We focus on the R computing environment because of its popularity, free availability, and high quality contributed packages. The stcos package is introduced to facilitate computations for the STCOS model. A motivating application is the American Community Survey (ACS), an ongoing survey administered by the U.S. Census Bureau that measures key socioeconomic and demographic variables for various populations in the United States. The STCOS methodology offers a principled approach to compute model-based estimates and associated measures of uncertainty for ACS variables on customized geographies and/or time periods. We present a detailed case study with ACS data as a guide for change of support analysis in R, and as a foundation which can be customized to other applications.",
+  "year": 2019,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1904.12092.pdf",
+  "url_used": "https://arxiv.org/pdf/1904.12092.pdf",
+  "status": 200,
+  "etag": "\"sha256:7f39592cf4a9db341586b9c51a297e9e63eb86d8a3e74472a5e502bd54ae2f6e\"",
+  "last_modified": "Mon, 23 Jan 2023 00:42:27 GMT",
+  "content_type": "application/pdf",
+  "sha256": "cb01587d20b18df92b60930655e9b17e6300ae4bf8d38ef5f42419446c164e1d",
+  "file_size": 1691540,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:16:05.779949Z",
+  "fetched_at": "2025-11-03T05:16:05.779949Z",
+  "s3_key": "uwss/clean_large/by-id/512/pdf.pdf"
+}

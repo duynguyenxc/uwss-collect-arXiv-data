@@ -1,0 +1,28 @@
+{
+  "document_id": 602,
+  "source": "arxiv",
+  "arxiv_id": "2304.01714",
+  "doi": "10.1103/physrevresearch.6.013082",
+  "title": "Thermodynamic bounds on spectral perturbations, with applications to oscillations and relaxation dynamics",
+  "authors": [
+    "Kolchinsky, Artemy",
+    "Ohga, Naruo",
+    "Ito, Sosuke"
+  ],
+  "abstract": "In discrete-state Markovian systems, many important properties of correlations functions and relaxation dynamics depend on the spectrum of the rate matrix. Here we demonstrate the existence of a universal trade-off between thermodynamic and spectral properties. We show that the entropy production rate, the fundamental thermodynamic cost of a nonequilibrium steady state, bounds the difference between the eigenvalues of a nonequilibrium rate matrix and a reference equilibrium rate matrix. Using this result, we derive thermodynamic bounds on the spectral gap, which governs autocorrelations times and the speed of relaxation to steady state. We also derive thermodynamic bounds on the imaginary eigenvalues, which govern the speed of oscillations. We illustrate our approach using a simple model of biomolecular sensing.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2304.01714.pdf",
+  "url_used": "https://arxiv.org/pdf/2304.01714.pdf",
+  "status": 200,
+  "etag": "\"sha256:95983c0193f591ec1494ddf8105732fcb3ddbeeb25d885c9bf99d8a65ff08710\"",
+  "last_modified": "Wed, 24 Jan 2024 03:00:02 GMT",
+  "content_type": "application/pdf",
+  "sha256": "9d435349c56194f714b8a9ad4270eff49eaf50e698429b9549d1bb252cd25a6b",
+  "file_size": 1276679,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:51.173396Z",
+  "fetched_at": "2025-11-03T05:19:51.173396Z",
+  "s3_key": "uwss/clean/by-id/602/pdf.pdf"
+}

@@ -1,0 +1,27 @@
+{
+  "document_id": 474,
+  "source": "arxiv",
+  "arxiv_id": "2401.09375",
+  "doi": null,
+  "title": "Self-navigation in crowds: An invariant set-based approach",
+  "authors": [
+    "J, Veejay Karthik",
+    "Vachhani, Leena"
+  ],
+  "abstract": "Self-navigation in non-coordinating crowded environments is formidably challenging within multi-agent systems consisting of non-holonomic robots operating through local sensing. Our primary objective is the development of a novel, rapid, sensor-driven, self-navigation controller that directly computes control commands to enable safe maneuvering while coexisting with other agents. We propose an input-constrained feedback controller meticulously crafted for non-holonomic mobile robots and the characterization of associated invariant sets. The invariant sets are the key to maintaining stability and safety amidst the non-cooperating agents. We then propose a planning strategy that strategically guides the generation of invariant sets toward the agent's intended target. This enables the agents to directly compute theoretically safe control inputs without explicitly requiring pre-planned paths/trajectories to reliably navigate through crowded multi-agent environments. The practicality of our technique is demonstrated through hardware experiments, and the ability to parallelize computations to shorten computational durations for synthesizing safe control commands. The proposed approach finds potential applications in crowded multi-agent scenarios that require rapid control computations based on perceived safety bounds during run-time.",
+  "year": 2024,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2401.09375.pdf",
+  "url_used": "https://arxiv.org/pdf/2401.09375.pdf",
+  "status": 200,
+  "etag": "\"sha256:9a0c1c312ca413701147695dfac6cb498e9d7d472f2c02dfdfe3743c03ea8c95\"",
+  "last_modified": "Thu, 18 Jan 2024 03:00:16 GMT",
+  "content_type": "application/pdf",
+  "sha256": "a4f992b176fc0ac7baa395614f0e862d55914e76ffd8eeecd4b9f2e4394c71d7",
+  "file_size": 19911599,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:42.374187Z",
+  "fetched_at": "2025-11-03T05:13:42.374187Z",
+  "s3_key": "uwss/clean_large/by-id/474/pdf.pdf"
+}

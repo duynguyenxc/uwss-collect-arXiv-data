@@ -1,0 +1,26 @@
+{
+  "document_id": 530,
+  "source": "arxiv",
+  "arxiv_id": "2108.04535",
+  "doi": "10.5802/jtnb.1235",
+  "title": "On the Decomposition of Hecke Polynomials over Parabolic Hecke Algebras",
+  "authors": [
+    "Heyer, Claudius"
+  ],
+  "abstract": "We generalize a classical result of Andrianov on the decomposition of Hecke polynomials. Let $\\mathfrak{F}$ be a non-archimedean local fied. For every connected reductive group $\\mathbf{G}$, we give a criterion for when a polynomial with coefficients in the spherical parahoric Hecke algebra of $\\mathbf{G}(\\mathfrak{F})$ decomposes over a parabolic Hecke algebra associated with a non-obtuse parabolic subgroup of $\\mathbf{G}$. We classify the non-obtuse parabolics. This then shows that our decomposition theorem covers all the classical cases due to Andrianov and Gritsenko. We also obtain new cases when the relative root system of $\\mathbf{G}$ contains factors of types $E_6$ or $E_7$.",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2108.04535.pdf",
+  "url_used": "https://arxiv.org/pdf/2108.04535.pdf",
+  "status": 200,
+  "etag": "CMnGi4a66IMDEAI=",
+  "last_modified": "Fri, 19 Jan 2024 02:56:34 GMT",
+  "content_type": "application/pdf",
+  "sha256": "402b885b2095a6a1912420dad4edfa78dcc4626bacabffac0a77cbac2cca496f",
+  "file_size": 631154,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:12.448163Z",
+  "fetched_at": "2025-11-03T05:17:12.448163Z",
+  "s3_key": "uwss/clean_large/by-id/530/pdf.pdf"
+}

@@ -1,0 +1,31 @@
+{
+  "document_id": 525,
+  "source": "arxiv",
+  "arxiv_id": "2012.15335",
+  "doi": "10.1073/pnas.2104092118",
+  "title": "Polar In-Plane Surface Orientation of a Ferroelectric Nematic Liquid Crystal: Polar Monodomains and Twisted State Electro-Optics",
+  "authors": [
+    "Chen, Xi",
+    "Korblova, Eva",
+    "Glaser, Matthew A.",
+    "Maclennan, Joseph E.",
+    "Walba, David M.",
+    "Clark, Noel A."
+  ],
+  "abstract": "We show that surface interactions can vectorially structure the three-dimensional polariza-tion field of a ferroelectric fluid. The contact between a ferroelectric nematic liquid crystal and a surface with in-plane polarity generates a preferred in-plane orientation of the polarization field at that interface. This is a route to the formation of fluid or glassy monodomains of high polarization without the need for electric field poling. For example, unidirectional buffing of polyimide films on planar surfaces to give quadrupolar in-plane anisotropy also induces mac-roscopic in-plane polar order at the surfaces, enabling the formation of a variety of azimuthal polar director structures in the cell interior, including uniform and twisted states. In a Ï-twist cell, obtained with antiparallel, unidirectional buffing on opposing surfaces, we demonstrate three distinct modes of ferroelectric nematic electro-optic response: intrinsic, viscosity-limited, field-induced molecular reorientation; field-induced motion of domain walls separating twist-ed states of opposite chirality; and propagation of polarization reorientation solitons from the cell plates to the cell center upon field reversal. Chirally doped ferroelectric nematics in anti-parallel-rubbed cells produce Grandjean textures of helical twist that can be unwound via field-induced polar surface reorientation transitions. Fields required are in the 3 V/mm range, indicating an in-plane polar anchoring energy of wP ~ 3x10-3 J/m2.",
+  "year": 2020,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2012.15335.pdf",
+  "url_used": "https://arxiv.org/pdf/2012.15335.pdf",
+  "status": 200,
+  "etag": "\"sha256:89f86f9228d7df4fa9d459253664fc4152dbceb8b3ccb07776d4f8ce207efafc\"",
+  "last_modified": "Wed, 11 Aug 2021 05:44:49 GMT",
+  "content_type": "application/pdf",
+  "sha256": "851dc7a40abe4053b9a51d39440f2bf763a4f90c17f28a7de0c999ecfc098c90",
+  "file_size": 2363748,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:03.096249Z",
+  "fetched_at": "2025-11-03T05:17:03.096249Z",
+  "s3_key": "uwss/clean_large/by-id/525/pdf.pdf"
+}

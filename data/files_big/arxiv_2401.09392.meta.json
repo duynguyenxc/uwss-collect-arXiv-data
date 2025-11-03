@@ -1,0 +1,28 @@
+{
+  "document_id": 479,
+  "source": "arxiv",
+  "arxiv_id": "2401.09392",
+  "doi": null,
+  "title": "Equivariant Cosheaves and Finite Group Representations in Graphic Statics",
+  "authors": [
+    "Cooperband, Zoe",
+    "Lopez, Miguel",
+    "Schulze, Bernd"
+  ],
+  "abstract": "This work extends the theory of reciprocal diagrams in graphic statics to frameworks that are invariant under finite group actions by utilizing the homology and representation theory of cellular cosheaves, recent tools from applied algebraic topology. By introducing the structure of an equivariant cellular cosheaf, we prove that pairs of self-stresses and reciprocal diagrams of symmetric frameworks are classified by the irreducible representations of the underlying group. We further derive the symmetry-aligned Euler characteristics of a finite dimensional equivariant chain complex, which for the force cosheaf yields a new formulation of the symmetry-adapted Maxwell counting rule for detecting symmetric self-stresses and kinematic degrees of freedom in frameworks. A freely available program is used to implement the relevant cosheaf homologies and illustrate the theory with examples.",
+  "year": 2024,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2401.09392.pdf",
+  "url_used": "https://arxiv.org/pdf/2401.09392.pdf",
+  "status": 200,
+  "etag": "\"sha256:4e19196e33d1603b086b0290aaef6debbbbe9ca4eeff623bf1316883eba0f5ab\"",
+  "last_modified": "Thu, 18 Jan 2024 03:01:04 GMT",
+  "content_type": "application/pdf",
+  "sha256": "1f519aea2ce9eafe98ee4e403dc817cf96501bd2897299cfb7bdf54e71cf3873",
+  "file_size": 1067389,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:14:15.737077Z",
+  "fetched_at": "2025-11-03T05:14:15.737077Z",
+  "s3_key": "uwss/clean_large/by-id/479/pdf.pdf"
+}

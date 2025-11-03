@@ -1,0 +1,30 @@
+{
+  "document_id": 629,
+  "source": "arxiv",
+  "arxiv_id": "2307.12436",
+  "doi": "10.1016/j.physletb.2024.138464",
+  "title": "Polarization of spin-1/2 particles with effective spacetime dependent masses",
+  "authors": [
+    "Bhadury, Samapan",
+    "Das, Arpan",
+    "Florkowski, Wojciech",
+    "K., Gowthama K.",
+    "Ryblewski, Radoslaw"
+  ],
+  "abstract": "Semiclassical expansion of the Wigner function for spin-1/2 fermions having an effective spacetime-dependent mass is used to analyze spin-polarization effects. The existing framework is reformulated to obtain a differential equation directly connecting the particle spin tensor with the effective mass. It reflects the conservation of the total angular momentum in a system. In general, we find that the gradients of mass act as a source of the spin polarization. Although this effect is absent for simple boost-invariant dynamics, an extension to non-boost-invariant systems displays a non-trivial dependence of the spin density on the mass indicating that the spin polarization effects may be intertwined with the phenomenon of chiral restoration.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2307.12436.pdf",
+  "url_used": "https://arxiv.org/pdf/2307.12436.pdf",
+  "status": 200,
+  "etag": "CJS11seC9YMDEAI=",
+  "last_modified": "Wed, 24 Jan 2024 02:52:56 GMT",
+  "content_type": "application/pdf",
+  "sha256": "a4d9831aebfb573e55aebc92c5af361780dd45ffae3d218ddb504839a08d41c6",
+  "file_size": 258668,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:21:02.238042Z",
+  "fetched_at": "2025-11-03T05:21:02.238042Z",
+  "s3_key": "uwss/clean/by-id/629/pdf.pdf"
+}

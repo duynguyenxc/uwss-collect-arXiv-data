@@ -1,0 +1,28 @@
+{
+  "document_id": 495,
+  "source": "arxiv",
+  "arxiv_id": "0811.2745",
+  "doi": "10.4213/sm8098",
+  "title": "Classification of knotted tori in the 2-metastable dimension",
+  "authors": [
+    "Cencelj, M.",
+    "RepovÅ¡, D.",
+    "Skopenkov, M."
+  ],
+  "abstract": "This paper is on the classical Knotting Problem: for a given manifold N and a number m describe the set of isotopy classes of embeddings $N\\to S^m$. We study the specific case of knotted tori, i. e. the embeddings $S^p \\times S^q \\to S^m$. The classification of knotted tori up to isotopy in the metastable dimension range $m>p+\\frac{3}{2}q+2$, $p\\le q$, was given by A. Haefliger, E. Zeeman and A. Skopenkov. We consider the dimensions below the metastable range, and give an explicit criterion for the finiteness of this set of isotopy classes in the 2-metastable dimension:\n  Theorem. Assume that $p+\\frac{4}{3}q+2<m<p+\\frac{3}{2}q+2$ and $m>2p+q+2$. Then the set of smooth embeddings $S^p \\times S^q \\to S^m$ up to isotopy is infinite if and only if either $q+1$ or $p+q+1$ is divisible by 4.\n  Our approach to the classification is based on an analogue of the Koschorke exact sequence from the theory of link maps. This sequence involves a new $Î²$-invariant of knotted tori. The exactness is proved using embedded surgery and the Habegger-Kaiser techniques of studying the complement.",
+  "year": 2008,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_0811.2745.pdf",
+  "url_used": "https://arxiv.org/pdf/0811.2745.pdf",
+  "status": 200,
+  "etag": "CMfrjpfd6oMDEAE=",
+  "last_modified": "Sat, 20 Jan 2024 00:39:05 GMT",
+  "content_type": "application/pdf",
+  "sha256": "af18a8ea8e723205abb2dac4636bf01ef25bd85a20bf3ed9903191babb7dcf77",
+  "file_size": 812413,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:14:57.478625Z",
+  "fetched_at": "2025-11-03T05:14:57.478625Z",
+  "s3_key": "uwss/clean_large/by-id/495/pdf.pdf"
+}

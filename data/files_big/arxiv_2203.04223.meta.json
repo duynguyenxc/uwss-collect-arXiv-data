@@ -1,0 +1,25 @@
+{
+  "document_id": 570,
+  "source": "arxiv",
+  "arxiv_id": "2203.04223",
+  "doi": null,
+  "title": "A fast implementation of the Monster group",
+  "authors": [
+    "Seysen, Martin"
+  ],
+  "abstract": "Let $\\mathbb{M}$ be the Monster group, which is the largest sporadic finite simple group, and has first been constructed in 1982 by Griess. In 1985 Conway has constructed a 196884-dimensional rational epresentation $Ï$ of $\\mathbb{M}$ with matrix entries in $\\mathbb{Z}[\\frac{1}{2}]$. We describe a new and very fast algorithm for performing the group operation in $\\mathbb{M}$.\n  For an odd integer $p > 1$ let $Ï_p$ be the representation $Ï$ with matrix entries taken modulo $p$. We use a generating set $Î$ of $\\mathbb{M}$, such that the operation of a generator in $Î$ on an element of $Ï_p$ can easily be computed.\n  We construct a triple $(v_1, v^+, v^-)$ of elements of the module $Ï_{15}$, such that an unknown $g \\in \\mathbb{M}$ can be effectively computed as a word in $Î$ from the images $(v_1 g, v^+ g, v^- g)$.\n  Our new algorithm based on this idea multiplies two random elements of $\\mathbb{M}$ in less than 30~milliseconds on a standard PC with an Intel i7-8750H CPU at 4 GHz. This is more than 100000 times faster than estimated by Wilson in 2013.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2203.04223.pdf",
+  "url_used": "https://arxiv.org/pdf/2203.04223.pdf",
+  "status": 200,
+  "etag": "CNy6+KWD9YMDEAI=",
+  "last_modified": "Wed, 24 Jan 2024 02:56:14 GMT",
+  "content_type": "application/pdf",
+  "sha256": "9a25d63774359a9e53b56b415ea41663e205558edbfbfca2e6a606d3fa2a5522",
+  "file_size": 429483,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:35.660735Z",
+  "fetched_at": "2025-11-03T05:18:35.660735Z",
+  "s3_key": "uwss/clean_large/by-id/570/pdf.p

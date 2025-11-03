@@ -1,0 +1,29 @@
+{
+  "document_id": 453,
+  "source": "arxiv",
+  "arxiv_id": "2104.02222",
+  "doi": null,
+  "title": "On the Benefits of Traffic \"Reprofiling'' -- The Single Hop Case",
+  "authors": [
+    "Song, Jiayi",
+    "Qiu, Jiaming",
+    "Guerin, Roch",
+    "Sariowan, Henry"
+  ],
+  "abstract": "The need to guarantee hard delay bounds to traffic flows with deterministic traffic profiles, e.g., token buckets, arises in a number of network settings. Of interest are solutions that offer such guarantees while minimizing network bandwidth. The paper explores a basic building block towards realizing such solutions, namely, a single hop configuration. The main results are in the form of optimal solutions for meeting local deadlines under schedulers of varying complexity and therefore cost. The results demonstrate how judiciously modifying flows' traffic profiles, i.e., reprofiling them, can help simple schedulers reduce the bandwidth they require, often performing nearly as well as more complex ones.",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2104.02222.pdf",
+  "url_used": "https://arxiv.org/pdf/2104.02222.pdf",
+  "status": 200,
+  "etag": "\"sha256:877b4756059c4e0473e28cd5998f14851738185d61ca425217b34007264fd6fe\"",
+  "last_modified": "Thu, 18 Jan 2024 03:03:15 GMT",
+  "content_type": "application/pdf",
+  "sha256": "11b1ec2ec7cf9084cf61f9d28bba614512f2d522cc91ecfd29847dadf78084a8",
+  "file_size": 1110540,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:12:45.584360Z",
+  "fetched_at": "2025-11-03T05:12:45.584360Z",
+  "s3_key": "uwss/clean_large/by-id/453/pdf.pdf"
+}

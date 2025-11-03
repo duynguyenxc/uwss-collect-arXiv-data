@@ -1,0 +1,27 @@
+{
+  "document_id": 505,
+  "source": "arxiv",
+  "arxiv_id": "1708.09276",
+  "doi": null,
+  "title": "Indicator sequences and indicator topologies of Fort transformation groups",
+  "authors": [
+    "Shirazi, Fatemah Ayatollah Zadeh",
+    "Ebrahimifar, Fatemeh"
+  ],
+  "abstract": "In the following text we prove that there exists a Fort transformation group with indicator sequence $(p_0,\\ldots,p_n)$ if and only if $0=p_0\\leq p_1\\leq\\cdots\\leq p_n=1$, moreover we characterize all possible indicator topological spaces of Fort transformation groups.The text will study indicator sequences and indicator topologies of Fort transformation semigroups too.",
+  "year": 2017,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1708.09276.pdf",
+  "url_used": "https://arxiv.org/pdf/1708.09276.pdf",
+  "status": 200,
+  "etag": "CPz+36rw2/wCEAE=",
+  "last_modified": "Sun, 22 Jan 2023 19:09:24 GMT",
+  "content_type": "application/pdf",
+  "sha256": "903cef8ea483c372c305dfb28e12f32edef6f19ab072e8e2f97b4a00c7096129",
+  "file_size": 136994,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:15:22.144463Z",
+  "fetched_at": "2025-11-03T05:15:22.144463Z",
+  "s3_key": "uwss/clean_large/by-id/505/pdf.pdf"
+}

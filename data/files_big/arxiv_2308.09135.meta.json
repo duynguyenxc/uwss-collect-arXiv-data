@@ -1,0 +1,28 @@
+{
+  "document_id": 636,
+  "source": "arxiv",
+  "arxiv_id": "2308.09135",
+  "doi": "10.1007/jhep12(2023)185",
+  "title": "Phenomenological profile of scotogenic fermionic dark matter",
+  "authors": [
+    "Karan, Anirban",
+    "Sadhukhan, Soumya",
+    "Valle, JosÃ© W. F."
+  ],
+  "abstract": "We consider the possibility that neutrino masses arise from the exchange of dark matter states. We examine in detail the phenomenology of fermionic dark matter in the singlet-triplet scotogenic reference model. We explore the case of singlet-like fermionic dark matter, taking into account all co-annihilation effects relevant for determining its relic abundance, such as fermion-fermion and scalar-fermion co-annihilation. Although this in principle allows for dark matter below 60 GeV, the latter is in conflict with charged lepton flavour violation (cLFV) and/or collider physics constraints. We examine the prospects for direct dark matter detection in upcoming experiments up to 10 TeV. Fermion-scalar coannihilation is needed to obtain viable fermionic dark matter in the 60-100 GeV mass range. Fermion-fermion and fermion-scalar coannihilation play complementary roles in different parameter regions above 100 GeV.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2308.09135.pdf",
+  "url_used": "https://arxiv.org/pdf/2308.09135.pdf",
+  "status": 200,
+  "etag": "\"sha256:baa6201a6439c85c979040f602e24c4981fc947d49c82952ef7b8333e66cef33\"",
+  "last_modified": "Wed, 24 Jan 2024 02:56:37 GMT",
+  "content_type": "application/pdf",
+  "sha256": "ff76c725d3a3065b320cac976cad0e46e16aceb3f87deb981ea3020e0fc013b1",
+  "file_size": 7772144,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:21:21.457081Z",
+  "fetched_at": "2025-11-03T05:21:21.457081Z",
+  "s3_key": "uwss/clean/by-id/636/pdf.pdf"
+}

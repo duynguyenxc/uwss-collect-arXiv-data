@@ -1,0 +1,28 @@
+{
+  "document_id": 459,
+  "source": "arxiv",
+  "arxiv_id": "2208.12816",
+  "doi": "10.1109/tai.2024.3353157",
+  "title": "Complexity-Driven CNN Compression for Resource-constrained Edge AI",
+  "authors": [
+    "Zawish, Muhammad",
+    "Davy, Steven",
+    "Abraham, Lizy"
+  ],
+  "abstract": "Recent advances in Artificial Intelligence (AI) on the Internet of Things (IoT)-enabled network edge has realized edge intelligence in several applications such as smart agriculture, smart hospitals, and smart factories by enabling low-latency and computational efficiency. However, deploying state-of-the-art Convolutional Neural Networks (CNNs) such as VGG-16 and ResNets on resource-constrained edge devices is practically infeasible due to their large number of parameters and floating-point operations (FLOPs). Thus, the concept of network pruning as a type of model compression is gaining attention for accelerating CNNs on low-power devices. State-of-the-art pruning approaches, either structured or unstructured do not consider the different underlying nature of complexities being exhibited by convolutional layers and follow a training-pruning-retraining pipeline, which results in additional computational overhead. In this work, we propose a novel and computationally efficient pruning pipeline by exploiting the inherent layer-level complexities of CNNs. Unlike typical methods, our proposed complexity-driven algorithm selects a particular layer for filter-pruning based on its contribution to overall network complexity. We follow a procedure that directly trains the pruned model and avoids the computationally complex ranking and fine-tuning steps. Moreover, we define three modes of pruning, namely parameter-aware (PA), FLOPs-aware (FA), and memory-aware (MA), to introduce versatile compression of CNNs. Our results show the competitive performance of our approach in terms of accuracy and acceleration. Lastly, we present a trade-off between different resources and accuracy which can be helpful for developers in making the right decisions in resource-constrained IoT environments.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2208.12816.pdf",
+  "url_used": "https://arxiv.org/pdf/2208.12816.pdf",
+  "status": 200,
+  "etag": "\"sha256:39229436a90c91d1544a6ed21b00ff7b7994f23bd836a7361049f27d994d55f9\"",
+  "last_modified": "Mon, 23 Jan 2023 17:27:48 GMT",
+  "content_type": "application/pdf",
+  "sha256": "0d708e1573d35528a08577ed73159e5afcb2623f1c43290d906407067f242bbd",
+  "file_size": 1424562,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:01.912499Z",
+  "fetched_at": "2025-11-03T05:13:01.912499Z",
+  "s3_key": "uwss/clean_large/by-id/459/pdf.pdf"
+}

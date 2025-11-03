@@ -1,0 +1,28 @@
+{
+  "document_id": 501,
+  "source": "arxiv",
+  "arxiv_id": "1612.03302",
+  "doi": "10.1080/10618600.2017.1391698",
+  "title": "An Extension of Generalized Linear Models to Finite Mixture Outcome Distributions",
+  "authors": [
+    "Raim, Andrew M.",
+    "Neerchal, Nagaraj K.",
+    "Morel, Jorge G."
+  ],
+  "abstract": "Finite mixture distributions arise in sampling a heterogeneous population. Data drawn from such a population will exhibit extra variability relative to any single subpopulation. Statistical models based on finite mixtures can assist in the analysis of categorical and count outcomes when standard generalized linear models (GLMs) cannot adequately account for variability observed in the data. We propose an extension of GLM where the response is assumed to follow a finite mixture distribution, while the regression of interest is linked to the mixture's mean. This approach may be preferred over a finite mixture of regressions when the population mean is the quantity of interest; here, only a single regression function must be specified and interpreted in the analysis. A technical challenge is that the mean of a finite mixture is a composite parameter which does not appear explicitly in the density. The proposed model is completely likelihood-based and maintains the link to the regression through a certain random effects structure. We consider typical GLM cases where means are either real-valued, constrained to be positive, or constrained to be on the unit interval. The resulting model is applied to two example datasets through a Bayesian analysis: one with success/failure outcomes and one with count outcomes. Supporting the extra variation is seen to improve residual plots and to appropriately widen prediction intervals.",
+  "year": 2016,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1612.03302.pdf",
+  "url_used": "https://arxiv.org/pdf/1612.03302.pdf",
+  "status": 200,
+  "etag": "\"sha256:745381f3b676b86054ab1a6aeb1ff3ceafb068fe39ed8c3c60afc6fab765dc97\"",
+  "last_modified": "Sat, 21 Jan 2023 07:54:14 GMT",
+  "content_type": "application/pdf",
+  "sha256": "0baa44675fd451d664aca4ac33cdb64c4caf607708b99e8e218525248dbc2e33",
+  "file_size": 1245352,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:15:11.670601Z",
+  "fetched_at": "2025-11-03T05:15:11.670601Z",
+  "s3_key": "uwss/clean_large/by-id/501/pdf.pdf"
+}

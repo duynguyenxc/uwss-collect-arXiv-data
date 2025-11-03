@@ -1,0 +1,27 @@
+{
+  "document_id": 546,
+  "source": "arxiv",
+  "arxiv_id": "2204.05136",
+  "doi": "10.1109/jiot.2023.3338220",
+  "title": "SoK: Privacy Preserving Machine Learning using Functional Encryption: Opportunities and Challenges",
+  "authors": [
+    "Panzade, Prajwal",
+    "Takabi, Daniel"
+  ],
+  "abstract": "With the advent of functional encryption, new possibilities for computation on encrypted data have arisen. Functional Encryption enables data owners to grant third-party access to perform specified computations without disclosing their inputs. It also provides computation results in plain, unlike Fully Homomorphic Encryption. The ubiquitousness of machine learning has led to the collection of massive private data in the cloud computing environment. This raises potential privacy issues and the need for more private and secure computing solutions. Numerous efforts have been made in privacy-preserving machine learning (PPML) to address security and privacy concerns. There are approaches based on fully homomorphic encryption (FHE), secure multiparty computation (SMC), and, more recently, functional encryption (FE). However, FE-based PPML is still in its infancy and has not yet gotten much attention compared to FHE-based PPML approaches. In this paper, we provide a systematization of PPML works based on FE summarizing state-of-the-art in the literature. We focus on Inner-product-FE and Quadratic-FE-based machine learning models for the PPML applications. We analyze the performance and usability of the available FE libraries and their applications to PPML. We also discuss potential directions for FE-based PPML approaches. To the best of our knowledge, this is the first work to systematize FE-based PPML approaches.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2204.05136.pdf",
+  "url_used": "https://arxiv.org/pdf/2204.05136.pdf",
+  "status": 200,
+  "etag": "\"sha256:049eed82a7a2a1427c2dabd02eb2e87193348c77e974d7f1844f50e0a3737816\"",
+  "last_modified": "Mon, 23 Jan 2023 14:19:35 GMT",
+  "content_type": "application/pdf",
+  "sha256": "7530fe207cd00e9d8d4248cb8593c16fc27d22d4ad6d9e8efa7fa298e457c63a",
+  "file_size": 1138911,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:46.350937Z",
+  "fetched_at": "2025-11-03T05:17:46.350937Z",
+  "s3_key": "uwss/clean_large/by-id/546/pdf.pdf"
+}

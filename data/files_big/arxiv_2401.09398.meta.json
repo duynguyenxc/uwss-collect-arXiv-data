@@ -1,0 +1,27 @@
+{
+  "document_id": 482,
+  "source": "arxiv",
+  "arxiv_id": "2401.09398",
+  "doi": null,
+  "title": "A Future-Input Dependent model for Greenberger-Horne-Zeilinger correlations",
+  "authors": [
+    "Neder, Izhar",
+    "Argaman, Nathan"
+  ],
+  "abstract": "It is widely appreciated, due to Bell's theorem, that quantum phenomena are inconsistent with local-realist models. In this context, locality refers to local causality, and there is thus an open possibility for reproducing the quantum predictions with models which internally violate the causal arrow of time, while otherwise adhering to the relevant locality condition. So far, this possibility has been demonstrated only at a toy-model level, and only for systems involving one or two spins (or photons). The present work extends one of these models to quantum correlations between three or more spins which are entangled in the Greenberger-Horne-Zeilinger state.",
+  "year": 2024,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2401.09398.pdf",
+  "url_used": "https://arxiv.org/pdf/2401.09398.pdf",
+  "status": 200,
+  "etag": "CNT3tKH55YMDEAI=",
+  "last_modified": "Thu, 18 Jan 2024 03:01:24 GMT",
+  "content_type": "application/pdf",
+  "sha256": "f66eee84a24ee0becab77fd02dfb3b29cdb9287e0ee01af20b8d9756bb7fe482",
+  "file_size": 782949,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:14:23.202014Z",
+  "fetched_at": "2025-11-03T05:14:23.202014Z",
+  "s3_key": "uwss/clean_large/by-id/482/pdf.pdf"
+}

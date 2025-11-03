@@ -1,0 +1,29 @@
+{
+  "document_id": 460,
+  "source": "arxiv",
+  "arxiv_id": "2212.00677",
+  "doi": "10.1007/s42484-023-00121-4",
+  "title": "Quantum circuit fidelity estimation using machine learning",
+  "authors": [
+    "Vadali, Avi",
+    "Kshirsagar, Rutuja",
+    "Shyamsundar, Prasanth",
+    "Perdue, Gabriel N."
+  ],
+  "abstract": "The computational power of real-world quantum computers is limited by errors. When using quantum computers to perform algorithms which cannot be efficiently simulated classically, it is important to quantify the accuracy with which the computation has been performed. In this work we introduce a machine-learning-based technique to estimate the fidelity between the state produced by a noisy quantum circuit and the target state corresponding to ideal noise-free computation. Our machine learning model is trained in a supervised manner, using smaller or simpler circuits for which the fidelity can be estimated using other techniques like direct fidelity estimation and quantum state tomography. We demonstrate that, for simulated random quantum circuits with a realistic noise model, the trained model can predict the fidelities of more complicated circuits for which such methods are infeasible. In particular, we show the trained model may make predictions for circuits with higher degrees of entanglement than were available in the training set, and that the model may make predictions for non-Clifford circuits even when the training set included only Clifford-reducible circuits. This empirical demonstration suggests classical machine learning may be useful for making predictions about beyond-classical quantum circuits for some non-trivial problems.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2212.00677.pdf",
+  "url_used": "https://arxiv.org/pdf/2212.00677.pdf",
+  "status": 200,
+  "etag": "\"sha256:e5779ccf3df106f5a866898ffa48ee49a097a82a91eb76bafe020f6f9a4a593a\"",
+  "last_modified": "Sat, 18 Mar 2023 00:01:54 GMT",
+  "content_type": "application/pdf",
+  "sha256": "6ffbc89c8a8b3e401b2a7801331f32f79bb54a10626428e3ca71cd1e8bdccb00",
+  "file_size": 1075543,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:04.109426Z",
+  "fetched_at": "2025-11-03T05:13:04.109426Z",
+  "s3_key": "uwss/clean_large/by-id/460/pdf.pdf"
+}

@@ -1,0 +1,26 @@
+{
+  "document_id": 640,
+  "source": "arxiv",
+  "arxiv_id": "2308.12638",
+  "doi": "10.1088/1742-5468/ad17b7",
+  "title": "Inverse problem in the conditioning of Markov processes on trajectory observables : what canonical conditionings can connect two given Markov generators ?",
+  "authors": [
+    "Monthus, Cecile"
+  ],
+  "abstract": "In the field of large deviations for stochastic dynamics, the canonical conditioning of a given Markov process with respect to a given time-local trajectory observable over a large time-window has attracted a lot of interest recently. In the present paper, we analyze the following inverse problem: when two Markov generators are given, is it possible to connect them via some canonical conditioning and to construct the corresponding time-local trajectory observable? We focus on continuous-time Markov processes and obtain the following necessary and sufficient conditions: (i) for continuous-time Markov jump processes, the two generators should involve the same possible elementary jumps in configuration space, i.e. only the values of the corresponding rates can differ; (ii) for diffusion processes, the two Fokker-Planck generators should involve the same diffusion coefficients, i.e. only the two forces can differ. In both settings, we then construct explicitly the various time-local trajectory observables that can be used to connect the two given generators via canonical conditioning. This general framework is illustrated with various applications involving a single particle or many-body spin models. In particular, we describe several examples to show how non-equilibrium Markov processes with non-vanishing steady currents can be interpreted as the canonical conditionings of detailed-balance processes with respect to explicit time-local trajectory observables.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2308.12638.pdf",
+  "url_used": "https://arxiv.org/pdf/2308.12638.pdf",
+  "status": 200,
+  "etag": "CK2w2rOAsYIDEAI=",
+  "last_modified": "Tue, 07 Nov 2023 04:01:29 GMT",
+  "content_type": "application/pdf",
+  "sha256": "68c1e4f3171906ea17394d77cb92301d571a3fb1821e19929dfe8a4e8d4aa25d",
+  "file_size": 442852,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:21:29.558286Z",
+  "fetched_at": "2025-11-03T05:21:29.558286Z",
+  "s3_key": "uwss/clean/by-id/640/pdf.pdf"
+}

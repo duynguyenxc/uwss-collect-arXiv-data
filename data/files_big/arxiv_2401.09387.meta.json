@@ -1,0 +1,29 @@
+{
+  "document_id": 477,
+  "source": "arxiv",
+  "arxiv_id": "2401.09387",
+  "doi": null,
+  "title": "A Multi-Agent Security Testbed for the Analysis of Attacks and Defenses in Collaborative Sensor Fusion",
+  "authors": [
+    "Hallyburton, R. Spencer",
+    "Hunt, David",
+    "Luo, Shaocheng",
+    "Pajic, Miroslav"
+  ],
+  "abstract": "The performance and safety of autonomous vehicles (AVs) deteriorates under adverse environments and adversarial actors. The investment in multi-sensor, multi-agent (MSMA) AVs is meant to promote improved efficiency of travel and mitigate safety risks. Unfortunately, minimal investment has been made to develop security-aware MSMA sensor fusion pipelines leaving them vulnerable to adversaries. To advance security analysis of AVs, we develop the Multi-Agent Security Testbed, MAST, in the Robot Operating System (ROS2). Our framework is scalable for general AV scenarios and is integrated with recent multi-agent datasets. We construct the first bridge between AVstack and ROS and develop automated AV pipeline builds to enable rapid AV prototyping. We tackle the challenge of deploying variable numbers of agent/adversary nodes at launch-time with dynamic topic remapping. Using this testbed, we motivate the need for security-aware AV architectures by exposing the vulnerability of centralized multi-agent fusion pipelines to (un)coordinated adversary models in case studies and Monte Carlo analysis.",
+  "year": 2024,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2401.09387.pdf",
+  "url_used": "https://arxiv.org/pdf/2401.09387.pdf",
+  "status": 200,
+  "etag": "\"sha256:fc33b212187af8f6745a54191f6e07cb32a96e5e48648d25c116607e33bde431\"",
+  "last_modified": "Thu, 18 Jan 2024 03:00:57 GMT",
+  "content_type": "application/pdf",
+  "sha256": "d645baa3603b67ed69fa0bd4a6d504d8ffb749abc2c56fbe9e173c4510e8f223",
+  "file_size": 2512237,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:14:06.426103Z",
+  "fetched_at": "2025-11-03T05:14:06.426103Z",
+  "s3_key": "uwss/clean_large/by-id/477/pdf.pdf"
+}

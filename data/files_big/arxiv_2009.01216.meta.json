@@ -1,0 +1,31 @@
+{
+  "document_id": 520,
+  "source": "arxiv",
+  "arxiv_id": "2009.01216",
+  "doi": "10.1126/sciadv.adj0822",
+  "title": "A meta-analysis of Boolean network models reveals design principles of gene regulatory networks",
+  "authors": [
+    "Kadelka, Claus",
+    "Butrie, Taras-Michael",
+    "Hilton, Evan",
+    "Kinseth, Jack",
+    "Schmidt, Addison",
+    "Serdarevic, Haris"
+  ],
+  "abstract": "Gene regulatory networks (GRNs) play a central role in cellular decision-making. Understanding their structure and how it impacts their dynamics constitutes thus a fundamental biological question. GRNs are frequently modeled as Boolean networks, which are intuitive, simple to describe, and can yield qualitative results even when data is sparse. We assembled the largest repository of expert-curated Boolean GRN models. A meta-analysis of this diverse set of models reveals several design principles. GRNs exhibit more canalization, redundancy and stable dynamics than expected. Moreover, they are enriched for certain recurring network motifs. This raises the important question why evolution favors these design mechanisms.",
+  "year": 2020,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2009.01216.pdf",
+  "url_used": "https://arxiv.org/pdf/2009.01216.pdf",
+  "status": 200,
+  "etag": "\"sha256:08f6d9b4fdfd3c2f461f43cdd104126375865d08b8361e183e0b02043d9c1df9\"",
+  "last_modified": "Fri, 15 Sep 2023 23:56:57 GMT",
+  "content_type": "application/pdf",
+  "sha256": "cab4ec2df53b94ea5d1def7f74b320bc6677097865f62c147da9e973b3dca256",
+  "file_size": 2241888,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:16:22.298268Z",
+  "fetched_at": "2025-11-03T05:16:22.298268Z",
+  "s3_key": "uwss/clean_large/by-id/520/pdf.pdf"
+}

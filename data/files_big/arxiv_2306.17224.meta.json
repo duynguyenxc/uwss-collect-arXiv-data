@@ -1,0 +1,30 @@
+{
+  "document_id": 619,
+  "source": "arxiv",
+  "arxiv_id": "2306.17224",
+  "doi": null,
+  "title": "Partition function approach to non-Gaussian likelihoods: partitions for the inference of functions and the Fisher-functional",
+  "authors": [
+    "Kuntz, Rebecca Maria",
+    "Herzog, Maximilian Philipp",
+    "von Campe, Heinrich",
+    "RÃ¶ver, Lennart",
+    "SchÃ¤fer, BjÃ¶rn Malte"
+  ],
+  "abstract": "Motivated by constraints on the dark energy equation of state from supernova-data, we propose a formalism for the Bayesian inference of functions: Starting at a functional variant of the Kullback-Leibler divergence we construct a functional Fisher-matrix and a suitable partition functional which takes on the shape of a path integral. After showing the validity of the CramÃ©r-Rao bound and unbiasedness for functional inference in the Gaussian case, we construct Fisher-functionals for the dark energy equation of state constrained by the cosmological redshift-luminosity relationship of supernovae of type Ia, for both the linearised and the lowest-order non-linear model. Introducing Fourier-expansions and expansions into Gegenbauer-polynomials as discretisations of the dark energy equation of state function shows how the uncertainty on the inferred function scales with model complexity and how functional assumptions can lead to errors in extrapolation to poorly constrained redshift ranges.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2306.17224.pdf",
+  "url_used": "https://arxiv.org/pdf/2306.17224.pdf",
+  "status": 200,
+  "etag": "\"sha256:26700f6db8e361c3989c603e2a5c866b812ccb152b9ad3e2703649d4aa0d7c59\"",
+  "last_modified": "Wed, 24 Jan 2024 02:53:21 GMT",
+  "content_type": "application/pdf",
+  "sha256": "6e3c6fa8f7f8655aa3f3225e5f5f5bf8213369052b56901dd9d6cf94339c2ff2",
+  "file_size": 2763722,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:20:32.769407Z",
+  "fetched_at": "2025-11-03T05:20:32.769407Z",
+  "s3_key": "uwss/clean/by-id/619/pdf.pdf"
+}

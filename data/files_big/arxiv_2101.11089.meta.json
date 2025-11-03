@@ -1,0 +1,30 @@
+{
+  "document_id": 561,
+  "source": "arxiv",
+  "arxiv_id": "2101.11089",
+  "doi": "10.1145/3349537.3351901",
+  "title": "Chatbots language design: the influence of language variation on user experience",
+  "authors": [
+    "Chaves, Ana Paula",
+    "Egbert, Jesse",
+    "Hocking, Toby",
+    "Doerry, Eck",
+    "Gerosa, Marco Aurelio"
+  ],
+  "abstract": "Chatbots are often designed to mimic social roles attributed to humans. However, little is known about the impact on user's perceptions of using language that fails to conform to the associated social role. Our research draws on sociolinguistic theory to investigate how a chatbot's language choices can adhere to the expected social role the agent performs within a given context. In doing so, we seek to understand whether chatbots design should account for linguistic register. This research analyzes how register differences play a role in shaping the user's perception of the human-chatbot interaction. Ultimately, we want to determine whether register-specific language influences users' perceptions and experiences with chatbots. We produced parallel corpora of conversations in the tourism domain with similar content and varying register characteristics and evaluated users' preferences of chatbot's linguistic choices in terms of appropriateness, credibility, and user experience. Our results show that register characteristics are strong predictors of user's preferences, which points to the needs of designing chatbots with register-appropriate language to improve acceptance and users' perceptions of chatbot interactions.",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2101.11089.pdf",
+  "url_used": "https://arxiv.org/pdf/2101.11089.pdf",
+  "status": 200,
+  "etag": "CNKKn86i3fwCEAE=",
+  "last_modified": "Mon, 23 Jan 2023 08:27:00 GMT",
+  "content_type": "application/pdf",
+  "sha256": "99287609da0b606b3041b7ab7958ada9f47c1a7dd2356b6fbb46ea32e506d1f6",
+  "file_size": 972831,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:15.810506Z",
+  "fetched_at": "2025-11-03T05:18:15.810506Z",
+  "s3_key": "uwss/clean_large/by-id/561/pdf.pdf"
+}

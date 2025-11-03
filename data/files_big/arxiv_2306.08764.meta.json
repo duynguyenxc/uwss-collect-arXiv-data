@@ -1,0 +1,26 @@
+{
+  "document_id": 615,
+  "source": "arxiv",
+  "arxiv_id": "2306.08764",
+  "doi": null,
+  "title": "Lorentz-like extension Mixing Higgs and Gauge Fields in a U(1) symmetric model",
+  "authors": [
+    "Wills-Toro, Luis Alberto"
+  ],
+  "abstract": "A program searching for symmetry structures behind some features of the standard Model is launched. After addressing known no-go theorems, we construct a novel symmetry mixing gauge and Higgs fields which is a Lorentz symmetry extension involving gauge symmetries. We construct a field theory model with such a local symmetry, which is in turn invariant under local Lorentz transformations. We address the action of extended symmetries on the geometric frame, and models with extra dimensions. This features the novelty of diverse covariant derivatives associated to non--commuting differential operators, and their associated curvatures. Mass--like terms arise accompanying non--commuting differential operators. A novel formalism for constructing an invariant Lagrangian in direct correspondence to obtained casimir operators --embodying a long sought paradigm-- is developed. It recovers both gauge as well as some sort of Higgs-like potential. Equations of motion and conserved currents are found. Some exploration is devoted to possible invariant measures hinting possible approaches to address anomalies.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2306.08764.pdf",
+  "url_used": "https://arxiv.org/pdf/2306.08764.pdf",
+  "status": 200,
+  "etag": "CNqAgcKC9YMDEAI=",
+  "last_modified": "Wed, 24 Jan 2024 02:52:44 GMT",
+  "content_type": "application/pdf",
+  "sha256": "8453ef87cd4c5ec25889eb0647b9631cfdf35967f0a48e3c42944ae22abd0b07",
+  "file_size": 352308,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:20:21.294814Z",
+  "fetched_at": "2025-11-03T05:20:21.294814Z",
+  "s3_key": "uwss/clean/by-id/615/pdf.pdf"
+}

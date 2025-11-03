@@ -1,0 +1,27 @@
+{
+  "document_id": 622,
+  "source": "arxiv",
+  "arxiv_id": "2307.03000",
+  "doi": "10.21468/scipostphys.16.1.027",
+  "title": "Holographic Weyl anomaly in string theory",
+  "authors": [
+    "Eberhardt, Lorenz",
+    "Pal, Sridip"
+  ],
+  "abstract": "We compute the worldsheet sphere partition function of string theory on global AdS$_3$ with pure NS-NS flux. Because of an unfixed MÃ¶bius symmetry on the worldsheet, there is a cancellation of infinities and only a part of the answer is unambiguous. We show that it precisely reproduces the holographic Weyl anomaly and the ambiguous terms correspond to the possible counterterms of the boundary CFT.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2307.03000.pdf",
+  "url_used": "https://arxiv.org/pdf/2307.03000.pdf",
+  "status": 200,
+  "etag": "CLD+zezjmoMDEAI=",
+  "last_modified": "Tue, 19 Dec 2023 05:35:56 GMT",
+  "content_type": "application/pdf",
+  "sha256": "c035deafe961c3fef182024202f9db9cb003a3ddee2f6f4a7809d06da5b168f7",
+  "file_size": 244510,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:20:40.760887Z",
+  "fetched_at": "2025-11-03T05:20:40.760887Z",
+  "s3_key": "uwss/clean/by-id/622/pdf.pdf"
+}

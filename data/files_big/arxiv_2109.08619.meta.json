@@ -1,0 +1,27 @@
+{
+  "document_id": 533,
+  "source": "arxiv",
+  "arxiv_id": "2109.08619",
+  "doi": "10.1002/malq.202100055",
+  "title": "Spherically complete models of Hensel minimal valued fields",
+  "authors": [
+    "Bradley-Williams, David",
+    "Halupczok, Immanuel"
+  ],
+  "abstract": "We prove that Hensel minimal expansions of finitely ramified Henselian valued fields admit spherically complete immediate elementary extensions. More precisely, the version of Hensel minimality we use is $0$-hmix-minimality (which, in equi-characteristic $0$, amounts to $0$-h-minimality).",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2109.08619.pdf",
+  "url_used": "https://arxiv.org/pdf/2109.08619.pdf",
+  "status": 200,
+  "etag": "CKPCmv3f3fwCEAE=",
+  "last_modified": "Mon, 23 Jan 2023 13:01:33 GMT",
+  "content_type": "application/pdf",
+  "sha256": "913327d5c732f4ab1f55f3d5d853e5aec9a1327385346c5d5176b3015f5127a7",
+  "file_size": 190095,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:18.449011Z",
+  "fetched_at": "2025-11-03T05:17:18.449011Z",
+  "s3_key": "uwss/clean_large/by-id/533/pdf.pdf"
+}

@@ -1,0 +1,28 @@
+{
+  "document_id": 606,
+  "source": "arxiv",
+  "arxiv_id": "2304.09900",
+  "doi": "10.21468/scipostphys.16.1.024",
+  "title": "Constraints on physical computers in holographic spacetimes",
+  "authors": [
+    "Kubicki, Aleksander M.",
+    "May, Alex",
+    "PÃ©rez-Garcia, David"
+  ],
+  "abstract": "Within the setting of the AdS/CFT correspondence, we ask about the power of computers in the presence of gravity. We show that there are computations on $n$ qubits which cannot be implemented inside of black holes with entropy less than $O(2^n)$. To establish our claim, we argue computations happening inside the black hole must be implementable in a programmable quantum processor, so long as the inputs and description of the unitary to be run are not too large. We then prove a bound on quantum processors which shows many unitaries cannot be implemented inside the black hole, and further show some of these have short descriptions and act on small systems. These unitaries with short descriptions must be computationally forbidden from happening inside the black hole.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2304.09900.pdf",
+  "url_used": "https://arxiv.org/pdf/2304.09900.pdf",
+  "status": 200,
+  "etag": "CPfIqJap/IIDEAI=",
+  "last_modified": "Thu, 07 Dec 2023 02:53:33 GMT",
+  "content_type": "application/pdf",
+  "sha256": "7c747081958f33b4d071b9e16f4e1956e82ff2b9d773b23a2396b9f7464c5d30",
+  "file_size": 803937,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:20:00.182609Z",
+  "fetched_at": "2025-11-03T05:20:00.182609Z",
+  "s3_key": "uwss/clean/by-id/606/pdf.pdf"
+}

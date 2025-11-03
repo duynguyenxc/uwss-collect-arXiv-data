@@ -1,0 +1,31 @@
+{
+  "document_id": 634,
+  "source": "arxiv",
+  "arxiv_id": "2308.06316",
+  "doi": null,
+  "title": "Galactic Cosmic-ray Scattering due to Intermittent Structures",
+  "authors": [
+    "Butsky, Iryna S.",
+    "Hopkins, Philip F.",
+    "Kempski, Philipp",
+    "Ponnada, Sam B.",
+    "Quataert, Eliot",
+    "Squire, Jonathan"
+  ],
+  "abstract": "Cosmic rays (CRs) with energies $\\ll$ TeV comprise a significant component of the interstellar medium (ISM). Major uncertainties in CR behavior on observable scales (much larger than CR gyroradii) stem from how magnetic fluctuations scatter CRs in pitch angle. Traditional first-principles models, which assume these magnetic fluctuations are weak and uniformly scatter CRs in a homogeneous ISM, struggle to reproduce basic observables such as the dependence of CR residence times and scattering rates on rigidity. We therefore explore a new category of \"patchy\" CR scattering models, wherein CRs are predominantly scattered by intermittent strong scattering structures with small volume-filling factors. These models produce the observed rigidity dependence with a simple size distribution constraint, such that larger scattering structures are rarer but can scatter a wider range of CR energies. To reproduce the empirically-inferred CR scattering rates, the mean free path between scattering structures must be $\\ell_{\\rm mfp} \\sim 10$ pc at GeV energies. We derive constraints on the sizes, internal properties, mass/volume-filling factors, and the number density any such structures would need to be both physically and observationally consistent. We consider a range of candidate structures, both large-scale (e.g. H II regions) and small-scale (e.g. intermittent turbulent structures, perhaps even associated with radio plasma scattering) and show that while many macroscopic candidates can be immediately ruled out as the primary CR scattering sites, many smaller structures remain viable and merit further theoretical study. We discuss future observational constraints that could test these models.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2308.06316.pdf",
+  "url_used": "https://arxiv.org/pdf/2308.06316.pdf",
+  "status": 200,
+  "etag": "\"sha256:1a04a27663d685a91cddc96038db0c0e2c3e169cc0af284af502c162e2d4c859\"",
+  "last_modified": "Wed, 24 Jan 2024 02:59:59 GMT",
+  "content_type": "application/pdf",
+  "sha256": "bbd1e5df0104583a41a6925a658d7c27445d806e20f680a2946e3194d47ede0a",
+  "file_size": 2461943,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:21:14.296897Z",
+  "fetched_at": "2025-11-03T05:21:14.296897Z",
+  "s3_key": "uwss/clean/by-id/634/pdf.pdf"
+}

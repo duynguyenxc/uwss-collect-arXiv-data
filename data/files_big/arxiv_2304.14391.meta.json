@@ -1,0 +1,31 @@
+{
+  "document_id": 607,
+  "source": "arxiv",
+  "arxiv_id": "2304.14391",
+  "doi": null,
+  "title": "Energy-based Models are Zero-Shot Planners for Compositional Scene Rearrangement",
+  "authors": [
+    "Gkanatsios, Nikolaos",
+    "Jain, Ayush",
+    "Xian, Zhou",
+    "Zhang, Yunchu",
+    "Atkeson, Christopher",
+    "Fragkiadaki, Katerina"
+  ],
+  "abstract": "Language is compositional; an instruction can express multiple relation constraints to hold among objects in a scene that a robot is tasked to rearrange. Our focus in this work is an instructable scene-rearranging framework that generalizes to longer instructions and to spatial concept compositions never seen at training time. We propose to represent language-instructed spatial concepts with energy functions over relative object arrangements. A language parser maps instructions to corresponding energy functions and an open-vocabulary visual-language model grounds their arguments to relevant objects in the scene. We generate goal scene configurations by gradient descent on the sum of energy functions, one per language predicate in the instruction. Local vision-based policies then re-locate objects to the inferred goal locations. We test our model on established instruction-guided manipulation benchmarks, as well as benchmarks of compositional instructions we introduce. We show our model can execute highly compositional instructions zero-shot in simulation and in the real world. It outperforms language-to-action reactive policies and Large Language Model planners by a large margin, especially for long instructions that involve compositions of multiple spatial concepts. Simulation and real-world robot execution videos, as well as our code and datasets are publicly available on our website: https://ebmplanner.github.io.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2304.14391.pdf",
+  "url_used": "https://arxiv.org/pdf/2304.14391.pdf",
+  "status": 200,
+  "etag": "\"sha256:ec334670cc1bc9963c01bdf271a91e0df1ea2e4bcdad37494b2ba3197227a803\"",
+  "last_modified": "Wed, 24 Jan 2024 02:53:31 GMT",
+  "content_type": "application/pdf",
+  "sha256": "afce159aeda2cc818297479ce332e90189b068b41a5173c8f931e25ccc15b35e",
+  "file_size": 5349551,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:20:02.650373Z",
+  "fetched_at": "2025-11-03T05:20:02.650373Z",
+  "s3_key": "uwss/clean/by-id/607/pdf.pdf"
+}

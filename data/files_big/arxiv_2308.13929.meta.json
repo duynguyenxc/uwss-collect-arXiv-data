@@ -1,0 +1,27 @@
+{
+  "document_id": 468,
+  "source": "arxiv",
+  "arxiv_id": "2308.13929",
+  "doi": null,
+  "title": "TeleFMG: A Wearable Force-Myography Device for Natural Teleoperation of Multi-finger Robotic Hands",
+  "authors": [
+    "Mizrahi, Alon",
+    "Sintov, Avishai"
+  ],
+  "abstract": "Teleoperation enables a user to perform dangerous tasks (e.g., work in disaster zones or in chemical plants) from a remote location. Nevertheless, common approaches often provide cumbersome and unnatural usage. In this letter, we propose TeleFMG, an approach for teleoperation of a multi-finger robotic hand through natural motions of the user's hand. By using a low-cost wearable Force-Myography (FMG) device, musculoskeletal activities on the user's forearm are mapped to hand poses which, in turn, are mimicked by a robotic hand. The mapping is performed by a spatio-temporal data-based model based on the Temporal Convolutional Network. The model considers spatial positions of the sensors on the forearm along with temporal dependencies of the FMG signals. A set of experiments show the ability of a teleoperator to control a multi-finger hand through intuitive and natural finger motion. A robot is shown to successfully mimic the user's hand in object grasping and gestures. Furthermore, transfer to a new user is evaluated while showing that fine-tuning with a limited amount of new data significantly improves accuracy.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2308.13929.pdf",
+  "url_used": "https://arxiv.org/pdf/2308.13929.pdf",
+  "status": 200,
+  "etag": "\"sha256:83231323cb91b4bf323de80e65f1375e601ae161262dacd1330a5ff316c7db2f\"",
+  "last_modified": "Thu, 18 Jan 2024 03:01:47 GMT",
+  "content_type": "application/pdf",
+  "sha256": "f3cfa3dc0c5a036b86f8d61709810423a95cf5cdd5496b04ca5760c0e254ff18",
+  "file_size": 5949765,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:23.097992Z",
+  "fetched_at": "2025-11-03T05:13:23.097992Z",
+  "s3_key": "uwss/clean_large/by-id/468/pdf.pdf"
+}

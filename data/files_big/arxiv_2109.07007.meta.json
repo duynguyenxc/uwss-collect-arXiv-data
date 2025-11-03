@@ -1,0 +1,26 @@
+{
+  "document_id": 532,
+  "source": "arxiv",
+  "arxiv_id": "2109.07007",
+  "doi": null,
+  "title": "The Empirical Content of Bayesianism",
+  "authors": [
+    "Molavi, Pooya"
+  ],
+  "abstract": "This paper characterizes the conditions under which the observed beliefs of a group of agents are consistent with Bayesian updating. Beliefs are consistent with Bayesianism if they arise from the application of Bayes' rule given some subjective distribution for the state and the signals agents observe between periods. The paper's main finding is that beliefs are consistent with Bayesianism if and only if the mean of the distribution of posteriors is uniformly absolutely continuous with respect to the prior. Furthermore, the paper shows that the existing results on the empirical content of Bayesianism rely on additional restrictions on permissible subjective distributions, such as the requirement that agents have correct beliefs about the distribution of signals.",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2109.07007.pdf",
+  "url_used": "https://arxiv.org/pdf/2109.07007.pdf",
+  "status": 200,
+  "etag": "CJXg9OG56IMDEAI=",
+  "last_modified": "Fri, 19 Jan 2024 02:55:18 GMT",
+  "content_type": "application/pdf",
+  "sha256": "089166a856e338ffb6d1dfa8050ace9fc591491982b5e2a1b2c6feeee55f0417",
+  "file_size": 187698,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:16.531198Z",
+  "fetched_at": "2025-11-03T05:17:16.531198Z",
+  "s3_key": "uwss/clean_large/by-id/532/pdf.pdf"
+}

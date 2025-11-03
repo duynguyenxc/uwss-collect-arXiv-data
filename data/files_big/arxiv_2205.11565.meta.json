@@ -1,0 +1,27 @@
+{
+  "document_id": 577,
+  "source": "arxiv",
+  "arxiv_id": "2205.11565",
+  "doi": "10.1103/physrevb.108.214201",
+  "title": "Electron transport in a weakly disordered Weyl semimetal",
+  "authors": [
+    "Ismagambetov, M. E.",
+    "Ostrovsky, P. M."
+  ],
+  "abstract": "Weyl semimetal is a solid material with isolated touching points between conduction and valence bands in its Brillouin zone -- Weyl points. Low energy excitations near these points exhibit a linear dispersion and act as relativistic massless particles. Weyl points are stable topological objects robust with respect to most perturbations. We study effects of weak disorder on the spectral and transport properties of Weyl semimetals in the limit of low energies. We use a model of Gaussian white-noise potential and apply dimensional regularization scheme near three dimensions to treat divergent terms in the perturbation theory. In the framework of self-consistent Born approximation, we find closed expressions for the average density of states and conductivity. Both quantities are analytic functions in the limit of zero energy. We also include interference terms beyond the self-consistent Born approximation up to the third order in the disorder strength. These interference corrections are stronger than the mean-field result and non-analytic as functions of energy. Our main result is the dependence of conductivity (in units $e^2/h$) on the electron concentration $Ï= Ï_0 - 0.891\\, n^{1/3} + 0.115\\, (n^{2/3}/Ï_0) \\ln|n|$.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2205.11565.pdf",
+  "url_used": "https://arxiv.org/pdf/2205.11565.pdf",
+  "status": 200,
+  "etag": "CLbDqeaC9YMDEAI=",
+  "last_modified": "Wed, 24 Jan 2024 02:54:00 GMT",
+  "content_type": "application/pdf",
+  "sha256": "ed51089937b2cc51d91b8def82f0c0ee68a1e12d47bec1bfd41946b98ea7039d",
+  "file_size": 552426,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:50.631388Z",
+  "fetched_at": "2025-11-03T05:18:50.631388Z",
+  "s3_key": "uwss/clean/by-id/577/pdf.pdf"
+}

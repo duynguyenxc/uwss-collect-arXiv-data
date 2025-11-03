@@ -1,0 +1,29 @@
+{
+  "document_id": 579,
+  "source": "arxiv",
+  "arxiv_id": "2206.03297",
+  "doi": "10.1103/physrevb.106.075123",
+  "title": "Random singlet-like phase of disordered Hubbard chains",
+  "authors": [
+    "Yu, Josephine",
+    "Jiang, Hong-Chen",
+    "Nandkishore, Rahul",
+    "Raghu, Srinivas"
+  ],
+  "abstract": "Local moment formation is ubiquitous in disordered semiconductors such as Si:P, where it is observed both in the metallic and the insulating regimes. Here, we focus on local moment behavior in disordered insulators, which arises from short-ranged, repulsive electron-electron interactions. Using density matrix renormalization group and strong-disorder renormalization group methods, we study paradigmatic models of interacting insulators: one dimensional Hubbard chains with quenched randomness. In chains with either random fermion hoppings or random chemical potentials, both at and away from half-filling, we find exponential decay of charge and fermion 2-point correlations but power-law decay of spin correlations that are indicative of the random singlet phase. The numerical results can be understood qualitatively by appealing to the large-interaction limit of the Hubbard chain, in which a remarkably simple picture emerges.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2206.03297.pdf",
+  "url_used": "https://arxiv.org/pdf/2206.03297.pdf",
+  "status": 200,
+  "etag": "\"sha256:9f64939b20d4e7be0814b6473059768695f7b140394123c87a9864df8c6484c7\"",
+  "last_modified": "Mon, 23 Jan 2023 15:05:03 GMT",
+  "content_type": "application/pdf",
+  "sha256": "32bad46c1a7fdc251b2478f3dc61538219cea72d7713a0333b00eeb2bc508ae8",
+  "file_size": 1369070,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:55.908352Z",
+  "fetched_at": "2025-11-03T05:18:55.908352Z",
+  "s3_key": "uwss/clean/by-id/579/pdf.pdf"
+}

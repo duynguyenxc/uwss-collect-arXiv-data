@@ -1,0 +1,33 @@
+{
+  "document_id": 624,
+  "source": "arxiv",
+  "arxiv_id": "2307.07197",
+  "doi": "10.1103/physrevb.108.195101",
+  "title": "Electrical polarization switching in bulk single crystal GaFeO$_{3}$",
+  "authors": [
+    "Biernacka, Maria",
+    "Butkiewicz, PaweÅ",
+    "Kapcia, Konrad J.",
+    "Olszewski, Wojciech",
+    "SatuÅa, Dariusz",
+    "SzafraÅski, Marek",
+    "Wojtyniak, Marcin",
+    "SzymaÅski, Krzysztof"
+  ],
+  "abstract": "The electrical polarization switching on stoichiometric GaFeO$_{3}$ single crystal was measured, and a new model of atomic displacements responsible for the polarization reverse was proposed. The widely adapted mechanism of polarization switching in GaFeO$_{3}$ can be applied to stoichiometric, perfectly ordered crystals. However, the grown single crystals, as well as thin films of Ga-Fe-O, show pronounced atomic disorder. By piezoresponse force microscopy, the electrical polarization switching on a crystal surface perpendicular to the electrical polarization direction was demonstrated. Atomic disorder in the crystal was measured by X-ray diffraction and MÃ¶ssbauer spectroscopy. These measurements were supported by ab initio calculations. By analysis of atomic disorder and electronic structure calculations, the energies of defects of cations in foreign cationic sites were estimated. The energies of the polarization switch were estimated, confirming the proposed mechanism of polarization switching in GaFeO$_{3}$ single crystals.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2307.07197.pdf",
+  "url_used": "https://arxiv.org/pdf/2307.07197.pdf",
+  "status": 200,
+  "etag": "\"sha256:d00ed5ecad92d65a8c60d7ed5e97d4aa86fe07e3137b97f8fcf0d10ae911e691\"",
+  "last_modified": "Fri, 21 Jul 2023 23:38:26 GMT",
+  "content_type": "application/pdf",
+  "sha256": "1e7657f83366a95fcf33a54465e5d758222876647ee30e24093d51d986d3acca",
+  "file_size": 1363755,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:20:46.232368Z",
+  "fetched_at": "2025-11-03T05:20:46.232368Z",
+  "s3_key": "uwss/clean/by-id/624/pdf.pdf"
+}

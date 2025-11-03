@@ -1,0 +1,27 @@
+{
+  "document_id": 455,
+  "source": "arxiv",
+  "arxiv_id": "2112.14642",
+  "doi": null,
+  "title": "Thin hyperbolic reflection groups",
+  "authors": [
+    "Bogachev, Nikolay",
+    "Kolpakov, Alexander"
+  ],
+  "abstract": "We study a family of Zariski dense finitely generated discrete subgroups of $\\mathrm{Isom}(\\mathbb{H}^d)$, $d \\geqslant 2$, defined by the following property: any group in this family contains at least one reflection in a hyperplane. As an application we obtain a general description of all thin hyperbolic reflection groups. In particular, we show that the Vinberg algorithm applied to a non-reflective Lorentzian lattice gives rise to an infinite sequence of thin reflection subgroups in $\\mathrm{Isom}(\\mathbb{H}^d)$, for any $d \\geqslant 2$. Moreover, every such group is a subgroup of a group produced by the Vinberg algorithm applied to a Lorentzian lattice independently on the latter being reflective. As a consequence, all thin hyperbolic reflection groups are enumerable.",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2112.14642.pdf",
+  "url_used": "https://arxiv.org/pdf/2112.14642.pdf",
+  "status": 200,
+  "etag": "CPHXqLf55YMDEAI=",
+  "last_modified": "Thu, 18 Jan 2024 03:02:10 GMT",
+  "content_type": "application/pdf",
+  "sha256": "add5264cbf3bead7eddf96cc5af0e5599549fdf1b0a8265fc99bf626cbf33941",
+  "file_size": 189018,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:12:49.653856Z",
+  "fetched_at": "2025-11-03T05:12:49.653856Z",
+  "s3_key": "uwss/clean_large/by-id/455/pdf.pdf"
+}

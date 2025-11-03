@@ -1,0 +1,27 @@
+{
+  "document_id": 509,
+  "source": "arxiv",
+  "arxiv_id": "1805.07967",
+  "doi": null,
+  "title": "Set-theoretical entropies of Euler's totient function and other number theoretical special functions",
+  "authors": [
+    "Shirazi, Fatemah Ayatollah Zadeh",
+    "Yaghmaeian, Reza"
+  ],
+  "abstract": "In the following text we show set--theoretical entropy of Euler's totient function and contravariant set--theoretical entropy of Dedekind psi function are zero. Also contravariant set--theoretical entropy of Euler's totient function and set--theoretical entropy of Dedekind psi function are $+\\infty$. We pay attention to some of the other number theoretical special functions too. We continue our studies on Alexandroff topologies induced by Euler's totient function and Dedekind psi function.",
+  "year": 2018,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1805.07967.pdf",
+  "url_used": "https://arxiv.org/pdf/1805.07967.pdf",
+  "status": 200,
+  "etag": "CLmAkYuP3PwCEAE=",
+  "last_modified": "Sun, 22 Jan 2023 21:27:00 GMT",
+  "content_type": "application/pdf",
+  "sha256": "5aa45e701f9dc32725e192bce00ed83f6684c0e26680b1b11db6d0882c31f40a",
+  "file_size": 146361,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:15:29.373577Z",
+  "fetched_at": "2025-11-03T05:15:29.373577Z",
+  "s3_key": "uwss/clean_large/by-id/509/pdf.pdf"
+}

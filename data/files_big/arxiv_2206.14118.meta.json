@@ -1,0 +1,29 @@
+{
+  "document_id": 581,
+  "source": "arxiv",
+  "arxiv_id": "2206.14118",
+  "doi": "10.1007/s10664-023-10369-w",
+  "title": "GitHub Actions: The Impact on the Pull Request Process",
+  "authors": [
+    "Wessel, Mairieli",
+    "Vargovich, Joseph",
+    "Gerosa, Marco A.",
+    "Treude, Christoph"
+  ],
+  "abstract": "Software projects frequently use automation tools to perform repetitive activities in the distributed software development process. Recently, GitHub introduced GitHub Actions, a feature providing automated workflows for software projects. Understanding and anticipating the effects of adopting such technology is important for planning and management. Our research investigates how projects use GitHub Actions, what the developers discuss about them, and how project activity indicators change after their adoption. Our results indicate that 1,489 out of 5,000 most popular repositories (almost 30% of our sample) adopt GitHub Actions and that developers frequently ask for help implementing them. Our findings also suggest that the adoption of GitHub Actions leads to more rejections of pull requests (PRs), more communication in accepted PRs and less communication in rejected PRs, fewer commits in accepted PRs and more commits in rejected PRs, and more time to accept a PR. We found similar results when segmenting our results by categories of GitHub Actions. We suggest practitioners consider these effects when adopting GitHub Actions on their projects.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2206.14118.pdf",
+  "url_used": "https://arxiv.org/pdf/2206.14118.pdf",
+  "status": 200,
+  "etag": "CIuNzdzNsoADEAE=",
+  "last_modified": "Fri, 28 Jul 2023 23:58:31 GMT",
+  "content_type": "application/pdf",
+  "sha256": "6368bd928615b2b23d9d0a59c089bc97f15617fa8bd95a703150f7bc104d4fa7",
+  "file_size": 719052,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:00.245699Z",
+  "fetched_at": "2025-11-03T05:19:00.245699Z",
+  "s3_key": "uwss/clean/by-id/581/pdf.pdf"
+}

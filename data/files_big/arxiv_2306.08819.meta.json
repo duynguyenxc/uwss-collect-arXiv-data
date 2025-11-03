@@ -1,0 +1,28 @@
+{
+  "document_id": 465,
+  "source": "arxiv",
+  "arxiv_id": "2306.08819",
+  "doi": "10.1016/j.jfranklin.2024.01.022",
+  "title": "Robust time-of-arrival localization via ADMM",
+  "authors": [
+    "Xiong, Wenxin",
+    "Schindelhauer, Christian",
+    "So, Hing Cheung"
+  ],
+  "abstract": "This article considers the problem of source localization (SL) using possibly unreliable time-of-arrival (TOA) based range measurements. Adopting the strategy of statistical robustification, we formulate TOA SL as minimization of a versatile loss that possesses resistance against the occurrence of outliers. We then present an alternating direction method of multipliers (ADMM) to tackle the nonconvex optimization problem in a computationally attractive iterative manner. Moreover, we prove that the solution obtained by the proposed ADMM will correspond to a Karush-Kuhn-Tucker point of the formulation when the algorithm converges, and discuss reasonable assumptions about the robust loss function under which the approach can be theoretically guaranteed to be convergent. Numerical investigations demonstrate the superiority of our method over many existing TOA SL schemes in terms of positioning accuracy and computational simplicity. In particular, the proposed ADMM achieves estimation results with mean square error performance closer to the CramÃ©r-Rao lower bound than its competitors in our simulations of impulsive noise environments.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2306.08819.pdf",
+  "url_used": "https://arxiv.org/pdf/2306.08819.pdf",
+  "status": 200,
+  "etag": "CPTwx8H55YMDEAI=",
+  "last_modified": "Thu, 18 Jan 2024 03:02:31 GMT",
+  "content_type": "application/pdf",
+  "sha256": "923551b4b04d8e0b53ee8868436dcd451a62f5233de79476462156f004772ece",
+  "file_size": 663962,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:15.449180Z",
+  "fetched_at": "2025-11-03T05:13:15.449180Z",
+  "s3_key": "uwss/clean_large/by-id/465/pdf.pdf"
+}

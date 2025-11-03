@@ -1,0 +1,28 @@
+{
+  "document_id": 583,
+  "source": "arxiv",
+  "arxiv_id": "2209.03966",
+  "doi": "10.1103/physrevlett.132.040401",
+  "title": "Ergodicity breaking provably robust to arbitrary perturbations",
+  "authors": [
+    "Stephen, David T.",
+    "Hart, Oliver",
+    "Nandkishore, Rahul M."
+  ],
+  "abstract": "We present a new route to ergodicity breaking via Hilbert space fragmentation that displays an unprecedented level of robustness. Our construction relies on a single emergent (prethermal) conservation law. In the limit when the conservation law is exact, we prove the emergence of Hilbert space fragmentation with an exponential number of frozen configurations. We further prove that every frozen configuration is absolutely stable to arbitrary perturbations, to all finite orders in perturbation theory. In particular, our proof is not limited to symmetric perturbations, or to perturbations with compact support, but also applies to perturbations with long-range tails, and even to arbitrary geometrically nonlocal $k$-body perturbations, as long as $k/L \\rightarrow 0$ in the thermodynamic limit, where $L$ is linear system size. Additionally, we identify one-form $U(1)$ charges characterizing some non-frozen sectors, and discuss the dynamics starting from typical initial conditions, which we argue is best interpreted in terms of the magnetohydrodynamics of the emergent one-form symmetry.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2209.03966.pdf",
+  "url_used": "https://arxiv.org/pdf/2209.03966.pdf",
+  "status": 200,
+  "etag": "\"sha256:0712523d77efa8d0790451d57e313400ea7e5a5f34a62b64ddc521dc3d1cd137\"",
+  "last_modified": "Mon, 23 Jan 2023 16:14:54 GMT",
+  "content_type": "application/pdf",
+  "sha256": "5350a6c8ded4f0a6b6781bedbf59ff4f4e49dd483783a4711a8807bea4b796df",
+  "file_size": 1912690,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:05.028188Z",
+  "fetched_at": "2025-11-03T05:19:05.028188Z",
+  "s3_key": "uwss/clean/by-id/583/pdf.pdf"
+}

@@ -1,0 +1,28 @@
+{
+  "document_id": 471,
+  "source": "arxiv",
+  "arxiv_id": "2311.00753",
+  "doi": "10.1007/jhep01(2024)094",
+  "title": "Operator dynamics in Lindbladian SYK: a Krylov complexity perspective",
+  "authors": [
+    "Bhattacharjee, Budhaditya",
+    "Nandy, Pratik",
+    "Pathak, Tanay"
+  ],
+  "abstract": "We use Krylov complexity to study operator growth in the $q$-body dissipative SYK model, where the dissipation is modeled by linear and random $p$-body Lindblad operators. In the large $q$ limit, we analytically establish the linear growth of two sets of coefficients for any generic jump operators. We numerically verify this by implementing the bi-Lanczos algorithm, which transforms the Lindbladian into a pure tridiagonal form. We find that the Krylov complexity saturates inversely with the dissipation strength, while the dissipative timescale grows logarithmically. This is akin to the behavior of other $\\mathfrak{q}$-complexity measures, namely out-of-time-order correlator (OTOC) and operator size, which we also demonstrate. We connect these observations to continuous quantum measurement processes. We further investigate the pole structure of a generic auto-correlation and the high-frequency behavior of the spectral function in the presence of dissipation, thereby revealing a general principle for operator growth in dissipative quantum chaotic systems.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2311.00753.pdf",
+  "url_used": "https://arxiv.org/pdf/2311.00753.pdf",
+  "status": 200,
+  "etag": "\"sha256:555818ae42f9f3734d52f7e3f26bb90a538648ab13ef8066639f99f4b2effe1d\"",
+  "last_modified": "Thu, 18 Jan 2024 03:02:43 GMT",
+  "content_type": "application/pdf",
+  "sha256": "72929dfa0a2d17ea6dc80b4ca07c9361db46d98a9cefe7db34df90aec56eaca0",
+  "file_size": 2371892,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:29.652619Z",
+  "fetched_at": "2025-11-03T05:13:29.652619Z",
+  "s3_key": "uwss/clean_large/by-id/471/pdf.pdf"
+}

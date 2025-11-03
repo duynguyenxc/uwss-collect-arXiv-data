@@ -1,0 +1,29 @@
+{
+  "document_id": 588,
+  "source": "arxiv",
+  "arxiv_id": "2210.14143",
+  "doi": "10.22331/q-2024-01-24-1233",
+  "title": "Entanglement Purification with Quantum LDPC Codes and Iterative Decoding",
+  "authors": [
+    "Rengaswamy, Narayanan",
+    "Raveendran, Nithin",
+    "Raina, Ankur",
+    "VasiÄ, Bane"
+  ],
+  "abstract": "Recent constructions of quantum low-density parity-check (QLDPC) codes provide optimal scaling of the number of logical qubits and the minimum distance in terms of the code length, thereby opening the door to fault-tolerant quantum systems with minimal resource overhead. However, the hardware path from nearest-neighbor-connection-based topological codes to long-range-interaction-demanding QLDPC codes is a challenging one. Given the practical difficulty in building a monolithic architecture for quantum computers based on optimal QLDPC codes, it is worth considering a distributed implementation of such codes over a network of interconnected quantum processors. In such a setting, all syndrome measurements and logical operations must be performed using high-fidelity shared entangled states between the processing nodes. Since probabilistic many-to-1 distillation schemes for purifying entanglement are inefficient, we investigate quantum error correction based entanglement purification in this work. Specifically, we employ QLDPC codes to distill GHZ states, as the resulting high-fidelity logical GHZ states can interact directly with the code used to perform distributed quantum computing (DQC), e.g. for fault-tolerant Steane syndrome extraction. This protocol is applicable beyond DQC since entanglement purification is a quintessential task of any quantum network. We use the min-sum algorithm (MSA) based iterative decoder for distilling $3$-qubit GHZ states using a rate $0.118$ family of lifted product QLDPC codes and obtain an input threshold of $\\approx 0.7974$ under i.i.d. single-qubit depolarizing noise. This represents the best threshold for a yield of $0.118$ for any GHZ purification protocol. Our results apply to larger size GHZ states as well, where we extend our technical result about a measurement property of $3$-qubit GHZ states to construct a scalable GHZ purification protocol.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2210.14143.pdf",
+  "url_used": "https://arxiv.org/pdf/2210.14143.pdf",
+  "status": 200,
+  "etag": "\"sha256:58fa466ec27041428af0947f7cbd24dd95fd340f0a75a905c8b6e57407e82a52\"",
+  "last_modified": "Thu, 18 Jan 2024 03:05:26 GMT",
+  "content_type": "application/pdf",
+  "sha256": "956ec62654b34f9b752a2001e81b0c23a8dad155afe24fdda2508be9686a288f",
+  "file_size": 1617975,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:15.279538Z",
+  "fetched_at": "2025-11-03T05:19:15.279538Z",
+  "s3_key": "uwss/clean/by-id/588/pdf.pdf"
+}

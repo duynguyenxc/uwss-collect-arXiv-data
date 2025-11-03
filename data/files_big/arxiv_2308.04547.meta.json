@@ -1,0 +1,28 @@
+{
+  "document_id": 632,
+  "source": "arxiv",
+  "arxiv_id": "2308.04547",
+  "doi": "10.1016/j.jmmm.2023.171522",
+  "title": "Spin-polarized superconducting phase in semiconducting system with next-nearest-neighbor hopping on the honeycomb lattice",
+  "authors": [
+    "Cichy, Agnieszka",
+    "Kapcia, Konrad J.",
+    "Ptok, Andrzej"
+  ],
+  "abstract": "The particles in the honeycomb lattice with on-site $s$-wave pairing exhibit many interesting behaviors, which can be described in the framework of the Hubbard model. Among others, at the half-filling, some critical value $|U_c|$ of pairing interaction $U<0$ exists that, for $U<U_c$, the superconducting phase becomes unstable. Introduction of the nonzero hopping $t'$ between next-nearest-neighbor sites strongly modifies the physical properties of the system. Here, we discuss the behavior of the system for $t' \\neq 0$ (at the ground state), where the hopping between next-nearest neighbors leads to change of the order of phase transition between superconducting and normal phases from discontinuous to continuous one in the external magnetic field $h$. We show that this behavior is strongly dependent on $t'$ and associated with the Dirac cones in the non-interacting band structure of the system. For non-zero magnetic field and for some range of $t'$, a spin-polarized superconducting phase occurs in the ground state phase diagram (only at the half-filling and for $h\\neq 0$).",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2308.04547.pdf",
+  "url_used": "https://arxiv.org/pdf/2308.04547.pdf",
+  "status": 200,
+  "etag": "CIX2naHo1YADEAE=",
+  "last_modified": "Sat, 12 Aug 2023 00:00:25 GMT",
+  "content_type": "application/pdf",
+  "sha256": "7ddc35efddae5dc358bda7e14c35902af9636c3acc6a486ca168e7c1d7528fb0",
+  "file_size": 795660,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:21:09.044472Z",
+  "fetched_at": "2025-11-03T05:21:09.044472Z",
+  "s3_key": "uwss/clean/by-id/632/pdf.pdf"
+}

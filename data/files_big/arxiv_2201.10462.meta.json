@@ -1,0 +1,27 @@
+{
+  "document_id": 541,
+  "source": "arxiv",
+  "arxiv_id": "2201.10462",
+  "doi": null,
+  "title": "Untwisted Gaiotto equivalence",
+  "authors": [
+    "Travkin, Roman",
+    "Yang, Ruotao"
+  ],
+  "abstract": "This is a successive paper of arXiv:1909.11492. We prove an equivalence between the category of finite-dimensional representations of degenerate supergroup $\\underline{GL}(M|N)$ and the category of $(GL_M(O) \\ltimes U_{M, N}(F), Ï_{M, N})$-equivariant D-modules on $Gr_{N}$. We also prove that we can realize the category of finite-dimensional representations of degenerate supergroup $\\underline{GL}(M|N)$ as a category of D-modules on the mirabolic subgroup $Mir_L(F)$ with certain equivariant conditions for any $L$ bigger than $N$ and $M$.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2201.10462.pdf",
+  "url_used": "https://arxiv.org/pdf/2201.10462.pdf",
+  "status": 200,
+  "etag": "CI321fe66IMDEAI=",
+  "last_modified": "Fri, 19 Jan 2024 03:00:33 GMT",
+  "content_type": "application/pdf",
+  "sha256": "c37d5a39c46095465f2ba1640b10f6ebb27c7cfff350449a2ab32acb4e077bc2",
+  "file_size": 896687,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:38.125017Z",
+  "fetched_at": "2025-11-03T05:17:38.125017Z",
+  "s3_key": "uwss/clean_large/by-id/541/pdf.pdf"
+}

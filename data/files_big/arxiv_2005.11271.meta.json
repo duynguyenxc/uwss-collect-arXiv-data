@@ -1,0 +1,28 @@
+{
+  "document_id": 519,
+  "source": "arxiv",
+  "arxiv_id": "2005.11271",
+  "doi": "10.1007/s10773-020-04629-4",
+  "title": "Revisiting the experimental test of Mermin's inequalities at IBMQ",
+  "authors": [
+    "GonzÃ¡lez, Diego",
+    "de la Pradilla, Diego FernÃ¡ndez",
+    "GonzÃ¡lez, Guillermo"
+  ],
+  "abstract": "Bell-type inequalities allow for experimental testing of local hidden variable theories. In the present work we show the violation of Mermin's inequalities in IBM's five-qubit quantum computers, ruling out the local realism hypothesis in quantum mechanics. Furthermore, our numerical results show significant improvement with respect to previous implementations. The circuit implementation of these inequalities is also proposed as a way of assessing the reliability of different quantum computers.",
+  "year": 2020,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2005.11271.pdf",
+  "url_used": "https://arxiv.org/pdf/2005.11271.pdf",
+  "status": 200,
+  "etag": "CPjx9L723PwCEAE=",
+  "last_modified": "Mon, 23 Jan 2023 05:09:37 GMT",
+  "content_type": "application/pdf",
+  "sha256": "33b068f3b98592efff006b573399d419541708238530328f7ab4aed5cdb9a2cc",
+  "file_size": 384467,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:16:19.946786Z",
+  "fetched_at": "2025-11-03T05:16:19.946786Z",
+  "s3_key": "uwss/clean_large/by-id/519/pdf.pdf"
+}

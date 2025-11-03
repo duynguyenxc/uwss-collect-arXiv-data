@@ -1,0 +1,30 @@
+{
+  "document_id": 628,
+  "source": "arxiv",
+  "arxiv_id": "2307.12356",
+  "doi": "10.1016/j.jmmm.2023.171464",
+  "title": "Continuous unitary transformation approach to the Kondo-Majorana interplay",
+  "authors": [
+    "Baranski, Jan",
+    "Baranska, Magdalena",
+    "Zienkiewicz, Tomasz",
+    "Tomaszewska, Justyna",
+    "Kapcia, Konrad Jerzy"
+  ],
+  "abstract": "We analyze a setup composed of a correlated quantum dot (QD) coupled to one metallic lead and one end of topological chain hosting a Majorana zero mode (MZM). In such a hybrid structure, a leakage of the MZM into the region of the QD competes with the Kondo resonance appearing as a consequence of the spin-exchange interactions between the dot and the lead. In the work, we use the nontrivial technique called the continuous unitary transformation (CUT) to analyze this competition. Using the CUT technique, we inspect the influence of the coupling between the QD and the chain on effective exchange interactions and calculate the resultant Kondo temperature.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2307.12356.pdf",
+  "url_used": "https://arxiv.org/pdf/2307.12356.pdf",
+  "status": 200,
+  "etag": "\"sha256:f01135a0f9758388a406d87f1fa125d4733c4c4ad4243d673ed87791da8985ff\"",
+  "last_modified": "Sat, 29 Jul 2023 00:02:52 GMT",
+  "content_type": "application/pdf",
+  "sha256": "719c9a1b310864b20f4a67c9b89ed6e6001423df6f585dda4d8dfd108ec63629",
+  "file_size": 2776953,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:21:00.098624Z",
+  "fetched_at": "2025-11-03T05:21:00.098624Z",
+  "s3_key": "uwss/clean/by-id/628/pdf.pdf"
+}

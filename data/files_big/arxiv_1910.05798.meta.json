@@ -1,0 +1,31 @@
+{
+  "document_id": 556,
+  "source": "arxiv",
+  "arxiv_id": "1910.05798",
+  "doi": "10.1016/j.jss.2019.110487",
+  "title": "Google Summer of Code: Student Motivations and Contributions",
+  "authors": [
+    "Silva, Jefferson O.",
+    "Wiese, Igor",
+    "German, Daniel M.",
+    "Treude, Christoph",
+    "Gerosa, Marco A.",
+    "Steinmacher, Igor"
+  ],
+  "abstract": "Several open source software (OSS) projects expect to foster newcomers' onboarding and to receive contributions by participating in engagement programs, like Summers of Code. However, there is little empirical evidence showing why students join such programs. In this paper, we study the well-established Google Summer of Code (GSoC), which is a 3-month OSS engagement program that offers stipends and mentors to students willing to contribute to OSS projects. We combined a survey (students and mentors) and interviews (students) to understand what motivates students to enter GSoC. Our results show that students enter GSoC for an enriching experience, not necessarily to become frequent contributors. Our data suggest that, while the stipends are an important motivator, the students participate for work experience and the ability to attach the name of the supporting organization to their resumÃ©s. We also discuss practical implications for students, mentors, OSS projects, and Summer of Code programs.",
+  "year": 2019,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1910.05798.pdf",
+  "url_used": "https://arxiv.org/pdf/1910.05798.pdf",
+  "status": 200,
+  "etag": "\"sha256:f314a2f50a5099037c3173988f76154d1ee2452b06e06e8544a3675ba79a913e\"",
+  "last_modified": "Mon, 23 Jan 2023 02:31:39 GMT",
+  "content_type": "application/pdf",
+  "sha256": "28a7efba0dcb99066bf32dec66d4612bf7692a7248191e95ade13eaad19797cf",
+  "file_size": 2316918,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:06.481386Z",
+  "fetched_at": "2025-11-03T05:18:06.481386Z",
+  "s3_key": "uwss/clean_large/by-id/556/pdf.pdf"
+}

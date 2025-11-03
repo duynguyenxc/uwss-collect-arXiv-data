@@ -1,0 +1,27 @@
+{
+  "document_id": 585,
+  "source": "arxiv",
+  "arxiv_id": "2209.10596",
+  "doi": "10.26421/qic23.13-14-2",
+  "title": "Understanding the Mapping of Encode Data Through An Implementation of Quantum Topological Analysis",
+  "authors": [
+    "Vlasic, Andrew",
+    "Pham, Anh"
+  ],
+  "abstract": "A potential advantage of quantum machine learning stems from the ability of encoding classical data into high dimensional complex Hilbert space using quantum circuits. Recent studies exhibit that not all encoding methods are the same when representing classical data since certain parameterized circuit structures are more expressive than the others. In this study, we show the difference in encoding techniques can be visualized by investigating the topology of the data embedded in complex Hilbert space. The technique for visualization is a hybrid quantum based topological analysis which uses simple diagonalization of the boundary operators to compute the persistent Betti numbers and the persistent homology graph. To augment the computation of Betti numbers within a NISQ framework, we suggest a simple hybrid algorithm. Through a illuminating example of a synthetic data set and the methods of angle encoding, amplitude encoding, and IQP encoding, we reveal topological differences with the encoding methods, as well as the original data. Consequently, our results suggest the encoding method needs to be considered carefully within different quantum machine learning models since it can strongly affect downstream analysis like clustering or classification.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2209.10596.pdf",
+  "url_used": "https://arxiv.org/pdf/2209.10596.pdf",
+  "status": 200,
+  "etag": "CK7V6/6t/IMDEAE=",
+  "last_modified": "Sat, 27 Jan 2024 00:55:53 GMT",
+  "content_type": "application/pdf",
+  "sha256": "ff23c3cbd3fc6347574c6c7064714a75e3054d40f822d163ea9d6d0bb4014847",
+  "file_size": 626752,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:08.943581Z",
+  "fetched_at": "2025-11-03T05:19:08.943581Z",
+  "s3_key": "uwss/clean/by-id/585/pdf.pdf"
+}

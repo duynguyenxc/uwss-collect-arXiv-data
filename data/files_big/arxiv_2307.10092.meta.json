@@ -1,0 +1,29 @@
+{
+  "document_id": 467,
+  "source": "arxiv",
+  "arxiv_id": "2307.10092",
+  "doi": "10.1007/jhep01(2024)075",
+  "title": "Accidentally light scalars from large representations",
+  "authors": [
+    "BrÃ¼mmer, Felix",
+    "Ferrante, Giacomo",
+    "Frigerio, Michele",
+    "Hambye, Thomas"
+  ],
+  "abstract": "In models with spontaneous symmetry breaking by scalar fields in large group representations, we observe that some of the scalar masses can be loop-suppressed with respect to the naive expectation from symmetry selection rules. We present minimal models -- the $\\rm{SU(2)}$ five-plet and $\\rm{SU(3)}$ ten-plet -- with such accidentally light scalars, featuring compact tree-level flat directions lifted by radiative corrections. We sketch some potential applications, from stable relics and slow roll in cosmology, to hierarchy and fine-tuning problems in particle physics.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2307.10092.pdf",
+  "url_used": "https://arxiv.org/pdf/2307.10092.pdf",
+  "status": 200,
+  "etag": "CIzUpr/55YMDEAI=",
+  "last_modified": "Thu, 18 Jan 2024 03:02:27 GMT",
+  "content_type": "application/pdf",
+  "sha256": "b26f91445d46fcc7eb5bf86e9ea84efc599910d2866d0582e0ac08b9b8b877c8",
+  "file_size": 525101,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:19.822808Z",
+  "fetched_at": "2025-11-03T05:13:19.822808Z",
+  "s3_key": "uwss/clean_large/by-id/467/pdf.pdf"
+}

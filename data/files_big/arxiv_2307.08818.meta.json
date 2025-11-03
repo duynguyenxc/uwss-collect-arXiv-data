@@ -1,0 +1,27 @@
+{
+  "document_id": 625,
+  "source": "arxiv",
+  "arxiv_id": "2307.08818",
+  "doi": null,
+  "title": "Numerical bifurcation analysis of post-contact states in mathematical models of Micro-Electromechanical Systems",
+  "authors": [
+    "Naudet, Charles",
+    "Lindsay, Alan E."
+  ],
+  "abstract": "This paper is a computational bifurcation analysis of a non-linear partial differential equation (PDE) characterizing equilibrium configurations in Micro electromechanical Systems (MEMS). MEMS are engineering systems that utilize electrostatic forces to actuate elastic surfaces. The potential equilibrium states of MEMS are described by solutions of a singularly perturbed elliptic nonlinear PDE. We develop a numerical method which couples a finite element approximation with mesh refinement to a pseudo arc-length continuation algorithm to numerically obtain bifurcation diagrams in the physically relevant two dimensional scenario. Several geometries, including a unit disk, square, and annulus, are studied to understand the behavior of the system over a range of domains and parameter regimes. We find that solution multiplicity, and importantly the potential for bistability in the system, depends sensitively on the parameters. In the annulus domain, symmetry breaking bifurcations are located and asymmetric solution branches are tracked. This work significantly extends the envelope for numerical characterization of equilibrium states in microscopic electrostatic contact problems relating to MEMS.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2307.08818.pdf",
+  "url_used": "https://arxiv.org/pdf/2307.08818.pdf",
+  "status": 200,
+  "etag": "\"sha256:275526a67591e78e47242c75bd0396398b2db247601d5d3c1a1601d7cb882969\"",
+  "last_modified": "Wed, 24 Jan 2024 02:56:43 GMT",
+  "content_type": "application/pdf",
+  "sha256": "14a05986abde670646abd5f1370512b137facb6cc7b05afd402b706ba31a0920",
+  "file_size": 16332351,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:20:54.217603Z",
+  "fetched_at": "2025-11-03T05:20:54.217603Z",
+  "s3_key": "uwss/clean/by-id/625/pdf.pdf"
+}

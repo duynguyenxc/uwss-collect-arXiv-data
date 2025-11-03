@@ -1,0 +1,28 @@
+{
+  "document_id": 496,
+  "source": "arxiv",
+  "arxiv_id": "1503.07685",
+  "doi": null,
+  "title": "The matching problem between functional shapes via a BV penalty term: a $Î$-convergence result",
+  "authors": [
+    "Nardi, G.",
+    "Charlier, B.",
+    "TrouvÃ©, A."
+  ],
+  "abstract": "This paper proves a $Î$-convergence result for the discrete energy (to the continuous one) of the matching problem for signals defined on surfaces. In particular, we highlight some geometric properties that must be guaranteed in the discretization process to ensure the convergence of minimizers. The proof is given in the framework of functional shapes introduced in \\cite{ABN}. In particular, we consider a varifold-type attachment term, and a $BV$ penalty term is used instead of the original $L^2$ norm.",
+  "year": 2015,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1503.07685.pdf",
+  "url_used": "https://arxiv.org/pdf/1503.07685.pdf",
+  "status": 200,
+  "etag": "CInvsY+z6IMDEAI=",
+  "last_modified": "Fri, 19 Jan 2024 02:25:35 GMT",
+  "content_type": "application/pdf",
+  "sha256": "0a7a97558dfcfa6f3d7485c0aa5ea7c61366e86dbc0c6fd0616a27077cf0af2d",
+  "file_size": 939477,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:14:59.704383Z",
+  "fetched_at": "2025-11-03T05:14:59.704383Z",
+  "s3_key": "uwss/clean_large/by-id/496/pdf.pdf"
+}

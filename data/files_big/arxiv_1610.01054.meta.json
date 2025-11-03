@@ -1,0 +1,28 @@
+{
+  "document_id": 499,
+  "source": "arxiv",
+  "arxiv_id": "1610.01054",
+  "doi": "10.1063/1.5004259",
+  "title": "A new algorithm for computing branching rules and Clebsch-Gordan coefficients of unitary representations of compact groups",
+  "authors": [
+    "Ibort, Alberto",
+    "LÃ³pez-Yela, Alberto",
+    "Moro, Julio"
+  ],
+  "abstract": "A numerical algorithm that computes the decomposition of any finite-dimen\\-sio\\-nal unitary reducible representation of a compact Lie group is presented. The algorithm, which does not rely on an algebraic insight on the group structure, is inspired by quantum mechanical notions. After generating two adapted states (these objects will be conveniently defined in {\\bf Def.\\,II.1}) and after appropriate algebraic manipulations, the algorithm returns the block matrix structure of the representation in terms of its irreducible components. It also provides an adapted orthonormal basis. The algorithm can be used to compute the Clebsch--Gordan coefficients of the tensor product of irreducible representations of a given compact Lie group. The performance of the algorithm is tested on various examples: the decomposition of the regular representation of two finite groups and the computation of Clebsch--Gordan coefficients of two examples of tensor products of representations of $SU(2)$.",
+  "year": 2016,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1610.01054.pdf",
+  "url_used": "https://arxiv.org/pdf/1610.01054.pdf",
+  "status": 200,
+  "etag": "CNDKvO226IMDEAI=",
+  "last_modified": "Fri, 19 Jan 2024 02:42:17 GMT",
+  "content_type": "application/pdf",
+  "sha256": "dee6e0977b3aedf38d11430c1b22514fc30662a0e6b17940bdb38237a67a6da0",
+  "file_size": 860091,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:15:06.736020Z",
+  "fetched_at": "2025-11-03T05:15:06.736020Z",
+  "s3_key": "uwss/clean_large/by-id/499/pdf.pdf"
+}

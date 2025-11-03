@@ -6,5 +6,6 @@
   "content_type": "application/pdf",
   "sha256": "d28603672136668fe0f04d24e75ab7f0f810725fe4fe75c8954f7a8b3adc46ca",
   "file_size": 3237118,
-  "fetched_at": "2025-11-01T22:10:43.558923Z"
+  "fetched_at": "2025-11-01T22:10:43.558923Z",
+  "s3_key": "uwss/clean_large/by-id/278/pdf.pdf"
 }

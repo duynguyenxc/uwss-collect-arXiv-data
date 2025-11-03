@@ -1,0 +1,31 @@
+{
+  "document_id": 513,
+  "source": "arxiv",
+  "arxiv_id": "1906.09579",
+  "doi": "10.1140/epjc/s10052-020-08716-y",
+  "title": "Top condensation model: a step towards the correct prediction of the Higgs mass",
+  "authors": [
+    "Osipov, A. A.",
+    "Hiller, B.",
+    "Blin, A. H.",
+    "Palanca, F.",
+    "Moreira, J.",
+    "Sampaio, M."
+  ],
+  "abstract": "A realization of the composite Higgs scenario in the context of the effective model with the $SU(2)_L\\times U(1)_R$ symmetric four-Fermi interactions proposed by Miransky, Tanabashi and Yamawaki is studied. The model implements Nambu's mechanism of dynamical electroweak symmetry breaking leading to the formation of $\\bar tt$ and $\\bar bb$ quark condensates. We explore the vacuum structure and spectrum of the model by using the Schwinger proper-time method. As a direct consequence of this mechanism, the Higgs acquires a mass in accord with its experimental value. The present prediction essentially differs from the known overestimated value, $m_Ï= 2m_t$, making more favourable the top condensation scenario presented here. The mass formulas for the members of the second Higgs doublet are also obtained. The Nambu sum rule is discussed. It is shown that the anomalous $U(1)_A$ symmetry breaking modifies this rule at next to leading order in $1/N_c$.",
+  "year": 2019,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1906.09579.pdf",
+  "url_used": "https://arxiv.org/pdf/1906.09579.pdf",
+  "status": 200,
+  "etag": "CPD2+IrD3PwCEAE=",
+  "last_modified": "Mon, 23 Jan 2023 01:19:38 GMT",
+  "content_type": "application/pdf",
+  "sha256": "94b0dacb812e1ea095d9b934b441922b19d7bd152ceb4679036c38df5fa055f0",
+  "file_size": 283818,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:16:07.882714Z",
+  "fetched_at": "2025-11-03T05:16:07.882714Z",
+  "s3_key": "uwss/clean_large/by-id/513/pdf.pdf"
+}

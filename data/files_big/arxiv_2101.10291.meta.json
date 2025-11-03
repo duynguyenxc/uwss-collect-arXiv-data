@@ -1,0 +1,33 @@
+{
+  "document_id": 560,
+  "source": "arxiv",
+  "arxiv_id": "2101.10291",
+  "doi": "10.1109/icse43902.2021.00098",
+  "title": "The Shifting Sands of Motivation: Revisiting What Drives Contributors in Open Source",
+  "authors": [
+    "Gerosa, Marco",
+    "Wiese, Igor",
+    "Trinkenreich, Bianca",
+    "Link, Georg",
+    "Robles, Gregorio",
+    "Treude, Christoph",
+    "Steinmacher, Igor",
+    "Sarma, Anita"
+  ],
+  "abstract": "Open Source Software (OSS) has changed drastically over the last decade, with OSS projects now producing a large ecosystem of popular products, involving industry participation, and providing professional career opportunities. But our field's understanding of what motivates people to contribute to OSS is still fundamentally grounded in studies from the early 2000s. With the changed landscape of OSS, it is very likely that motivations to join OSS have also evolved. Through a survey of 242 OSS contributors, we investigate shifts in motivation from three perspectives: (1) the impact of the new OSS landscape, (2) the impact of individuals' personal growth as they become part of OSS communities, and (3) the impact of differences in individuals' demographics. Our results show that some motivations related to social aspects and reputation increased in frequency and that some intrinsic and internalized motivations, such as learning and intellectual stimulation, are still highly relevant. We also found that contributing to OSS often transforms extrinsic motivations to intrinsic, and that while experienced contributors often shift toward altruism, novices often shift toward career, fun, kinship, and learning. OSS projects can leverage our results to revisit current strategies to attract and retain contributors, and researchers and tool builders can better support the design of new studies and tools to engage and support OSS development.",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2101.10291.pdf",
+  "url_used": "https://arxiv.org/pdf/2101.10291.pdf",
+  "status": 200,
+  "etag": "CLSzhKqi3fwCEAE=",
+  "last_modified": "Mon, 23 Jan 2023 08:25:44 GMT",
+  "content_type": "application/pdf",
+  "sha256": "bf253564a929c04c20df1d801d36ba99800c2fc25c6222a9112f4e409e8dc71c",
+  "file_size": 720329,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:13.501550Z",
+  "fetched_at": "2025-11-03T05:18:13.501550Z",
+  "s3_key": "uwss/clean_large/by-id/560/pdf.pdf"
+}

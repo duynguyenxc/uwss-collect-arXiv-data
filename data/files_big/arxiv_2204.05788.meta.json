@@ -1,0 +1,27 @@
+{
+  "document_id": 547,
+  "source": "arxiv",
+  "arxiv_id": "2204.05788",
+  "doi": "10.1007/s00222-023-01223-3",
+  "title": "Subgroups of hyperbolic groups, finiteness properties and complex hyperbolic lattices",
+  "authors": [
+    "Isenrich, Claudio Llosa",
+    "Py, Pierre"
+  ],
+  "abstract": "We prove that in a cocompact complex hyperbolic arithmetic lattice $Î< {\\rm PU}(m,1)$ of the simplest type, deep enough finite index subgroups admit plenty of homomorphisms to $\\mathbb{Z}$ with kernel of type $\\mathscr{F}_{m-1}$ but not of type $\\mathscr{F}_{m}$. This provides many finitely presented non-hyperbolic subgroups of hyperbolic groups and answers an old question of Brady. Our method also yields a proof of a special case of Singer's conjecture for aspherical KÃ¤hler manifolds.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2204.05788.pdf",
+  "url_used": "https://arxiv.org/pdf/2204.05788.pdf",
+  "status": 200,
+  "etag": "CNXPztXx3fwCEAE=",
+  "last_modified": "Mon, 23 Jan 2023 14:20:42 GMT",
+  "content_type": "application/pdf",
+  "sha256": "0afc5e6fff4814b5bbedd13a967e39ab014de23b86bca0d8c08cdd5b98298703",
+  "file_size": 481672,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:48.122179Z",
+  "fetched_at": "2025-11-03T05:17:48.122179Z",
+  "s3_key": "uwss/clean_large/by-id/547/pdf.pdf"
+}

@@ -1,0 +1,31 @@
+{
+  "document_id": 518,
+  "source": "arxiv",
+  "arxiv_id": "2003.08433",
+  "doi": "10.56553/popets-2022-0100",
+  "title": "Neural Fuzzy Extractors: A Secure Way to Use Artificial Neural Networks for Biometric User Authentication",
+  "authors": [
+    "Jana, Abhishek",
+    "Paudel, Bipin",
+    "Sarker, Md Kamruzzaman",
+    "Ebrahimi, Monireh",
+    "Hitzler, Pascal",
+    "Amariucai, George T"
+  ],
+  "abstract": "Powered by new advances in sensor development and artificial intelligence, the decreasing cost of computation, and the pervasiveness of handheld computation devices, biometric user authentication (and identification) is rapidly becoming ubiquitous. Modern approaches to biometric authentication, based on sophisticated machine learning techniques, cannot avoid storing either trained-classifier details or explicit user biometric data, thus exposing users' credentials to falsification. In this paper, we introduce a secure way to handle user-specific information involved with the use of vector-space classifiers or artificial neural networks for biometric authentication. Our proposed architecture, called a Neural Fuzzy Extractor (NFE), allows the coupling of pre-existing classifiers with fuzzy extractors, through a artificial-neural-network-based buffer called an expander, with minimal or no performance degradation. The NFE thus offers all the performance advantages of modern deep-learning-based classifiers, and all the security of standard fuzzy extractors. We demonstrate the NFE retrofit to a classic artificial neural network for a simple scenario of fingerprint-based user authentication.",
+  "year": 2020,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2003.08433.pdf",
+  "url_used": "https://arxiv.org/pdf/2003.08433.pdf",
+  "status": 200,
+  "etag": "COu7gY2t/IMDEAE=",
+  "last_modified": "Sat, 27 Jan 2024 00:51:54 GMT",
+  "content_type": "application/pdf",
+  "sha256": "a4a6e8d35e5141da5f076a60311eed74f072a6be9a1d2467e7023f75452088b7",
+  "file_size": 490461,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:16:17.848923Z",
+  "fetched_at": "2025-11-03T05:16:17.848923Z",
+  "s3_key": "uwss/clean_large/by-id/518/pdf.pdf"
+}

@@ -1,0 +1,30 @@
+{
+  "document_id": 564,
+  "source": "arxiv",
+  "arxiv_id": "2103.13547",
+  "doi": "10.1007/s10664-022-10130-9",
+  "title": "Quality Gatekeepers: Investigating the Effects ofCode Review Bots on Pull Request Activities",
+  "authors": [
+    "Wessel, Mairieli",
+    "Serebrenik, Alexander",
+    "Wiese, Igor",
+    "Steinmacher, Igor",
+    "Gerosa, Marco A."
+  ],
+  "abstract": "Software bots have been facilitating several development activities in Open Source Software (OSS) projects, including code review. However, these bots may bring unexpected impacts to group dynamics, as frequently occurs with new technology adoption. Understanding and anticipating such effects is important for planning and management. To analyze these effects, we investigate how several activity indicators change after the adoption of a code review bot. We employed a regression discontinuity design on 1,194 software projects from GitHub. We also interviewed 12 practitioners, including open-source maintainers and contributors. Our results indicate that the adoption of code review bots increases the number of monthly merged pull requests, decreases monthly non-merged pull requests, and decreases communication among developers. From the developers' perspective, these effects are explained by the transparency and confidence the bot comments introduce, in addition to the changes in the discussion focused on pull requests. Practitioners and maintainers may leverage our results to understand, or even predict, bot effects on their projects.",
+  "year": 2021,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2103.13547.pdf",
+  "url_used": "https://arxiv.org/pdf/2103.13547.pdf",
+  "status": 200,
+  "etag": "CMXptOes3fwCEAE=",
+  "last_modified": "Mon, 23 Jan 2023 09:12:38 GMT",
+  "content_type": "application/pdf",
+  "sha256": "dea05d48dc50b20eadb8bbb14737352b2529aa8f5bc588ae0d0cf9a6b82689eb",
+  "file_size": 674698,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:22.510384Z",
+  "fetched_at": "2025-11-03T05:18:22.510384Z",
+  "s3_key": "uwss/clean_large/by-id/564/pdf.pdf"
+}

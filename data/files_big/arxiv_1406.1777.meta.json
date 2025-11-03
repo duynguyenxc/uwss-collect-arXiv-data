@@ -1,0 +1,26 @@
+{
+  "document_id": 451,
+  "source": "arxiv",
+  "arxiv_id": "1406.1777",
+  "doi": "10.1134/s199508021504006x",
+  "title": "Algebraic solutions of tropical optimization problems",
+  "authors": [
+    "Krivulin, N."
+  ],
+  "abstract": "We consider multidimensional optimization problems, which are formulated and solved in terms of tropical mathematics. The problems are to minimize (maximize) a linear or nonlinear function defined on vectors over an idempotent semifield, and may have constraints in the form of linear equations and inequalities. The aim of the paper is twofold: first to give a broad overview of known tropical optimization problems and solution methods, including recent results; and second, to derive a direct, complete solution to a new constrained optimization problem as an illustration of the algebraic approach recently proposed to solve tropical optimization problems with nonlinear objective functions.",
+  "year": 2014,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1406.1777.pdf",
+  "url_used": "https://arxiv.org/pdf/1406.1777.pdf",
+  "status": 200,
+  "etag": "CNPmysv55YMDEAI=",
+  "last_modified": "Thu, 18 Jan 2024 03:02:52 GMT",
+  "content_type": "application/pdf",
+  "sha256": "99d1ee0d02ebe45e4c62364e2fb85ef12065e71e109f9e46f8d6aede577957c8",
+  "file_size": 239873,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:12:41.760474Z",
+  "fetched_at": "2025-11-03T05:12:41.760474Z",
+  "s3_key": "uwss/clean_large/by-id/451/pdf.pdf"
+}

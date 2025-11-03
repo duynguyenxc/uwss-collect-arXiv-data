@@ -1,0 +1,32 @@
+{
+  "document_id": 584,
+  "source": "arxiv",
+  "arxiv_id": "2209.07805",
+  "doi": null,
+  "title": "A Comprehensive Benchmark for COVID-19 Predictive Modeling Using Electronic Health Records in Intensive Care",
+  "authors": [
+    "Gao, Junyi",
+    "Zhu, Yinghao",
+    "Wang, Wenqing",
+    "Wang, Yasha",
+    "Tang, Wen",
+    "Harrison, Ewen M.",
+    "Ma, Liantao"
+  ],
+  "abstract": "The COVID-19 pandemic has posed a heavy burden to the healthcare system worldwide and caused huge social disruption and economic loss. Many deep learning models have been proposed to conduct clinical predictive tasks such as mortality prediction for COVID-19 patients in intensive care units using Electronic Health Record (EHR) data. Despite their initial success in certain clinical applications, there is currently a lack of benchmarking results to achieve a fair comparison so that we can select the optimal model for clinical use. Furthermore, there is a discrepancy between the formulation of traditional prediction tasks and real-world clinical practice in intensive care. To fill these gaps, we propose two clinical prediction tasks, Outcome-specific length-of-stay prediction and Early mortality prediction for COVID-19 patients in intensive care units. The two tasks are adapted from the naive length-of-stay and mortality prediction tasks to accommodate the clinical practice for COVID-19 patients. We propose fair, detailed, open-source data-preprocessing pipelines and evaluate 17 state-of-the-art predictive models on two tasks, including 5 machine learning models, 6 basic deep learning models and 6 deep learning predictive models specifically designed for EHR data. We provide benchmarking results using data from two real-world COVID-19 EHR datasets. One dataset is publicly available without needing any inquiry and another dataset can be accessed on request. We provide fair, reproducible benchmarking results for two tasks. We deploy all experiment results and models on an online platform. We also allow clinicians and researchers to upload their data to the platform and get quick prediction results using our trained models. We hope our efforts can further facilitate deep learning and machine learning research for COVID-19 predictive modeling.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2209.07805.pdf",
+  "url_used": "https://arxiv.org/pdf/2209.07805.pdf",
+  "status": 200,
+  "etag": "\"sha256:530acbf30cec3ab20d3bb7e6101416e8d2538a3b8188782a8af502696e1f6266\"",
+  "last_modified": "Wed, 24 Jan 2024 02:56:10 GMT",
+  "content_type": "application/pdf",
+  "sha256": "618244814e1c40850d15459a28a3c08fd3b21911a85e1f116dfd4ee69993066b",
+  "file_size": 2144295,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:07.117104Z",
+  "fetched_at": "2025-11-03T05:19:07.117104Z",
+  "s3_key": "uwss/clean/by-id/584/pdf.pdf"
+}

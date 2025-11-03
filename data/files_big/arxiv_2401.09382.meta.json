@@ -1,0 +1,29 @@
+{
+  "document_id": 475,
+  "source": "arxiv",
+  "arxiv_id": "2401.09382",
+  "doi": null,
+  "title": "POE: Acoustic Soft Robotic Proprioception for Omnidirectional End-effectors",
+  "authors": [
+    "Yoo, Uksang",
+    "Lopez, Ziven",
+    "Ichnowski, Jeffrey",
+    "Oh, Jean"
+  ],
+  "abstract": "Soft robotic shape estimation and proprioception are challenging because of soft robot's complex deformation behaviors and infinite degrees of freedom. A soft robot's continuously deforming body makes it difficult to integrate rigid sensors and to reliably estimate its shape. In this work, we present Proprioceptive Omnidirectional End-effector (POE), which has six embedded microphones across the tendon-driven soft robot's surface. We first introduce novel applications of previously proposed 3D reconstruction methods to acoustic signals from the microphones for soft robot shape proprioception. To improve the proprioception pipeline's training efficiency and model prediction consistency, we present POE-M. POE-M first predicts key point positions from the acoustic signal observations with the embedded microphone array. Then we utilize an energy-minimization method to reconstruct a physically admissible high-resolution mesh of POE given the estimated key points. We evaluate the mesh reconstruction module with simulated data and the full POE-M pipeline with real-world experiments. We demonstrate that POE-M's explicit guidance of the key points during the mesh reconstruction process provides robustness and stability to the pipeline with ablation studies. POE-M reduced the maximum Chamfer distance error by 23.10 % compared to the state-of-the-art end-to-end soft robot proprioception models and achieved 4.91 mm average Chamfer distance error during evaluation.",
+  "year": 2024,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2401.09382.pdf",
+  "url_used": "https://arxiv.org/pdf/2401.09382.pdf",
+  "status": 200,
+  "etag": "\"sha256:81dd1ee332a9137aee4b7f75a20d0b09484d0b2563297028a1fe2fc0d550084c\"",
+  "last_modified": "Thu, 18 Jan 2024 03:00:38 GMT",
+  "content_type": "application/pdf",
+  "sha256": "771195045b3b0f6834c18459bcf2e3c0075456818d2c869bde778e0f8354335c",
+  "file_size": 7736302,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:47.141261Z",
+  "fetched_at": "2025-11-03T05:13:47.141261Z",
+  "s3_key": "uwss/clean_large/by-id/475/pdf.pdf"
+}

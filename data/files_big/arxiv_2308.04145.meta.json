@@ -1,0 +1,27 @@
+{
+  "document_id": 630,
+  "source": "arxiv",
+  "arxiv_id": "2308.04145",
+  "doi": "10.1016/j.jmmm.2023.171702",
+  "title": "Magnetic and charge orders on the triangular lattice: Extended Hubbard model with intersite Ising-like magnetic interactions in the atomic limit",
+  "authors": [
+    "Kapcia, Konrad Jerzy",
+    "BaraÅski, Jan"
+  ],
+  "abstract": "In the work, we investigated a generalized model of the fermionic lattice gas in the form of the extended Hubbard model with intersite Ising-like interactions (both antiferromagnetic and ferromagnetic) at the atomic limit on the triangular lattice. In the ground state, we find the exact phase diagram as a function of $Î¼$. Within the mean-field decoupling of the intersite term and exact treatment of onsite interaction, we found also the diagrams for $T\\geq 0$ including metastable phases. For antiferromagnetic coupling, we find that nontrival ordered phase can exist with coexistence of charge and metamagnetic ordering. The transition between the ordered phase and the nonordered phase can be discontinuous as well continuous depending on the model parameters. Moreover, the ordered phase can coexist with the nonordered phase in phase separated states for fixed electron concentration. Additionally, the ranges of phases metastability are determined in the neighborhood of the discontinuous transitions.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2308.04145.pdf",
+  "url_used": "https://arxiv.org/pdf/2308.04145.pdf",
+  "status": 200,
+  "etag": "CKuxg5vo1YADEAE=",
+  "last_modified": "Sat, 12 Aug 2023 00:00:12 GMT",
+  "content_type": "application/pdf",
+  "sha256": "bc8b4770c3c24418a9eea5319f114a0f6748e180c6ce9c903fc8d052a3f851dd",
+  "file_size": 989630,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:21:04.700746Z",
+  "fetched_at": "2025-11-03T05:21:04.700746Z",
+  "s3_key": "uwss/clean/by-id/630/pdf.pdf"
+}

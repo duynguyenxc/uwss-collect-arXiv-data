@@ -1,0 +1,28 @@
+{
+  "document_id": 485,
+  "source": "arxiv",
+  "arxiv_id": "2401.09401",
+  "doi": null,
+  "title": "PERMUTOOLS: A MATLAB Package for Multivariate Permutation Testing",
+  "authors": [
+    "Crosse, Michael J.",
+    "Foxe, John J.",
+    "Molholm, Sophie"
+  ],
+  "abstract": "Statistical hypothesis testing and effect size measurement are routine parts of quantitative research. Advancements in computer processing power have greatly improved the capability of statistical inference through the availability of resampling methods. However, many of the statistical practices used today are based on traditional, parametric methods that rely on assumptions about the underlying population. These assumptions may not always be valid, leading to inaccurate results and misleading interpretations. Permutation testing, on the other hand, generates the sampling distribution empirically by permuting the observed data, providing distribution-free hypothesis testing. Furthermore, this approach lends itself to a powerful method for multiple comparison correction - known as max correction - which is less prone to type II errors than conventional correction methods. Parametric methods have also traditionally been utilized for estimating the confidence interval of various test statistics and effect size measures. However, these too can be estimated empirically using permutation or bootstrapping techniques. Whilst resampling methods are generally considered preferable, many popular programming languages and statistical software packages lack efficient implementations. Here, we introduce PERMUTOOLS, a MATLAB package for multivariate permutation testing and effect size measurement.",
+  "year": 2024,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2401.09401.pdf",
+  "url_used": "https://arxiv.org/pdf/2401.09401.pdf",
+  "status": 200,
+  "etag": "CPjO9rL55YMDEAI=",
+  "last_modified": "Thu, 18 Jan 2024 03:02:01 GMT",
+  "content_type": "application/pdf",
+  "sha256": "d31bc588f3bd67f9b2700f53be139b41656fbada00cceb1d70329f77b2dc16f9",
+  "file_size": 263353,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:14:29.879634Z",
+  "fetched_at": "2025-11-03T05:14:29.879634Z",
+  "s3_key": "uwss/clean_large/by-id/485/pdf.pdf"
+}

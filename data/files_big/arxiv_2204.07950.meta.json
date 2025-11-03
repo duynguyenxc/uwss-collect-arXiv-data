@@ -1,0 +1,29 @@
+{
+  "document_id": 550,
+  "source": "arxiv",
+  "arxiv_id": "2204.07950",
+  "doi": null,
+  "title": "Li-Yorke and Devaney chaotic uniform dynamical systems amongst weighted shifts",
+  "authors": [
+    "Shirazi, Fatemah Ayatollah Zadeh",
+    "Hakimi, Elaheh",
+    "Hosseini, Arezoo",
+    "Rezavand, Reza"
+  ],
+  "abstract": "In this paper, for finite discrete field $F$, nonempty set $Î$, weight vector $\\mathfrak{w}=({\\mathfrak w}_Î±)_{Î±\\inÎ}\\in F^Î$ and weighted generalized shift $Ï_{Ï,{\\mathfrak w}}:F^Î\\to F^Î$, we find necessary and sufficient conditions for uniform dynamical system $(F^Î,Ï_{Ï,{\\mathfrak w}})$ to be Li--Yorke chaotic. Next we find necessary and sufficient conditions for $(F^Î,Ï_{Ï,{\\mathfrak w}})$ to be Devaney chaotic.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2204.07950.pdf",
+  "url_used": "https://arxiv.org/pdf/2204.07950.pdf",
+  "status": 200,
+  "etag": "CK6n7bfy3fwCEAE=",
+  "last_modified": "Mon, 23 Jan 2023 14:24:08 GMT",
+  "content_type": "application/pdf",
+  "sha256": "70b8f9226865527e9fbdb7801547ef00f0f5856c62e88bf136696acbb68e800e",
+  "file_size": 248003,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:17:53.765913Z",
+  "fetched_at": "2025-11-03T05:17:53.765913Z",
+  "s3_key": "uwss/clean_large/by-id/550/pdf.pdf"
+}

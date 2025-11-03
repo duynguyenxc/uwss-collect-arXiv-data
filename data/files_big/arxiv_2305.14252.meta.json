@@ -1,0 +1,30 @@
+{
+  "document_id": 611,
+  "source": "arxiv",
+  "arxiv_id": "2305.14252",
+  "doi": "10.22331/q-2024-01-18-1230",
+  "title": "Quantum Kolmogorov complexity and quantum correlations in deterministic-control quantum Turing machines",
+  "authors": [
+    "Lemus, Mariano",
+    "Faleiro, Ricardo",
+    "Mateus, Paulo",
+    "PaunkoviÄ, Nikola",
+    "Souto, AndrÃ©"
+  ],
+  "abstract": "This work presents a study of Kolmogorov complexity for general quantum states from the perspective of deterministic-control quantum Turing Machines (dcq-TM). We extend the dcq-TM model to incorporate mixed state inputs and outputs, and define dcq-computable states as those that can be approximated by a dcq-TM. Moreover, we introduce (conditional) Kolmogorov complexity of quantum states and use it to study three particular aspects of the algorithmic information contained in a quantum state: a comparison of the information in a quantum state with that of its classical representation as an array of real numbers, an exploration of the limits of quantum state copying in the context of algorithmic complexity, and study of the complexity of correlations in quantum systems, resulting in a correlation-aware definition for algorithmic mutual information that satisfies symmetry of information property.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2305.14252.pdf",
+  "url_used": "https://arxiv.org/pdf/2305.14252.pdf",
+  "status": 200,
+  "etag": "CNizncPX44MDEAI=",
+  "last_modified": "Wed, 17 Jan 2024 05:25:08 GMT",
+  "content_type": "application/pdf",
+  "sha256": "2140cd7cc2e465875b4650c90e5664f754de5b2056dc68c7a3dd4d590c4eafb2",
+  "file_size": 930996,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:20:12.007080Z",
+  "fetched_at": "2025-11-03T05:20:12.007080Z",
+  "s3_key": "uwss/clean/by-id/611/pdf.pdf"
+}

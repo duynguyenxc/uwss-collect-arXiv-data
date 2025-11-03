@@ -1,0 +1,27 @@
+{
+  "document_id": 508,
+  "source": "arxiv",
+  "arxiv_id": "1804.10786",
+  "doi": null,
+  "title": "Top-designs in the category of Fort spaces",
+  "authors": [
+    "Pourattar, Mehrnaz",
+    "Shirazi, Fatemah Ayatollah Zadeh"
+  ],
+  "abstract": "In infinite topological Fort space $X$, for nonempty subsets $C,D$ of $X$ in the following text we answer to this question \"Is there any $Î»$ and Top--design $C-(X,D,Î»)$ of type $i$?\" for $i=1,2,3,4$. We prove there exist $Î»$ and $C-(X,D,Î»)$, Top--design of type 2 (resp. type 4) if and only if $C$ can be embedded into $D$.",
+  "year": 2018,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1804.10786.pdf",
+  "url_used": "https://arxiv.org/pdf/1804.10786.pdf",
+  "status": 200,
+  "etag": "CMSLzrSM3PwCEAE=",
+  "last_modified": "Sun, 22 Jan 2023 21:15:01 GMT",
+  "content_type": "application/pdf",
+  "sha256": "dea4b76f1a2792e84ea8c85354ea75a8fa9a66f5a0eda090e09340d64a0cc701",
+  "file_size": 120274,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:15:27.461135Z",
+  "fetched_at": "2025-11-03T05:15:27.461135Z",
+  "s3_key": "uwss/clean_large/by-id/508/pdf.pdf"
+}

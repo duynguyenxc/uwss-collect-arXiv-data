@@ -1,0 +1,27 @@
+{
+  "document_id": 457,
+  "source": "arxiv",
+  "arxiv_id": "2206.05601",
+  "doi": "10.1177/02783649231182486",
+  "title": "Simple Kinesthetic Haptics for Object Recognition",
+  "authors": [
+    "Sintov, Avishai",
+    "Ben-David, Inbar"
+  ],
+  "abstract": "Object recognition is an essential capability when performing various tasks. Humans naturally use either or both visual and tactile perception to extract object class and properties. Typical approaches for robots, however, require complex visual systems or multiple high-density tactile sensors which can be highly expensive. In addition, they usually require actual collection of a large dataset from real objects through direct interaction. In this paper, we propose a kinesthetic-based object recognition method that can be performed with any multi-fingered robotic hand in which the kinematics is known. The method does not require tactile sensors and is based on observing grasps of the objects. We utilize a unique and frame invariant parameterization of grasps to learn instances of object shapes. To train a classifier, training data is generated rapidly and solely in a computational process without interaction with real objects. We then propose and compare between two iterative algorithms that can integrate any trained classifier. The classifiers and algorithms are independent of any particular robot hand and, therefore, can be exerted on various ones. We show in experiments, that with few grasps, the algorithms acquire accurate classification. Furthermore, we show that the object recognition approach is scalable to objects of various sizes. Similarly, a global classifier is trained to identify general geometries (e.g., an ellipsoid or a box) rather than particular ones and demonstrated on a large set of objects. Full scale experiments and analysis are provided to show the performance of the method.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2206.05601.pdf",
+  "url_used": "https://arxiv.org/pdf/2206.05601.pdf",
+  "status": 200,
+  "etag": "\"sha256:8bea65865062bca95292cc4c0762efd005bf6448ffb3bb9ec1350328188f0638\"",
+  "last_modified": "Mon, 23 Jan 2023 15:08:53 GMT",
+  "content_type": "application/pdf",
+  "sha256": "7eda82a67f9f7f42081680139190d55743b98e3b16e1f0323ecc9c37234a61f1",
+  "file_size": 11519313,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:12:57.255740Z",
+  "fetched_at": "2025-11-03T05:12:57.255740Z",
+  "s3_key": "uwss/clean_large/by-id/457/pdf.pdf"
+}

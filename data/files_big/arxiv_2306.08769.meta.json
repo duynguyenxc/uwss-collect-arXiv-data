@@ -1,0 +1,26 @@
+{
+  "document_id": 616,
+  "source": "arxiv",
+  "arxiv_id": "2306.08769",
+  "doi": null,
+  "title": "PoincarÃ©-like extension Mixing Higgs and Gauge Fields in a U(1) symmetric model",
+  "authors": [
+    "Wills-Toro, Luis Alberto"
+  ],
+  "abstract": "We continue the program by investigating symmetric structures underlying features of the Standard Model. We then expand the symmetry to encompass translations before contraction. A field theory model emerges with the goal of replicating a coupling to gravity before contraction. Then we obtain an expanded second-order gravity model after contraction that incorporates the abelian internal symmetry.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2306.08769.pdf",
+  "url_used": "https://arxiv.org/pdf/2306.08769.pdf",
+  "status": 200,
+  "etag": "CMjuw4aD9YMDEAI=",
+  "last_modified": "Wed, 24 Jan 2024 02:55:08 GMT",
+  "content_type": "application/pdf",
+  "sha256": "54bca41de991c7c2a83e347e9b12390943a54667fcfd5dcaffab817146be1429",
+  "file_size": 421996,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:20:23.860207Z",
+  "fetched_at": "2025-11-03T05:20:23.860207Z",
+  "s3_key": "uwss/clean/by-id/616/pdf.pdf"
+}

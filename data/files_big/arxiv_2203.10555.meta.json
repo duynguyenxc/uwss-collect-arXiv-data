@@ -1,0 +1,29 @@
+{
+  "document_id": 572,
+  "source": "arxiv",
+  "arxiv_id": "2203.10555",
+  "doi": "10.1145/3510458.3513018",
+  "title": "An Empirical Investigation on the Challenges Faced by Women in the Software Industry: A Case Study",
+  "authors": [
+    "Trinkenreich, Bianca",
+    "Britto, Ricardo",
+    "Gerosa, Marco Aurelio",
+    "Steinmacher, Igor"
+  ],
+  "abstract": "Addressing women's under-representation in the software industry, a widely recognized concern, requires attracting as well as retaining more women. Hearing from women practitioners, particularly those positioned in multi-cultural settings, about their challenges and and adopting their lived experienced solutions can support the design of programs to resolve the under-representation issue. \n  Goal: We investigated the challenges women face in global software development teams, particularly what motivates women to leave their company; how those challenges might break down according to demographics; and strategies to mitigate the identified challenges. \n  Method: To achieve this goal, we conducted an exploratory case study in Ericsson, a global technology company. We surveyed 94 women and employed mixed-methods to analyze the data. \n  Results: Our findings reveal that women face socio-cultural challenges, including work-life balance issues, benevolent and hostile sexism, lack of recognition and peer parity, impostor syndrome, glass ceiling bias effects, the prove-it-again phenomenon, and the maternal wall. The participants of our research provided different suggestions to address/mitigate the reported challenges, including sabbatical policies, flexibility of location and time, parenthood support, soft skills training for managers, equality of payment and opportunities between genders, mentoring and role models to support career growth, directives to hire more women, inclusive groups and events, women's empowerment, and recognition for women's success. The framework of challenges and suggestions can inspire further initiatives both in academia and industry to onboard and retain women.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2203.10555.pdf",
+  "url_used": "https://arxiv.org/pdf/2203.10555.pdf",
+  "status": 200,
+  "etag": "\"sha256:875f1642035501f2229ad42a4342af036e1f4dfd9d5fce3bd41666833bd0cac9\"",
+  "last_modified": "Mon, 23 Jan 2023 14:00:42 GMT",
+  "content_type": "application/pdf",
+  "sha256": "175a7c6411e857c9745a9242bb497764271925ee66875cabd1f3be67d2df5ab9",
+  "file_size": 1205673,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:18:39.702698Z",
+  "fetched_at": "2025-11-03T05:18:39.702698Z",
+  "s3_key": "uwss/clean/by-id/572/pdf.pdf"
+}

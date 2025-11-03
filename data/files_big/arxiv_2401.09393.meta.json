@@ -1,0 +1,31 @@
+{
+  "document_id": 480,
+  "source": "arxiv",
+  "arxiv_id": "2401.09393",
+  "doi": null,
+  "title": "ÃlivÃ¡gar: Efficient Quantum Circuit Search for Classification",
+  "authors": [
+    "Anagolum, Sashwat",
+    "Alavisamani, Narges",
+    "Das, Poulami",
+    "Qureshi, Moinuddin",
+    "Kessler, Eric",
+    "Shi, Yunong"
+  ],
+  "abstract": "Designing performant and noise-robust circuits for Quantum Machine Learning (QML) is challenging -- the design space scales exponentially with circuit size, and there are few well-supported guiding principles for QML circuit design. Although recent Quantum Circuit Search (QCS) methods attempt to search for performant QML circuits that are also robust to hardware noise, they directly adopt designs from classical Neural Architecture Search (NAS) that are misaligned with the unique constraints of quantum hardware, resulting in high search overheads and severe performance bottlenecks.\n  We present ÃlivÃ¡gar, a novel resource-efficient, noise-guided QCS framework. ÃlivÃ¡gar innovates in all three major aspects of QCS -- search space, search algorithm and candidate evaluation strategy -- to address the design flaws in current classically-inspired QCS methods. ÃlivÃ¡gar achieves hardware-efficiency and avoids an expensive circuit-mapping co-search via noise- and device topology-aware candidate generation. By introducing two cheap-to-compute predictors, Clifford noise resilience and Representational capacity, ÃlivÃ¡gar decouples the evaluation of noise robustness and performance, enabling early rejection of low-fidelity circuits and reducing circuit evaluation costs. Due to its resource-efficiency, ÃlivÃ¡gar can further search for data embeddings, significantly improving performance.\n  Based on a comprehensive evaluation of ÃlivÃ¡gar on 12 real quantum devices and 9 QML applications, ÃlivÃ¡gar achieves 5.3% higher accuracy and a 271$\\times$ speedup compared to state-of-the-art QCS methods.",
+  "year": 2024,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2401.09393.pdf",
+  "url_used": "https://arxiv.org/pdf/2401.09393.pdf",
+  "status": 200,
+  "etag": "\"sha256:aa479b0e06196c4d5a07fea0fea9ccd0a28959ffc17a6a65b739ea105ff36043\"",
+  "last_modified": "Thu, 18 Jan 2024 03:01:06 GMT",
+  "content_type": "application/pdf",
+  "sha256": "ebccc0ab3f9808001cc864bd2d364ec43aaf2a8c4c62add44d820507e2fccf53",
+  "file_size": 2496614,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:14:19.135931Z",
+  "fetched_at": "2025-11-03T05:14:19.135931Z",
+  "s3_key": "uwss/clean_large/by-id/480/pdf.pdf"
+}

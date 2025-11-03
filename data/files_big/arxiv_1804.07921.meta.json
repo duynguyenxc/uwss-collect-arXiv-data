@@ -1,0 +1,27 @@
+{
+  "document_id": 507,
+  "source": "arxiv",
+  "arxiv_id": "1804.07921",
+  "doi": null,
+  "title": "Is there any nontrivial compact generalized shift operator on Hilbert spaces?",
+  "authors": [
+    "Shirazi, Fatemah Ayatollah Zadeh",
+    "Ebrahimifar, Fatemeh"
+  ],
+  "abstract": "In the following text for cardinal number $Ï>0$, and self--map $Ï:Ï\\toÏ$ we show the generalized shift operator $Ï_Ï(\\ell^2(Ï))\\subseteq\\ell^2(Ï)$ (where $Ï_Ï((x_Î±)_{Î±<Ï})=(x_{Ï(Î±)})_{Î±<Ï}$ for $(x_Î±)_{Î±<Ï}\\in{\\mathbb C}^Ï$) if and only if $Ï:Ï\\toÏ$ is bounded and in this case $Ï_Ï\\restriction_{\\ell^2(Ï)}:\\ell^2(Ï)\\to\\ell^2(Ï)$ is continuous, consequently $Ï_Ï\\restriction_{\\ell^2(Ï)}:\\ell^2(Ï)\\to\\ell^2(Ï)$ is a compact operator if and only if $Ï$ is finite.",
+  "year": 2018,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1804.07921.pdf",
+  "url_used": "https://arxiv.org/pdf/1804.07921.pdf",
+  "status": 200,
+  "etag": "CKrFgMCL3PwCEAE=",
+  "last_modified": "Sun, 22 Jan 2023 21:10:57 GMT",
+  "content_type": "application/pdf",
+  "sha256": "81934e045611d31e90893d05776deb56e1a0607d86b2f9ea6cae580bedb6007f",
+  "file_size": 134818,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:15:25.794711Z",
+  "fetched_at": "2025-11-03T05:15:25.794711Z",
+  "s3_key": "uwss/clean_large/by-id/507/pdf.pdf"
+}

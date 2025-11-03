@@ -1,0 +1,28 @@
+{
+  "document_id": 469,
+  "source": "arxiv",
+  "arxiv_id": "2308.16897",
+  "doi": null,
+  "title": "Distinguishing models with $Î¼\\to e $ observables",
+  "authors": [
+    "Ardu, Marco",
+    "Davidson, Sacha",
+    "Lavignac, StÃ©phane"
+  ],
+  "abstract": "Upcoming experiments will improve the reach for the lepton flavour violating (LFV) processes $Î¼\\to e Î³$, $Î¼\\to e \\bar{e} e$ and $Î¼A \\to e A$ by orders of magnitude. We investigate whether this upcoming data could rule out some popular TeV-scale LFV models (the type II seesaw, the inverse seesaw and a scalar leptoquark) using a bottom-up EFT approach involving twelve Wilson coefficients that can in principle all be determined by experimental measurements. In this 12-dimensional coefficient space, each model can only predict points in a specific subspace; for instance, flavour change involving singlet electrons is suppressed in the seesaw models, and the leptoquark induces negligible coefficients for 4-lepton scalar operators. Using the fact that none of these models can populate the whole region accessible to upcoming experiments, we show that $Î¼\\to e$ experiments have the ability to rule them out.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2308.16897.pdf",
+  "url_used": "https://arxiv.org/pdf/2308.16897.pdf",
+  "status": 200,
+  "etag": "\"sha256:2915b97385bb64f1b0a6b7ce58c85ee0b1b186ec82f266d3f1f92ae343d8442f\"",
+  "last_modified": "Thu, 18 Jan 2024 03:01:20 GMT",
+  "content_type": "application/pdf",
+  "sha256": "c00d3aa4b3be2bec4fbb8778c6bfc14cb87ec60daa26ee313499d35f464f53fa",
+  "file_size": 2103256,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:13:25.165865Z",
+  "fetched_at": "2025-11-03T05:13:25.165865Z",
+  "s3_key": "uwss/clean_large/by-id/469/pdf.pdf"
+}

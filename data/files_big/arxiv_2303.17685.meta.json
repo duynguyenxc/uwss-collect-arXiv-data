@@ -1,0 +1,27 @@
+{
+  "document_id": 601,
+  "source": "arxiv",
+  "arxiv_id": "2303.17685",
+  "doi": "10.21468/scipostphys.16.1.028",
+  "title": "Hydrodynamics of a relativistic charged fluid in the presence of a periodically modulated chemical potential",
+  "authors": [
+    "Chagnet, Nicolas",
+    "Schalm, Koenraad"
+  ],
+  "abstract": "We study charged hydrodynamics in a periodic lattice background. Fluctuations are Bloch waves rather than single momentum Fourier modes. At boundaries of the unit cell where hydrodynamic fluctuations are formally degenerate with their Umklapped copy, level repulsion occurs. Novel mode mixings between charge, sound, and their Umklapped copies appear at finite chemical potential -- both at zero and finite momentum. We provide explicit examples for an ionic lattice, i.e. a periodic external chemical potential, and verify our results with numerical computations in fluid-gravity duality.",
+  "year": 2023,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2303.17685.pdf",
+  "url_used": "https://arxiv.org/pdf/2303.17685.pdf",
+  "status": 200,
+  "etag": "\"sha256:091eea9531f3842857afda1f83bd0b9a55a74fab05af2698217e2a3e4fb9884b\"",
+  "last_modified": "Mon, 22 Jan 2024 02:38:06 GMT",
+  "content_type": "application/pdf",
+  "sha256": "e9ee1b4fb64534676c85a235fa299847726c945f79062dd5f3dfe57d7a486116",
+  "file_size": 2622843,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:48.960931Z",
+  "fetched_at": "2025-11-03T05:19:48.960931Z",
+  "s3_key": "uwss/clean/by-id/601/pdf.pdf"
+}

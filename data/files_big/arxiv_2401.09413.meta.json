@@ -1,0 +1,32 @@
+{
+  "document_id": 489,
+  "source": "arxiv",
+  "arxiv_id": "2401.09413",
+  "doi": null,
+  "title": "POP-3D: Open-Vocabulary 3D Occupancy Prediction from Images",
+  "authors": [
+    "Vobecky, Antonin",
+    "SimÃ©oni, Oriane",
+    "Hurych, David",
+    "Gidaris, Spyros",
+    "Bursuc, Andrei",
+    "PÃ©rez, Patrick",
+    "Sivic, Josef"
+  ],
+  "abstract": "We describe an approach to predict open-vocabulary 3D semantic voxel occupancy map from input 2D images with the objective of enabling 3D grounding, segmentation and retrieval of free-form language queries. This is a challenging problem because of the 2D-3D ambiguity and the open-vocabulary nature of the target tasks, where obtaining annotated training data in 3D is difficult. The contributions of this work are three-fold. First, we design a new model architecture for open-vocabulary 3D semantic occupancy prediction. The architecture consists of a 2D-3D encoder together with occupancy prediction and 3D-language heads. The output is a dense voxel map of 3D grounded language embeddings enabling a range of open-vocabulary tasks. Second, we develop a tri-modal self-supervised learning algorithm that leverages three modalities: (i) images, (ii) language and (iii) LiDAR point clouds, and enables training the proposed architecture using a strong pre-trained vision-language model without the need for any 3D manual language annotations. Finally, we demonstrate quantitatively the strengths of the proposed model on several open-vocabulary tasks: Zero-shot 3D semantic segmentation using existing datasets; 3D grounding and retrieval of free-form language queries, using a small dataset that we propose as an extension of nuScenes. You can find the project page here https://vobecant.github.io/POP3D.",
+  "year": 2024,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2401.09413.pdf",
+  "url_used": "https://arxiv.org/pdf/2401.09413.pdf",
+  "status": 200,
+  "etag": "\"sha256:6f36ecc2d64ca9aa903844e59721bdffc8cc654e9f19b73b9c95f33fd489f255\"",
+  "last_modified": "Thu, 18 Jan 2024 03:02:59 GMT",
+  "content_type": "application/pdf",
+  "sha256": "7fe1326daf97e33c0288d7c9e464b9439781bc052554611de486998e32dbb588",
+  "file_size": 14071575,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:14:42.192143Z",
+  "fetched_at": "2025-11-03T05:14:42.192143Z",
+  "s3_key": "uwss/clean_large/by-id/489/pdf.pdf"
+}

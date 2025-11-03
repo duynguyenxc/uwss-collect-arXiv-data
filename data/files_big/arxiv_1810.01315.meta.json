@@ -1,0 +1,29 @@
+{
+  "document_id": 511,
+  "source": "arxiv",
+  "arxiv_id": "1810.01315",
+  "doi": null,
+  "title": "Possible heights of Alexandroff square transformation groups",
+  "authors": [
+    "Shirazi, Fatemah Ayatollah Zadeh",
+    "Ebrahimifar, Fatemeh",
+    "Yaghmaeian, Reza",
+    "Yahyaoghli, Hamed"
+  ],
+  "abstract": "In the following text we compute possible heights of $\\mathbb A$ (Alexandroff square), $\\mathbb O$ (unit square $[0,1]\\times[0,1]$ with lexicographic order topology) and $\\mathbb U$ (unit square $[0,1]\\times[0,1]$ with induced topology of Euclidean plane). We prove $P_h(\\mathbb{A})=\\{n:n\\geq5\\}\\cup\\{+\\infty\\}$, $P_h(\\mathbb{O})=\\{n:n\\geq4\\}\\cup\\{+\\infty\\}$, $P_h(\\mathbb{U})=\\{n:n\\geq1\\}\\cup\\{+\\infty\\}$ (where for topological space $X$, by $P_h(X)$ we mean the collection of heights of transformation groups with phase space $X$. In this way we also prove that there is not any topological transitive (resp. Devaney chaotic) Alexandroff square transformation group.",
+  "year": 2018,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_1810.01315.pdf",
+  "url_used": "https://arxiv.org/pdf/1810.01315.pdf",
+  "status": 200,
+  "etag": "CMPK5rCf3PwCEAE=",
+  "last_modified": "Sun, 22 Jan 2023 22:39:54 GMT",
+  "content_type": "application/pdf",
+  "sha256": "a6f106831c471e1ec32873f9822454a469532d6b1eff1ff7c3ecab999add911a",
+  "file_size": 172135,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:16:03.187646Z",
+  "fetched_at": "2025-11-03T05:16:03.187646Z",
+  "s3_key": "uwss/clean_large/by-id/511/pdf.pdf"
+}

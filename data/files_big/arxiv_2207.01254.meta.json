@@ -1,0 +1,30 @@
+{
+  "document_id": 582,
+  "source": "arxiv",
+  "arxiv_id": "2207.01254",
+  "doi": "10.1109/ms.2022.3176864",
+  "title": "The Present and Future of Bots in Software Engineering",
+  "authors": [
+    "Shihab, Emad",
+    "Wagner, Stefan",
+    "Gerosa, Marco A.",
+    "Wessel, Mairieli",
+    "Cabot, Jordi"
+  ],
+  "abstract": "We are witnessing a massive adoption of software engineering bots, applications that react to events triggered by tools and messages posted by users and run automated tasks in response, in a variety of domains. This thematic issues describes experiences and challenges with these bots.",
+  "year": 2022,
+  "topic": null,
+  "local_path": "data\\files_big\\arxiv_2207.01254.pdf",
+  "url_used": "https://arxiv.org/pdf/2207.01254.pdf",
+  "status": 200,
+  "etag": "\"sha256:d91ce749add275f6d3cd3dd7122a4e00e259710e8f61cd7ed19f838da9ea4272\"",
+  "last_modified": "Mon, 23 Jan 2023 15:26:31 GMT",
+  "content_type": "application/pdf",
+  "sha256": "e9c77651d03354c4fae332915a0169283402e6ea09eb1503d35f29f6701fd63c",
+  "file_size": 18702216,
+  "http_status": 200,
+  "pdf_status": "ok",
+  "pdf_fetched_at": "2025-11-03T05:19:02.738051Z",
+  "fetched_at": "2025-11-03T05:19:02.738051Z",
+  "s3_key": "uwss/clean/by-id/582/pdf.pdf"
+}
