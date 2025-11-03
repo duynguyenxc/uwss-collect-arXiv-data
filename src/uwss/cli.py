@@ -999,16 +999,30 @@ def build_parser() -> argparse.ArgumentParser:
 	p_sfc.set_defaults(func=_cmd_sfc)
 
 	# s3-upload (optional: upload downloaded files to S3)
-	p_s3 = sub.add_parser("s3-upload", help="Upload files from data/files to S3 bucket/prefix")
+	p_s3 = sub.add_parser("s3-upload", help="Upload files (PDF + optional sidecars/metadata/content) to S3")
 	p_s3.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
 	p_s3.add_argument("--files-dir", default=str(Path("data") / "files"))
 	p_s3.add_argument("--bucket", required=True)
 	p_s3.add_argument("--prefix", default="uwss/")
 	p_s3.add_argument("--region", default=None)
+	p_s3.add_argument("--include-sidecars", action="store_true", help="Also upload PDF sidecar .meta.json if present")
+	p_s3.add_argument("--include-docjson", action="store_true", help="Upload per-document doc.json (identification)")
+	p_s3.add_argument("--include-content", action="store_true", help="Upload extracted content if available")
+	p_s3.add_argument("--layout", choices=["flat", "by-id"], default="flat", help="Key layout: flat or by-id/<id>/...")
 
 	def _cmd_s3(args: argparse.Namespace) -> int:
 		from .upload import upload_files_to_s3
-		count = upload_files_to_s3(Path(args.db), Path(args.files_dir), args.bucket, args.prefix, args.region)
+		count = upload_files_to_s3(
+			Path(args.db),
+			Path(args.files_dir),
+			args.bucket,
+			args.prefix,
+			args.region,
+			include_sidecars=bool(getattr(args, "include_sidecars", False)),
+			include_docjson=bool(getattr(args, "include_docjson", False)),
+			include_content=bool(getattr(args, "include_content", False)),
+			layout=str(getattr(args, "layout", "flat")),
+		)
 		console.print(f"[green]Uploaded {count} files to s3://{args.bucket}/{args.prefix}[/green]")
 		return 0
 
