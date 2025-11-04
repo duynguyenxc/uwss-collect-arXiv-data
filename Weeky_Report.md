@@ -1,4 +1,4 @@
-## Universal Web-Scraping System (UWSS) — Summary Report (English)
+<!-- ## Universal Web-Scraping System (UWSS) — Summary Report (English)
 
 ### Table of contents
 - Weekly summary (10/20–10/26)
@@ -352,4 +352,4 @@ Assume the topic is “reinforced concrete deterioration” and a keyword is “
 - [SQLAlchemy Docs](https://docs.sqlalchemy.org/)
 - [Requests Docs](https://requests.readthedocs.io/en/latest/)
 
-
+ -->

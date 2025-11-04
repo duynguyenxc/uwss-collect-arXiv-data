@@ -5,10 +5,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="883218ad-3f05-44fa-b7a0-cc40b43cf2c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REPORT.md" beforeDir="false" afterPath="$PROJECT_DIR$/REPORT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/uwss.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/data/uwss.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uwss/arxiv/harvest_oai.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/uwss/arxiv/harvest_oai.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weeky_Report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Weeky_Report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2202.13260.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2202.13260.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2203.04223.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2203.04223.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2203.05655.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2203.05655.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2203.10555.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2203.10555.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2204.00596.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2204.00596.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2204.05047.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2204.05047.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2205.05587.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2205.05587.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2205.08765.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2205.08765.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2205.11565.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2205.11565.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2205.13743.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2205.13743.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2206.03297.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2206.03297.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2206.05155.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2206.05155.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2206.14118.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2206.14118.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2207.01254.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2207.01254.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2209.03966.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2209.03966.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2209.07805.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2209.07805.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2209.10596.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2209.10596.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2210.00194.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2210.00194.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2210.07256.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2210.07256.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2210.14143.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2210.14143.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2211.08441.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2211.08441.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2211.12222.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2211.12222.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2301.04563.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2301.04563.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2301.06437.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2301.06437.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2301.06524.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2301.06524.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2301.06565.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2301.06565.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2301.09103.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2301.09103.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2301.10912.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2301.10912.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2302.05154.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2302.05154.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2303.04699.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2303.04699.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2303.07700.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2303.07700.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2303.07846.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2303.07846.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2303.17685.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2303.17685.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2304.01714.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2304.01714.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2304.05948.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2304.05948.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2304.05951.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2304.05951.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2304.07196.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2304.07196.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2304.09900.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2304.09900.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2304.14391.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2304.14391.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2305.00338.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2305.00338.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2305.09162.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2305.09162.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2305.10209.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2305.10209.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2305.14252.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2305.14252.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2305.15201.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2305.15201.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2305.20075.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2305.20075.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2306.05468.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2306.05468.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2306.08764.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2306.08764.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2306.08769.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2306.08769.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2306.13389.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2306.13389.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2306.14317.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2306.14317.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2306.17224.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2306.17224.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2307.02117.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2307.02117.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2307.02764.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2307.02764.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2307.03000.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2307.03000.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2307.04671.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2307.04671.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2307.07197.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2307.07197.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2307.08818.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2307.08818.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2307.09527.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2307.09527.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2307.10356.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2307.10356.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2307.12356.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2307.12356.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2307.12436.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2307.12436.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.04145.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.04145.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.04186.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.04186.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.04547.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.04547.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.04939.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.04939.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.06316.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.06316.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.07565.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.07565.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.09135.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.09135.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.10976.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.10976.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.11626.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.11626.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.11986.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.11986.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.12638.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.12638.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.12999.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.12999.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.13291.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.13291.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2308.15430.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2308.15430.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/files_big/arxiv_2309.01141.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/files_big/arxiv_2309.01141.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/report_professor.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/runbook_phase3.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +114,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "improvement-uwss",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/uwss"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;improvement-uwss&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/uwss&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
