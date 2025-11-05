@@ -190,6 +190,15 @@ def build_parser() -> argparse.ArgumentParser:
 					pass
 			# url_hash_sha1
 			conn.execute(sql_text("CREATE INDEX IF NOT EXISTS idx_documents_urlhash ON documents(url_hash_sha1)"))
+			# pdf_status and year (useful for filters/exports)
+			try:
+				conn.execute(sql_text("CREATE INDEX IF NOT EXISTS idx_documents_pdf_status ON documents(pdf_status)"))
+			except Exception:
+				pass
+			try:
+				conn.execute(sql_text("CREATE INDEX IF NOT EXISTS idx_documents_year ON documents(year)"))
+			except Exception:
+				pass
 			conn.commit()
 		console.print("[green]Indexes created (or already exist).[/green]")
 		return 0
@@ -963,6 +972,7 @@ def build_parser() -> argparse.ArgumentParser:
 	p_gb.add_argument("--limit", type=int, default=20)
 	p_gb.add_argument("--grobid-url", default=os.getenv("UWSS_GROBID_URL", "http://localhost:8070"))
 	p_gb.add_argument("--log-json", action="store_true")
+	p_gb.add_argument("--metrics-out", default=None)
 	def _cmd_gb(args: argparse.Namespace) -> int:
 		from .parse.grobid_client import parse_with_grobid
 		from .store import Base
@@ -975,6 +985,13 @@ def build_parser() -> argparse.ArgumentParser:
 			s.close()
 		console.print(f"[green]GROBID parse: ok={res['parsed_ok']} fail={res['parsed_fail']} attempted={res['attempted']}[/green]")
 		_log_json(args.log_json, "grobid_parse_done", **res)
+		if getattr(args, "metrics_out", None):
+			try:
+				Path(args.metrics_out).parent.mkdir(parents=True, exist_ok=True)
+				Path(args.metrics_out).write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding="utf-8")
+				console.print(f"[green]Saved metrics to {args.metrics_out}[/green]")
+			except Exception:
+				pass
 		return 0
 
 	p_gb.set_defaults(func=_cmd_gb)
@@ -1422,6 +1439,65 @@ def build_parser() -> argparse.ArgumentParser:
 		return 0
 
 	p_imp.set_defaults(func=_cmd_import_jsonl)
+
+	# sample-records: randomly sample documents for manual QA
+	p_samp = sub.add_parser("sample-records", help="Write a random sample of records to a file for manual review")
+	p_samp.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_samp.add_argument("--out", required=True, help="Output path (.jsonl or .txt)")
+	p_samp.add_argument("--n", type=int, default=20, help="Number of records to sample")
+	p_samp.add_argument("--pdf-only", action="store_true", help="Only include records with downloaded PDFs (pdf_status ok and local_path exists)")
+	p_samp.add_argument("--require-match", action="store_true", help="Require matched keywords (non-empty keywords_found)")
+	p_samp.add_argument("--min-score", type=float, default=0.0, help="Minimum relevance_score")
+
+	def _cmd_sample(args: argparse.Namespace) -> int:
+		import random, json
+		from sqlalchemy import select
+		from .store import Document
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		s = SessionLocal()
+		try:
+			q = s.execute(select(Document))
+			candidates = []
+			for (d,) in q:
+				if args.pdf_only:
+					if not getattr(d, "local_path", None):
+						continue
+					if getattr(d, "pdf_status", None) not in ("ok", "fetched", None):
+						continue
+				if args.require_match:
+					kf = (d.keywords_found or "").strip()
+					if not kf or kf == "[]":
+						continue
+				if (d.relevance_score or 0.0) < float(getattr(args, "min_score", 0.0)):
+					continue
+				candidates.append(d)
+			random.shuffle(candidates)
+			sample = candidates[: max(0, int(args.n))]
+			out_path = Path(args.out)
+			out_path.parent.mkdir(parents=True, exist_ok=True)
+			if out_path.suffix.lower() == ".jsonl":
+				with open(out_path, "w", encoding="utf-8") as f:
+					for d in sample:
+						row = {
+							"id": d.id,
+							"title": d.title,
+							"year": d.year,
+							"relevance_score": d.relevance_score,
+							"keywords_found": d.keywords_found,
+							"pdf_status": getattr(d, "pdf_status", None),
+							"local_path": getattr(d, "local_path", None),
+						}
+						f.write(json.dumps(row, ensure_ascii=False) + "\n")
+			else:
+				with open(out_path, "w", encoding="utf-8") as f:
+					for d in sample:
+						f.write(f"{d.id}\t{d.year or ''}\t{(d.relevance_score or 0):.3f}\t{(d.title or '').strip()}\n")
+			console.print(f"[green]Wrote sample of {len(sample)} records to {args.out}[/green]")
+			return 0
+		finally:
+			s.close()
+
+	p_samp.set_defaults(func=_cmd_sample)
 
 	# download-open (basic)
 	p_dl = sub.add_parser("download-open", help="Download open-access links for a small batch")
