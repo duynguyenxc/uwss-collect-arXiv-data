@@ -1,4 +1,4 @@
-<!-- # UWSS – Universal Web‑Scraping System (arXiv‑first)
+ # UWSS – Universal Web‑Scraping System (arXiv‑first)
 
 Universal, config‑driven harvesting pipeline. Current focus: official arXiv integration using OAI‑PMH for metadata and canonical PDF download, with safe, reproducible operations.
 
@@ -98,4 +98,4 @@ See `config/config.yaml`:
 - Policy snapshot stored under `docs/policies/arxiv`.
 
 
- -->
+
