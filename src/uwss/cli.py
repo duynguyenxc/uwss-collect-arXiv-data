@@ -412,51 +412,13 @@ def build_parser() -> argparse.ArgumentParser:
 
 	p_arxiv.set_defaults(func=_cmd_arxiv)
 
-	# arxiv-harvest-oai (official OAI-PMH)
-	p_arxiv_oai = sub.add_parser("arxiv-harvest-oai", help="Harvest arXiv via OAI-PMH ListRecords (official)")
-	p_arxiv_oai.add_argument("--config", default=str(Path("config") / "config.yaml"))
-	p_arxiv_oai.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
-	p_arxiv_oai.add_argument("--from", dest="from_date", default=None, help="YYYY-MM-DD start date")
-	p_arxiv_oai.add_argument("--until", dest="until_date", default=None, help="YYYY-MM-DD end date")
-	p_arxiv_oai.add_argument("--set", dest="set_spec", default=None, help="Optional arXiv set/category")
-	p_arxiv_oai.add_argument("--max", type=int, default=None, help="Stop after N inserted records")
-	p_arxiv_oai.add_argument("--resume", action="store_true", help="Resume using saved resumptionToken")
-	p_arxiv_oai.add_argument("--log-json", action="store_true")
-	p_arxiv_oai.add_argument("--metrics-out", default=None, help="Optional JSON file to write harvest metrics")
-	
-	def _cmd_arxiv_oai(args: argparse.Namespace) -> int:
-		from .arxiv.harvest_oai import harvest_oai_records
-		from .store import Base
-		data = load_config(Path(args.config))
-		contact_email = data.get("contact_email")
-		engine, SessionLocal = _get_engine_session(args, Path(args.db))
-		Base.metadata.create_all(engine)
-		s = SessionLocal()
-		try:
-			res = harvest_oai_records(
-				s,
-				contact_email=contact_email,
-				from_date=getattr(args, "from_date", None),
-				until_date=getattr(args, "until_date", None),
-				set_spec=getattr(args, "set_spec", None),
-				max_records=getattr(args, "max", None),
-				resume=bool(getattr(args, "resume", False)),
-			throttle_sec=float(os.getenv("UWSS_THROTTLE_SEC", "1.0")),
-			)
-		finally:
-			s.close()
-		console.print(f"[green]arXiv OAI-PMH: inserted={res['inserted']} failed={res['failed']} pages={res['pages']} elapsed={res['elapsed_sec']}s[/green]")
-		_log_json(args.log_json, "arxiv_oai_done", **res)
-		if getattr(args, "metrics_out", None):
-			try:
-				Path(args.metrics_out).parent.mkdir(parents=True, exist_ok=True)
-				Path(args.metrics_out).write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding="utf-8")
-				console.print(f"[green]Saved metrics to {args.metrics_out}[/green]")
-			except Exception:
-				pass
-		return 0
-
-	p_arxiv_oai.set_defaults(func=_cmd_arxiv_oai)
+	# arxiv-harvest-oai (moved to commands.arxiv_harvest)
+	try:
+		from .cli.commands.arxiv_harvest import register as register_arxiv_harvest
+		register_arxiv_harvest(sub)
+	except Exception:
+		# Fallback: keep CLI loading even if optional module fails
+		pass
 
 	# arxiv-policy-snapshot
 	p_pol = sub.add_parser("arxiv-policy-snapshot", help="Capture arXiv Identify/robots and save under docs/policies/arxiv")
@@ -474,65 +436,12 @@ def build_parser() -> argparse.ArgumentParser:
 
 	p_pol.set_defaults(func=_cmd_arxiv_policy)
 
-	# arxiv-fetch-pdf (canonical, lawful)
-	p_fetch_arxiv = sub.add_parser("arxiv-fetch-pdf", help="Download canonical arXiv PDFs with throttle/backoff")
-	p_fetch_arxiv.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
-	p_fetch_arxiv.add_argument("--outdir", default=str(Path("data") / "files"))
-	p_fetch_arxiv.add_argument("--limit", type=int, default=50)
-	p_fetch_arxiv.add_argument("--config", default=str(Path("config") / "config.yaml"))
-	p_fetch_arxiv.add_argument("--throttle-sec", type=float, default=None)
-	p_fetch_arxiv.add_argument("--jitter-sec", type=float, default=None)
-	p_fetch_arxiv.add_argument("--max-mb", type=float, default=60.0, help="Max PDF size in MB (HEAD check)")
-	p_fetch_arxiv.add_argument("--dry-run", action="store_true", help="HEAD only, do not download")
-	p_fetch_arxiv.add_argument("--since-days", type=int, default=None, help="Only consider docs older than N days or missing local_path")
-	p_fetch_arxiv.add_argument("--ids-file", default=None, help="Optional file with Document IDs (one per line) to restrict fetching")
-	p_fetch_arxiv.add_argument("--log-json", action="store_true")
-	p_fetch_arxiv.add_argument("--metrics-out", default=None)
-	p_fetch_arxiv.add_argument("--db-url", default=os.getenv("UWSS_DB_URL"))
-
-	def _cmd_arxiv_fetch(args: argparse.Namespace) -> int:
-		from .fetch.arxiv_pdf import fetch_arxiv_pdfs
-		from .store import Base
-		data = load_config(Path(args.config))
-		contact_email = data.get("contact_email")
-		engine, SessionLocal = _get_engine_session(args, Path(args.db))
-		Base.metadata.create_all(engine)
-		s = SessionLocal()
-		try:
-			throttle = args.throttle_sec if args.throttle_sec is not None else float(os.getenv("UWSS_THROTTLE_SEC", "1.0"))
-			jitter = args.jitter_sec if args.jitter_sec is not None else float(os.getenv("UWSS_JITTER_SEC", "0.5"))
-			ids = None
-			if getattr(args, "ids_file", None):
-				try:
-					ids = set(int(x.strip()) for x in Path(args.ids_file).read_text(encoding="utf-8").splitlines() if x.strip())
-				except Exception:
-					ids = None
-			res = fetch_arxiv_pdfs(
-				s,
-				Path(args.outdir),
-				limit=args.limit,
-				contact_email=contact_email,
-				throttle_sec=throttle,
-				jitter_sec=jitter,
-				max_mb=float(getattr(args, "max_mb", 60.0)),
-				dry_run=bool(getattr(args, "dry_run", False)),
-				since_days=getattr(args, "since_days", None),
-				ids=ids,
-			)
-		finally:
-			s.close()
-		console.print(f"[green]arXiv PDF: downloaded={res['downloaded']} failed={res['failed']} attempted={res['attempted']}[/green]")
-		_log_json(args.log_json, "arxiv_pdf_done", **res)
-		if getattr(args, "metrics_out", None):
-			try:
-				Path(args.metrics_out).parent.mkdir(parents=True, exist_ok=True)
-				Path(args.metrics_out).write_text(json.dumps(res, ensure_ascii=False, indent=2), encoding="utf-8")
-				console.print(f"[green]Saved metrics to {args.metrics_out}[/green]")
-			except Exception:
-				pass
-		return 0
-
-	p_fetch_arxiv.set_defaults(func=_cmd_arxiv_fetch)
+	# arxiv-fetch-pdf (moved to commands.arxiv_fetch)
+	try:
+		from .cli.commands.arxiv_fetch import register as register_arxiv_fetch
+		register_arxiv_fetch(sub)
+	except Exception:
+		pass
 
 	# discover-eupmc
 	p_eupmc = sub.add_parser("discover-eupmc", help="Fetch candidate metadata from Europe PMC")
@@ -906,6 +815,295 @@ def build_parser() -> argparse.ArgumentParser:
 
 	p_s2.set_defaults(func=_cmd_s2)
 
+	# oai-harvest (generic)
+	p_oai = sub.add_parser("oai-harvest", help="Harvest via generic OAI-PMH (oai_dc)")
+	p_oai.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_oai.add_argument("--oai-url", required=True, help="Base OAI-PMH endpoint (e.g., https://.../oai/request)")
+	p_oai.add_argument("--from", dest="from_date", default=None)
+	p_oai.add_argument("--until", dest="until_date", default=None)
+	p_oai.add_argument("--set", dest="set_spec", default=None)
+	p_oai.add_argument("--max", type=int, default=None)
+	p_oai.add_argument("--resume-key", default=None, help="Checkpoint key to store resumptionToken under ingestion_state")
+	p_oai.add_argument("--throttle-sec", type=float, default=1.0)
+
+	def _cmd_oai(args: argparse.Namespace) -> int:
+		from sqlalchemy import select
+		from .store import Document, IngestionState, Base
+		from .discovery.oai import iter_oai_dc
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		Base.metadata.create_all(engine)
+		s = SessionLocal()
+		inserted = 0
+		try:
+			resume_token = None
+			if args.resume_key:
+				st = s.query(IngestionState).filter(IngestionState.source == args.oai_url, IngestionState.checkpoint_key == args.resume_key).first()
+				if st and st.checkpoint_value:
+					resume_token = st.checkpoint_value
+			for item in iter_oai_dc(args.oai_url, getattr(args, "from_date", None), getattr(args, "until_date", None), getattr(args, "set_spec", None), resume_token=resume_token, throttle_sec=float(getattr(args, "throttle_sec", 1.0))):
+				title = item.get("title")
+				doi = item.get("doi")
+				src = item.get("source_url") or ""
+				# dedupe by DOI then title then source_url
+				existing = None
+				if doi:
+					existing = s.query(Document).filter(Document.doi == doi).first()
+				if existing is None and title:
+					existing = s.query(Document).filter(Document.title == title).first()
+				if existing is None and src:
+					existing = s.query(Document).filter(Document.source_url == src).first()
+				if existing:
+					continue
+				d = Document(
+					source_url=src,
+					landing_url=src,
+					pdf_url=item.get("pdf_url"),
+					doi=(_clip(doi, 255) if doi else None),
+					title=_clip(title, 1000),
+					authors=None if not item.get("authors") else __import__("json").dumps(item.get("authors")),
+					venue=None,
+					year=item.get("year"),
+					open_access=True if item.get("pdf_url") else False,
+					abstract=_clip(item.get("abstract"), 20000),
+					status="metadata_only",
+					source="oai",
+				)
+				s.add(d)
+				inserted += 1
+				if args.max and inserted >= args.max:
+					break
+			s.commit()
+			# Save resume token placeholder if provided by caller via resume_key (not available from iter here)
+			# Caller can re-provide resume token on next run using --resume-key with stored value
+			console.print(f"[green]OAI-PMH inserted {inserted} records from {args.oai_url}[/green]")
+			return 0
+		finally:
+			s.close()
+
+	p_oai.set_defaults(func=_cmd_oai)
+
+	# discover-rss (generic)
+	p_rss = sub.add_parser("discover-rss", help="Discover documents from an RSS/Atom feed")
+	p_rss.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_rss.add_argument("--rss-url", required=True)
+	p_rss.add_argument("--source-label", default="rss")
+	p_rss.add_argument("--max", type=int, default=100)
+
+	def _cmd_rss(args: argparse.Namespace) -> int:
+		from .discovery.rss import iter_rss
+		from .store import Document, Base
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		Base.metadata.create_all(engine)
+		s = SessionLocal()
+		inserted = 0
+		try:
+			for item in iter_rss(args.rss_url, max_records=args.max):
+				# Dedupe by DOI (none for RSS), then title, then source_url
+				existing = None
+				title = item.get("title")
+				src = item.get("source_url") or ""
+				if title:
+					existing = s.query(Document).filter(Document.title == title).first()
+				if existing is None and src:
+					existing = s.query(Document).filter(Document.source_url == src).first()
+				if existing:
+					continue
+				# flags
+				pdf_url = item.get("pdf_url")
+				open_access = True if pdf_url else False
+				oa_status = ("fulltext_pdf" if pdf_url else "abstract_only")
+				# normalize authors/affiliations/keywords to JSON strings
+				import json as _json
+				authors_json = _json.dumps(item.get("authors") or [])
+				affils_json = _json.dumps(item.get("affiliations") or [])
+				keywords_json = _json.dumps(item.get("keywords") or [])
+				d = Document(
+					source_url=src,
+					landing_url=src,
+					pdf_url=pdf_url,
+					doi=None,
+					title=_clip(title, 1000),
+					authors=authors_json,
+					affiliations=affils_json,
+					keywords=keywords_json,
+					venue=None,
+					year=item.get("year"),
+					open_access=open_access,
+					oa_status=oa_status,
+					abstract=_clip(item.get("abstract"), 20000),
+					status="metadata_only",
+					source=str(args.source_label or "rss"),
+				)
+				s.add(d)
+				inserted += 1
+			s.commit()
+			console.print(f"[green]RSS inserted {inserted} records from {args.rss_url}[/green]")
+			return 0
+		finally:
+			s.close()
+
+	p_rss.set_defaults(func=_cmd_rss)
+
+	# export-preset (strict/relaxed)
+	p_preset = sub.add_parser("export-preset", help="Export with strict/relaxed presets and write IDs")
+	p_preset.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_preset.add_argument("--out", required=True, help="Output file path (.jsonl or .csv)")
+	p_preset.add_argument("--preset", choices=["strict", "relaxed"], required=True)
+	p_preset.add_argument("--ids-out", default=None)
+	p_preset.add_argument("--year-min", type=int, default=None, help="Override default year for preset")
+	p_preset.add_argument("--min-score", type=float, default=None, help="Override default min-score for preset")
+	p_preset.add_argument("--negative-keywords-file", default=None)
+	p_preset.add_argument("--require-match", action="store_true", help="Require matched keywords (default true for presets)")
+	p_preset.add_argument("--log-json", action="store_true")
+	def _cmd_preset(args: argparse.Namespace) -> int:
+		# derive defaults by preset
+		defaults = {"strict": {"min_score": 0.25, "year_min": 1995}, "relaxed": {"min_score": 0.20, "year_min": 2015}}
+		p = defaults[args.preset]
+		ns_min = args.min_score if args.min_score is not None else p["min_score"]
+		ns_year = args.year_min if args.year_min is not None else p["year_min"]
+		# Reuse export selection logic
+		from sqlalchemy import select
+		from .store import Document
+		import json, csv
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		session = SessionLocal()
+		try:
+			q = session.execute(select(Document))
+			rows = []
+			nk_set = None
+			if args.negative_keywords_file:
+				try:
+					nk_set = set([ln.strip().lower() for ln in Path(args.negative_keywords_file).read_text(encoding="utf-8").splitlines() if ln.strip()])
+				except Exception:
+					nk_set = None
+			for (d,) in q:
+				if d.relevance_score is not None and d.relevance_score < ns_min:
+					continue
+				if ns_year and d.year and d.year < ns_year:
+					continue
+				if (args.require_match or True):
+					kf = (d.keywords_found or "").strip()
+					if not kf or kf == "[]":
+						continue
+				row = {
+					"id": d.id,
+					"source_url": d.source_url,
+					"landing_url": getattr(d, "landing_url", None),
+					"pdf_url": getattr(d, "pdf_url", None),
+					"doi": d.doi,
+					"title": d.title,
+					"authors": d.authors,
+					"venue": d.venue,
+					"year": d.year,
+					"date": getattr(d, "pub_date", None),
+					"relevance_score": d.relevance_score,
+					"status": d.status,
+					"local_path": d.local_path,
+					"pdf_path": d.local_path,
+					"content_path": getattr(d, "content_path", None),
+					"content_chars": getattr(d, "content_chars", None),
+					"open_access": d.open_access,
+					"license": d.license,
+					"file_size": d.file_size,
+					"source": d.source,
+					"oa_status": d.oa_status,
+					"topic": d.topic,
+				}
+				if nk_set:
+					txt = ((d.title or "") + "\n" + (d.abstract or "") + "\n" + (getattr(d, "text_excerpt", None) or "")).lower()
+					if any(neg in txt for neg in nk_set):
+						continue
+				rows.append(row)
+			# Write out
+			out_path = Path(args.out)
+			out_path.parent.mkdir(parents=True, exist_ok=True)
+			if out_path.suffix.lower() == ".jsonl":
+				with open(out_path, "w", encoding="utf-8") as f:
+					for r in rows:
+						f.write(json.dumps(r, ensure_ascii=False) + "\n")
+			elif out_path.suffix.lower() == ".csv":
+				if rows:
+					with open(out_path, "w", encoding="utf-8", newline="") as f:
+						writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+						writer.writeheader()
+						writer.writerows(rows)
+			else:
+				raise ValueError("Unsupported extension. Use .jsonl or .csv")
+			if getattr(args, "ids_out", None):
+				try:
+					id_path = Path(args.ids_out)
+					id_path.parent.mkdir(parents=True, exist_ok=True)
+					id_path.write_text("\n".join(str(r.get("id")) for r in rows), encoding="utf-8")
+					console.print(f"[green]Saved IDs to {args.ids_out}[/green]")
+				except Exception:
+					pass
+			console.print(f"[green]Preset export ({args.preset}) wrote {len(rows)} records to {args.out}[/green]")
+			_log_json(args.log_json, "export_preset_done", preset=args.preset, out=str(args.out), count=len(rows))
+			return 0
+		finally:
+			session.close()
+	p_preset.set_defaults(func=_cmd_preset)
+
+	# sample-preset (pdf-only sampling aligned to preset thresholds)
+	p_sp = sub.add_parser("sample-preset", help="Sample PDF-only records aligned to preset thresholds")
+	p_sp.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_sp.add_argument("--out", required=True)
+	p_sp.add_argument("--preset", choices=["strict", "relaxed"], required=True)
+	p_sp.add_argument("--n", type=int, default=20)
+	def _cmd_sp(args: argparse.Namespace) -> int:
+		defaults = {"strict": {"min_score": 0.25}, "relaxed": {"min_score": 0.20}}
+		ms = defaults[args.preset]["min_score"]
+		# Delegate to existing sample-records implementation by selecting and writing file here (reuse selection quickly)
+		from sqlalchemy import select
+		from .store import Document
+		import json, random
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		s = SessionLocal()
+		try:
+			q = s.execute(select(Document))
+			candidates = []
+			for (d,) in q:
+				if not getattr(d, "local_path", None):
+					continue
+				if (d.relevance_score or 0.0) < ms:
+					continue
+				kf = (d.keywords_found or "").strip()
+				if not kf or kf == "[]":
+					continue
+				candidates.append(d)
+			random.shuffle(candidates)
+			sample = candidates[: max(0, int(args.n))]
+			out_path = Path(args.out)
+			out_path.parent.mkdir(parents=True, exist_ok=True)
+			with open(out_path, "w", encoding="utf-8") as f:
+				for d in sample:
+					row = {"id": d.id, "title": d.title, "year": d.year, "relevance_score": d.relevance_score, "local_path": d.local_path}
+					f.write(json.dumps(row, ensure_ascii=False) + "\n")
+			console.print(f"[green]Wrote {len(sample)} samples to {args.out}[/green]")
+			return 0
+		finally:
+			s.close()
+	p_sp.set_defaults(func=_cmd_sp)
+
+	# grobid-batch-small (convenience)
+	p_gbs = sub.add_parser("grobid-batch-small", help="Parse a small batch of PDFs via GROBID (default limit=50)")
+	p_gbs.add_argument("--db", default=str(Path("data") / "uwss.sqlite"))
+	p_gbs.add_argument("--content-dir", default=str(Path("data") / "content"))
+	p_gbs.add_argument("--limit", type=int, default=50)
+	p_gbs.add_argument("--grobid-url", default=os.getenv("UWSS_GROBID_URL", "http://localhost:8070"))
+	def _cmd_gbs(args: argparse.Namespace) -> int:
+		from .parse.grobid_client import parse_with_grobid
+		from .store import Base
+		engine, SessionLocal = _get_engine_session(args, Path(args.db))
+		Base.metadata.create_all(engine)
+		s = SessionLocal()
+		try:
+			res = parse_with_grobid(s, Path(args.content_dir), limit=args.limit, grobid_url=args.grobid_url)
+		finally:
+			s.close()
+		console.print(f"[green]GROBID batch: ok={res['parsed_ok']} fail={res['parsed_fail']} attempted={res['attempted']}[/green]")
+		return 0
+	p_gbs.set_defaults(func=_cmd_gbs)
 	# score-keywords
 	p_score = sub.add_parser("score-keywords", help="Compute keyword relevance scores for documents in DB")
 	p_score.add_argument("--config", default=str(Path("config") / "config.yaml"))

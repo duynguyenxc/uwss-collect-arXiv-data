@@ -16,18 +16,18 @@ from .models import Base
 
 
 def create_sqlite_engine(db_path: Path):
-    engine = create_engine(f"sqlite:///{db_path}", future=True)
-    SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
-    return engine, SessionLocal
+	engine = create_engine(f"sqlite:///{db_path}", future=True)
+	SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
+	return engine, SessionLocal
 
 
 def create_engine_from_url(db_url: str):
-    """Create engine/session from a full DB URL (e.g., Postgres on RDS).
-    Example: postgresql+psycopg2://user:pass@host:5432/dbname
-    """
-    engine = create_engine(db_url, future=True)
-    SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
-    return engine, SessionLocal
+	"""Create engine/session from a full DB URL (e.g., Postgres on RDS).
+	Example: postgresql+psycopg2://user:pass@host:5432/dbname
+	"""
+	engine = create_engine(db_url, future=True)
+	SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
+	return engine, SessionLocal
 
 
 def init_db(db_path: Path) -> None:
@@ -73,6 +73,13 @@ def migrate_db(db_path: Path) -> None:
 			conn.commit()
 		if "text_excerpt" not in names:
 			conn.execute(sql_text("ALTER TABLE documents ADD COLUMN text_excerpt TEXT"))
+			conn.commit()
+		# New scholarly fields
+		if "affiliations" not in names:
+			conn.execute(sql_text("ALTER TABLE documents ADD COLUMN affiliations TEXT"))
+			conn.commit()
+		if "keywords" not in names:
+			conn.execute(sql_text("ALTER TABLE documents ADD COLUMN keywords TEXT"))
 			conn.commit()
 		if "url_hash_sha1" not in names:
 			conn.execute(sql_text("ALTER TABLE documents ADD COLUMN url_hash_sha1 VARCHAR(40)"))

@@ -21,6 +21,8 @@ class Document(Base):
 	doi: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
 	title: Mapped[Optional[str]] = mapped_column(String(1000), nullable=True)
 	authors: Mapped[Optional[str]] = mapped_column(Text, nullable=True)  # JSON string of author names
+	affiliations: Mapped[Optional[str]] = mapped_column(Text, nullable=True)  # JSON string of affiliations
+	keywords: Mapped[Optional[str]] = mapped_column(Text, nullable=True)  # JSON string of keywords/subjects
 	venue: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
 	year: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
 	pub_date: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)

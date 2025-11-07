@@ -17,10 +17,10 @@ from collections import Counter
 from pathlib import Path
 from typing import Dict, Iterable, List, Set, Optional
 
-from sqlalchemy import select
+from sqlalchemy import select, create_engine
+from sqlalchemy.orm import sessionmaker
 
-from ..store import create_sqlite_engine, Document
-from ..store.db import create_engine_from_url
+from ..store.models import Document
 
 
 def _tokenize(text: str) -> List[str]:
@@ -58,7 +58,12 @@ def _score_text(tokens: List[str], bi_tokens: List[str], kw_uni: Set[str], kw_bi
 
 
 def score_documents(db_path: Path, keywords: List[str], min_score: float = 0.0, db_url: str | None = None, negative_keywords: Optional[List[str]] = None) -> int:
-	engine, SessionLocal = (create_engine_from_url(db_url) if db_url else create_sqlite_engine(db_path))
+	# Lightweight local engine factory to avoid importing store.db at import time
+	if db_url:
+		engine = create_engine(db_url, future=True)
+	else:
+		engine = create_engine(f"sqlite:///{db_path}", future=True)
+	SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 	session = SessionLocal()
 	try:
 		lex = _build_keyword_lexicon(keywords)

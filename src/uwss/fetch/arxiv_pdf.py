@@ -13,6 +13,8 @@ import requests
 
 from ..store import Document, VisitedUrl
 from sqlalchemy import or_, and_
+from ..utils.http import session_with_retries
+from ..constants import PDF_UA
 
 
 def _safe_filename(base: str) -> str:
@@ -88,18 +90,48 @@ def fetch_arxiv_pdfs(
     - Records VisitedUrl for provenance.
     """
     out_dir.mkdir(parents=True, exist_ok=True)
-    headers = {
-        "User-Agent": f"uwss/0.1 (+pdf; {contact_email or 'contact@unknown'})",
-        "Accept": "application/pdf, */*;q=0.8",
-        "Connection": "close",
-    }
+    ua = f"{PDF_UA}; {contact_email or 'contact@unknown'}"
+    headers = {"User-Agent": ua, "Accept": "application/pdf, */*;q=0.8", "Connection": "close"}
+    http = session_with_retries(user_agent=ua)
+
+    # If caller supplied an IDs set but it's empty, do NOT fallback to all rows.
+    # Return a zero-attempt metrics block so that PDF downloads always reflect the export gate.
+    if ids is not None and len(ids) == 0:
+        return {
+            "attempted": 0,
+            "downloaded": 0,
+            "failed": 0,
+            "not_found_404": 0,
+            "forbidden_403": 0,
+            "errors_5xx": 0,
+            "timeouts": 0,
+            "too_large": 0,
+            "retries": 0,
+            "bytes_downloaded": 0,
+            "latency_ms": {"p50": None, "p95": None, "max": None},
+            "items": [],
+        }
 
     q = session.query(Document).filter(Document.source == "arxiv").filter(Document.pdf_url != None)
-    if ids:
+    if ids is not None:
         try:
             q = q.filter(Document.id.in_(list(ids)))
         except Exception:
-            pass
+            # If the provided IDs cannot be applied, treat as zero-attempts rather than silently falling back.
+            return {
+                "attempted": 0,
+                "downloaded": 0,
+                "failed": 0,
+                "not_found_404": 0,
+                "forbidden_403": 0,
+                "errors_5xx": 0,
+                "timeouts": 0,
+                "too_large": 0,
+                "retries": 0,
+                "bytes_downloaded": 0,
+                "latency_ms": {"p50": None, "p95": None, "max": None},
+                "items": [],
+            }
     if since_days is not None and since_days >= 0:
         cutoff = datetime.utcnow() - timedelta(days=since_days)
         q = q.filter(or_(Document.local_path == None, Document.local_path == "", Document.fetched_at == None, Document.fetched_at < cutoff))
@@ -142,7 +174,7 @@ def fetch_arxiv_pdfs(
         # HEAD size cap & dry-run, iterate until acceptable candidate
         for url_try in cand_urls:
             try:
-                head = requests.head(url_try, headers=headers, timeout=30, allow_redirects=True)
+                head = http.head(url_try, headers=headers, allow_redirects=True)
                 # record visited for HEAD
                 try:
                     existing = session.get(VisitedUrl, url_try)
@@ -309,7 +341,7 @@ def fetch_arxiv_pdfs(
         while True:
             attempt += 1
             try:
-                resp = requests.get(url, headers=headers, timeout=60, stream=True)
+                resp = http.get(url, headers=headers, stream=True)
                 d.http_status = resp.status_code
                 ct = (resp.headers.get("Content-Type") or "").lower()
                 if resp.status_code == 200 and ct.startswith("application/pdf"):
