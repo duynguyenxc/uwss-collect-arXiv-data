@@ -1,8 +1,4 @@
-<<<<<<< HEAD
- # UWSS – Universal Web‑Scraping System (arXiv‑first)
-=======
 # UWSS – Universal Web Scraping System
->>>>>>> 72fb6f1 (docs: rewrite README.md to reflect universal web scraping system architecture)
 
 A universal, config-driven academic data harvesting and web scraping system designed to work with any academic database, research repository, or web source. The system uses a plugin-based adapter architecture that allows switching between sources or topics by changing configuration only, without rewriting the pipeline.
 
